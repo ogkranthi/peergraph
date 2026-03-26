@@ -1,0 +1,62 @@
+name: Add a Builder
+description: Add a real AI builder/founder to PeerGraph.ai
+title: "[Builder] "
+labels: ["data", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Add a real AI builder with a verified GitHub account.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g., Harrison Chase
+    validations:
+      required: true
+  - type: input
+    id: github
+    attributes:
+      label: GitHub Username
+      placeholder: e.g., hwchase17
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: City
+      placeholder: e.g., San Francisco
+    validations:
+      required: true
+  - type: textarea
+    id: bio
+    attributes:
+      label: Bio
+      description: One sentence about what they build
+      placeholder: e.g., CEO of LangChain. Building the open-source framework for LLM-powered applications.
+    validations:
+      required: true
+  - type: input
+    id: skills
+    attributes:
+      label: Skills (comma-separated)
+      placeholder: e.g., LLMs, python, agents, RAG, open source
+    validations:
+      required: true
+  - type: textarea
+    id: projects
+    attributes:
+      label: Projects
+      description: What AI projects have they built? Include repo URLs if open source.
+      placeholder: |
+        - LangChain (https://github.com/langchain-ai/langchain) — LLM application framework
+    validations:
+      required: true
+  - type: textarea
+    id: papers
+    attributes:
+      label: Papers their products build on
+      description: This is the most valuable part! Which research papers does their product use?
+      placeholder: |
+        - "Attention Is All You Need" (Vaswani et al., 2017)
+        - "Chain-of-Thought Prompting" (Wei et al., 2022)

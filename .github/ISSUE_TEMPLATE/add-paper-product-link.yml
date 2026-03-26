@@ -1,0 +1,45 @@
+name: Add a Paper → Product Link
+description: Link a research paper to a product built from it (the core data primitive!)
+title: "[Link] "
+labels: ["data", "paper-product-link", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most valuable contribution to PeerGraph.ai! If you know a product that was built using a specific research paper, tell us about it.
+  - type: input
+    id: paper
+    attributes:
+      label: Paper
+      description: Title and authors of the research paper
+      placeholder: e.g., "Attention Is All You Need" (Vaswani et al., 2017)
+    validations:
+      required: true
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper URL
+      placeholder: e.g., https://arxiv.org/abs/1706.03762
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: Product / Project
+      description: The product or project built using this paper
+      placeholder: e.g., LangChain
+    validations:
+      required: true
+  - type: input
+    id: product_url
+    attributes:
+      label: Product URL (repo or website)
+      placeholder: e.g., https://github.com/langchain-ai/langchain
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How does the product use this paper?
+      description: Brief explanation of the connection
+      placeholder: e.g., LangChain's agent framework uses the transformer architecture from this paper for all LLM interactions.

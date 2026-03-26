@@ -1,0 +1,43 @@
+name: Add a Researcher
+description: Add an AI researcher to PeerGraph.ai
+title: "[Researcher] "
+labels: ["data", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Add an AI researcher. We'll pull their papers and citations from Semantic Scholar.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g., Yann LeCun
+    validations:
+      required: true
+  - type: input
+    id: institution
+    attributes:
+      label: Institution
+      placeholder: e.g., Meta AI / NYU
+    validations:
+      required: true
+  - type: input
+    id: semantic_scholar
+    attributes:
+      label: Semantic Scholar Profile URL
+      description: Find them at semanticscholar.org
+      placeholder: e.g., https://www.semanticscholar.org/author/1741101
+  - type: input
+    id: domains
+    attributes:
+      label: Research Domains (comma-separated)
+      placeholder: "e.g., NLP, Generative AI, Computer Vision"
+    validations:
+      required: true
+  - type: textarea
+    id: key_papers
+    attributes:
+      label: Key Papers
+      description: Their most influential papers (especially those with known products built on them)
+      placeholder: |
+        - "Gradient-based learning applied to document recognition" (1998)
