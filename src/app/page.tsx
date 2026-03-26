@@ -1,102 +1,248 @@
-import Image from "next/image";
+import Link from "next/link";
+import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
+import { getAllResearcherImpactScores } from "@/lib/impact-score";
+import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 
-export default function Home() {
+export default function HomePage() {
+  const stats = getStats();
+  const researchers = getResearchers();
+  const projects = getProjects();
+
+  const papers = getPapers();
+
+  // Top researchers by citation
+  const topResearchers = [...researchers].sort((a, b) => b.citation_count - a.citation_count).slice(0, 6);
+
+  // Top researchers by Research Impact Score
+  const impactScores = getAllResearcherImpactScores(researchers, papers, projects);
+  const topImpactResearchers = impactScores
+    .filter((s) => s.overallScore > 0)
+    .slice(0, 6)
+    .map((s) => ({ ...s, researcher: researchers.find((r) => r.id === s.researcherId)! }))
+    .filter((s) => s.researcher);
+
+  // Domain breakdown
+  const domainCounts = new Map<string, number>();
+  researchers.forEach((r) => r.domains.forEach((d) => domainCounts.set(d, (domainCounts.get(d) || 0) + 1)));
+  projects.forEach((p) => p.domains.forEach((d) => domainCounts.set(d, (domainCounts.get(d) || 0) + 1)));
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-4 pt-20 pb-16 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-white/50 mb-6">
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          Open source &middot; MIT licensed
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
+          Where AI Research{" "}
+          <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            Meets Products
+          </span>
+        </h1>
+        <p className="text-lg text-white/50 max-w-2xl mx-auto mb-8">
+          The open graph connecting AI researchers and builders.
+          See who&apos;s publishing, who&apos;s building, and how research becomes real-world impact.
+        </p>
+        <div className="flex items-center justify-center gap-4">
+          <Link
+            href="/graph"
+            className="bg-white text-black rounded-lg px-6 py-3 font-medium hover:bg-white/90 transition-colors"
+          >
+            Explore the Graph
+          </Link>
+          <Link
+            href="/directory"
+            className="bg-white/10 text-white rounded-lg px-6 py-3 font-medium hover:bg-white/20 transition-colors"
+          >
+            Browse Directory
+          </Link>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: NODE_COLORS.researcher }} />
+              <p className="text-3xl font-bold">{stats.researchers}</p>
+            </div>
+            <p className="text-sm text-white/50">Researchers</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <span className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: NODE_COLORS.builder }} />
+              <p className="text-3xl font-bold">{stats.builders}</p>
+            </div>
+            <p className="text-sm text-white/50">Builders</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <p className="text-3xl font-bold">{stats.papers}</p>
+            <p className="text-sm text-white/50">Papers</p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <p className="text-3xl font-bold">{stats.paperProductLinks}</p>
+            <p className="text-sm text-white/50">Research → Product Links</p>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="text-xl font-semibold mb-8 text-center">How It Works</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-blue-400 text-lg font-bold">R</span>
+            </div>
+            <h3 className="font-semibold mb-2">Researchers Auto-Import</h3>
+            <p className="text-sm text-white/50">
+              AI researchers are imported from Semantic Scholar. Papers, citations, and co-authors are populated automatically.
+            </p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-emerald-400 text-lg font-bold">B</span>
+            </div>
+            <h3 className="font-semibold mb-2">Builders Sign Up</h3>
+            <p className="text-sm text-white/50">
+              Sign up with GitHub, add your AI projects, and declare what papers or techniques your product builds on.
+            </p>
+          </div>
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-yellow-400 text-lg font-bold">&harr;</span>
+            </div>
+            <h3 className="font-semibold mb-2">The Graph Connects Them</h3>
+            <p className="text-sm text-white/50">
+              When a builder links a paper, the graph creates an edge from research to product — making impact visible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Domains */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <h2 className="text-xl font-semibold mb-6">Domains</h2>
+        <div className="flex flex-wrap gap-3">
+          {Array.from(domainCounts.entries())
+            .sort((a, b) => b[1] - a[1])
+            .map(([domain, count]) => (
+              <div
+                key={domain}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border"
+                style={{
+                  backgroundColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "10",
+                  borderColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "20",
+                }}
+              >
+                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: DOMAIN_COLORS[domain] || "#94A3B8" }} />
+                <span className="text-sm" style={{ color: DOMAIN_COLORS[domain] || "#94A3B8" }}>{domain}</span>
+                <span className="text-xs text-white/30">{count}</span>
+              </div>
+            ))}
+        </div>
+      </section>
+
+      {/* Top researchers */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <h2 className="text-xl font-semibold mb-6">Top Researchers</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {topResearchers.map((r) => (
+            <Link
+              key={r.id}
+              href={`/researcher/${r.id}`}
+              className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/8 hover:border-white/20 transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <img src={r.photo_url} alt={r.name} className="w-12 h-12 rounded-full bg-white/10" />
+                <div>
+                  <h3 className="font-semibold group-hover:text-blue-400 transition-colors">{r.name}</h3>
+                  <p className="text-sm text-white/50">{r.institution}</p>
+                  <p className="text-xs text-white/40 mt-1">{r.citation_count.toLocaleString()} citations</p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Research Impact Score Leaderboard */}
+      {topImpactResearchers.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 py-12">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-xl font-semibold">Research Impact Score</h2>
+              <p className="text-sm text-white/40 mt-1">
+                Ranked by real-world product adoption, not just citations
+              </p>
+            </div>
+            <Link href="/analytics" className="text-sm text-amber-400 hover:text-amber-300 transition-colors">
+              View Analytics &rarr;
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {topImpactResearchers.map(({ researcher, overallScore, breakdown }, i) => (
+              <Link
+                key={researcher.id}
+                href={`/researcher/${researcher.id}`}
+                className="group bg-gradient-to-br from-amber-500/5 to-orange-500/5 border border-amber-500/10 rounded-xl p-5 hover:border-amber-500/30 transition-all"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <img src={researcher.photo_url} alt={researcher.name} className="w-12 h-12 rounded-full bg-white/10" />
+                    <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-amber-500 text-black text-[10px] font-bold flex items-center justify-center">
+                      {i + 1}
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold group-hover:text-amber-400 transition-colors truncate">{researcher.name}</h3>
+                    <p className="text-sm text-white/50 truncate">{researcher.institution}</p>
+                    <div className="flex items-center gap-3 mt-1 text-xs text-white/40">
+                      <span>{breakdown.productAdoption} products</span>
+                      <span>{breakdown.domainBreadth} domains</span>
+                      <span>{Math.round(breakdown.translationRate * 100)}% translated</span>
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 text-right">
+                    <span className="text-2xl font-bold text-amber-400">{overallScore}</span>
+                    <p className="text-[9px] text-white/30">RIS</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="max-w-7xl mx-auto px-4 py-20 text-center">
+        <div className="bg-gradient-to-r from-blue-500/10 to-emerald-500/10 border border-white/10 rounded-2xl p-12">
+          <h2 className="text-3xl font-bold mb-3">Building with AI?</h2>
+          <p className="text-white/50 mb-6 max-w-lg mx-auto">
+            Join the graph. Add your projects, link the papers that inspired them,
+            and connect with researchers pushing the frontier.
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              href="/graph"
+              className="bg-white text-black rounded-lg px-6 py-3 font-medium hover:bg-white/90 transition-colors"
+            >
+              Explore the Graph
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+          <p className="text-sm text-white/30">PeerGraph.ai</p>
+          <p className="text-sm text-white/30">
+            Open source &middot; MIT License
+          </p>
+        </div>
       </footer>
     </div>
   );

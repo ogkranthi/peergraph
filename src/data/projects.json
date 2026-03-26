@@ -1,0 +1,145 @@
+[
+  {
+    "id": "proj1",
+    "builder_id": "b1",
+    "name": "LangChain",
+    "description": "Framework for developing applications powered by language models. Connects LLMs to external data, tools, and agents.",
+    "repo_url": "https://github.com/langchain-ai/langchain",
+    "live_url": "https://langchain.com",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p1", "p6", "p13"],
+    "created_at": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "proj2",
+    "builder_id": "b2",
+    "name": "Liquid Foundation Models",
+    "description": "Compact, efficient foundation models built on Liquid Neural Networks. State-space models that outperform transformers at smaller sizes.",
+    "repo_url": "",
+    "live_url": "https://liquid.ai",
+    "domains": ["Generative AI", "Robotics"],
+    "paper_ids": ["p11", "p1"],
+    "created_at": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "proj3",
+    "builder_id": "b3",
+    "name": "MIT 6.S191 — Introduction to Deep Learning",
+    "description": "MIT's official introductory course on deep learning. Open courseware with labs covering CNNs, RNNs, GANs, reinforcement learning, and more.",
+    "repo_url": "https://github.com/aamini/introtodeeplearning",
+    "live_url": "http://introtodeeplearning.com",
+    "domains": ["Generative AI", "Computer Vision"],
+    "paper_ids": ["p1", "p2"],
+    "created_at": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "proj4",
+    "builder_id": "b4",
+    "name": "Liquid Neural Networks",
+    "description": "Open-source implementation of Liquid Time-Constant networks — continuous-time neural networks inspired by biological neurons.",
+    "repo_url": "https://github.com/mlech26l/keras-ncp",
+    "live_url": "",
+    "domains": ["Generative AI", "Robotics"],
+    "paper_ids": ["p11"],
+    "created_at": "2026-03-01T00:00:00Z"
+  },
+  {
+    "id": "proj5",
+    "builder_id": "b5",
+    "name": "Suno AI",
+    "description": "AI music generation from text. Type a description, get a full song with vocals, instruments, and production. Used by millions.",
+    "repo_url": "",
+    "live_url": "https://suno.com",
+    "domains": ["Speech & Audio", "Generative AI"],
+    "paper_ids": ["p1"],
+    "created_at": "2026-03-02T00:00:00Z"
+  },
+  {
+    "id": "proj6",
+    "builder_id": "b6",
+    "name": "MosaicML / DBRX",
+    "description": "Open-source efficient LLM training platform. DBRX is a 132B MoE model rivaling GPT-3.5. Acquired by Databricks for $1.3B.",
+    "repo_url": "https://github.com/mosaicml/composer",
+    "live_url": "https://www.databricks.com/product/machine-learning",
+    "domains": ["NLP", "Generative AI", "Optimization"],
+    "paper_ids": ["p1", "p6", "p12"],
+    "created_at": "2026-03-02T00:00:00Z"
+  },
+  {
+    "id": "proj7",
+    "builder_id": "b7",
+    "name": "nanoGPT",
+    "description": "The simplest, fastest repository for training/finetuning medium-sized GPTs. Reproduces GPT-2 (124M) in ~$20 of compute.",
+    "repo_url": "https://github.com/karpathy/nanoGPT",
+    "live_url": "",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p1", "p6"],
+    "created_at": "2026-03-02T00:00:00Z"
+  },
+  {
+    "id": "proj8",
+    "builder_id": "b8",
+    "name": "llm",
+    "description": "CLI tool for interacting with Large Language Models. Supports OpenAI, Claude, local models via plugins. Log and search prompts.",
+    "repo_url": "https://github.com/simonw/llm",
+    "live_url": "https://llm.datasette.io",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p6"],
+    "created_at": "2026-03-03T00:00:00Z"
+  },
+  {
+    "id": "proj9",
+    "builder_id": "b9",
+    "name": "v0 by Vercel",
+    "description": "AI-powered UI generation. Describe a component in natural language, get production-ready React/Tailwind code. Uses LLMs for code generation.",
+    "repo_url": "",
+    "live_url": "https://v0.dev",
+    "domains": ["Generative AI", "NLP"],
+    "paper_ids": ["p6", "p1"],
+    "created_at": "2026-03-03T00:00:00Z"
+  },
+  {
+    "id": "proj10",
+    "builder_id": "b10",
+    "name": "DocETL",
+    "description": "AI-powered data processing pipelines for unstructured documents. LLM-driven extraction, transformation, and analysis at scale.",
+    "repo_url": "https://github.com/shreyashankar/docetl",
+    "live_url": "https://docetl.org",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p6", "p1"],
+    "created_at": "2026-03-03T00:00:00Z"
+  },
+  {
+    "id": "proj11",
+    "builder_id": "b11",
+    "name": "tinygrad",
+    "description": "A tiny neural network framework. Under 1000 lines of code, supports GPU acceleration. The antithesis of PyTorch complexity.",
+    "repo_url": "https://github.com/tinygrad/tinygrad",
+    "live_url": "",
+    "domains": ["Generative AI", "Optimization"],
+    "paper_ids": ["p8", "p1"],
+    "created_at": "2026-03-04T00:00:00Z"
+  },
+  {
+    "id": "proj12",
+    "builder_id": "b11",
+    "name": "openpilot",
+    "description": "Open-source self-driving system by comma.ai. Runs on supported cars with a $200 device. 10,000+ users driving daily.",
+    "repo_url": "https://github.com/commaai/openpilot",
+    "live_url": "https://comma.ai",
+    "domains": ["Computer Vision", "Robotics"],
+    "paper_ids": ["p3", "p4"],
+    "created_at": "2026-03-04T00:00:00Z"
+  },
+  {
+    "id": "proj13",
+    "builder_id": "b12",
+    "name": "Chain-of-Thought Research",
+    "description": "Pioneering research on chain-of-thought prompting, instruction tuning, and emergent abilities of large language models at OpenAI.",
+    "repo_url": "",
+    "live_url": "https://jasonwei20.github.io",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p13", "p7", "p6"],
+    "created_at": "2026-03-04T00:00:00Z"
+  }
+]

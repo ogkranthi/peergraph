@@ -1,0 +1,197 @@
+import { Researcher, Paper, Project, ResearchDomain } from "./types";
+
+/**
+ * Research Impact Score (RIS)
+ *
+ * A novel metric that measures real-world product adoption of research,
+ * NOT just academic citations. No existing tool (Altmetric, PlumX, Overton,
+ * Dimensions, Lens.org, Google Scholar) measures paper→product adoption.
+ *
+ * Components:
+ * 1. Product Adoption Count — How many builder projects use this researcher's papers?
+ * 2. Domain Breadth — How many distinct product domains do their papers influence?
+ * 3. Foundation Index — Diversity of projects using their work (Gini-like)
+ * 4. Translation Rate — What % of their papers have at least one product?
+ *
+ * Score = (adoption × 0.4) + (breadth × 0.3) + (foundation × 0.2) + (translation × 0.1)
+ * Normalized to 0–100.
+ */
+
+// ============ Types ============
+
+export interface PaperImpactScore {
+  paperId: string;
+  title: string;
+  productCount: number;
+  productDomains: ResearchDomain[];
+  score: number; // 0–100
+}
+
+export interface ResearchImpactScore {
+  researcherId: string;
+  overallScore: number; // 0–100
+  breakdown: {
+    productAdoption: number; // raw count of projects using their papers
+    domainBreadth: number; // number of distinct product domains influenced
+    foundationIndex: number; // 0–1, diversity of project usage
+    translationRate: number; // 0–1, fraction of papers with ≥1 product
+  };
+  normalizedBreakdown: {
+    productAdoption: number; // 0–100 contribution
+    domainBreadth: number;
+    foundationIndex: number;
+    translationRate: number;
+  };
+  topPapers: PaperImpactScore[];
+  totalPapers: number;
+  papersWithProducts: number;
+}
+
+// ============ Computation ============
+
+/**
+ * Calculate the impact score for a single paper.
+ */
+export function calculatePaperImpactScore(
+  paper: Paper,
+  allProjects: Project[]
+): PaperImpactScore {
+  const linkedProjects = allProjects.filter((p) =>
+    p.paper_ids.includes(paper.id)
+  );
+  const productDomains = [
+    ...new Set(linkedProjects.flatMap((p) => p.domains)),
+  ] as ResearchDomain[];
+
+  // Paper score: product count weighted by domain diversity
+  const productCount = linkedProjects.length;
+  const domainBonus = Math.min(productDomains.length / 3, 1); // up to 1.0 for 3+ domains
+  const score = Math.min(
+    100,
+    productCount * 25 * (1 + domainBonus * 0.5)
+  );
+
+  return {
+    paperId: paper.id,
+    title: paper.title,
+    productCount,
+    productDomains,
+    score: Math.round(score),
+  };
+}
+
+/**
+ * Calculate the Research Impact Score for a researcher.
+ */
+export function calculateResearchImpactScore(
+  researcher: Researcher,
+  researcherPapers: Paper[],
+  allProjects: Project[]
+): ResearchImpactScore {
+  // Calculate per-paper impact
+  const paperScores = researcherPapers.map((paper) =>
+    calculatePaperImpactScore(paper, allProjects)
+  );
+
+  // 1. Product Adoption Count
+  const productAdoption = paperScores.reduce(
+    (sum, ps) => sum + ps.productCount,
+    0
+  );
+
+  // 2. Domain Breadth — unique product domains across all linked projects
+  const allProductDomains = new Set<string>();
+  paperScores.forEach((ps) =>
+    ps.productDomains.forEach((d) => allProductDomains.add(d))
+  );
+  const domainBreadth = allProductDomains.size;
+
+  // 3. Foundation Index — how evenly distributed are products across papers?
+  // Uses normalized entropy (0 = all products on one paper, 1 = evenly spread)
+  const papersWithProducts = paperScores.filter((ps) => ps.productCount > 0);
+  let foundationIndex = 0;
+  if (papersWithProducts.length > 1 && productAdoption > 0) {
+    const proportions = papersWithProducts.map(
+      (ps) => ps.productCount / productAdoption
+    );
+    const entropy = -proportions.reduce(
+      (sum, p) => sum + (p > 0 ? p * Math.log2(p) : 0),
+      0
+    );
+    const maxEntropy = Math.log2(papersWithProducts.length);
+    foundationIndex = maxEntropy > 0 ? entropy / maxEntropy : 0;
+  } else if (papersWithProducts.length === 1) {
+    foundationIndex = 0.5; // single paper with products gets partial credit
+  }
+
+  // 4. Translation Rate — fraction of papers with at least one product
+  const translationRate =
+    researcherPapers.length > 0
+      ? papersWithProducts.length / researcherPapers.length
+      : 0;
+
+  // Normalize each component to 0–100 scale
+  // Product adoption: 1 product = 25, 4+ = 100
+  const normalizedAdoption = Math.min(100, productAdoption * 25);
+  // Domain breadth: 1 domain = 25, 4+ = 100
+  const normalizedBreadth = Math.min(100, domainBreadth * 25);
+  // Foundation index: already 0–1, scale to 0–100
+  const normalizedFoundation = foundationIndex * 100;
+  // Translation rate: already 0–1, scale to 0–100
+  const normalizedTranslation = translationRate * 100;
+
+  // Weighted overall score
+  const overallScore = Math.round(
+    normalizedAdoption * 0.4 +
+      normalizedBreadth * 0.3 +
+      normalizedFoundation * 0.2 +
+      normalizedTranslation * 0.1
+  );
+
+  // Sort papers by impact score descending
+  const topPapers = [...paperScores]
+    .filter((ps) => ps.productCount > 0)
+    .sort((a, b) => b.score - a.score);
+
+  return {
+    researcherId: researcher.id,
+    overallScore,
+    breakdown: {
+      productAdoption,
+      domainBreadth,
+      foundationIndex: Math.round(foundationIndex * 100) / 100,
+      translationRate: Math.round(translationRate * 100) / 100,
+    },
+    normalizedBreakdown: {
+      productAdoption: Math.round(normalizedAdoption),
+      domainBreadth: Math.round(normalizedBreadth),
+      foundationIndex: Math.round(normalizedFoundation),
+      translationRate: Math.round(normalizedTranslation),
+    },
+    topPapers,
+    totalPapers: researcherPapers.length,
+    papersWithProducts: papersWithProducts.length,
+  };
+}
+
+/**
+ * Get impact scores for all researchers, sorted by score descending.
+ */
+export function getAllResearcherImpactScores(
+  researchers: Researcher[],
+  papers: Paper[],
+  projects: Project[]
+): ResearchImpactScore[] {
+  return researchers
+    .map((researcher) => {
+      const researcherPapers = papers.filter((p) =>
+        p.author_ids.includes(researcher.id)
+      );
+      return calculateResearchImpactScore(
+        researcher,
+        researcherPapers,
+        projects
+      );
+    })
+    .sort((a, b) => b.overallScore - a.overallScore);
+}

@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PeerGraph.ai
+
+The open graph where AI research meets AI products.
+
+PeerGraph.ai connects AI researchers and builders in an interactive force-directed graph. Researchers are auto-imported from Semantic Scholar. Builders sign up with GitHub and link the papers their products build on. The result: a living map of how research becomes real-world impact.
+
+## Features
+
+- **Interactive Graph** — Force-directed visualization with two node types: researchers (blue) and builders (green)
+- **Research Impact Score** — A novel metric measuring real-world product adoption, not just citations
+- **Bidirectional AI Recommendations** — Researcher↔builder matching based on domain overlap and keyword analysis
+- **Public REST API** — Open endpoints at `/api/v1/` for researchers, builders, papers, recommendations, and stats
+- **Embeddable Badges** — SVG badges showing researcher impact scores, embeddable on websites and READMEs
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15** (App Router) + TypeScript + Tailwind CSS
+- **react-force-graph-2d** for graph visualization
+- Static JSON seed data (no database required)
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add researchers, builders, paper→product links, and code.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
