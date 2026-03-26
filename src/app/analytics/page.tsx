@@ -50,9 +50,9 @@ export default function AnalyticsPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-        {/* Builder Adoption Score Leaderboard */}
+        {/* Applied Impact Index Leaderboard */}
         <div>
-          <h2 className="text-lg font-semibold mb-1">Builder Adoption Score Leaderboard</h2>
+          <h2 className="text-lg font-semibold mb-1">Applied Impact Index Leaderboard</h2>
           <p className="text-xs text-white/30 mb-4">Researchers ranked by builder-declared product usage</p>
           <div className="space-y-2">
             {analytics.impactLeaderboard.map(({ researcher, score }, i) => (
@@ -190,9 +190,9 @@ export default function AnalyticsPage() {
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
         <h2 className="text-sm font-semibold mb-2">About These Metrics (Methodology v1.0)</h2>
         <p className="text-xs text-white/40 leading-relaxed mb-3">
-          The <strong className="text-amber-400">Builder Adoption Score (BAS)</strong> measures
+          The <strong className="text-amber-400">Applied Impact Index (AII)</strong> measures
           real-world product adoption of academic research based on builder-declared usage. Unlike citation-based metrics
-          (h-index, impact factor) or attention-based metrics (Altmetric score), BAS tracks how many
+          (h-index, impact factor) or attention-based metrics (Altmetric score), AII tracks how many
           products and projects were actually built using a researcher&apos;s work. The score combines
           four components: Product Adoption Count (40%), Domain Breadth (30%), Foundation Index (20%),
           and Translation Rate (10%). The <strong className="text-emerald-400">Translation Rate</strong> measures

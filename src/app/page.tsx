@@ -168,11 +168,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Builder Adoption Score Leaderboard */}
+      {/* Applied Impact Index Leaderboard */}
       {topImpactResearchers.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 py-12">
           <div className="mb-6">
-            <h2 className="text-xl font-semibold">Builder Adoption Score</h2>
+            <h2 className="text-xl font-semibold">Applied Impact Index</h2>
             <p className="text-sm text-white/40 mt-1">
               Ranked by real-world product adoption, not just citations
             </p>
@@ -202,7 +202,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 text-right">
                     <span className="text-2xl font-bold text-amber-400">{overallScore}</span>
-                    <p className="text-[9px] text-white/30">BAS</p>
+                    <p className="text-[9px] text-white/30">AII</p>
                   </div>
                 </div>
               </Link>

@@ -1,7 +1,7 @@
 import { Researcher, Paper, Project, ResearchDomain } from "./types";
 
 /**
- * Builder Adoption Score (BAS) — Methodology v1.0
+ * Applied Impact Index (AII) — Methodology v1.0
  *
  * Measures real-world product adoption of research. This is NOT a measure
  * of research quality — it reflects how many builder projects have declared

@@ -2,7 +2,7 @@
 
 ## Phase 1: Foundation (CURRENT)
 - [x] Open-source scoring function
-- [ ] Rename to "Builder Adoption Score" (not "Research Impact Score")
+- [ ] Rename to "Applied Impact Index" (not "Research Impact Score")
 - [ ] Add link provenance model (source_type, evidence_url, confidence)
 - [ ] Add disclaimers on all score displays
 - [ ] Only show profiles with score > 0
@@ -52,7 +52,7 @@
 | SPECTER2 | Scientific paper embeddings (open weights) | Free (local) |
 
 ## Legal Safeguards
-- Score named "Builder Adoption Score" — measures adoption, not quality
+- Score named "Applied Impact Index" — measures adoption, not quality
 - Only show profiles with score > 0
 - Disclaimer on every score: "Reflects builder-declared usage. Not a measure of research quality."
 - Opt-out mechanism for researchers
