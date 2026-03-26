@@ -50,10 +50,10 @@ export default function AnalyticsPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-        {/* Research Impact Score Leaderboard */}
+        {/* Builder Adoption Score Leaderboard */}
         <div>
-          <h2 className="text-lg font-semibold mb-1">Research Impact Score Leaderboard</h2>
-          <p className="text-xs text-white/30 mb-4">Researchers ranked by real-world product adoption</p>
+          <h2 className="text-lg font-semibold mb-1">Builder Adoption Score Leaderboard</h2>
+          <p className="text-xs text-white/30 mb-4">Researchers ranked by builder-declared product usage</p>
           <div className="space-y-2">
             {analytics.impactLeaderboard.map(({ researcher, score }, i) => (
               <Link
@@ -188,16 +188,20 @@ export default function AnalyticsPage() {
 
       {/* Methodology Note */}
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h2 className="text-sm font-semibold mb-2">About These Metrics</h2>
-        <p className="text-xs text-white/40 leading-relaxed">
-          The <strong className="text-amber-400">Research Impact Score (RIS)</strong> is a novel metric
-          that measures real-world product adoption of academic research. Unlike citation-based metrics
-          (h-index, impact factor) or attention-based metrics (Altmetric score), RIS tracks how many
+        <h2 className="text-sm font-semibold mb-2">About These Metrics (Methodology v1.0)</h2>
+        <p className="text-xs text-white/40 leading-relaxed mb-3">
+          The <strong className="text-amber-400">Builder Adoption Score (BAS)</strong> measures
+          real-world product adoption of academic research based on builder-declared usage. Unlike citation-based metrics
+          (h-index, impact factor) or attention-based metrics (Altmetric score), BAS tracks how many
           products and projects were actually built using a researcher&apos;s work. The score combines
           four components: Product Adoption Count (40%), Domain Breadth (30%), Foundation Index (20%),
-          and Translation Rate (10%). The <strong className="text-emerald-400">Research Translation Rate</strong> measures
+          and Translation Rate (10%). The <strong className="text-emerald-400">Translation Rate</strong> measures
           what percentage of papers have at least one real-world product — a metric no existing platform
           (Altmetric, PlumX, Overton, Dimensions, Lens.org, or Google Scholar) currently provides.
+        </p>
+        <p className="text-[10px] text-white/25 italic">
+          Disclaimer: Scores reflect builder-declared project usage. They are not a measure of research quality.
+          Scoring methodology is open source and reproducible. Data is licensed CC0.
         </p>
       </div>
     </div>

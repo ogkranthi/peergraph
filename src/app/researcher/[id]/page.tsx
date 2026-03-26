@@ -1,6 +1,6 @@
 import { getResearchers, getResearcherById, getResearcherPapers, getResearcherCoAuthors, getResearcherProducts, getProjects, getBuilders } from "@/lib/data";
 import { suggestBuildersForResearcher } from "@/lib/recommendations";
-import { calculateResearchImpactScore } from "@/lib/impact-score";
+import { calculateResearchImpactScore, SCORE_DISCLAIMER } from "@/lib/impact-score";
 import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -20,7 +20,7 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
   const allProjects = getProjects();
   const allBuilders = getBuilders();
 
-  // Research Impact Score
+  // Builder Adoption Score
   const impactScore = calculateResearchImpactScore(researcher, papers, allProjects);
 
   // AI-suggested builders who might benefit from this researcher's work
@@ -55,13 +55,13 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        {/* Research Impact Score */}
+        {/* Builder Adoption Score */}
         {impactScore.overallScore > 0 && (
           <div className="mb-8 p-5 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl">
             <div className="flex items-center justify-between mb-3">
               <div>
-                <h2 className="text-sm font-medium text-amber-400 uppercase tracking-wider">Research Impact Score</h2>
-                <p className="text-[10px] text-white/30 mt-0.5">Measures real-world product adoption, not just citations</p>
+                <h2 className="text-sm font-medium text-amber-400 uppercase tracking-wider">Builder Adoption Score</h2>
+                <p className="text-[10px] text-white/30 mt-0.5">{SCORE_DISCLAIMER}</p>
               </div>
               <div className="text-right">
                 <span className="text-3xl font-bold text-amber-400">{impactScore.overallScore}</span>

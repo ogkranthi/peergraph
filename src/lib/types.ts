@@ -66,6 +66,22 @@ export interface Builder {
   created_at: string;
 }
 
+// ============ Link Provenance ============
+
+export type LinkSourceType =
+  | "maintainer_claim"    // Builder/maintainer self-declared
+  | "readme_extraction"   // Automated: extracted from README/docs
+  | "community"           // Community-contributed
+  | "ai_detected";        // AI-detected via semantic similarity
+
+export interface PaperLink {
+  paper_id: string;
+  source_type: LinkSourceType;
+  evidence_url: string;   // URL where the claim can be verified
+  confidence: number;     // 0–100
+  added_at: string;
+}
+
 export interface Project {
   id: string;
   builder_id: string;
@@ -74,7 +90,8 @@ export interface Project {
   repo_url: string;
   live_url: string;
   domains: ResearchDomain[];
-  paper_ids: string[]; // linked paper IDs
+  paper_ids: string[];        // simple list (backward compat)
+  paper_links?: PaperLink[];  // rich provenance (Phase 1+)
   created_at: string;
 }
 

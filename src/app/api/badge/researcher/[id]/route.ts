@@ -28,8 +28,8 @@ export async function GET(
   const scoreWidth = 90;
   const totalWidth = nameWidth + scoreWidth;
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="28" role="img" aria-label="${name}: RIS ${score}">
-  <title>${name} — Research Impact Score: ${score} | ${products} products, ${domains} domains</title>
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="28" role="img" aria-label="${name}: BAS ${score}">
+  <title>${name} — Builder Adoption Score: ${score} | ${products} products, ${domains} domains</title>
   <linearGradient id="s" x2="0" y2="100%">
     <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
     <stop offset="1" stop-opacity=".1"/>
@@ -42,7 +42,7 @@ export async function GET(
   </g>
   <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
     <text x="${nameWidth / 2}" y="18.5" fill="#fff">${name}</text>
-    <text x="${nameWidth + scoreWidth / 2}" y="18.5" fill="#fff" font-weight="bold">RIS ${score}</text>
+    <text x="${nameWidth + scoreWidth / 2}" y="18.5" fill="#fff" font-weight="bold">BAS ${score}</text>
   </g>
 </svg>`;
 

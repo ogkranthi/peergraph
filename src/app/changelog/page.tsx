@@ -6,7 +6,7 @@ const CHANGELOG = [
     date: "2026-03-26",
     title: "EB1A Feature Suite",
     changes: [
-      "Added Research Impact Score (RIS) — a novel metric measuring real-world product adoption of research",
+      "Added Builder Adoption Score (BAS) — measures real-world product adoption based on builder-declared usage",
       "Added Impact Analytics Dashboard at /analytics with leaderboards and domain flow analysis",
       "Added Public REST API at /api/v1/ (researchers, builders, papers, recommendations, stats)",
       "Added embeddable SVG badge for researcher impact scores",

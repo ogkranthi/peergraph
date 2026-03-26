@@ -1,21 +1,33 @@
 import { Researcher, Paper, Project, ResearchDomain } from "./types";
 
 /**
- * Research Impact Score (RIS)
+ * Builder Adoption Score (BAS) — Methodology v1.0
  *
- * A novel metric that measures real-world product adoption of research,
- * NOT just academic citations. No existing tool (Altmetric, PlumX, Overton,
- * Dimensions, Lens.org, Google Scholar) measures paper→product adoption.
+ * Measures real-world product adoption of research. This is NOT a measure
+ * of research quality — it reflects how many builder projects have declared
+ * usage of a researcher's papers.
+ *
+ * No existing tool (Altmetric, PlumX, Overton, Dimensions, Lens.org,
+ * Google Scholar) measures paper→product adoption.
  *
  * Components:
- * 1. Product Adoption Count — How many builder projects use this researcher's papers?
- * 2. Domain Breadth — How many distinct product domains do their papers influence?
- * 3. Foundation Index — Diversity of projects using their work (Gini-like)
- * 4. Translation Rate — What % of their papers have at least one product?
+ * 1. Product Adoption Count (40%) — How many builder projects use this researcher's papers?
+ * 2. Domain Breadth (30%) — How many distinct product domains do their papers influence?
+ * 3. Foundation Index (20%) — Diversity of projects using their work (normalized entropy)
+ * 4. Translation Rate (10%) — What % of their papers have at least one product?
  *
  * Score = (adoption × 0.4) + (breadth × 0.3) + (foundation × 0.2) + (translation × 0.1)
  * Normalized to 0–100.
+ *
+ * Disclaimer: Reflects builder-declared usage. Not a measure of research quality.
+ * Methodology: https://peergraph.ai/methodology
+ * License: MIT (code), CC0 (computed scores)
  */
+
+export const SCORING_METHODOLOGY_VERSION = "1.0";
+
+export const SCORE_DISCLAIMER =
+  "Reflects builder-declared project usage. Not a measure of research quality.";
 
 // ============ Types ============
 
@@ -30,6 +42,7 @@ export interface PaperImpactScore {
 export interface ResearchImpactScore {
   researcherId: string;
   overallScore: number; // 0–100
+  methodologyVersion: string;
   breakdown: {
     productAdoption: number; // raw count of projects using their papers
     domainBreadth: number; // number of distinct product domains influenced
@@ -156,6 +169,7 @@ export function calculateResearchImpactScore(
   return {
     researcherId: researcher.id,
     overallScore,
+    methodologyVersion: SCORING_METHODOLOGY_VERSION,
     breakdown: {
       productAdoption,
       domainBreadth,

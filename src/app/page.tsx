@@ -168,19 +168,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Research Impact Score Leaderboard */}
+      {/* Builder Adoption Score Leaderboard */}
       {topImpactResearchers.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 py-12">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-xl font-semibold">Research Impact Score</h2>
-              <p className="text-sm text-white/40 mt-1">
-                Ranked by real-world product adoption, not just citations
-              </p>
-            </div>
-            <Link href="/analytics" className="text-sm text-amber-400 hover:text-amber-300 transition-colors">
-              View Analytics &rarr;
-            </Link>
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold">Builder Adoption Score</h2>
+            <p className="text-sm text-white/40 mt-1">
+              Ranked by real-world product adoption, not just citations
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {topImpactResearchers.map(({ researcher, overallScore, breakdown }, i) => (
@@ -207,7 +202,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 text-right">
                     <span className="text-2xl font-bold text-amber-400">{overallScore}</span>
-                    <p className="text-[9px] text-white/30">RIS</p>
+                    <p className="text-[9px] text-white/30">BAS</p>
                   </div>
                 </div>
               </Link>
