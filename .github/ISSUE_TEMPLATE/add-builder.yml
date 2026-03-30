@@ -1,7 +1,7 @@
 name: Add a Builder
 description: Add a real AI builder/founder to PeerGraph.ai
 title: "[Builder] "
-labels: ["data", "good first issue"]
+labels: ["data", "add-builder"]
 body:
   - type: markdown
     attributes:

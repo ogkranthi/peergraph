@@ -1,7 +1,7 @@
 name: Add a Researcher
 description: Add an AI researcher to PeerGraph.ai
 title: "[Researcher] "
-labels: ["data", "good first issue"]
+labels: ["data", "add-researcher"]
 body:
   - type: markdown
     attributes:

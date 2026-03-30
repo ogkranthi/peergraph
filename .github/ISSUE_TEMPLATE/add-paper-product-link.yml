@@ -1,7 +1,7 @@
 name: Add a Paper → Product Link
 description: Link a research paper to a product built from it (the core data primitive!)
 title: "[Link] "
-labels: ["data", "paper-product-link", "good first issue"]
+labels: ["data", "paper-product-link"]
 body:
   - type: markdown
     attributes:
