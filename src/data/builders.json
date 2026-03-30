@@ -6,8 +6,17 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/11986836",
     "bio": "CEO of LangChain. Building the open-source framework for LLM-powered applications — agents, chains, and retrieval.",
     "city": "San Francisco",
-    "skills": ["LLMs", "python", "agents", "RAG", "open source"],
-    "looking_for": ["collaborator", "hiring"],
+    "skills": [
+      "LLMs",
+      "python",
+      "agents",
+      "RAG",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
     "website_url": "https://langchain.com",
     "twitter_url": "https://twitter.com/hwchase17",
     "linkedin_url": "",
@@ -20,8 +29,17 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/7057476",
     "bio": "CEO & Co-founder of Liquid AI. Invented Liquid Neural Networks at MIT CSAIL. Building compact, efficient foundation models.",
     "city": "Cambridge",
-    "skills": ["neural networks", "robotics", "autonomous systems", "python", "research"],
-    "looking_for": ["collaborator", "hiring"],
+    "skills": [
+      "neural networks",
+      "robotics",
+      "autonomous systems",
+      "python",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
     "website_url": "https://liquid.ai",
     "twitter_url": "https://twitter.com/raboramin",
     "linkedin_url": "",
@@ -34,8 +52,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/6449364",
     "bio": "CSO & Co-founder of Liquid AI. Creator of MIT 6.S191 (Introduction to Deep Learning). Research on robust autonomous systems.",
     "city": "Cambridge",
-    "skills": ["deep learning", "autonomous vehicles", "computer vision", "teaching", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "deep learning",
+      "autonomous vehicles",
+      "computer vision",
+      "teaching",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://aamini.github.io",
     "twitter_url": "",
     "linkedin_url": "",
@@ -48,8 +74,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/11040765",
     "bio": "CTO & Co-founder of Liquid AI. Co-invented Liquid Neural Networks. Expert in neural ODEs and continuous-time models.",
     "city": "Cambridge",
-    "skills": ["neural ODEs", "python", "pytorch", "robotics", "research"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "neural ODEs",
+      "python",
+      "pytorch",
+      "robotics",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://mlech26l.github.io",
     "twitter_url": "",
     "linkedin_url": "",
@@ -62,8 +96,17 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/2151953",
     "bio": "Co-founder of Suno AI. Building AI music generation — anyone can make a song with just text. Previously at Kensho (S&P Global).",
     "city": "Cambridge",
-    "skills": ["audio ML", "generative AI", "python", "music", "transformers"],
-    "looking_for": ["collaborator", "hiring"],
+    "skills": [
+      "audio ML",
+      "generative AI",
+      "python",
+      "music",
+      "transformers"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
     "website_url": "https://suno.com",
     "twitter_url": "",
     "linkedin_url": "",
@@ -76,8 +119,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/2438960",
     "bio": "Chief Scientist at Databricks. Creator of the Lottery Ticket Hypothesis. Previously led MosaicML (acquired by Databricks). Harvard/MIT.",
     "city": "Boston",
-    "skills": ["model training", "pruning", "LLMs", "distributed systems", "research"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "model training",
+      "pruning",
+      "LLMs",
+      "distributed systems",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://www.jfrankle.com",
     "twitter_url": "https://twitter.com/jfrankle",
     "linkedin_url": "",
@@ -90,8 +141,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/241138",
     "bio": "Building Eureka Labs — AI-native education. Created nanoGPT and built neural networks from scratch on YouTube. Previously Director of AI at Tesla, founding member of OpenAI.",
     "city": "San Francisco",
-    "skills": ["deep learning", "computer vision", "LLMs", "education", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "deep learning",
+      "computer vision",
+      "LLMs",
+      "education",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://karpathy.ai",
     "twitter_url": "https://twitter.com/kabornyakov",
     "linkedin_url": "",
@@ -104,8 +163,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/9599",
     "bio": "Creator of Datasette and the llm CLI tool. Django co-creator. Building open-source tools for exploring data and working with LLMs.",
     "city": "San Francisco",
-    "skills": ["python", "LLMs", "databases", "open source", "data journalism"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "python",
+      "LLMs",
+      "databases",
+      "open source",
+      "data journalism"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://simonwillison.net",
     "twitter_url": "https://twitter.com/simonw",
     "linkedin_url": "",
@@ -118,8 +185,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/13041",
     "bio": "CEO of Vercel. Built v0 — AI-powered UI generation from natural language. Created Next.js, Socket.io. Pushing the frontier of AI-assisted development.",
     "city": "San Francisco",
-    "skills": ["react", "typescript", "AI coding", "infrastructure", "open source"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "react",
+      "typescript",
+      "AI coding",
+      "infrastructure",
+      "open source"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://vercel.com",
     "twitter_url": "https://twitter.com/rauchg",
     "linkedin_url": "",
@@ -132,8 +207,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/6895706",
     "bio": "PhD at UC Berkeley. Building DocETL — AI-powered data processing pipelines. Research on ML data quality and LLM evaluation.",
     "city": "Berkeley",
-    "skills": ["ML systems", "data quality", "python", "LLMs", "research"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "ML systems",
+      "data quality",
+      "python",
+      "LLMs",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://shreya-shankar.com",
     "twitter_url": "https://twitter.com/sh_reya",
     "linkedin_url": "",
@@ -146,8 +229,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/113759",
     "bio": "Founder of comma.ai (self-driving) and tinygrad (tiny neural network framework). Building simple, fast, open-source AI infrastructure.",
     "city": "San Diego",
-    "skills": ["hardware", "compilers", "self-driving", "pytorch", "open source"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "hardware",
+      "compilers",
+      "self-driving",
+      "pytorch",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://geohot.com",
     "twitter_url": "https://twitter.com/realGeorgeHotz",
     "linkedin_url": "",
@@ -160,8 +251,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/23265820",
     "bio": "Research Scientist at OpenAI. Invented chain-of-thought prompting. Previously at Google Brain. Making language models reason step by step.",
     "city": "San Francisco",
-    "skills": ["LLMs", "prompting", "reasoning", "python", "research"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "LLMs",
+      "prompting",
+      "reasoning",
+      "python",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://jasonwei20.github.io",
     "twitter_url": "https://twitter.com/_jasonwei",
     "linkedin_url": "",
@@ -174,8 +273,17 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=EM&backgroundColor=34d399",
     "bio": "Founder of Stability AI, the company behind Stable Diffusion. Championed open-source generative AI and democratized image generation.",
     "city": "London",
-    "skills": ["generative AI", "diffusion models", "open source", "strategy", "community"],
-    "looking_for": ["collaborator", "investor"],
+    "skills": [
+      "generative AI",
+      "diffusion models",
+      "open source",
+      "strategy",
+      "community"
+    ],
+    "looking_for": [
+      "collaborator",
+      "investor"
+    ],
     "website_url": "https://stability.ai",
     "twitter_url": "https://twitter.com/EMostaque",
     "linkedin_url": "",
@@ -188,8 +296,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/2524865",
     "bio": "Founder and CEO of Scale AI. Built the data infrastructure powering AI at OpenAI, Meta, and the US military. Youngest self-made billionaire.",
     "city": "San Francisco",
-    "skills": ["data labeling", "ML infrastructure", "python", "leadership", "defense AI"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "data labeling",
+      "ML infrastructure",
+      "python",
+      "leadership",
+      "defense AI"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://scale.com",
     "twitter_url": "https://twitter.com/alexandr_wang",
     "linkedin_url": "",
@@ -202,8 +318,17 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CD&backgroundColor=34d399",
     "bio": "Co-founder and CEO of Hugging Face, the GitHub of machine learning. Built the open-source platform hosting 500K+ models and transformers library.",
     "city": "New York",
-    "skills": ["open source", "transformers", "ML platform", "community", "python"],
-    "looking_for": ["collaborator", "hiring"],
+    "skills": [
+      "open source",
+      "transformers",
+      "ML platform",
+      "community",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
     "website_url": "https://huggingface.co",
     "twitter_url": "https://twitter.com/ClementDelangue",
     "linkedin_url": "",
@@ -216,8 +341,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/279531",
     "bio": "Co-founder of Pioneer Fund. Former Head of AI at Apple and YC partner. Angel investor in GitHub, Figma, Cruise, and Coinbase.",
     "city": "San Francisco",
-    "skills": ["AI investing", "product", "apple ML", "startups", "strategy"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "AI investing",
+      "product",
+      "apple ML",
+      "startups",
+      "strategy"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://danielgross.com",
     "twitter_url": "https://twitter.com/danielgross",
     "linkedin_url": "",
@@ -230,8 +363,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/5933",
     "bio": "Former CEO of GitHub. AI investor and builder. Co-leads Pioneer Fund with Daniel Gross. Previously CEO of Xamarin (acquired by Microsoft).",
     "city": "San Francisco",
-    "skills": ["open source", "developer tools", "AI investing", "leadership", "product"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "open source",
+      "developer tools",
+      "AI investing",
+      "leadership",
+      "product"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://nat.org",
     "twitter_url": "https://twitter.com/natfriedman",
     "linkedin_url": "",
@@ -244,8 +385,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/35577566",
     "bio": "Member of Technical Staff at Google DeepMind. Former first DevRel hire at OpenAI. Bridges AI research and developer communities.",
     "city": "San Francisco",
-    "skills": ["developer relations", "LLMs", "API design", "community", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "developer relations",
+      "LLMs",
+      "API design",
+      "community",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://logankilpatrick.com",
     "twitter_url": "https://twitter.com/OfficialLoganK",
     "linkedin_url": "",
@@ -258,8 +407,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/6764957",
     "bio": "Founder of smol.ai and editor of Latent Space, the leading AI engineering podcast and newsletter. Coined the AI Engineer role definition.",
     "city": "San Francisco",
-    "skills": ["AI engineering", "writing", "community", "typescript", "LLMs"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "AI engineering",
+      "writing",
+      "community",
+      "typescript",
+      "LLMs"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://www.swyx.io",
     "twitter_url": "https://twitter.com/swyx",
     "linkedin_url": "",
@@ -272,8 +429,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/346999",
     "bio": "Co-founder of fast.ai and CEO of Answer.AI. Made deep learning accessible to millions through free courses. Former President of Kaggle.",
     "city": "San Francisco",
-    "skills": ["deep learning", "python", "education", "NLP", "computer vision"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "deep learning",
+      "python",
+      "education",
+      "NLP",
+      "computer vision"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://jeremy.fast.ai",
     "twitter_url": "https://twitter.com/jeremyphoward",
     "linkedin_url": "",
@@ -286,8 +451,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/2041697",
     "bio": "AI researcher and YouTuber who explains cutting-edge ML papers to 250K+ subscribers. Co-founded OpenAssistant. Makes research accessible.",
     "city": "Zurich",
-    "skills": ["research communication", "deep learning", "NLP", "open source", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "research communication",
+      "deep learning",
+      "NLP",
+      "open source",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://www.youtube.com/@YannicKilcher",
     "twitter_url": "https://twitter.com/yaborinyakov",
     "linkedin_url": "",
@@ -300,8 +473,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/587518",
     "bio": "CEO and founder of Replit. Building the AI-powered coding platform used by 30M+ developers. Previously at Facebook and Codecademy.",
     "city": "San Francisco",
-    "skills": ["AI coding", "developer tools", "javascript", "infrastructure", "product"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "AI coding",
+      "developer tools",
+      "javascript",
+      "infrastructure",
+      "product"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://replit.com",
     "twitter_url": "https://twitter.com/amasad",
     "linkedin_url": "",
@@ -314,8 +495,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/148844",
     "bio": "VP of Product and Partnerships at OpenAI. Built the API platform powering ChatGPT and GPT-4. Previously at Anchovi Labs and Dropbox.",
     "city": "San Francisco",
-    "skills": ["ML platforms", "API design", "product", "computer vision", "robotics"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "ML platforms",
+      "API design",
+      "product",
+      "computer vision",
+      "robotics"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://openai.com",
     "twitter_url": "https://twitter.com/npew",
     "linkedin_url": "",
@@ -328,8 +517,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/312142",
     "bio": "Co-founder and President of OpenAI. Former CTO of Stripe. Led the engineering efforts behind GPT-4 and ChatGPT.",
     "city": "San Francisco",
-    "skills": ["AI systems", "engineering leadership", "infrastructure", "python", "strategy"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "AI systems",
+      "engineering leadership",
+      "infrastructure",
+      "python",
+      "strategy"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://gregbrockman.com",
     "twitter_url": "https://twitter.com/gabornyakov",
     "linkedin_url": "",
@@ -342,8 +539,17 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MM&backgroundColor=34d399",
     "bio": "Founder of Thinking Machines Lab. Former CTO of OpenAI who led the launches of ChatGPT, GPT-4, and DALL-E. Previously at Tesla Autopilot.",
     "city": "San Francisco",
-    "skills": ["AI leadership", "product", "engineering", "robotics", "strategy"],
-    "looking_for": ["hiring", "collaborator"],
+    "skills": [
+      "AI leadership",
+      "product",
+      "engineering",
+      "robotics",
+      "strategy"
+    ],
+    "looking_for": [
+      "hiring",
+      "collaborator"
+    ],
     "website_url": "",
     "twitter_url": "https://twitter.com/mabornyakov",
     "linkedin_url": "",
@@ -356,8 +562,17 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AR&backgroundColor=34d399",
     "bio": "CEO of Snorkel AI. Stanford PhD under Chris Re. Pioneered programmatic data labeling — write functions instead of hand-labeling data.",
     "city": "Boston",
-    "skills": ["weak supervision", "data-centric AI", "python", "ML systems", "research"],
-    "looking_for": ["hiring", "collaborator"],
+    "skills": [
+      "weak supervision",
+      "data-centric AI",
+      "python",
+      "ML systems",
+      "research"
+    ],
+    "looking_for": [
+      "hiring",
+      "collaborator"
+    ],
     "website_url": "https://snorkel.ai",
     "twitter_url": "",
     "linkedin_url": "",
@@ -370,8 +585,16 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/20600",
     "bio": "CEO of Weights & Biases (W&B). The experiment tracking platform used by OpenAI, DeepMind, and thousands of ML teams. Previously founded CrowdFlower.",
     "city": "Boston",
-    "skills": ["MLOps", "experiment tracking", "python", "distributed ML", "open source"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "MLOps",
+      "experiment tracking",
+      "python",
+      "distributed ML",
+      "open source"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://wandb.ai",
     "twitter_url": "https://twitter.com/l2k",
     "linkedin_url": "",
@@ -384,8 +607,17 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=JN&backgroundColor=34d399",
     "bio": "Co-founder of Cleanlab. Building data-centric AI tools to find and fix label errors in datasets automatically. Harvard + Google Brain alum.",
     "city": "Cambridge",
-    "skills": ["data quality", "confident learning", "python", "ML", "research"],
-    "looking_for": ["collaborator", "hiring"],
+    "skills": [
+      "data quality",
+      "confident learning",
+      "python",
+      "ML",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
     "website_url": "https://cleanlab.ai",
     "twitter_url": "",
     "linkedin_url": "",
@@ -398,8 +630,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MP&backgroundColor=34d399",
     "bio": "Co-founder of Neurala. Building edge AI and lifelong-learning neural networks for visual inspection and robotics. Boston-based since 2006.",
     "city": "Boston",
-    "skills": ["edge AI", "computer vision", "lifelong learning", "robotics", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "edge AI",
+      "computer vision",
+      "lifelong learning",
+      "robotics",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://neurala.com",
     "twitter_url": "",
     "linkedin_url": "",
@@ -412,8 +652,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=JF&backgroundColor=34d399",
     "bio": "CEO of DataRobot. Building the enterprise automated machine learning platform from Boston. Helping companies deploy ML without deep expertise.",
     "city": "Boston",
-    "skills": ["AutoML", "enterprise AI", "python", "MLOps", "data science"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "AutoML",
+      "enterprise AI",
+      "python",
+      "MLOps",
+      "data science"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://datarobot.com",
     "twitter_url": "",
     "linkedin_url": "",
@@ -426,8 +674,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=HK&backgroundColor=34d399",
     "bio": "CEO of Lunit. Boston-based AI for cancer detection in medical imaging. FDA-cleared products used in 4000+ hospitals worldwide.",
     "city": "Boston",
-    "skills": ["medical imaging", "computer vision", "healthcare AI", "deep learning", "FDA"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "medical imaging",
+      "computer vision",
+      "healthcare AI",
+      "deep learning",
+      "FDA"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://lunit.io",
     "twitter_url": "",
     "linkedin_url": "",
@@ -440,8 +696,17 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/6598478",
     "bio": "CEO of Cohere. Co-author of 'Attention Is All You Need' — the Transformer paper. Building enterprise LLMs from Toronto, with a growing Boston presence.",
     "city": "Cambridge",
-    "skills": ["transformers", "NLP", "enterprise AI", "python", "research"],
-    "looking_for": ["hiring", "collaborator"],
+    "skills": [
+      "transformers",
+      "NLP",
+      "enterprise AI",
+      "python",
+      "research"
+    ],
+    "looking_for": [
+      "hiring",
+      "collaborator"
+    ],
     "website_url": "https://cohere.com",
     "twitter_url": "https://twitter.com/aidangomez",
     "linkedin_url": "",
@@ -454,8 +719,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AJ&backgroundColor=34d399",
     "bio": "Co-founder of Run:ai. Building GPU orchestration for AI workloads — fractional GPUs, scheduling, and cluster management. Acquired by NVIDIA 2024.",
     "city": "Boston",
-    "skills": ["GPU orchestration", "kubernetes", "distributed computing", "MLOps", "infrastructure"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "GPU orchestration",
+      "kubernetes",
+      "distributed computing",
+      "MLOps",
+      "infrastructure"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://run.ai",
     "twitter_url": "",
     "linkedin_url": "",
@@ -468,8 +741,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AF&backgroundColor=34d399",
     "bio": "CEO of Allen Institute for AI (AI2) and UW professor. Built YOLO (real-time object detection) and leads AI2's mission to do AI research for the common good.",
     "city": "Seattle",
-    "skills": ["computer vision", "NLP", "open source", "research", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "computer vision",
+      "NLP",
+      "open source",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://allenai.org",
     "twitter_url": "",
     "linkedin_url": "",
@@ -482,8 +763,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MS&backgroundColor=34d399",
     "bio": "Engineering Director at Allen AI (AI2). Led development of Semantic Scholar, the AI-powered academic search engine used by millions of researchers.",
     "city": "Seattle",
-    "skills": ["search", "NLP", "data engineering", "python", "open source"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "search",
+      "NLP",
+      "data engineering",
+      "python",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://www.semanticscholar.org",
     "twitter_url": "",
     "linkedin_url": "",
@@ -496,8 +785,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AA&backgroundColor=34d399",
     "bio": "Co-founder of Lexion AI. Seattle-based AI contract management platform. Uses NLP to automate legal document review for enterprises.",
     "city": "Seattle",
-    "skills": ["NLP", "legal tech", "enterprise AI", "python", "product"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "NLP",
+      "legal tech",
+      "enterprise AI",
+      "python",
+      "product"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://lexion.ai",
     "twitter_url": "",
     "linkedin_url": "",
@@ -510,8 +807,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DG&backgroundColor=34d399",
     "bio": "Lead engineer at Allen AI. Built OLMo, the fully open language model with open data, code, and weights. Making LLM research reproducible.",
     "city": "Seattle",
-    "skills": ["LLMs", "python", "distributed training", "open source", "NLP"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "LLMs",
+      "python",
+      "distributed training",
+      "open source",
+      "NLP"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "https://allenai.org/olmo",
     "twitter_url": "",
     "linkedin_url": "",
@@ -524,8 +829,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=RF&backgroundColor=34d399",
     "bio": "Engineering lead at Xnor.ai (acquired by Apple). Built ultra-efficient edge AI that runs deep learning on $5 chips. Pioneer of binary neural networks in Seattle.",
     "city": "Seattle",
-    "skills": ["edge AI", "model compression", "computer vision", "C++", "python"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "edge AI",
+      "model compression",
+      "computer vision",
+      "C++",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "",
     "twitter_url": "",
     "linkedin_url": "",
@@ -538,8 +851,16 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MF&backgroundColor=34d399",
     "bio": "Co-founder of Mighty AI (acquired by Uber). Built Seattle's first large-scale training data platform for autonomous vehicles. Now advising AI startups.",
     "city": "Seattle",
-    "skills": ["autonomous vehicles", "data labeling", "computer vision", "product", "startups"],
-    "looking_for": ["collaborator"],
+    "skills": [
+      "autonomous vehicles",
+      "data labeling",
+      "computer vision",
+      "product",
+      "startups"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
     "website_url": "",
     "twitter_url": "",
     "linkedin_url": "",
@@ -552,10 +873,1175 @@
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SZ&backgroundColor=34d399",
     "bio": "Co-founder of Textio. Seattle-based augmented writing platform that uses NLP to predict how language will perform. Used by Fortune 500 for hiring.",
     "city": "Seattle",
-    "skills": ["NLP", "augmented writing", "data science", "python", "product"],
-    "looking_for": ["hiring"],
+    "skills": [
+      "NLP",
+      "augmented writing",
+      "data science",
+      "python",
+      "product"
+    ],
+    "looking_for": [
+      "hiring"
+    ],
     "website_url": "https://textio.com",
     "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b41",
+    "github_username": "bcatanzaro",
+    "name": "Bryan Catanzaro",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=BC&backgroundColor=34d399",
+    "bio": "VP of Applied Deep Learning at NVIDIA. Led teams behind CUDA deep learning libraries, Megatron-LM, and GPU-accelerated AI infrastructure.",
+    "city": "Santa Clara",
+    "skills": [
+      "CUDA",
+      "deep learning",
+      "GPU computing",
+      "distributed training",
+      "C++"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://ctnzr.io",
+    "twitter_url": "https://twitter.com/caborin",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b42",
+    "github_username": "soumith",
+    "name": "Soumith Chintala",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SC&backgroundColor=34d399",
+    "bio": "Co-creator of PyTorch at Meta AI. Building the most widely-used deep learning framework in research and production.",
+    "city": "NYC",
+    "skills": [
+      "PyTorch",
+      "deep learning",
+      "open source",
+      "distributed systems",
+      "C++"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://soumith.ch",
+    "twitter_url": "https://twitter.com/soumaborinth",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b43",
+    "github_username": "thomwolf",
+    "name": "Thomas Wolf",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=TW&backgroundColor=34d399",
+    "bio": "Co-founder and CSO of Hugging Face. Leading the open-source movement in NLP and making transformer models accessible to all.",
+    "city": "Paris",
+    "skills": [
+      "NLP",
+      "transformers",
+      "open source",
+      "python",
+      "machine learning"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://huggingface.co",
+    "twitter_url": "https://twitter.com/Thom_Wolf",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b44",
+    "github_username": "raborain",
+    "name": "Raia Hadsell",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=RH&backgroundColor=34d399",
+    "bio": "VP of Research at Google DeepMind. Pioneer in continual learning, robotics, and representation learning for embodied AI.",
+    "city": "London",
+    "skills": [
+      "robotics",
+      "reinforcement learning",
+      "continual learning",
+      "representation learning",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://raiahadsell.com",
+    "twitter_url": "https://twitter.com/raborainraia",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b45",
+    "github_username": "rromb",
+    "name": "Robin Rombach",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=RR&backgroundColor=34d399",
+    "bio": "Co-creator of Stable Diffusion and co-founder of Black Forest Labs. Pioneered latent diffusion models for high-resolution image synthesis.",
+    "city": "Berlin",
+    "skills": [
+      "diffusion models",
+      "computer vision",
+      "generative AI",
+      "PyTorch",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://blackforestlabs.ai",
+    "twitter_url": "https://twitter.com/robinrobinromb",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b46",
+    "github_username": "plewis",
+    "name": "Patrick Lewis",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=PL&backgroundColor=34d399",
+    "bio": "Researcher at Cohere. Co-author of RAG (Retrieval-Augmented Generation) and leading work on knowledge-grounded language models.",
+    "city": "London",
+    "skills": [
+      "NLP",
+      "RAG",
+      "information retrieval",
+      "python",
+      "transformers"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://www.patricklewis.io",
+    "twitter_url": "https://twitter.com/paboratrick_lew",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b47",
+    "github_username": "edwardjhu",
+    "name": "Edward Hu",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=EH&backgroundColor=34d399",
+    "bio": "Researcher at Microsoft. Inventor of LoRA and co-inventor of muP — enabling efficient fine-tuning and hyperparameter transfer for large models.",
+    "city": "NYC",
+    "skills": [
+      "LoRA",
+      "fine-tuning",
+      "NLP",
+      "python",
+      "deep learning"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://edwardjhu.com",
+    "twitter_url": "https://twitter.com/edwardhu_",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b48",
+    "github_username": "TimDettmers",
+    "name": "Tim Dettmers",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=TD&backgroundColor=34d399",
+    "bio": "Creator of bitsandbytes and QLoRA. Researcher at UW making large language models accessible through quantization and efficient fine-tuning.",
+    "city": "Seattle",
+    "skills": [
+      "quantization",
+      "LLMs",
+      "CUDA",
+      "python",
+      "efficient ML"
+    ],
+    "looking_for": [
+      "collaborator",
+      "job"
+    ],
+    "website_url": "https://timdettmers.com",
+    "twitter_url": "https://twitter.com/TimDettmers",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b49",
+    "github_username": "tridao",
+    "name": "Tri Dao",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=TDao&backgroundColor=34d399",
+    "bio": "Assistant Professor at Princeton and co-founder of Together AI. Creator of FlashAttention — the IO-aware exact attention algorithm used everywhere.",
+    "city": "Princeton",
+    "skills": [
+      "FlashAttention",
+      "systems ML",
+      "CUDA",
+      "python",
+      "efficient transformers"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://tridao.me",
+    "twitter_url": "https://twitter.com/tri_dao",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b50",
+    "github_username": "albertgu",
+    "name": "Albert Gu",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AG&backgroundColor=34d399",
+    "bio": "Assistant Professor at CMU and co-founder of Cartesia. Creator of Mamba and structured state space models (S4) for efficient sequence modeling.",
+    "city": "Pittsburgh",
+    "skills": [
+      "state space models",
+      "Mamba",
+      "deep learning",
+      "python",
+      "sequence modeling"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://cartesia.ai",
+    "twitter_url": "https://twitter.com/albertgu_",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b51",
+    "github_username": "borisdayma",
+    "name": "Boris Dayma",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=BD&backgroundColor=34d399",
+    "bio": "Creator of DALL-E Mini (Craiyon). Built the viral open-source text-to-image model that demonstrated democratized image generation.",
+    "city": "Toronto",
+    "skills": [
+      "generative AI",
+      "JAX",
+      "computer vision",
+      "transformers",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator",
+      "investor"
+    ],
+    "website_url": "https://www.craiyon.com",
+    "twitter_url": "https://twitter.com/boraborisdayma",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b52",
+    "github_username": "apolinario",
+    "name": "Apolinário Passos",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AP&backgroundColor=34d399",
+    "bio": "Machine Learning Art Engineer at Hugging Face. Building tools and demos that bridge generative AI with creative applications.",
+    "city": "Amsterdam",
+    "skills": [
+      "generative AI",
+      "Gradio",
+      "diffusion models",
+      "python",
+      "creative AI"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://huggingface.co/apolinario",
+    "twitter_url": "https://twitter.com/multiaboramodal",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b53",
+    "github_username": "JunyangLin",
+    "name": "Junyang Lin",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=JL&backgroundColor=34d399",
+    "bio": "Lead researcher at Alibaba DAMO Academy. Creator of the Qwen series of large language and multimodal models.",
+    "city": "Beijing",
+    "skills": [
+      "LLMs",
+      "multimodal AI",
+      "NLP",
+      "python",
+      "large-scale training"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://qwenlm.github.io",
+    "twitter_url": "https://twitter.com/JunyangLin",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b54",
+    "github_username": "yitay",
+    "name": "Yi Tay",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=YT&backgroundColor=34d399",
+    "bio": "Co-founder and CTO of Reka AI. Former Google Brain researcher who led UL2 and Flan-PaLM efficiency efforts.",
+    "city": "Singapore",
+    "skills": [
+      "LLMs",
+      "efficient transformers",
+      "NLP",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://reka.ai",
+    "twitter_url": "https://twitter.com/ytaboray1",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b55",
+    "github_username": "reinerpope",
+    "name": "Reiner Pope",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=RP&backgroundColor=34d399",
+    "bio": "Staff Research Engineer at Google DeepMind. Key contributor to PaLM scaling and infrastructure for training trillion-parameter models.",
+    "city": "Sydney",
+    "skills": [
+      "distributed training",
+      "TPU",
+      "JAX",
+      "large-scale ML",
+      "systems"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b56",
+    "github_username": "ludwigschmidt",
+    "name": "Ludwig Schmidt",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=LS&backgroundColor=34d399",
+    "bio": "Professor at UW and co-lead of LAION. Building massive open datasets like LAION-5B that power open-source image generation models.",
+    "city": "Seattle",
+    "skills": [
+      "datasets",
+      "computer vision",
+      "robustness",
+      "open source",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://people.csail.mit.edu/ludwigs/",
+    "twitter_url": "https://twitter.com/ludwigschmidt2",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b57",
+    "github_username": "jd-schuhmann",
+    "name": "Christoph Schuhmann",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CS&backgroundColor=34d399",
+    "bio": "Co-founder of LAION. Organized the open-source community effort behind LAION-5B, enabling Stable Diffusion and open generative AI.",
+    "city": "Hamburg",
+    "skills": [
+      "open data",
+      "community building",
+      "CLIP",
+      "datasets",
+      "education"
+    ],
+    "looking_for": [
+      "collaborator",
+      "investor"
+    ],
+    "website_url": "https://laion.ai",
+    "twitter_url": "https://twitter.com/laaborion_ai",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b58",
+    "github_username": "colah",
+    "name": "Chris Olah",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CO&backgroundColor=34d399",
+    "bio": "Co-founder of Anthropic's interpretability team. Pioneer of neural network visualization and mechanistic interpretability research.",
+    "city": "San Francisco",
+    "skills": [
+      "interpretability",
+      "neural networks",
+      "visualization",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://colah.github.io",
+    "twitter_url": "https://twitter.com/ch402",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b59",
+    "github_username": "lilianweng",
+    "name": "Lilian Weng",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=LW&backgroundColor=34d399",
+    "bio": "VP of Research at OpenAI. Known for her comprehensive blog posts that are the go-to reference for understanding ML research.",
+    "city": "San Francisco",
+    "skills": [
+      "LLMs",
+      "research",
+      "deep learning",
+      "technical writing",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://lilianweng.github.io",
+    "twitter_url": "https://twitter.com/lilaborianweng",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b60",
+    "github_username": "douwekiela",
+    "name": "Douwe Kiela",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DK&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Contextual AI. Former Meta AI researcher building RAG-native enterprise AI systems.",
+    "city": "San Francisco",
+    "skills": [
+      "RAG",
+      "NLP",
+      "multimodal AI",
+      "python",
+      "enterprise AI"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://contextual.ai",
+    "twitter_url": "https://twitter.com/dwaboraekiela",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b61",
+    "github_username": "okhat",
+    "name": "Omar Khattab",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=OK&backgroundColor=34d399",
+    "bio": "PhD at Stanford and creator of DSPy and ColBERT. Building programming frameworks for optimizing LLM pipelines beyond prompt engineering.",
+    "city": "Stanford",
+    "skills": [
+      "DSPy",
+      "information retrieval",
+      "NLP",
+      "python",
+      "LLM optimization"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://omarkhattab.com",
+    "twitter_url": "https://twitter.com/oaborarkhattab",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b62",
+    "github_username": "ofirpress",
+    "name": "Ofir Press",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=OP&backgroundColor=34d399",
+    "bio": "Researcher at Princeton. Inventor of ALiBi positional encoding enabling length generalization in transformers without position embeddings.",
+    "city": "Princeton",
+    "skills": [
+      "transformers",
+      "NLP",
+      "positional encoding",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "job"
+    ],
+    "website_url": "https://ofir.io",
+    "twitter_url": "https://twitter.com/ofirpress",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b63",
+    "github_username": "jbrownlee",
+    "name": "Jason Brownlee",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=JB&backgroundColor=34d399",
+    "bio": "Founder of Machine Learning Mastery. Published 20+ books and hundreds of tutorials making ML accessible to practitioners worldwide.",
+    "city": "Sydney",
+    "skills": [
+      "machine learning",
+      "technical writing",
+      "python",
+      "scikit-learn",
+      "education"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://machinelearningmastery.com",
+    "twitter_url": "https://twitter.com/TeachThMachine",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b64",
+    "github_username": "rasbt",
+    "name": "Sebastian Raschka",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SR&backgroundColor=34d399",
+    "bio": "Staff Research Engineer at Lightning AI. Author of 'Machine Learning with PyTorch and Scikit-Learn' and 'Build a Large Language Model From Scratch'.",
+    "city": "Austin",
+    "skills": [
+      "PyTorch",
+      "LLMs",
+      "machine learning",
+      "technical writing",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://sebastianraschka.com",
+    "twitter_url": "https://twitter.com/rasbt",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b65",
+    "github_username": "jamescalam",
+    "name": "James Briggs",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=JBr&backgroundColor=34d399",
+    "bio": "Staff Developer Advocate at Pinecone. Popular AI educator creating content on vector databases, RAG, and semantic search.",
+    "city": "London",
+    "skills": [
+      "vector databases",
+      "RAG",
+      "NLP",
+      "python",
+      "developer advocacy"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://www.pinecone.io",
+    "twitter_url": "https://twitter.com/jameaborasbriggs",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b66",
+    "github_username": "nreimers",
+    "name": "Nils Reimers",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=NR&backgroundColor=34d399",
+    "bio": "Director of ML at Cohere. Creator of sentence-transformers, the most popular library for computing dense text embeddings.",
+    "city": "Berlin",
+    "skills": [
+      "embeddings",
+      "NLP",
+      "sentence-transformers",
+      "python",
+      "information retrieval"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://www.nils-reimers.de",
+    "twitter_url": "https://twitter.com/NilsReimertsm",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b67",
+    "github_username": "lewtun",
+    "name": "Lewis Tunstall",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=LT&backgroundColor=34d399",
+    "bio": "ML Engineer at Hugging Face. Co-author of 'Natural Language Processing with Transformers' and maintainer of the TRL library for RLHF.",
+    "city": "Zurich",
+    "skills": [
+      "RLHF",
+      "NLP",
+      "transformers",
+      "python",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://huggingface.co/lewtun",
+    "twitter_url": "https://twitter.com/leaborawistunstall",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b68",
+    "github_username": "philschmid",
+    "name": "Philipp Schmid",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=PS&backgroundColor=34d399",
+    "bio": "Technical Lead at Hugging Face. Building deployment solutions and optimizing transformer inference for production at scale.",
+    "city": "Berlin",
+    "skills": [
+      "MLOps",
+      "transformers",
+      "AWS",
+      "python",
+      "model deployment"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://www.philschmid.de",
+    "twitter_url": "https://twitter.com/_philschmid",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b69",
+    "github_username": "sayakpaul",
+    "name": "Sayak Paul",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SP&backgroundColor=34d399",
+    "bio": "ML Engineer at Hugging Face. Core contributor to diffusers library and champion of efficient diffusion model inference and training.",
+    "city": "Bangalore",
+    "skills": [
+      "diffusion models",
+      "TensorFlow",
+      "python",
+      "computer vision",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator",
+      "mentor"
+    ],
+    "website_url": "https://sayak.dev",
+    "twitter_url": "https://twitter.com/RisingSayak",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b70",
+    "github_username": "rwightman",
+    "name": "Ross Wightman",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=RW&backgroundColor=34d399",
+    "bio": "ML Engineer at Hugging Face. Creator of timm (PyTorch Image Models), the definitive collection of SOTA vision model implementations.",
+    "city": "Vancouver",
+    "skills": [
+      "computer vision",
+      "PyTorch",
+      "model training",
+      "python",
+      "open source"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://huggingface.co/rwightman",
+    "twitter_url": "https://twitter.com/waboraightm",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b71",
+    "github_username": "stellaathena",
+    "name": "Stella Biderman",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SB&backgroundColor=34d399",
+    "bio": "Executive Director of EleutherAI. Leading the largest open-source AI research collective building GPT-NeoX, Pythia, and open LLMs.",
+    "city": "NYC",
+    "skills": [
+      "LLMs",
+      "open source",
+      "NLP",
+      "python",
+      "research"
+    ],
+    "looking_for": [
+      "collaborator",
+      "investor"
+    ],
+    "website_url": "https://www.eleuther.ai",
+    "twitter_url": "https://twitter.com/BlancheMinerva",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b72",
+    "github_username": "vmoens",
+    "name": "Vinicius Moens",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=VM&backgroundColor=34d399",
+    "bio": "Co-founder of Together AI. Building open-source cloud infrastructure for training, fine-tuning, and serving AI models at scale.",
+    "city": "San Francisco",
+    "skills": [
+      "distributed training",
+      "cloud infrastructure",
+      "LLMs",
+      "python",
+      "MLOps"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://together.ai",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b73",
+    "github_username": "arthurmensch",
+    "name": "Arthur Mensch",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AM&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Mistral AI. Former DeepMind researcher building open-weight frontier models from Europe.",
+    "city": "Paris",
+    "skills": [
+      "LLMs",
+      "research",
+      "open source",
+      "python",
+      "distributed training"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://mistral.ai",
+    "twitter_url": "https://twitter.com/arthuraboramensch",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b74",
+    "github_username": "hardmaru",
+    "name": "David Ha",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DH&backgroundColor=34d399",
+    "bio": "Co-founder and CEO of Sakana AI. Former Google Brain researcher pioneering nature-inspired AI and evolutionary model merging in Tokyo.",
+    "city": "Tokyo",
+    "skills": [
+      "evolutionary AI",
+      "creative coding",
+      "generative models",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://sakana.ai",
+    "twitter_url": "https://twitter.com/hardmaru",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b75",
+    "github_username": "kanjun",
+    "name": "Kanjun Qiu",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=KQ&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Imbue (formerly Generally Intelligent). Building AI agents that can reason and code with human-like understanding.",
+    "city": "San Francisco",
+    "skills": [
+      "AI agents",
+      "reasoning",
+      "code generation",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://imbue.com",
+    "twitter_url": "https://twitter.com/kaboranjunqiu",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b76",
+    "github_username": "davidluan",
+    "name": "David Luan",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DL&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Adept AI. Former VP Engineering at OpenAI building AI models that take actions on computers.",
+    "city": "San Francisco",
+    "skills": [
+      "AI agents",
+      "transformers",
+      "UI automation",
+      "python",
+      "product"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://adept.ai",
+    "twitter_url": "https://twitter.com/davidaboraluan",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b77",
+    "github_username": "cris-val",
+    "name": "Cristóbal Valenzuela",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CV&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Runway ML. Building the next generation of creative tools powered by generative AI for video and multimedia.",
+    "city": "NYC",
+    "skills": [
+      "generative AI",
+      "video generation",
+      "creative tools",
+      "javascript",
+      "product"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://runwayml.com",
+    "twitter_url": "https://twitter.com/c_vaboraalenzuela",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b78",
+    "github_username": "dholz",
+    "name": "David Holz",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DHo&backgroundColor=34d399",
+    "bio": "Founder and CEO of Midjourney. Previously co-founded Leap Motion. Building the world's most popular AI image generation platform.",
+    "city": "San Francisco",
+    "skills": [
+      "generative AI",
+      "image generation",
+      "product design",
+      "distributed systems",
+      "leadership"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://midjourney.com",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b79",
+    "github_username": "daveril",
+    "name": "Dave Rogenmoser",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DR&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Jasper AI. Built the leading AI content generation platform used by over 100K businesses for marketing copy.",
+    "city": "Austin",
+    "skills": [
+      "generative AI",
+      "NLP",
+      "SaaS",
+      "product",
+      "marketing tech"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://jasper.ai",
+    "twitter_url": "https://twitter.com/DaveRogenmoser",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b80",
+    "github_username": "peterchen",
+    "name": "Peter Chen",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=PC&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Covariant. Building universal AI for robotic manipulation that generalizes across tasks and environments.",
+    "city": "Berkeley",
+    "skills": [
+      "robotics",
+      "reinforcement learning",
+      "computer vision",
+      "python",
+      "simulation"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://covariant.ai",
+    "twitter_url": "https://twitter.com/paboraeterchen_ai",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b81",
+    "github_username": "danieldefreitas",
+    "name": "Daniel De Freitas",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DDF&backgroundColor=34d399",
+    "bio": "Co-founder of Character.AI. Former Google Brain researcher who co-created LaMDA and built the leading AI character conversation platform.",
+    "city": "Palo Alto",
+    "skills": [
+      "conversational AI",
+      "LLMs",
+      "NLP",
+      "product",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://character.ai",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b82",
+    "github_username": "mustafa-suleyman",
+    "name": "Mustafa Suleyman",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MS&backgroundColor=34d399",
+    "bio": "CEO of Microsoft AI. Co-founder of DeepMind and Inflection AI. Building frontier personal AI assistants and shaping AI policy.",
+    "city": "London",
+    "skills": [
+      "AI strategy",
+      "product",
+      "leadership",
+      "AI safety",
+      "NLP"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://mustafasuleyman.com",
+    "twitter_url": "https://twitter.com/mustaboraafasul",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b83",
+    "github_username": "AravSrinivas",
+    "name": "Aravind Srinivas",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AS&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Perplexity AI. Building the AI-native answer engine that is redefining search with real-time citations.",
+    "city": "San Francisco",
+    "skills": [
+      "search",
+      "LLMs",
+      "RAG",
+      "product",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://perplexity.ai",
+    "twitter_url": "https://twitter.com/AravSrinivas",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b84",
+    "github_username": "demiguo",
+    "name": "Demi Guo",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DG&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Pika Labs. Building AI-powered creative video generation tools that turn text and images into cinematic clips.",
+    "city": "San Francisco",
+    "skills": [
+      "video generation",
+      "generative AI",
+      "computer vision",
+      "product",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://pika.art",
+    "twitter_url": "https://twitter.com/daboraemiguo",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b85",
+    "github_username": "matisz",
+    "name": "Mati Staniszewski",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MSt&backgroundColor=34d399",
+    "bio": "CEO and co-founder of ElevenLabs. Building the world's most realistic AI voice synthesis and dubbing platform.",
+    "city": "NYC",
+    "skills": [
+      "speech synthesis",
+      "audio AI",
+      "python",
+      "product",
+      "deep learning"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://elevenlabs.io",
+    "twitter_url": "https://twitter.com/maboraatisz",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b86",
+    "github_username": "dylanfox",
+    "name": "Dylan Fox",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=DF&backgroundColor=34d399",
+    "bio": "CEO and founder of AssemblyAI. Building state-of-the-art speech-to-text and audio intelligence APIs used by 200K+ developers.",
+    "city": "San Francisco",
+    "skills": [
+      "speech recognition",
+      "NLP",
+      "APIs",
+      "python",
+      "product"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://assemblyai.com",
+    "twitter_url": "https://twitter.com/dylanfox",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b87",
+    "github_username": "scottste",
+    "name": "Scott Stephenson",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=SS&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Deepgram. Building enterprise-grade speech AI with custom-trained deep learning models for real-time transcription.",
+    "city": "San Francisco",
+    "skills": [
+      "speech AI",
+      "deep learning",
+      "APIs",
+      "enterprise",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://deepgram.com",
+    "twitter_url": "https://twitter.com/scottaborastephenson",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b88",
+    "github_username": "victordbia",
+    "name": "Victor Riparbelli",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=VR&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Synthesia. Building the leading AI video generation platform that creates presenter-led videos from text.",
+    "city": "London",
+    "skills": [
+      "video generation",
+      "generative AI",
+      "product",
+      "enterprise",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://synthesia.io",
+    "twitter_url": "https://twitter.com/victoraborariparbelli",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b89",
+    "github_username": "matthieurouif",
+    "name": "Matthieu Rouif",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MR&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Photoroom. Building AI-powered photo editing tools that remove backgrounds and generate product images instantly.",
+    "city": "Paris",
+    "skills": [
+      "computer vision",
+      "image editing",
+      "mobile AI",
+      "product",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring"
+    ],
+    "website_url": "https://photoroom.com",
+    "twitter_url": "https://twitter.com/matthieurouif",
+    "linkedin_url": "",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b90",
+    "github_username": "mnorouzi",
+    "name": "Mohammad Norouzi",
+    "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=MN&backgroundColor=34d399",
+    "bio": "CEO and co-founder of Ideogram. Former Google Brain researcher building state-of-the-art text-to-image generation with reliable text rendering.",
+    "city": "Toronto",
+    "skills": [
+      "image generation",
+      "generative AI",
+      "computer vision",
+      "research",
+      "python"
+    ],
+    "looking_for": [
+      "collaborator",
+      "hiring",
+      "investor"
+    ],
+    "website_url": "https://ideogram.ai",
+    "twitter_url": "https://twitter.com/maboraonorouzi",
     "linkedin_url": "",
     "created_at": "2026-03-30T00:00:00Z"
   }

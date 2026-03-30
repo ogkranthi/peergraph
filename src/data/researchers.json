@@ -247,7 +247,12 @@
     "h_index": 24,
     "citation_count": 346122,
     "paper_count": 25,
-    "domains": ["NLP", "Computer Vision", "Generative AI", "Multimodal"],
+    "domains": [
+      "NLP",
+      "Computer Vision",
+      "Generative AI",
+      "Multimodal"
+    ],
     "homepage_url": "",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AR&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -260,7 +265,10 @@
     "h_index": 102,
     "citation_count": 294572,
     "paper_count": 230,
-    "domains": ["Reinforcement Learning", "Generative AI"],
+    "domains": [
+      "Reinforcement Learning",
+      "Generative AI"
+    ],
     "homepage_url": "https://davidstarsilver.wordpress.com",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DS&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -273,7 +281,11 @@
     "h_index": 95,
     "citation_count": 415165,
     "paper_count": 310,
-    "domains": ["NLP", "Reinforcement Learning", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Reinforcement Learning",
+      "Generative AI"
+    ],
     "homepage_url": "https://research.google/people/oriolvinyals/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=OV&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -286,7 +298,11 @@
     "h_index": 82,
     "citation_count": 117781,
     "paper_count": 350,
-    "domains": ["Reinforcement Learning", "Robotics", "Generative AI"],
+    "domains": [
+      "Reinforcement Learning",
+      "Robotics",
+      "Generative AI"
+    ],
     "homepage_url": "https://ai.stanford.edu/~cbfinn/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=CF&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -299,7 +315,10 @@
     "h_index": 28,
     "citation_count": 15864,
     "paper_count": 53,
-    "domains": ["AI Safety", "Computer Vision"],
+    "domains": [
+      "AI Safety",
+      "Computer Vision"
+    ],
     "homepage_url": "https://www.dair-institute.org",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TG&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -312,7 +331,10 @@
     "h_index": 38,
     "citation_count": 24806,
     "paper_count": 130,
-    "domains": ["NLP", "AI Safety"],
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
     "homepage_url": "https://faculty.washington.edu/ebender/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=EB&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -325,7 +347,10 @@
     "h_index": 15,
     "citation_count": 260248,
     "paper_count": 30,
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "homepage_url": "",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AG&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -338,7 +363,10 @@
     "h_index": 23,
     "citation_count": 127030,
     "paper_count": 41,
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "homepage_url": "",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JD&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -351,7 +379,11 @@
     "h_index": 105,
     "citation_count": 302473,
     "paper_count": 480,
-    "domains": ["NLP", "Generative AI", "Reinforcement Learning"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Reinforcement Learning"
+    ],
     "homepage_url": "https://people.idsia.ch/~juergen/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JS&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -364,7 +396,10 @@
     "h_index": 14,
     "citation_count": 264618,
     "paper_count": 22,
-    "domains": ["Computer Vision", "Generative AI"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
     "homepage_url": "",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AKr&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -377,7 +412,10 @@
     "h_index": 67,
     "citation_count": 750000,
     "paper_count": 150,
-    "domains": ["Computer Vision", "Generative AI"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
     "homepage_url": "https://people.csail.mit.edu/kaiming/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KH&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -390,7 +428,9 @@
     "h_index": 62,
     "citation_count": 673758,
     "paper_count": 112,
-    "domains": ["Computer Vision"],
+    "domains": [
+      "Computer Vision"
+    ],
     "homepage_url": "https://www.rossgirshick.info/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RG&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -403,7 +443,11 @@
     "h_index": 72,
     "citation_count": 112069,
     "paper_count": 250,
-    "domains": ["NLP", "Computer Vision", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Computer Vision",
+      "Generative AI"
+    ],
     "homepage_url": "",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SB&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -416,7 +460,11 @@
     "h_index": 124,
     "citation_count": 400701,
     "paper_count": 330,
-    "domains": ["NLP", "Generative AI", "Optimization"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Optimization"
+    ],
     "homepage_url": "https://research.google/people/jeff/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JDe&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -429,7 +477,9 @@
     "h_index": 122,
     "citation_count": 316101,
     "paper_count": 450,
-    "domains": ["NLP"],
+    "domains": [
+      "NLP"
+    ],
     "homepage_url": "https://nlp.stanford.edu/~manning/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=CM&backgroundColor=3b82f6",
     "created_at": "2026-03-29T00:00:00Z"
@@ -442,7 +492,10 @@
     "h_index": 52,
     "citation_count": 95000,
     "paper_count": 150,
-    "domains": ["Computer Vision", "Generative AI"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
     "homepage_url": "https://web.mit.edu/phillipi/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PI&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -455,7 +508,10 @@
     "h_index": 108,
     "citation_count": 65000,
     "paper_count": 700,
-    "domains": ["Robotics", "Generative AI"],
+    "domains": [
+      "Robotics",
+      "Generative AI"
+    ],
     "homepage_url": "https://danielarus.csail.mit.edu",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DR&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -468,7 +524,10 @@
     "h_index": 65,
     "citation_count": 55000,
     "paper_count": 200,
-    "domains": ["AI Safety", "Computer Vision"],
+    "domains": [
+      "AI Safety",
+      "Computer Vision"
+    ],
     "homepage_url": "https://madry.mit.edu",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AM&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -481,7 +540,10 @@
     "h_index": 75,
     "citation_count": 32000,
     "paper_count": 250,
-    "domains": ["NLP", "Healthcare AI"],
+    "domains": [
+      "NLP",
+      "Healthcare AI"
+    ],
     "homepage_url": "https://www.regina.csail.mit.edu",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RB&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -494,7 +556,10 @@
     "h_index": 90,
     "citation_count": 85000,
     "paper_count": 350,
-    "domains": ["Computer Vision", "Multimodal"],
+    "domains": [
+      "Computer Vision",
+      "Multimodal"
+    ],
     "homepage_url": "https://groups.csail.mit.edu/vision/torralbalab/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AT&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -507,7 +572,10 @@
     "h_index": 92,
     "citation_count": 58000,
     "paper_count": 380,
-    "domains": ["Generative AI", "Healthcare AI"],
+    "domains": [
+      "Generative AI",
+      "Healthcare AI"
+    ],
     "homepage_url": "https://people.csail.mit.edu/tommi/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TJ&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -520,7 +588,10 @@
     "h_index": 48,
     "citation_count": 22000,
     "paper_count": 150,
-    "domains": ["Healthcare AI", "AI Safety"],
+    "domains": [
+      "Healthcare AI",
+      "AI Safety"
+    ],
     "homepage_url": "https://dtak.github.io",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=FD&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -533,7 +604,10 @@
     "h_index": 55,
     "citation_count": 28000,
     "paper_count": 200,
-    "domains": ["Healthcare AI", "Generative AI"],
+    "domains": [
+      "Healthcare AI",
+      "Generative AI"
+    ],
     "homepage_url": "https://people.csail.mit.edu/dsontag/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DS&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -546,7 +620,10 @@
     "h_index": 85,
     "citation_count": 52000,
     "paper_count": 320,
-    "domains": ["NLP", "AI Safety"],
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
     "homepage_url": "https://allenai.org",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=OE&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -559,7 +636,10 @@
     "h_index": 78,
     "citation_count": 62000,
     "paper_count": 280,
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "homepage_url": "https://www.cs.washington.edu/people/faculty/lsz",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LZ&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -572,7 +652,10 @@
     "h_index": 82,
     "citation_count": 48000,
     "paper_count": 400,
-    "domains": ["NLP", "AI Safety"],
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
     "homepage_url": "https://nasmith.github.io",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=NS2&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -585,7 +668,10 @@
     "h_index": 72,
     "citation_count": 58000,
     "paper_count": 200,
-    "domains": ["Computer Vision", "Multimodal"],
+    "domains": [
+      "Computer Vision",
+      "Multimodal"
+    ],
     "homepage_url": "https://homes.cs.washington.edu/~ali/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AF&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -598,7 +684,10 @@
     "h_index": 75,
     "citation_count": 45000,
     "paper_count": 300,
-    "domains": ["NLP", "AI Safety"],
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
     "homepage_url": "https://homes.cs.washington.edu/~yejin/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=YC&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
@@ -611,9 +700,1617 @@
     "h_index": 55,
     "citation_count": 32000,
     "paper_count": 200,
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "homepage_url": "https://homes.cs.washington.edu/~hannaneh/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r45",
+    "semantic_id": "",
+    "name": "Andrew Ng",
+    "institution": "Stanford University / Coursera",
+    "h_index": 130,
+    "citation_count": 283000,
+    "paper_count": 320,
+    "domains": [
+      "Generative AI",
+      "Optimization",
+      "MLOps"
+    ],
+    "homepage_url": "https://www.andrewng.org",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AN&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r46",
+    "semantic_id": "",
+    "name": "Jitendra Malik",
+    "institution": "UC Berkeley",
+    "h_index": 134,
+    "citation_count": 196000,
+    "paper_count": 420,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "https://people.eecs.berkeley.edu/~malik/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JM&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r47",
+    "semantic_id": "",
+    "name": "Trevor Darrell",
+    "institution": "UC Berkeley",
+    "h_index": 120,
+    "citation_count": 175000,
+    "paper_count": 480,
+    "domains": [
+      "Computer Vision",
+      "Multimodal"
+    ],
+    "homepage_url": "https://people.eecs.berkeley.edu/~trevor/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TD&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r48",
+    "semantic_id": "",
+    "name": "Michael I. Jordan",
+    "institution": "UC Berkeley",
+    "h_index": 155,
+    "citation_count": 310000,
+    "paper_count": 580,
+    "domains": [
+      "Optimization",
+      "Generative AI",
+      "Other"
+    ],
+    "homepage_url": "https://people.eecs.berkeley.edu/~jordan/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MJ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r49",
+    "semantic_id": "",
+    "name": "Richard Sutton",
+    "institution": "University of Alberta / DeepMind",
+    "h_index": 78,
+    "citation_count": 142000,
+    "paper_count": 230,
+    "domains": [
+      "Reinforcement Learning"
+    ],
+    "homepage_url": "http://www.incompleteideas.net/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r50",
+    "semantic_id": "",
+    "name": "Ruslan Salakhutdinov",
+    "institution": "Carnegie Mellon University",
+    "h_index": 85,
+    "citation_count": 97000,
+    "paper_count": 260,
+    "domains": [
+      "Generative AI",
+      "Optimization"
+    ],
+    "homepage_url": "https://www.cs.cmu.edu/~rsalMDu/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RS2&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r51",
+    "semantic_id": "",
+    "name": "Dario Amodei",
+    "institution": "Anthropic",
+    "h_index": 42,
+    "citation_count": 68000,
+    "paper_count": 75,
+    "domains": [
+      "AI Safety",
+      "Generative AI"
+    ],
+    "homepage_url": "https://www.anthropic.com",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DA&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r52",
+    "semantic_id": "",
+    "name": "Tom Brown",
+    "institution": "OpenAI",
+    "h_index": 25,
+    "citation_count": 52000,
+    "paper_count": 40,
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TB&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r53",
+    "semantic_id": "",
+    "name": "Kyunghyun Cho",
+    "institution": "New York University / Genentech",
+    "h_index": 82,
+    "citation_count": 140000,
+    "paper_count": 310,
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "homepage_url": "https://kyunghyuncho.me/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r54",
+    "semantic_id": "",
+    "name": "Jason Weston",
+    "institution": "Meta AI",
+    "h_index": 88,
+    "citation_count": 112000,
+    "paper_count": 270,
+    "domains": [
+      "NLP",
+      "Reinforcement Learning"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JW&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r55",
+    "semantic_id": "",
+    "name": "Song Han",
+    "institution": "MIT",
+    "h_index": 62,
+    "citation_count": 58000,
+    "paper_count": 190,
+    "domains": [
+      "MLOps",
+      "Optimization",
+      "Computer Vision"
+    ],
+    "homepage_url": "https://songhan.mit.edu/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r56",
+    "semantic_id": "",
+    "name": "Karen Simonyan",
+    "institution": "DeepMind",
+    "h_index": 36,
+    "citation_count": 175000,
+    "paper_count": 48,
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r57",
+    "semantic_id": "",
+    "name": "Rob Fergus",
+    "institution": "Meta AI / NYU",
+    "h_index": 80,
+    "citation_count": 91000,
+    "paper_count": 210,
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "homepage_url": "https://cs.nyu.edu/~fergus/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RF&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r58",
+    "semantic_id": "",
+    "name": "Marc'Aurelio Ranzato",
+    "institution": "Meta AI",
+    "h_index": 60,
+    "citation_count": 62000,
+    "paper_count": 140,
+    "domains": [
+      "Computer Vision",
+      "NLP"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r59",
+    "semantic_id": "",
+    "name": "Hugo Larochelle",
+    "institution": "Google DeepMind / Mila",
+    "h_index": 68,
+    "citation_count": 72000,
+    "paper_count": 180,
+    "domains": [
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "homepage_url": "https://mila.quebec/en/person/hugo-larochelle/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r60",
+    "semantic_id": "",
+    "name": "Aaron Courville",
+    "institution": "Mila / Université de Montréal",
+    "h_index": 72,
+    "citation_count": 135000,
+    "paper_count": 230,
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "homepage_url": "https://aaroncourville.wordpress.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r61",
+    "semantic_id": "",
+    "name": "Tomas Mikolov",
+    "institution": "Czech Institute of Informatics (CIIRC)",
+    "h_index": 42,
+    "citation_count": 165000,
+    "paper_count": 82,
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TM&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r62",
+    "semantic_id": "",
+    "name": "Anima Anandkumar",
+    "institution": "Caltech / NVIDIA",
+    "h_index": 68,
+    "citation_count": 42000,
+    "paper_count": 280,
+    "domains": [
+      "Optimization",
+      "Generative AI",
+      "Other"
+    ],
+    "homepage_url": "http://tensorlab.cms.caltech.edu/users/anima/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AA&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r63",
+    "semantic_id": "",
+    "name": "Graham Neubig",
+    "institution": "Carnegie Mellon University",
+    "h_index": 60,
+    "citation_count": 31000,
+    "paper_count": 320,
+    "domains": [
+      "NLP",
+      "MLOps"
+    ],
+    "homepage_url": "https://www.phontron.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=GN&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r64",
+    "semantic_id": "",
+    "name": "Jure Leskovec",
+    "institution": "Stanford University",
+    "h_index": 110,
+    "citation_count": 175000,
+    "paper_count": 520,
+    "domains": [
+      "Graph ML",
+      "Other"
+    ],
+    "homepage_url": "https://cs.stanford.edu/~jure/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r65",
+    "semantic_id": "",
+    "name": "Max Welling",
+    "institution": "University of Amsterdam / Microsoft Research",
+    "h_index": 88,
+    "citation_count": 86000,
+    "paper_count": 360,
+    "domains": [
+      "Generative AI",
+      "Graph ML",
+      "Optimization"
+    ],
+    "homepage_url": "https://staff.fnwi.uva.nl/m.welling/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MW&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r66",
+    "semantic_id": "",
+    "name": "Shakir Mohamed",
+    "institution": "Google DeepMind",
+    "h_index": 52,
+    "citation_count": 34000,
+    "paper_count": 130,
+    "domains": [
+      "Generative AI",
+      "AI Safety"
+    ],
+    "homepage_url": "https://shakirm.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SM&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r67",
+    "semantic_id": "",
+    "name": "Been Kim",
+    "institution": "Google DeepMind",
+    "h_index": 32,
+    "citation_count": 18000,
+    "paper_count": 75,
+    "domains": [
+      "AI Safety",
+      "Other"
+    ],
+    "homepage_url": "https://beenkim.github.io/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=BK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r68",
+    "semantic_id": "",
+    "name": "Douwe Kiela",
+    "institution": "Contextual AI",
+    "h_index": 45,
+    "citation_count": 24000,
+    "paper_count": 140,
+    "domains": [
+      "NLP",
+      "Multimodal"
+    ],
+    "homepage_url": "https://douwekiela.github.io/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r69",
+    "semantic_id": "",
+    "name": "Ryan Adams",
+    "institution": "Princeton University",
+    "h_index": 52,
+    "citation_count": 28000,
+    "paper_count": 160,
+    "domains": [
+      "Optimization",
+      "Generative AI"
+    ],
+    "homepage_url": "https://www.cs.princeton.edu/~rpa/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RA&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r70",
+    "semantic_id": "",
+    "name": "Hao Li",
+    "institution": "Pinscreen / UC Berkeley",
+    "h_index": 38,
+    "citation_count": 12000,
+    "paper_count": 90,
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "homepage_url": "https://www.hao-li.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HLi&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r71",
+    "semantic_id": "",
+    "name": "Jiajun Wu",
+    "institution": "Stanford University",
+    "h_index": 42,
+    "citation_count": 16000,
+    "paper_count": 120,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "https://jiajunwu.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JW2&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r72",
+    "semantic_id": "",
+    "name": "Dawn Song",
+    "institution": "UC Berkeley",
+    "h_index": 82,
+    "citation_count": 58000,
+    "paper_count": 290,
+    "domains": [
+      "AI Safety",
+      "Other"
+    ],
+    "homepage_url": "https://people.eecs.berkeley.edu/~dawnsong/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r73",
+    "semantic_id": "",
+    "name": "Pushmeet Kohli",
+    "institution": "Google DeepMind",
+    "h_index": 72,
+    "citation_count": 41000,
+    "paper_count": 250,
+    "domains": [
+      "Computer Vision",
+      "AI Safety",
+      "Healthcare AI"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r74",
+    "semantic_id": "",
+    "name": "Raquel Urtasun",
+    "institution": "Waabi / University of Toronto",
+    "h_index": 78,
+    "citation_count": 52000,
+    "paper_count": 270,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "https://www.cs.toronto.edu/~urtasun/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RU&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r75",
+    "semantic_id": "",
+    "name": "Lior Wolf",
+    "institution": "Tel Aviv University",
+    "h_index": 65,
+    "citation_count": 38000,
+    "paper_count": 220,
+    "domains": [
+      "Computer Vision",
+      "NLP"
+    ],
+    "homepage_url": "https://www.cs.tau.ac.il/~wolf/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LW&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r76",
+    "semantic_id": "",
+    "name": "Nando de Freitas",
+    "institution": "Google DeepMind",
+    "h_index": 72,
+    "citation_count": 48000,
+    "paper_count": 200,
+    "domains": [
+      "Reinforcement Learning",
+      "Generative AI"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=NF&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r77",
+    "semantic_id": "",
+    "name": "Sanja Fidler",
+    "institution": "University of Toronto / NVIDIA",
+    "h_index": 58,
+    "citation_count": 28000,
+    "paper_count": 170,
+    "domains": [
+      "Computer Vision",
+      "Generative AI",
+      "NLP"
+    ],
+    "homepage_url": "https://www.cs.utoronto.ca/~fidler/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SF&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r78",
+    "semantic_id": "",
+    "name": "Abhinav Gupta",
+    "institution": "Carnegie Mellon University",
+    "h_index": 72,
+    "citation_count": 45000,
+    "paper_count": 280,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "http://www.cs.cmu.edu/~abhinavg/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AG&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r79",
+    "semantic_id": "",
+    "name": "Silvio Savarese",
+    "institution": "Salesforce AI Research",
+    "h_index": 72,
+    "citation_count": 42000,
+    "paper_count": 260,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r80",
+    "semantic_id": "",
+    "name": "Li Jia Li",
+    "institution": "Google Cloud AI",
+    "h_index": 55,
+    "citation_count": 36000,
+    "paper_count": 150,
+    "domains": [
+      "Computer Vision",
+      "MLOps"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r81",
+    "semantic_id": "",
+    "name": "Stuart Russell",
+    "institution": "UC Berkeley",
+    "h_index": 86,
+    "citation_count": 115000,
+    "paper_count": 320,
+    "domains": [
+      "AI Safety",
+      "Reinforcement Learning",
+      "Other"
+    ],
+    "homepage_url": "https://people.eecs.berkeley.edu/~russell/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r82",
+    "semantic_id": "",
+    "name": "Michael Bronstein",
+    "institution": "University of Oxford",
+    "h_index": 62,
+    "citation_count": 42000,
+    "paper_count": 280,
+    "domains": [
+      "Graph ML",
+      "Optimization"
+    ],
+    "homepage_url": "https://www.cs.ox.ac.uk/people/michael.bronstein/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MB&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r83",
+    "semantic_id": "",
+    "name": "Bernhard Scholkopf",
+    "institution": "Max Planck Institute for Intelligent Systems",
+    "h_index": 120,
+    "citation_count": 195000,
+    "paper_count": 550,
+    "domains": [
+      "Optimization",
+      "Other"
+    ],
+    "homepage_url": "https://is.mpg.de/~bs",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=BS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r84",
+    "semantic_id": "",
+    "name": "Cordelia Schmid",
+    "institution": "INRIA / Google Research",
+    "h_index": 105,
+    "citation_count": 98000,
+    "paper_count": 380,
+    "domains": [
+      "Computer Vision",
+      "Multimodal"
+    ],
+    "homepage_url": "https://thoth.inrialpes.fr/~schmid/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=CS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r85",
+    "semantic_id": "",
+    "name": "Andrew Zisserman",
+    "institution": "University of Oxford",
+    "h_index": 142,
+    "citation_count": 310000,
+    "paper_count": 620,
+    "domains": [
+      "Computer Vision"
+    ],
+    "homepage_url": "https://www.robots.ox.ac.uk/~az/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r86",
+    "semantic_id": "",
+    "name": "Philip Torr",
+    "institution": "University of Oxford",
+    "h_index": 88,
+    "citation_count": 68000,
+    "paper_count": 410,
+    "domains": [
+      "Computer Vision",
+      "AI Safety"
+    ],
+    "homepage_url": "https://www.robots.ox.ac.uk/~phst/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PT&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r87",
+    "semantic_id": "",
+    "name": "Vladlen Koltun",
+    "institution": "Apple",
+    "h_index": 72,
+    "citation_count": 55000,
+    "paper_count": 190,
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=VK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r88",
+    "semantic_id": "",
+    "name": "Liang-Chieh Chen",
+    "institution": "Google DeepMind",
+    "h_index": 45,
+    "citation_count": 82000,
+    "paper_count": 80,
+    "domains": [
+      "Computer Vision"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r89",
+    "semantic_id": "",
+    "name": "Saining Xie",
+    "institution": "New York University",
+    "h_index": 38,
+    "citation_count": 62000,
+    "paper_count": 65,
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "homepage_url": "https://www.sainingxie.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SX&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r90",
+    "semantic_id": "",
+    "name": "Hengshuang Zhao",
+    "institution": "University of Hong Kong",
+    "h_index": 38,
+    "citation_count": 35000,
+    "paper_count": 95,
+    "domains": [
+      "Computer Vision"
+    ],
+    "homepage_url": "https://hszhao.github.io/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r91",
+    "semantic_id": "",
+    "name": "Thomas Kipf",
+    "institution": "Google DeepMind",
+    "h_index": 22,
+    "citation_count": 32000,
+    "paper_count": 38,
+    "domains": [
+      "Graph ML",
+      "Generative AI"
+    ],
+    "homepage_url": "https://tkipf.github.io/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r92",
+    "semantic_id": "",
+    "name": "Petar Velickovic",
+    "institution": "Google DeepMind",
+    "h_index": 30,
+    "citation_count": 28000,
+    "paper_count": 70,
+    "domains": [
+      "Graph ML",
+      "Generative AI"
+    ],
+    "homepage_url": "https://petar-v.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PV&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r93",
+    "semantic_id": "",
+    "name": "Diederik P. Kingma",
+    "institution": "Google DeepMind",
+    "h_index": 30,
+    "citation_count": 185000,
+    "paper_count": 42,
+    "domains": [
+      "Generative AI",
+      "Optimization"
+    ],
+    "homepage_url": "https://dpkingma.com/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DPK&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r94",
+    "semantic_id": "",
+    "name": "Yarin Gal",
+    "institution": "University of Oxford",
+    "h_index": 45,
+    "citation_count": 38000,
+    "paper_count": 140,
+    "domains": [
+      "AI Safety",
+      "Optimization",
+      "Healthcare AI"
+    ],
+    "homepage_url": "https://www.cs.ox.ac.uk/people/yarin.gal/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=YG&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r95",
+    "semantic_id": "",
+    "name": "Jian Sun",
+    "institution": "Megvii / Face++",
+    "h_index": 75,
+    "citation_count": 148000,
+    "paper_count": 210,
+    "domains": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r96",
+    "semantic_id": "",
+    "name": "Xiaogang Wang",
+    "institution": "Chinese University of Hong Kong",
+    "h_index": 82,
+    "citation_count": 95000,
+    "paper_count": 320,
+    "domains": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "homepage_url": "http://www.ee.cuhk.edu.hk/~xgwang/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=XW&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r97",
+    "semantic_id": "",
+    "name": "Bolei Zhou",
+    "institution": "UCLA",
+    "h_index": 55,
+    "citation_count": 62000,
+    "paper_count": 150,
+    "domains": [
+      "Computer Vision",
+      "Scene Understanding"
+    ],
+    "homepage_url": "https://boleizhou.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=BZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r98",
+    "semantic_id": "",
+    "name": "Zhouchen Lin",
+    "institution": "Peking University",
+    "h_index": 68,
+    "citation_count": 42000,
+    "paper_count": 350,
+    "domains": [
+      "Optimization",
+      "Computer Vision"
+    ],
+    "homepage_url": "https://zhouchenlin.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=ZL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r99",
+    "semantic_id": "",
+    "name": "Wei Liu",
+    "institution": "Tencent AI Lab",
+    "h_index": 60,
+    "citation_count": 55000,
+    "paper_count": 200,
+    "domains": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=WL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r100",
+    "semantic_id": "",
+    "name": "Ming-Hsuan Yang",
+    "institution": "UC Merced / Google Research",
+    "h_index": 85,
+    "citation_count": 78000,
+    "paper_count": 400,
+    "domains": [
+      "Computer Vision",
+      "Object Tracking"
+    ],
+    "homepage_url": "https://faculty.ucmerced.edu/mhyang/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MY&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r101",
+    "semantic_id": "",
+    "name": "Tinne Tuytelaars",
+    "institution": "KU Leuven",
+    "h_index": 62,
+    "citation_count": 32000,
+    "paper_count": 280,
+    "domains": [
+      "Computer Vision",
+      "Continual Learning"
+    ],
+    "homepage_url": "https://homes.esat.kuleuven.be/~tuyMDlaa/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TT&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r102",
+    "semantic_id": "",
+    "name": "Ivan Laptev",
+    "institution": "INRIA Paris / MBZUAI",
+    "h_index": 55,
+    "citation_count": 30000,
+    "paper_count": 180,
+    "domains": [
+      "Computer Vision",
+      "Action Recognition"
+    ],
+    "homepage_url": "https://www.di.ens.fr/~laptev/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=IL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r103",
+    "semantic_id": "",
+    "name": "Pascale Fung",
+    "institution": "HKUST",
+    "h_index": 52,
+    "citation_count": 22000,
+    "paper_count": 300,
+    "domains": [
+      "NLP",
+      "Conversational AI"
+    ],
+    "homepage_url": "https://pascale.home.ece.ust.hk",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PF&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r104",
+    "semantic_id": "",
+    "name": "Kai-Wei Chang",
+    "institution": "UCLA",
+    "h_index": 48,
+    "citation_count": 19000,
+    "paper_count": 200,
+    "domains": [
+      "NLP",
+      "AI Fairness"
+    ],
+    "homepage_url": "http://web.cs.ucla.edu/~kwchang/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r105",
+    "semantic_id": "",
+    "name": "Hang Li",
+    "institution": "ByteDance AI Lab",
+    "h_index": 65,
+    "citation_count": 38000,
+    "paper_count": 250,
+    "domains": [
+      "NLP",
+      "Information Retrieval"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HL&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r106",
+    "semantic_id": "",
+    "name": "Zhou Yu",
+    "institution": "Columbia University",
+    "h_index": 40,
+    "citation_count": 14000,
+    "paper_count": 130,
+    "domains": [
+      "NLP",
+      "Dialogue Systems"
+    ],
+    "homepage_url": "https://www.cs.columbia.edu/~zhouyu/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=ZY&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r107",
+    "semantic_id": "",
+    "name": "Diyi Yang",
+    "institution": "Stanford University",
+    "h_index": 42,
+    "citation_count": 16000,
+    "paper_count": 160,
+    "domains": [
+      "NLP",
+      "Computational Social Science"
+    ],
+    "homepage_url": "https://cs.stanford.edu/~diyiy/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DY&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r108",
+    "semantic_id": "",
+    "name": "Xiang Ren",
+    "institution": "USC",
+    "h_index": 40,
+    "citation_count": 15000,
+    "paper_count": 150,
+    "domains": [
+      "NLP",
+      "Knowledge Graphs"
+    ],
+    "homepage_url": "https://shanzhenren.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=XR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r109",
+    "semantic_id": "",
+    "name": "William Yang Wang",
+    "institution": "UC Santa Barbara",
+    "h_index": 52,
+    "citation_count": 21000,
+    "paper_count": 250,
+    "domains": [
+      "NLP",
+      "Multimodal"
+    ],
+    "homepage_url": "https://sites.cs.ucsb.edu/~william/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=WW&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r110",
+    "semantic_id": "",
+    "name": "Dan Roth",
+    "institution": "University of Pennsylvania",
+    "h_index": 82,
+    "citation_count": 48000,
+    "paper_count": 450,
+    "domains": [
+      "NLP",
+      "Machine Learning"
+    ],
+    "homepage_url": "https://www.cis.upenn.edu/~danroth/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r111",
+    "semantic_id": "",
+    "name": "Sebastian Riedel",
+    "institution": "UCL / Meta AI",
+    "h_index": 55,
+    "citation_count": 24000,
+    "paper_count": 200,
+    "domains": [
+      "NLP",
+      "Knowledge Bases"
+    ],
+    "homepage_url": "http://www.riedelcastro.org",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r112",
+    "semantic_id": "",
+    "name": "Mirella Lapata",
+    "institution": "University of Edinburgh",
+    "h_index": 68,
+    "citation_count": 30000,
+    "paper_count": 300,
+    "domains": [
+      "NLP",
+      "Summarization"
+    ],
+    "homepage_url": "https://homepages.inf.ed.ac.uk/mlap/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=ML&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r113",
+    "semantic_id": "",
+    "name": "Ryan Cotterell",
+    "institution": "ETH Zurich",
+    "h_index": 38,
+    "citation_count": 10000,
+    "paper_count": 180,
+    "domains": [
+      "NLP",
+      "Computational Linguistics"
+    ],
+    "homepage_url": "https://rycolab.io/authors/ryan/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r114",
+    "semantic_id": "",
+    "name": "Mrinmaya Sachan",
+    "institution": "ETH Zurich",
+    "h_index": 32,
+    "citation_count": 8500,
+    "paper_count": 100,
+    "domains": [
+      "NLP",
+      "Reasoning"
+    ],
+    "homepage_url": "https://www.mrinmaya.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r115",
+    "semantic_id": "",
+    "name": "Suvrit Sra",
+    "institution": "MIT",
+    "h_index": 50,
+    "citation_count": 22000,
+    "paper_count": 180,
+    "domains": [
+      "Optimization",
+      "Machine Learning"
+    ],
+    "homepage_url": "https://optml.mit.edu",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r116",
+    "semantic_id": "",
+    "name": "Moritz Hardt",
+    "institution": "Max Planck Institute for Intelligent Systems",
+    "h_index": 45,
+    "citation_count": 25000,
+    "paper_count": 120,
+    "domains": [
+      "AI Fairness",
+      "Machine Learning Theory"
+    ],
+    "homepage_url": "https://mrtz.org",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r117",
+    "semantic_id": "",
+    "name": "Tatsunori Hashimoto",
+    "institution": "Stanford University",
+    "h_index": 30,
+    "citation_count": 12000,
+    "paper_count": 80,
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
+    "homepage_url": "https://thashim.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=TH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r118",
+    "semantic_id": "",
+    "name": "Dan Jurafsky",
+    "institution": "Stanford University",
+    "h_index": 82,
+    "citation_count": 72000,
+    "paper_count": 350,
+    "domains": [
+      "NLP",
+      "Computational Linguistics"
+    ],
+    "homepage_url": "https://web.stanford.edu/~jurafsky/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DJ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r119",
+    "semantic_id": "",
+    "name": "Dan Hendrycks",
+    "institution": "Center for AI Safety",
+    "h_index": 42,
+    "citation_count": 35000,
+    "paper_count": 70,
+    "domains": [
+      "AI Safety",
+      "Robustness"
+    ],
+    "homepage_url": "https://danhendrycks.com",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r120",
+    "semantic_id": "",
+    "name": "Jacob Steinhardt",
+    "institution": "UC Berkeley",
+    "h_index": 35,
+    "citation_count": 14000,
+    "paper_count": 80,
+    "domains": [
+      "AI Safety",
+      "Machine Learning Theory"
+    ],
+    "homepage_url": "https://jsteinhardt.stat.berkeley.edu",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JSt&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r121",
+    "semantic_id": "",
+    "name": "Priya Goyal",
+    "institution": "Meta AI",
+    "h_index": 22,
+    "citation_count": 28000,
+    "paper_count": 30,
+    "domains": [
+      "Computer Vision",
+      "Self-Supervised Learning"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=PG&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r122",
+    "semantic_id": "",
+    "name": "Karol Hausman",
+    "institution": "Google DeepMind / Stanford",
+    "h_index": 40,
+    "citation_count": 16000,
+    "paper_count": 100,
+    "domains": [
+      "Robotics",
+      "Reinforcement Learning"
+    ],
+    "homepage_url": "https://karolhausman.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r123",
+    "semantic_id": "",
+    "name": "Dorsa Sadigh",
+    "institution": "Stanford University",
+    "h_index": 38,
+    "citation_count": 10000,
+    "paper_count": 120,
+    "domains": [
+      "Robotics",
+      "Human-Robot Interaction"
+    ],
+    "homepage_url": "https://dorsa.fyi",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r124",
+    "semantic_id": "",
+    "name": "Stefano Ermon",
+    "institution": "Stanford University",
+    "h_index": 58,
+    "citation_count": 42000,
+    "paper_count": 200,
+    "domains": [
+      "Generative AI",
+      "Machine Learning"
+    ],
+    "homepage_url": "https://cs.stanford.edu/~ermon/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SE&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r125",
+    "semantic_id": "",
+    "name": "Le Song",
+    "institution": "MBZUAI",
+    "h_index": 62,
+    "citation_count": 28000,
+    "paper_count": 280,
+    "domains": [
+      "Machine Learning",
+      "Graph Neural Networks"
+    ],
+    "homepage_url": "https://mbzuai.ac.ae/study/faculty/le-song/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LS&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r126",
+    "semantic_id": "",
+    "name": "Masashi Sugiyama",
+    "institution": "RIKEN AIP / University of Tokyo",
+    "h_index": 75,
+    "citation_count": 45000,
+    "paper_count": 500,
+    "domains": [
+      "Machine Learning Theory",
+      "Transfer Learning"
+    ],
+    "homepage_url": "http://www.ms.k.u-tokyo.ac.jp/sugi/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MSu&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r127",
+    "semantic_id": "",
+    "name": "Sepp Hochreiter",
+    "institution": "JKU Linz",
+    "h_index": 62,
+    "citation_count": 180000,
+    "paper_count": 200,
+    "domains": [
+      "Deep Learning",
+      "Recurrent Networks"
+    ],
+    "homepage_url": "https://www.jku.at/en/institute-for-machine-learning/about-us/team/sepp-hochreiter/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r128",
+    "semantic_id": "",
+    "name": "Klaus-Robert Muller",
+    "institution": "TU Berlin",
+    "h_index": 95,
+    "citation_count": 85000,
+    "paper_count": 600,
+    "domains": [
+      "Machine Learning",
+      "Explainable AI"
+    ],
+    "homepage_url": "https://www.ml.tu-berlin.de/menue/members/klaus-robert_mueller/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=KM&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r129",
+    "semantic_id": "",
+    "name": "Mikhail Belkin",
+    "institution": "UC San Diego",
+    "h_index": 50,
+    "citation_count": 35000,
+    "paper_count": 150,
+    "domains": [
+      "Machine Learning Theory",
+      "Deep Learning"
+    ],
+    "homepage_url": "https://belkin-group.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MB&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r130",
+    "semantic_id": "",
+    "name": "Elad Hazan",
+    "institution": "Princeton University",
+    "h_index": 48,
+    "citation_count": 22000,
+    "paper_count": 160,
+    "domains": [
+      "Optimization",
+      "Online Learning"
+    ],
+    "homepage_url": "https://www.ehazan.com",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=EH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r131",
+    "semantic_id": "",
+    "name": "Sanjeev Arora",
+    "institution": "Princeton University",
+    "h_index": 68,
+    "citation_count": 42000,
+    "paper_count": 250,
+    "domains": [
+      "Machine Learning Theory",
+      "NLP"
+    ],
+    "homepage_url": "https://www.cs.princeton.edu/~arora/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=SA&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r132",
+    "semantic_id": "",
+    "name": "Rong Jin",
+    "institution": "Alibaba DAMO Academy",
+    "h_index": 62,
+    "citation_count": 28000,
+    "paper_count": 300,
+    "domains": [
+      "Machine Learning",
+      "Optimization"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=RJ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r133",
+    "semantic_id": "",
+    "name": "Xiaodong He",
+    "institution": "JD AI Research",
+    "h_index": 58,
+    "citation_count": 35000,
+    "paper_count": 200,
+    "domains": [
+      "NLP",
+      "Multimodal"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=XH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r134",
+    "semantic_id": "",
+    "name": "Yann Dauphin",
+    "institution": "Meta AI",
+    "h_index": 30,
+    "citation_count": 22000,
+    "paper_count": 50,
+    "domains": [
+      "Deep Learning",
+      "Optimization"
+    ],
+    "homepage_url": "",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=YD&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r135",
+    "semantic_id": "",
+    "name": "Ce Zhang",
+    "institution": "ETH Zurich / Together AI",
+    "h_index": 45,
+    "citation_count": 18000,
+    "paper_count": 150,
+    "domains": [
+      "Data-Centric AI",
+      "Machine Learning Systems"
+    ],
+    "homepage_url": "https://zhangce.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=CZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r136",
+    "semantic_id": "",
+    "name": "Alexander Rush",
+    "institution": "Cornell University",
+    "h_index": 45,
+    "citation_count": 22000,
+    "paper_count": 150,
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "homepage_url": "https://rush-nlp.com",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AR&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r137",
+    "semantic_id": "",
+    "name": "Danqi Chen",
+    "institution": "Princeton University",
+    "h_index": 38,
+    "citation_count": 32000,
+    "paper_count": 80,
+    "domains": [
+      "NLP",
+      "Question Answering"
+    ],
+    "homepage_url": "https://www.cs.princeton.edu/~danqic/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r138",
+    "semantic_id": "",
+    "name": "Zhiyuan Liu",
+    "institution": "Tsinghua University",
+    "h_index": 60,
+    "citation_count": 32000,
+    "paper_count": 300,
+    "domains": [
+      "NLP",
+      "Knowledge Graphs"
+    ],
+    "homepage_url": "http://nlp.csai.tsinghua.edu.cn/~lzy/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=ZLiu&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r139",
+    "semantic_id": "",
+    "name": "Jie Tang",
+    "institution": "Tsinghua University / AMiner",
+    "h_index": 72,
+    "citation_count": 38000,
+    "paper_count": 400,
+    "domains": [
+      "Data Mining",
+      "Social Networks"
+    ],
+    "homepage_url": "http://keg.cs.tsinghua.edu.cn/jietang/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=JT&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r140",
+    "semantic_id": "",
+    "name": "Maosong Sun",
+    "institution": "Tsinghua University",
+    "h_index": 65,
+    "citation_count": 28000,
+    "paper_count": 350,
+    "domains": [
+      "NLP",
+      "Computational Linguistics"
+    ],
+    "homepage_url": "https://nlp.csai.tsinghua.edu.cn/~sms/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=MSun&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r141",
+    "semantic_id": "",
+    "name": "Yue Zhang",
+    "institution": "Westlake University",
+    "h_index": 48,
+    "citation_count": 16000,
+    "paper_count": 250,
+    "domains": [
+      "NLP",
+      "Parsing"
+    ],
+    "homepage_url": "https://frcchang.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=YZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r142",
+    "semantic_id": "",
+    "name": "Iryna Gurevych",
+    "institution": "TU Darmstadt",
+    "h_index": 62,
+    "citation_count": 28000,
+    "paper_count": 400,
+    "domains": [
+      "NLP",
+      "Argumentation Mining"
+    ],
+    "homepage_url": "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=IG&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r143",
+    "semantic_id": "",
+    "name": "Barbara Plank",
+    "institution": "LMU Munich",
+    "h_index": 40,
+    "citation_count": 12000,
+    "paper_count": 200,
+    "domains": [
+      "NLP",
+      "Low-Resource Languages"
+    ],
+    "homepage_url": "https://bplank.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=BP&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r144",
+    "semantic_id": "",
+    "name": "Isabelle Augenstein",
+    "institution": "University of Copenhagen",
+    "h_index": 38,
+    "citation_count": 13000,
+    "paper_count": 170,
+    "domains": [
+      "NLP",
+      "Fact Verification"
+    ],
+    "homepage_url": "https://isabelleaugenstein.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=IA&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
   }
 ]

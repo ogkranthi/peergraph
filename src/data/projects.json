@@ -6,12 +6,37 @@
     "description": "Framework for developing applications powered by language models. Connects LLMs to external data, tools, and agents.",
     "repo_url": "https://github.com/langchain-ai/langchain",
     "live_url": "https://langchain.com",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p1", "p6", "p13"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p13"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "maintainer_claim", "evidence_url": "https://github.com/langchain-ai/langchain", "confidence": 85, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "maintainer_claim", "evidence_url": "https://github.com/langchain-ai/langchain", "confidence": 85, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p13", "source_type": "community", "evidence_url": "https://python.langchain.com/docs/concepts/", "confidence": 75, "added_at": "2026-03-26T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/langchain-ai/langchain",
+        "confidence": 85,
+        "added_at": "2026-03-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/langchain-ai/langchain",
+        "confidence": 85,
+        "added_at": "2026-03-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "community",
+        "evidence_url": "https://python.langchain.com/docs/concepts/",
+        "confidence": 75,
+        "added_at": "2026-03-26T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-01T00:00:00Z"
   },
@@ -22,11 +47,29 @@
     "description": "Compact, efficient foundation models built on Liquid Neural Networks. State-space models that outperform transformers at smaller sizes.",
     "repo_url": "",
     "live_url": "https://liquid.ai",
-    "domains": ["Generative AI", "Robotics"],
-    "paper_ids": ["p11", "p1"],
+    "domains": [
+      "Generative AI",
+      "Robotics"
+    ],
+    "paper_ids": [
+      "p11",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p11", "source_type": "maintainer_claim", "evidence_url": "https://arxiv.org/abs/2006.04439", "confidence": 95, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://liquid.ai/research", "confidence": 70, "added_at": "2026-03-26T00:00:00Z" }
+      {
+        "paper_id": "p11",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2006.04439",
+        "confidence": 95,
+        "added_at": "2026-03-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://liquid.ai/research",
+        "confidence": 70,
+        "added_at": "2026-03-26T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-01T00:00:00Z"
   },
@@ -37,15 +80,61 @@
     "description": "MIT's official introductory course on deep learning. Open courseware with labs covering CNNs, RNNs, GANs, reinforcement learning, and more.",
     "repo_url": "https://github.com/aamini/introtodeeplearning",
     "live_url": "http://introtodeeplearning.com",
-    "domains": ["Generative AI", "Computer Vision"],
-    "paper_ids": ["p1", "p2", "p15", "p23", "p26", "p28"],
+    "domains": [
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p1",
+      "p2",
+      "p15",
+      "p23",
+      "p26",
+      "p28"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/aamini/introtodeeplearning", "confidence": 90, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p2", "source_type": "readme_extraction", "evidence_url": "https://github.com/aamini/introtodeeplearning", "confidence": 90, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p23", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p26", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p28", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/aamini/introtodeeplearning",
+        "confidence": 90,
+        "added_at": "2026-03-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/aamini/introtodeeplearning",
+        "confidence": 90,
+        "added_at": "2026-03-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "http://introtodeeplearning.com",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p23",
+        "source_type": "community",
+        "evidence_url": "http://introtodeeplearning.com",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p26",
+        "source_type": "community",
+        "evidence_url": "http://introtodeeplearning.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p28",
+        "source_type": "community",
+        "evidence_url": "http://introtodeeplearning.com",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-01T00:00:00Z"
   },
@@ -56,10 +145,21 @@
     "description": "Open-source implementation of Liquid Time-Constant networks — continuous-time neural networks inspired by biological neurons.",
     "repo_url": "https://github.com/mlech26l/keras-ncp",
     "live_url": "",
-    "domains": ["Generative AI", "Robotics"],
-    "paper_ids": ["p11"],
+    "domains": [
+      "Generative AI",
+      "Robotics"
+    ],
+    "paper_ids": [
+      "p11"
+    ],
     "paper_links": [
-      { "paper_id": "p11", "source_type": "maintainer_claim", "evidence_url": "https://github.com/mlech26l/keras-ncp", "confidence": 95, "added_at": "2026-03-01T00:00:00Z" }
+      {
+        "paper_id": "p11",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/mlech26l/keras-ncp",
+        "confidence": 95,
+        "added_at": "2026-03-01T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-01T00:00:00Z"
   },
@@ -70,11 +170,29 @@
     "description": "AI music generation from text. Type a description, get a full song with vocals, instruments, and production. Used by millions.",
     "repo_url": "",
     "live_url": "https://suno.com",
-    "domains": ["Speech & Audio", "Generative AI"],
-    "paper_ids": ["p1", "p26"],
+    "domains": [
+      "Speech & Audio",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p26"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://suno.com", "confidence": 75, "added_at": "2026-03-02T00:00:00Z" },
-      { "paper_id": "p26", "source_type": "community", "evidence_url": "https://suno.com/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://suno.com",
+        "confidence": 75,
+        "added_at": "2026-03-02T00:00:00Z"
+      },
+      {
+        "paper_id": "p26",
+        "source_type": "community",
+        "evidence_url": "https://suno.com/research",
+        "confidence": 65,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-02T00:00:00Z"
   },
@@ -85,12 +203,38 @@
     "description": "Open-source efficient LLM training platform. DBRX is a 132B MoE model rivaling GPT-3.5. Acquired by Databricks for $1.3B.",
     "repo_url": "https://github.com/mosaicml/composer",
     "live_url": "https://www.databricks.com/product/machine-learning",
-    "domains": ["NLP", "Generative AI", "Optimization"],
-    "paper_ids": ["p1", "p6", "p12"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Optimization"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p12"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/mosaicml/composer", "confidence": 90, "added_at": "2026-03-02T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm", "confidence": 80, "added_at": "2026-03-02T00:00:00Z" },
-      { "paper_id": "p12", "source_type": "maintainer_claim", "evidence_url": "https://www.jfrankle.com", "confidence": 90, "added_at": "2026-03-02T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/mosaicml/composer",
+        "confidence": 90,
+        "added_at": "2026-03-02T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+        "confidence": 80,
+        "added_at": "2026-03-02T00:00:00Z"
+      },
+      {
+        "paper_id": "p12",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://www.jfrankle.com",
+        "confidence": 90,
+        "added_at": "2026-03-02T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-02T00:00:00Z"
   },
@@ -101,11 +245,29 @@
     "description": "The simplest, fastest repository for training/finetuning medium-sized GPTs. Reproduces GPT-2 (124M) in ~$20 of compute.",
     "repo_url": "https://github.com/karpathy/nanoGPT",
     "live_url": "",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p1", "p6"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/karpathy/nanoGPT#readme", "confidence": 95, "added_at": "2026-03-02T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "readme_extraction", "evidence_url": "https://github.com/karpathy/nanoGPT#readme", "confidence": 90, "added_at": "2026-03-02T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/karpathy/nanoGPT#readme",
+        "confidence": 95,
+        "added_at": "2026-03-02T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/karpathy/nanoGPT#readme",
+        "confidence": 90,
+        "added_at": "2026-03-02T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-02T00:00:00Z"
   },
@@ -116,10 +278,21 @@
     "description": "CLI tool for interacting with Large Language Models. Supports OpenAI, Claude, local models via plugins. Log and search prompts.",
     "repo_url": "https://github.com/simonw/llm",
     "live_url": "https://llm.datasette.io",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p6"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p6"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://github.com/simonw/llm", "confidence": 75, "added_at": "2026-03-03T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://github.com/simonw/llm",
+        "confidence": 75,
+        "added_at": "2026-03-03T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-03T00:00:00Z"
   },
@@ -130,11 +303,29 @@
     "description": "AI-powered UI generation. Describe a component in natural language, get production-ready React/Tailwind code. Uses LLMs for code generation.",
     "repo_url": "",
     "live_url": "https://v0.dev",
-    "domains": ["Generative AI", "NLP"],
-    "paper_ids": ["p6", "p1"],
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p6",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://v0.dev", "confidence": 75, "added_at": "2026-03-03T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://v0.dev", "confidence": 70, "added_at": "2026-03-03T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://v0.dev",
+        "confidence": 75,
+        "added_at": "2026-03-03T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://v0.dev",
+        "confidence": 70,
+        "added_at": "2026-03-03T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-03T00:00:00Z"
   },
@@ -145,11 +336,29 @@
     "description": "AI-powered data processing pipelines for unstructured documents. LLM-driven extraction, transformation, and analysis at scale.",
     "repo_url": "https://github.com/shreyashankar/docetl",
     "live_url": "https://docetl.org",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p6", "p1"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p6",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "readme_extraction", "evidence_url": "https://github.com/shreyashankar/docetl", "confidence": 80, "added_at": "2026-03-03T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://github.com/shreyashankar/docetl", "confidence": 70, "added_at": "2026-03-03T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/shreyashankar/docetl",
+        "confidence": 80,
+        "added_at": "2026-03-03T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/shreyashankar/docetl",
+        "confidence": 70,
+        "added_at": "2026-03-03T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-03T00:00:00Z"
   },
@@ -160,11 +369,29 @@
     "description": "A tiny neural network framework. Under 1000 lines of code, supports GPU acceleration. The antithesis of PyTorch complexity.",
     "repo_url": "https://github.com/tinygrad/tinygrad",
     "live_url": "",
-    "domains": ["Generative AI", "Optimization"],
-    "paper_ids": ["p8", "p1"],
+    "domains": [
+      "Generative AI",
+      "Optimization"
+    ],
+    "paper_ids": [
+      "p8",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p8", "source_type": "readme_extraction", "evidence_url": "https://github.com/tinygrad/tinygrad", "confidence": 85, "added_at": "2026-03-04T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://github.com/tinygrad/tinygrad", "confidence": 70, "added_at": "2026-03-04T00:00:00Z" }
+      {
+        "paper_id": "p8",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/tinygrad/tinygrad",
+        "confidence": 85,
+        "added_at": "2026-03-04T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/tinygrad/tinygrad",
+        "confidence": 70,
+        "added_at": "2026-03-04T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-04T00:00:00Z"
   },
@@ -175,11 +402,29 @@
     "description": "Open-source self-driving system by comma.ai. Runs on supported cars with a $200 device. 10,000+ users driving daily.",
     "repo_url": "https://github.com/commaai/openpilot",
     "live_url": "https://comma.ai",
-    "domains": ["Computer Vision", "Robotics"],
-    "paper_ids": ["p3", "p4"],
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "paper_ids": [
+      "p3",
+      "p4"
+    ],
     "paper_links": [
-      { "paper_id": "p3", "source_type": "community", "evidence_url": "https://github.com/commaai/openpilot", "confidence": 75, "added_at": "2026-03-04T00:00:00Z" },
-      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://github.com/commaai/openpilot", "confidence": 70, "added_at": "2026-03-04T00:00:00Z" }
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://github.com/commaai/openpilot",
+        "confidence": 75,
+        "added_at": "2026-03-04T00:00:00Z"
+      },
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://github.com/commaai/openpilot",
+        "confidence": 70,
+        "added_at": "2026-03-04T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-04T00:00:00Z"
   },
@@ -190,12 +435,37 @@
     "description": "Pioneering research on chain-of-thought prompting, instruction tuning, and emergent abilities of large language models at OpenAI.",
     "repo_url": "",
     "live_url": "https://jasonwei20.github.io",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p13", "p7", "p6"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p13",
+      "p7",
+      "p6"
+    ],
     "paper_links": [
-      { "paper_id": "p13", "source_type": "maintainer_claim", "evidence_url": "https://arxiv.org/abs/2201.11903", "confidence": 95, "added_at": "2026-03-04T00:00:00Z" },
-      { "paper_id": "p7", "source_type": "maintainer_claim", "evidence_url": "https://arxiv.org/abs/2203.02155", "confidence": 85, "added_at": "2026-03-04T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://jasonwei20.github.io", "confidence": 75, "added_at": "2026-03-04T00:00:00Z" }
+      {
+        "paper_id": "p13",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2201.11903",
+        "confidence": 95,
+        "added_at": "2026-03-04T00:00:00Z"
+      },
+      {
+        "paper_id": "p7",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2203.02155",
+        "confidence": 85,
+        "added_at": "2026-03-04T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://jasonwei20.github.io",
+        "confidence": 75,
+        "added_at": "2026-03-04T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-04T00:00:00Z"
   },
@@ -206,12 +476,37 @@
     "description": "Open-source text-to-image diffusion model that democratized AI image generation. Runs locally on consumer GPUs and powers thousands of apps.",
     "repo_url": "https://github.com/Stability-AI/stablediffusion",
     "live_url": "https://stability.ai",
-    "domains": ["Computer Vision", "Generative AI"],
-    "paper_ids": ["p18", "p3", "p17"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p18",
+      "p3",
+      "p17"
+    ],
     "paper_links": [
-      { "paper_id": "p18", "source_type": "maintainer_claim", "evidence_url": "https://github.com/Stability-AI/stablediffusion", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p3", "source_type": "community", "evidence_url": "https://stability.ai/research", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p17", "source_type": "community", "evidence_url": "https://stability.ai/research", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p18",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/Stability-AI/stablediffusion",
+        "confidence": 95,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://stability.ai/research",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p17",
+        "source_type": "community",
+        "evidence_url": "https://stability.ai/research",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -222,11 +517,30 @@
     "description": "Enterprise data labeling and AI infrastructure platform. Powers training data for OpenAI, Meta, and US DoD with human-in-the-loop annotation at scale.",
     "repo_url": "",
     "live_url": "https://scale.com",
-    "domains": ["Computer Vision", "NLP", "Generative AI"],
-    "paper_ids": ["p4", "p21"],
+    "domains": [
+      "Computer Vision",
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p4",
+      "p21"
+    ],
     "paper_links": [
-      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://scale.com/computer-vision", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://scale.com/generative-ai", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://scale.com/computer-vision",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://scale.com/generative-ai",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -237,12 +551,38 @@
     "description": "The most popular open-source library for state-of-the-art NLP, vision, and audio models. Hosts 500K+ models and 100K+ datasets. The GitHub of machine learning.",
     "repo_url": "https://github.com/huggingface/transformers",
     "live_url": "https://huggingface.co",
-    "domains": ["NLP", "Generative AI", "Computer Vision"],
-    "paper_ids": ["p1", "p14", "p22"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p1",
+      "p14",
+      "p22"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/huggingface/transformers", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p14", "source_type": "readme_extraction", "evidence_url": "https://github.com/huggingface/transformers", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p22", "source_type": "community", "evidence_url": "https://huggingface.co/meta-llama", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/huggingface/transformers",
+        "confidence": 95,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p14",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/huggingface/transformers",
+        "confidence": 95,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p22",
+        "source_type": "community",
+        "evidence_url": "https://huggingface.co/meta-llama",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -253,11 +593,28 @@
     "description": "AI-first venture fund and talent accelerator co-founded with Nat Friedman. Finds and funds the most ambitious AI builders globally using AI-powered scouting.",
     "repo_url": "",
     "live_url": "https://pioneer.app",
-    "domains": ["Generative AI"],
-    "paper_ids": ["p6", "p21"],
+    "domains": [
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://pioneer.app", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://pioneer.app", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://pioneer.app",
+        "confidence": 65,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://pioneer.app",
+        "confidence": 65,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -268,11 +625,29 @@
     "description": "Portfolio of AI investments and open-source contributions. Co-leads Pioneer Fund. Previously acquired GitHub for Microsoft and shipped Copilot.",
     "repo_url": "https://github.com/nat",
     "live_url": "https://nat.org",
-    "domains": ["Generative AI", "NLP"],
-    "paper_ids": ["p6", "p21"],
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://nat.org", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://nat.org", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://nat.org",
+        "confidence": 65,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://nat.org",
+        "confidence": 65,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -283,12 +658,37 @@
     "description": "Built OpenAI's developer ecosystem from scratch. Created the OpenAI Cookbook with 200+ examples, grew the API community to millions of developers.",
     "repo_url": "https://github.com/openai/openai-cookbook",
     "live_url": "https://cookbook.openai.com",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p6", "p21", "p13"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21",
+      "p13"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "readme_extraction", "evidence_url": "https://github.com/openai/openai-cookbook", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "readme_extraction", "evidence_url": "https://github.com/openai/openai-cookbook", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p13", "source_type": "community", "evidence_url": "https://cookbook.openai.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/openai/openai-cookbook",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/openai/openai-cookbook",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "community",
+        "evidence_url": "https://cookbook.openai.com",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -299,12 +699,37 @@
     "description": "Latent Space is the leading AI engineering podcast and newsletter. smol.ai builds small, useful AI developer tools. Defined the AI Engineer role.",
     "repo_url": "https://github.com/smol-ai/developer",
     "live_url": "https://www.latent.space",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p1", "p6", "p21"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p21"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://www.latent.space",
+        "confidence": 70,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://www.latent.space",
+        "confidence": 70,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://www.latent.space",
+        "confidence": 70,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -315,12 +740,38 @@
     "description": "Free deep learning courses and the fastai library. Made cutting-edge deep learning accessible to anyone who can code. Used by hundreds of thousands of students.",
     "repo_url": "https://github.com/fastai/fastai",
     "live_url": "https://fast.ai",
-    "domains": ["Generative AI", "Computer Vision", "NLP"],
-    "paper_ids": ["p1", "p15", "p23"],
+    "domains": [
+      "Generative AI",
+      "Computer Vision",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p15",
+      "p23"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p15", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p23", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/fastai/fastai",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p15",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/fastai/fastai",
+        "confidence": 90,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p23",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/fastai/fastai",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -331,12 +782,37 @@
     "description": "YouTube channel with 250K+ subscribers explaining cutting-edge ML papers. Co-created OpenAssistant, an open-source ChatGPT alternative.",
     "repo_url": "https://github.com/LAION-AI/Open-Assistant",
     "live_url": "https://www.youtube.com/@YannicKilcher",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p1", "p14", "p6"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p14",
+      "p6"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://www.youtube.com/@YannicKilcher",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://www.youtube.com/@YannicKilcher",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://www.youtube.com/@YannicKilcher",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -347,12 +823,37 @@
     "description": "AI-powered coding platform used by 30M+ developers. Features Replit Agent for building full-stack apps from natural language prompts in the browser.",
     "repo_url": "https://github.com/replit",
     "live_url": "https://replit.com",
-    "domains": ["Generative AI", "NLP"],
-    "paper_ids": ["p6", "p21", "p1"],
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://replit.com",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://replit.com",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://replit.com",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -363,12 +864,38 @@
     "description": "Built and scaled OpenAI's API platform serving GPT-4, DALL-E, and Whisper to millions of developers. Architected the product powering ChatGPT.",
     "repo_url": "",
     "live_url": "https://platform.openai.com",
-    "domains": ["NLP", "Generative AI", "Multimodal"],
-    "paper_ids": ["p6", "p21", "p17"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Multimodal"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21",
+      "p17"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p17", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://platform.openai.com",
+        "confidence": 90,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://platform.openai.com",
+        "confidence": 90,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p17",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://platform.openai.com",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -379,12 +906,37 @@
     "description": "Co-founded OpenAI and led engineering from GPT-1 through ChatGPT and GPT-4. Built the infrastructure and team behind the most impactful AI products.",
     "repo_url": "https://github.com/openai",
     "live_url": "https://openai.com",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p6", "p21", "p7"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p6",
+      "p21",
+      "p7"
+    ],
     "paper_links": [
-      { "paper_id": "p6", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p21", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p7", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p6",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://openai.com",
+        "confidence": 90,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p21",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://openai.com",
+        "confidence": 90,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p7",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://openai.com",
+        "confidence": 85,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -395,12 +947,38 @@
     "description": "AI research startup founded after departing OpenAI as CTO. Led the technical development of ChatGPT, GPT-4, and DALL-E at OpenAI.",
     "repo_url": "",
     "live_url": "",
-    "domains": ["Generative AI", "NLP", "Multimodal"],
-    "paper_ids": ["p21", "p17", "p7"],
+    "domains": [
+      "Generative AI",
+      "NLP",
+      "Multimodal"
+    ],
+    "paper_ids": [
+      "p21",
+      "p17",
+      "p7"
+    ],
     "paper_links": [
-      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p17", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" },
-      { "paper_id": "p7", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+      {
+        "paper_id": "p21",
+        "source_type": "community",
+        "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab",
+        "confidence": 80,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p17",
+        "source_type": "community",
+        "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p7",
+        "source_type": "community",
+        "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab",
+        "confidence": 75,
+        "added_at": "2026-03-29T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -411,11 +989,29 @@
     "description": "Data-centric AI platform. Write labeling functions instead of hand-labeling data. Used by Google, Apple, Intel, and government agencies.",
     "repo_url": "https://github.com/snorkel-team/snorkel",
     "live_url": "https://snorkel.ai",
-    "domains": ["MLOps", "Generative AI"],
-    "paper_ids": ["p27", "p1"],
+    "domains": [
+      "MLOps",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p27",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://snorkel.ai/blog", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://github.com/snorkel-team/snorkel", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p27",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://snorkel.ai/blog",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/snorkel-team/snorkel",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -426,11 +1022,29 @@
     "description": "ML experiment tracking, model versioning, and dataset management. The MLOps platform used by OpenAI, DeepMind, and 500K+ ML practitioners.",
     "repo_url": "https://github.com/wandb/wandb",
     "live_url": "https://wandb.ai",
-    "domains": ["MLOps", "Generative AI"],
-    "paper_ids": ["p1", "p15"],
+    "domains": [
+      "MLOps",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p15"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://wandb.ai/site/research", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://wandb.ai/site/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://wandb.ai/site/research",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "https://wandb.ai/site/research",
+        "confidence": 65,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -441,11 +1055,29 @@
     "description": "Open-source tool to find and fix label errors in datasets. Implements confident learning — automatically detects noisy labels in any ML dataset.",
     "repo_url": "https://github.com/cleanlab/cleanlab",
     "live_url": "https://cleanlab.ai",
-    "domains": ["MLOps", "AI Safety"],
-    "paper_ids": ["p27", "p28"],
+    "domains": [
+      "MLOps",
+      "AI Safety"
+    ],
+    "paper_ids": [
+      "p27",
+      "p28"
+    ],
     "paper_links": [
-      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://github.com/cleanlab/cleanlab", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p28", "source_type": "community", "evidence_url": "https://cleanlab.ai/blog", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p27",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/cleanlab/cleanlab",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p28",
+        "source_type": "community",
+        "evidence_url": "https://cleanlab.ai/blog",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -456,12 +1088,37 @@
     "description": "Edge AI platform for visual inspection and anomaly detection. Lifelong-learning neural networks that improve in production without retraining from scratch.",
     "repo_url": "",
     "live_url": "https://neurala.com",
-    "domains": ["Computer Vision", "Robotics"],
-    "paper_ids": ["p15", "p8", "p26"],
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "paper_ids": [
+      "p15",
+      "p8",
+      "p26"
+    ],
     "paper_links": [
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p8", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p26", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "https://neurala.com/technology",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p8",
+        "source_type": "community",
+        "evidence_url": "https://neurala.com/technology",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p26",
+        "source_type": "community",
+        "evidence_url": "https://neurala.com/technology",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -472,11 +1129,29 @@
     "description": "Enterprise AutoML platform. Automates model building, deployment, and monitoring. Serves Fortune 500 companies from Boston headquarters.",
     "repo_url": "",
     "live_url": "https://datarobot.com",
-    "domains": ["MLOps", "Generative AI"],
-    "paper_ids": ["p1", "p15"],
+    "domains": [
+      "MLOps",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p15"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://datarobot.com/platform", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://datarobot.com/platform", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://datarobot.com/platform",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "https://datarobot.com/platform",
+        "confidence": 65,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -487,13 +1162,45 @@
     "description": "AI-powered cancer detection in chest X-rays and mammography. FDA-cleared, CE-marked, deployed in 4000+ hospitals across 50+ countries.",
     "repo_url": "",
     "live_url": "https://lunit.io",
-    "domains": ["Healthcare AI", "Computer Vision"],
-    "paper_ids": ["p15", "p4", "p28", "p29"],
+    "domains": [
+      "Healthcare AI",
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p15",
+      "p4",
+      "p28",
+      "p29"
+    ],
     "paper_links": [
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p28", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p29", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "https://lunit.io/research",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://lunit.io/research",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p28",
+        "source_type": "community",
+        "evidence_url": "https://lunit.io/research",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p29",
+        "source_type": "community",
+        "evidence_url": "https://lunit.io/research",
+        "confidence": 65,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -504,12 +1211,37 @@
     "description": "Enterprise LLM platform built by a Transformer paper co-author. RAG, embeddings, and language understanding for enterprise search and generation.",
     "repo_url": "https://github.com/cohere-ai",
     "live_url": "https://cohere.com",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p1", "p14", "p22"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p14",
+      "p22"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "maintainer_claim", "evidence_url": "https://cohere.com/research", "confidence": 95, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://cohere.com/research", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p22", "source_type": "community", "evidence_url": "https://cohere.com/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://cohere.com/research",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://cohere.com/research",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p22",
+        "source_type": "community",
+        "evidence_url": "https://cohere.com/research",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -520,10 +1252,21 @@
     "description": "GPU orchestration platform for AI workloads. Fractional GPUs, dynamic scheduling, and cluster management. Acquired by NVIDIA in 2024.",
     "repo_url": "",
     "live_url": "https://run.ai",
-    "domains": ["MLOps", "Optimization"],
-    "paper_ids": ["p1"],
+    "domains": [
+      "MLOps",
+      "Optimization"
+    ],
+    "paper_ids": [
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://run.ai", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://run.ai",
+        "confidence": 65,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -534,13 +1277,46 @@
     "description": "Nonprofit AI research lab founded by Paul Allen. Builds open-source AI tools: Semantic Scholar, OLMo, AI2 THOR. Mission: AI for the common good.",
     "repo_url": "https://github.com/allenai",
     "live_url": "https://allenai.org",
-    "domains": ["NLP", "Computer Vision", "Generative AI"],
-    "paper_ids": ["p30", "p31", "p32", "p33"],
+    "domains": [
+      "NLP",
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p30",
+      "p31",
+      "p32",
+      "p33"
+    ],
     "paper_links": [
-      { "paper_id": "p30", "source_type": "maintainer_claim", "evidence_url": "https://allenai.org/research", "confidence": 95, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p31", "source_type": "maintainer_claim", "evidence_url": "https://allenai.org/olmo", "confidence": 95, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p32", "source_type": "maintainer_claim", "evidence_url": "https://allenai.org/research", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p33", "source_type": "community", "evidence_url": "https://allenai.org/research", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p30",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://allenai.org/research",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p31",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://allenai.org/olmo",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p32",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://allenai.org/research",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p33",
+        "source_type": "community",
+        "evidence_url": "https://allenai.org/research",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -551,12 +1327,37 @@
     "description": "AI-powered academic search engine by Allen AI. Indexes 200M+ papers with AI-generated TLDRs, citation contexts, and research recommendations.",
     "repo_url": "https://github.com/allenai/s2-folks",
     "live_url": "https://www.semanticscholar.org",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p14", "p33", "p1"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p14",
+      "p33",
+      "p1"
+    ],
     "paper_links": [
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://www.semanticscholar.org/product/tldr", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p33", "source_type": "community", "evidence_url": "https://www.semanticscholar.org/product", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://www.semanticscholar.org", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://www.semanticscholar.org/product/tldr",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p33",
+        "source_type": "community",
+        "evidence_url": "https://www.semanticscholar.org/product",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://www.semanticscholar.org",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -567,12 +1368,37 @@
     "description": "AI contract management for enterprises. Uses NLP to extract key terms, track obligations, and automate legal document workflows.",
     "repo_url": "",
     "live_url": "https://lexion.ai",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p14", "p1", "p33"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p14",
+      "p1",
+      "p33"
+    ],
     "paper_links": [
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://lexion.ai/technology", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://lexion.ai/technology", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p33", "source_type": "community", "evidence_url": "https://lexion.ai/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://lexion.ai/technology",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://lexion.ai/technology",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p33",
+        "source_type": "community",
+        "evidence_url": "https://lexion.ai/technology",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -583,12 +1409,37 @@
     "description": "Fully open language model from Allen AI. Open training data (Dolma), open code, open weights, open evals. Making LLM science reproducible.",
     "repo_url": "https://github.com/allenai/OLMo",
     "live_url": "https://allenai.org/olmo",
-    "domains": ["NLP", "Generative AI"],
-    "paper_ids": ["p31", "p1", "p14"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p31",
+      "p1",
+      "p14"
+    ],
     "paper_links": [
-      { "paper_id": "p31", "source_type": "maintainer_claim", "evidence_url": "https://github.com/allenai/OLMo", "confidence": 95, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/allenai/OLMo", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://allenai.org/olmo", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p31",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://github.com/allenai/OLMo",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/allenai/OLMo",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://allenai.org/olmo",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -599,11 +1450,29 @@
     "description": "Ultra-efficient edge AI. Ran deep learning on $5 solar-powered chips using binary neural networks. Acquired by Apple for $200M in 2020.",
     "repo_url": "",
     "live_url": "",
-    "domains": ["Computer Vision", "Optimization"],
-    "paper_ids": ["p30", "p15"],
+    "domains": [
+      "Computer Vision",
+      "Optimization"
+    ],
+    "paper_ids": [
+      "p30",
+      "p15"
+    ],
     "paper_links": [
-      { "paper_id": "p30", "source_type": "community", "evidence_url": "https://techcrunch.com/2020/01/15/apple-acquires-xnor-ai/", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://techcrunch.com/2020/01/15/apple-acquires-xnor-ai/", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p30",
+        "source_type": "community",
+        "evidence_url": "https://techcrunch.com/2020/01/15/apple-acquires-xnor-ai/",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p15",
+        "source_type": "community",
+        "evidence_url": "https://techcrunch.com/2020/01/15/apple-acquires-xnor-ai/",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -614,11 +1483,29 @@
     "description": "Training data platform for autonomous vehicles. Computer vision annotation at scale for self-driving cars. Acquired by Uber ATG in 2019.",
     "repo_url": "",
     "live_url": "",
-    "domains": ["Computer Vision", "Robotics"],
-    "paper_ids": ["p30", "p4"],
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "paper_ids": [
+      "p30",
+      "p4"
+    ],
     "paper_links": [
-      { "paper_id": "p30", "source_type": "community", "evidence_url": "https://www.uber.com/blog/mighty-ai/", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://www.uber.com/blog/mighty-ai/", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p30",
+        "source_type": "community",
+        "evidence_url": "https://www.uber.com/blog/mighty-ai/",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://www.uber.com/blog/mighty-ai/",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -629,11 +1516,1773 @@
     "description": "Augmented writing platform. NLP predicts how language performs in job posts, emails, and business writing. Used by Fortune 500 for inclusive hiring.",
     "repo_url": "",
     "live_url": "https://textio.com",
-    "domains": ["NLP"],
-    "paper_ids": ["p33", "p14"],
+    "domains": [
+      "NLP"
+    ],
+    "paper_ids": [
+      "p33",
+      "p14"
+    ],
     "paper_links": [
-      { "paper_id": "p33", "source_type": "community", "evidence_url": "https://textio.com/blog", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://textio.com/blog", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      {
+        "paper_id": "p33",
+        "source_type": "community",
+        "evidence_url": "https://textio.com/blog",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p14",
+        "source_type": "community",
+        "evidence_url": "https://textio.com/blog",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj42",
+    "builder_id": "b41",
+    "name": "Megatron-LM",
+    "description": "NVIDIA's framework for training large transformer language models efficiently across thousands of GPUs using model and data parallelism.",
+    "repo_url": "https://github.com/NVIDIA/Megatron-LM",
+    "live_url": "",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p34"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/NVIDIA/Megatron-LM",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p34",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/1909.08053",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj43",
+    "builder_id": "b42",
+    "name": "PyTorch",
+    "description": "The most widely used open-source deep learning framework. Provides dynamic computation graphs, GPU acceleration, and a rich ecosystem for research and production.",
+    "repo_url": "https://github.com/pytorch/pytorch",
+    "live_url": "https://pytorch.org",
+    "domains": [
+      "Generative AI",
+      "Computer Vision",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p2",
+      "p35"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://pytorch.org",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "community",
+        "evidence_url": "https://pytorch.org",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p35",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/1912.01703",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj44",
+    "builder_id": "b43",
+    "name": "Hugging Face Transformers",
+    "description": "The definitive open-source library for state-of-the-art NLP, vision, and multimodal models. Provides 200K+ pretrained models and unified APIs.",
+    "repo_url": "https://github.com/huggingface/transformers",
+    "live_url": "https://huggingface.co",
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p36"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/huggingface/transformers",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/huggingface/transformers",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p36",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/1910.03771",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj45",
+    "builder_id": "b44",
+    "name": "DeepMind Robotics Research",
+    "description": "Pioneering continual learning and sim-to-real transfer for embodied agents. Research on navigation, manipulation, and lifelong learning.",
+    "repo_url": "",
+    "live_url": "https://deepmind.google/discover/blog/",
+    "domains": [
+      "Robotics",
+      "Reinforcement Learning"
+    ],
+    "paper_ids": [
+      "p5",
+      "p37"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p5",
+        "source_type": "community",
+        "evidence_url": "https://deepmind.google",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p37",
+        "source_type": "ai_detected",
+        "evidence_url": "https://arxiv.org/abs/1612.00796",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj46",
+    "builder_id": "b45",
+    "name": "Stable Diffusion / FLUX",
+    "description": "Latent diffusion models for high-resolution image synthesis. Stable Diffusion democratized AI art; FLUX is the next-generation architecture from Black Forest Labs.",
+    "repo_url": "https://github.com/black-forest-labs/flux",
+    "live_url": "https://blackforestlabs.ai",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p3",
+      "p38"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://github.com/CompVis/stable-diffusion",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p38",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2112.10752",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj47",
+    "builder_id": "b46",
+    "name": "RAG (Retrieval-Augmented Generation)",
+    "description": "The original RAG framework combining retrieval and generation for knowledge-intensive NLP. Now a foundational pattern used across the LLM ecosystem.",
+    "repo_url": "https://github.com/facebookresearch/RAG",
+    "live_url": "",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p13",
+      "p39"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://arxiv.org/abs/2005.11401",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2005.11401",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p39",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2005.11401",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj48",
+    "builder_id": "b47",
+    "name": "LoRA",
+    "description": "Low-Rank Adaptation of Large Language Models. The most widely adopted parameter-efficient fine-tuning method, reducing trainable parameters by 10,000x.",
+    "repo_url": "https://github.com/microsoft/LoRA",
+    "live_url": "",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p40"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://arxiv.org/abs/2106.09685",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p40",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2106.09685",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj49",
+    "builder_id": "b48",
+    "name": "bitsandbytes / QLoRA",
+    "description": "Efficient 4-bit quantization library enabling fine-tuning of 65B parameter models on a single 48GB GPU. QLoRA made LLM fine-tuning accessible to everyone.",
+    "repo_url": "https://github.com/TimDettmers/bitsandbytes",
+    "live_url": "",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p40",
+      "p41"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/TimDettmers/bitsandbytes",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p40",
+        "source_type": "community",
+        "evidence_url": "https://arxiv.org/abs/2305.14314",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p41",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2305.14314",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj50",
+    "builder_id": "b49",
+    "name": "FlashAttention",
+    "description": "IO-aware exact attention algorithm that is 2-4x faster and uses 5-20x less memory. Now integrated into PyTorch and used by virtually all LLM training runs.",
+    "repo_url": "https://github.com/Dao-AILab/flash-attention",
+    "live_url": "",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p42"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/Dao-AILab/flash-attention",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p42",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2205.14135",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj51",
+    "builder_id": "b50",
+    "name": "Mamba",
+    "description": "Selective state space model architecture offering linear-time sequence modeling. Achieves transformer-quality performance with 5x faster inference throughput.",
+    "repo_url": "https://github.com/state-spaces/mamba",
+    "live_url": "",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p43"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/state-spaces/mamba",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p43",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2312.00752",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj52",
+    "builder_id": "b51",
+    "name": "Craiyon (DALL-E Mini)",
+    "description": "Open-source text-to-image model that went viral in 2022. Demonstrated that AI image generation could be accessible and fun for millions of users.",
+    "repo_url": "https://github.com/borisdayma/dalle-mini",
+    "live_url": "https://www.craiyon.com",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p3",
+      "p38"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p3",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/borisdayma/dalle-mini",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p38",
+        "source_type": "community",
+        "evidence_url": "https://github.com/borisdayma/dalle-mini",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj53",
+    "builder_id": "b52",
+    "name": "Hugging Face Spaces & Demos",
+    "description": "Interactive ML art demos and creative AI tools on Hugging Face Spaces. Bridging the gap between generative AI research and creative communities.",
+    "repo_url": "https://github.com/apolinario",
+    "live_url": "https://huggingface.co/apolinario",
+    "domains": [
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p38",
+      "p3"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p38",
+        "source_type": "community",
+        "evidence_url": "https://huggingface.co/apolinario",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://huggingface.co/apolinario",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj54",
+    "builder_id": "b53",
+    "name": "Qwen",
+    "description": "Alibaba's family of large language and multimodal models. Qwen2 series achieves top performance among open-weight models across benchmarks.",
+    "repo_url": "https://github.com/QwenLM/Qwen",
+    "live_url": "https://qwenlm.github.io",
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Multimodal"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p44"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/QwenLM/Qwen",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://github.com/QwenLM/Qwen",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p44",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2309.16609",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj55",
+    "builder_id": "b54",
+    "name": "Reka AI Models",
+    "description": "Multimodal AI models from Reka AI. Reka Core, Flash, and Edge deliver frontier performance across text, image, video, and audio understanding.",
+    "repo_url": "",
+    "live_url": "https://reka.ai",
+    "domains": [
+      "Multimodal",
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p45"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://reka.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p45",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2404.12387",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj56",
+    "builder_id": "b55",
+    "name": "PaLM Training Infrastructure",
+    "description": "Scaling infrastructure behind Google's PaLM model. Achieved efficient training of 540B parameter models across 6144 TPU v4 chips.",
+    "repo_url": "",
+    "live_url": "",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p46"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://arxiv.org/abs/2204.02311",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p46",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2204.02311",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj57",
+    "builder_id": "b56",
+    "name": "LAION-5B Dataset",
+    "description": "The largest openly available image-text dataset with 5.85 billion CLIP-filtered pairs. Enabled training of Stable Diffusion and open CLIP models.",
+    "repo_url": "https://github.com/LAION-AI/laion-datasets",
+    "live_url": "https://laion.ai",
+    "domains": [
+      "Computer Vision",
+      "Multimodal"
+    ],
+    "paper_ids": [
+      "p3",
+      "p47"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p3",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/LAION-AI/laion-datasets",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p47",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2210.08402",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj58",
+    "builder_id": "b57",
+    "name": "Open Assistant",
+    "description": "Community-driven open-source project to create a free, high-quality chat assistant dataset and model. One of the earliest open RLHF efforts.",
+    "repo_url": "https://github.com/LAION-AI/Open-Assistant",
+    "live_url": "",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p48"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/LAION-AI/Open-Assistant",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p48",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2304.07327",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj59",
+    "builder_id": "b58",
+    "name": "Circuits / Mechanistic Interpretability",
+    "description": "Pioneering research on understanding neural networks by reverse-engineering their internal mechanisms. Published the influential Circuits thread on Distill.",
+    "repo_url": "",
+    "live_url": "https://colah.github.io",
+    "domains": [
+      "Generative AI",
+      "AI Safety"
+    ],
+    "paper_ids": [
+      "p1",
+      "p49"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://distill.pub/2020/circuits/",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p49",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://distill.pub/2020/circuits/",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj60",
+    "builder_id": "b59",
+    "name": "Lil'Log",
+    "description": "Comprehensive technical blog covering LLMs, diffusion, RL, and more. The most widely cited personal ML blog, serving as a reference for researchers worldwide.",
+    "repo_url": "https://github.com/lilianweng/lilianweng.github.io",
+    "live_url": "https://lilianweng.github.io",
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Reinforcement Learning"
+    ],
+    "paper_ids": [
+      "p1",
+      "p2",
+      "p6"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://lilianweng.github.io",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://lilianweng.github.io",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://lilianweng.github.io",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj61",
+    "builder_id": "b60",
+    "name": "Contextual AI RAG 2.0",
+    "description": "Enterprise RAG platform that goes beyond naive retrieval. Contextual AI builds RAG-native language models trained end-to-end for grounded generation.",
+    "repo_url": "",
+    "live_url": "https://contextual.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p13",
+      "p39"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://contextual.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://contextual.ai",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p39",
+        "source_type": "community",
+        "evidence_url": "https://contextual.ai/blog",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj62",
+    "builder_id": "b61",
+    "name": "DSPy",
+    "description": "Programming framework for optimizing LLM pipelines. Replaces hand-written prompts with composable, learnable modules that auto-optimize via compilation.",
+    "repo_url": "https://github.com/stanfordnlp/dspy",
+    "live_url": "https://dspy-docs.vercel.app",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p50"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/stanfordnlp/dspy",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p50",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2310.03714",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj63",
+    "builder_id": "b62",
+    "name": "ALiBi Positional Encoding",
+    "description": "Attention with Linear Biases enables transformers to generalize to longer sequences than seen during training without learned position embeddings.",
+    "repo_url": "https://github.com/ofirpress/attention_with_linear_biases",
+    "live_url": "",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p51"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://arxiv.org/abs/2108.12409",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p51",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2108.12409",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj64",
+    "builder_id": "b63",
+    "name": "Machine Learning Mastery",
+    "description": "The largest practitioner-focused ML education platform with 1000+ tutorials and 20+ books covering deep learning, NLP, computer vision, and time series.",
+    "repo_url": "",
+    "live_url": "https://machinelearningmastery.com",
+    "domains": [
+      "NLP",
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p2",
+      "p4"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://machinelearningmastery.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "community",
+        "evidence_url": "https://machinelearningmastery.com",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://machinelearningmastery.com",
+        "confidence": 70,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj65",
+    "builder_id": "b64",
+    "name": "Build a Large Language Model From Scratch",
+    "description": "Hands-on book and code repository teaching LLM internals from the ground up. Covers pretraining, fine-tuning, and RLHF with clear PyTorch implementations.",
+    "repo_url": "https://github.com/rasbt/LLMs-from-scratch",
+    "live_url": "https://www.manning.com/books/build-a-large-language-model-from-scratch",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/rasbt/LLMs-from-scratch",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/rasbt/LLMs-from-scratch",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj66",
+    "builder_id": "b65",
+    "name": "Pinecone AI Education & Canopy",
+    "description": "Developer education content and open-source RAG framework for Pinecone. Tutorials on vector search, embeddings, and building production RAG systems.",
+    "repo_url": "https://github.com/pinecone-io/canopy",
+    "live_url": "https://www.pinecone.io/learn/",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p13"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://www.pinecone.io/learn/",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "community",
+        "evidence_url": "https://www.pinecone.io/learn/",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj67",
+    "builder_id": "b66",
+    "name": "sentence-transformers",
+    "description": "The most popular library for computing dense vector representations of text. Powers semantic search, clustering, and similarity across millions of applications.",
+    "repo_url": "https://github.com/UKPLab/sentence-transformers",
+    "live_url": "https://www.sbert.net",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p52"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/UKPLab/sentence-transformers",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p52",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/1908.10084",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj68",
+    "builder_id": "b67",
+    "name": "TRL (Transformer Reinforcement Learning)",
+    "description": "Hugging Face library for training language models with RLHF, DPO, and PPO. The standard open-source toolkit for alignment fine-tuning.",
+    "repo_url": "https://github.com/huggingface/trl",
+    "live_url": "https://huggingface.co/docs/trl",
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Reinforcement Learning"
+    ],
+    "paper_ids": [
+      "p1",
+      "p53"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://github.com/huggingface/trl",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p53",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://arxiv.org/abs/2203.02155",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj69",
+    "builder_id": "b68",
+    "name": "Hugging Face Inference Endpoints",
+    "description": "Production deployment platform for transformer models. One-click deployment of any Hugging Face model with auto-scaling and optimized inference.",
+    "repo_url": "",
+    "live_url": "https://huggingface.co/inference-endpoints",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p36"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://huggingface.co/inference-endpoints",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p36",
+        "source_type": "community",
+        "evidence_url": "https://huggingface.co/inference-endpoints",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj70",
+    "builder_id": "b69",
+    "name": "Diffusers",
+    "description": "Hugging Face library for state-of-the-art diffusion models. Provides pretrained pipelines for image, audio, and 3D generation with simple APIs.",
+    "repo_url": "https://github.com/huggingface/diffusers",
+    "live_url": "https://huggingface.co/docs/diffusers",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p38",
+      "p3",
+      "p54"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p38",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/huggingface/diffusers",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://github.com/huggingface/diffusers",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p54",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2006.11239",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj71",
+    "builder_id": "b70",
+    "name": "timm (PyTorch Image Models)",
+    "description": "The definitive collection of state-of-the-art computer vision model implementations. 800+ pretrained models including EfficientNet, Vision Transformers, and ConvNeXt.",
+    "repo_url": "https://github.com/huggingface/pytorch-image-models",
+    "live_url": "https://huggingface.co/docs/timm",
+    "domains": [
+      "Computer Vision"
+    ],
+    "paper_ids": [
+      "p4",
+      "p3",
+      "p55"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://github.com/huggingface/pytorch-image-models",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://github.com/huggingface/pytorch-image-models",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p55",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2010.11929",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj72",
+    "builder_id": "b71",
+    "name": "GPT-NeoX / Pythia",
+    "description": "EleutherAI's open-source large language model suite. Pythia provides 16 model checkpoints (70M-12B) for scientific study of LLM training dynamics.",
+    "repo_url": "https://github.com/EleutherAI/gpt-neox",
+    "live_url": "https://www.eleuther.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6",
+      "p56"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/EleutherAI/gpt-neox",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://github.com/EleutherAI/gpt-neox",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p56",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2304.01373",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj73",
+    "builder_id": "b72",
+    "name": "Together AI Platform",
+    "description": "Cloud platform for training, fine-tuning, and running open-source AI models. Offers the fastest inference for Llama, Mixtral, and other open models.",
+    "repo_url": "https://github.com/togethercomputer",
+    "live_url": "https://together.ai",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p42"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://together.ai",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p42",
+        "source_type": "community",
+        "evidence_url": "https://together.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj74",
+    "builder_id": "b73",
+    "name": "Mistral AI Models",
+    "description": "Open-weight frontier models from Europe. Mistral 7B, Mixtral 8x7B, and Mistral Large compete with models 10x their size through architecture innovations.",
+    "repo_url": "https://github.com/mistralai/mistral-src",
+    "live_url": "https://mistral.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p57"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "readme_extraction",
+        "evidence_url": "https://github.com/mistralai/mistral-src",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p57",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2310.06825",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj75",
+    "builder_id": "b74",
+    "name": "Sakana AI — Evolutionary Model Merging",
+    "description": "Nature-inspired AI research lab using evolutionary algorithms to automatically merge and create new foundation models without training from scratch.",
+    "repo_url": "https://github.com/SakanaAI",
+    "live_url": "https://sakana.ai",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p58"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://sakana.ai",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p58",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2403.13187",
+        "confidence": 95,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj76",
+    "builder_id": "b75",
+    "name": "Imbue AI Agents",
+    "description": "AI systems that reason about code and build software autonomously. Imbue trains models optimized for practical reasoning and agent capabilities.",
+    "repo_url": "",
+    "live_url": "https://imbue.com",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://imbue.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "community",
+        "evidence_url": "https://imbue.com/research",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj77",
+    "builder_id": "b76",
+    "name": "Adept ACT-1",
+    "description": "AI model trained to use software tools like a human. ACT-1 can navigate web browsers, use spreadsheets, and operate enterprise software via natural language.",
+    "repo_url": "",
+    "live_url": "https://adept.ai",
+    "domains": [
+      "Generative AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p59"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://adept.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p59",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://arxiv.org/abs/2210.03629",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj78",
+    "builder_id": "b77",
+    "name": "Runway Gen-3",
+    "description": "AI-powered creative suite for video generation and editing. Gen-3 Alpha produces photorealistic video from text and image prompts with fine temporal control.",
+    "repo_url": "",
+    "live_url": "https://runwayml.com",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p38",
+      "p2",
+      "p60"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p38",
+        "source_type": "community",
+        "evidence_url": "https://runwayml.com",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "community",
+        "evidence_url": "https://runwayml.com",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p60",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://research.runwayml.com/gen3",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj79",
+    "builder_id": "b78",
+    "name": "Midjourney",
+    "description": "The world's most popular AI image generation platform. Known for stunning artistic quality and used by millions of creators, designers, and artists.",
+    "repo_url": "",
+    "live_url": "https://midjourney.com",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p38",
+      "p3"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p38",
+        "source_type": "community",
+        "evidence_url": "https://midjourney.com",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "ai_detected",
+        "evidence_url": "https://midjourney.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj80",
+    "builder_id": "b79",
+    "name": "Jasper AI",
+    "description": "AI content generation platform for enterprise marketing teams. Used by 100K+ businesses to create on-brand copy, blog posts, and campaigns at scale.",
+    "repo_url": "",
+    "live_url": "https://jasper.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://jasper.ai",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "ai_detected",
+        "evidence_url": "https://jasper.ai",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj81",
+    "builder_id": "b80",
+    "name": "Covariant Brain",
+    "description": "Universal AI for robotic manipulation. The Covariant Brain enables robots to pick, place, and handle novel objects in real-world warehouse and logistics settings.",
+    "repo_url": "",
+    "live_url": "https://covariant.ai",
+    "domains": [
+      "Robotics",
+      "Computer Vision",
+      "Reinforcement Learning"
+    ],
+    "paper_ids": [
+      "p4",
+      "p61"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p4",
+        "source_type": "community",
+        "evidence_url": "https://covariant.ai",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p61",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://covariant.ai/research",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj82",
+    "builder_id": "b81",
+    "name": "Character.AI",
+    "description": "Platform for creating and chatting with AI characters. Over 20M monthly users interact with millions of user-created AI personalities and assistants.",
+    "repo_url": "",
+    "live_url": "https://character.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p6"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://character.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p6",
+        "source_type": "ai_detected",
+        "evidence_url": "https://character.ai",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj83",
+    "builder_id": "b82",
+    "name": "Inflection Pi / Microsoft AI",
+    "description": "Personal AI assistant designed for emotional intelligence and natural conversation. Pi pioneered empathetic AI before Mustafa moved to lead Microsoft AI.",
+    "repo_url": "",
+    "live_url": "https://pi.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p62"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://pi.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p62",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://inflection.ai/inflection-2-5",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj84",
+    "builder_id": "b83",
+    "name": "Perplexity AI",
+    "description": "AI-native answer engine with real-time web search and citations. Redefining search by providing direct, sourced answers instead of link lists.",
+    "repo_url": "",
+    "live_url": "https://perplexity.ai",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p13"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://perplexity.ai",
+        "confidence": 90,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p13",
+        "source_type": "ai_detected",
+        "evidence_url": "https://perplexity.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj85",
+    "builder_id": "b84",
+    "name": "Pika",
+    "description": "AI video generation platform that creates and edits cinematic videos from text, images, and existing clips. Known for intuitive creative controls.",
+    "repo_url": "",
+    "live_url": "https://pika.art",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p38",
+      "p2"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p38",
+        "source_type": "community",
+        "evidence_url": "https://pika.art",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p2",
+        "source_type": "ai_detected",
+        "evidence_url": "https://pika.art",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj86",
+    "builder_id": "b85",
+    "name": "ElevenLabs Voice AI",
+    "description": "Most realistic AI voice synthesis platform. Offers voice cloning, text-to-speech in 29 languages, and AI dubbing used by creators and enterprises worldwide.",
+    "repo_url": "",
+    "live_url": "https://elevenlabs.io",
+    "domains": [
+      "Audio AI",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p1",
+      "p63"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://elevenlabs.io",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p63",
+        "source_type": "maintainer_claim",
+        "evidence_url": "https://elevenlabs.io/research",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj87",
+    "builder_id": "b86",
+    "name": "AssemblyAI Universal-2",
+    "description": "State-of-the-art speech-to-text API with speaker diarization, sentiment analysis, and summarization. Universal-2 model achieves best-in-class accuracy.",
+    "repo_url": "",
+    "live_url": "https://assemblyai.com",
+    "domains": [
+      "Audio AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1",
+      "p34"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://assemblyai.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p34",
+        "source_type": "ai_detected",
+        "evidence_url": "https://assemblyai.com/research",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj88",
+    "builder_id": "b87",
+    "name": "Deepgram Nova-2",
+    "description": "Enterprise speech AI platform with real-time transcription, custom vocabulary, and language understanding. Nova-2 delivers industry-leading speed and accuracy.",
+    "repo_url": "",
+    "live_url": "https://deepgram.com",
+    "domains": [
+      "Audio AI",
+      "NLP"
+    ],
+    "paper_ids": [
+      "p1"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p1",
+        "source_type": "community",
+        "evidence_url": "https://deepgram.com",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj89",
+    "builder_id": "b88",
+    "name": "Synthesia EXPRESSIVE-1",
+    "description": "AI video generation platform creating realistic presenter-led videos from text. Used by 50K+ companies for training, marketing, and internal communications.",
+    "repo_url": "",
+    "live_url": "https://synthesia.io",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p2",
+      "p38"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p2",
+        "source_type": "community",
+        "evidence_url": "https://synthesia.io",
+        "confidence": 75,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p38",
+        "source_type": "ai_detected",
+        "evidence_url": "https://synthesia.io",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj90",
+    "builder_id": "b89",
+    "name": "Photoroom",
+    "description": "AI photo editing app that instantly removes backgrounds, generates product images, and creates studio-quality visuals. Used by 150M+ people globally.",
+    "repo_url": "",
+    "live_url": "https://photoroom.com",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p3",
+      "p38"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://photoroom.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p38",
+        "source_type": "ai_detected",
+        "evidence_url": "https://photoroom.com",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj91",
+    "builder_id": "b90",
+    "name": "Ideogram",
+    "description": "AI image generation platform known for reliable text rendering in images. Ideogram 2.0 sets the standard for typography accuracy in generated visuals.",
+    "repo_url": "",
+    "live_url": "https://ideogram.ai",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "paper_ids": [
+      "p3",
+      "p38"
+    ],
+    "paper_links": [
+      {
+        "paper_id": "p3",
+        "source_type": "community",
+        "evidence_url": "https://ideogram.ai",
+        "confidence": 85,
+        "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p38",
+        "source_type": "ai_detected",
+        "evidence_url": "https://ideogram.ai",
+        "confidence": 80,
+        "added_at": "2026-03-30T00:00:00Z"
+      }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   }

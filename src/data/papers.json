@@ -234,8 +234,13 @@
     "citation_count": 108124,
     "abstract": "We introduce BERT, a new language representation model that pre-trains deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers.",
     "url": "https://arxiv.org/abs/1810.04805",
-    "domains": ["NLP", "Generative AI"],
-    "author_ids": ["r23"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r23"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -247,8 +252,12 @@
     "citation_count": 220000,
     "abstract": "We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. Residual networks are easier to optimize and gain accuracy from considerably increased depth.",
     "url": "https://arxiv.org/abs/1512.03385",
-    "domains": ["Computer Vision"],
-    "author_ids": ["r26"],
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r26"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -260,8 +269,14 @@
     "citation_count": 130000,
     "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into 1000 different classes, achieving a top-5 test error rate of 15.3%.",
     "url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
-    "domains": ["Computer Vision"],
-    "author_ids": ["r25", "r3", "r2"],
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r25",
+      "r3",
+      "r2"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -273,8 +288,14 @@
     "citation_count": 5200,
     "abstract": "We propose a two-stage model: a prior that generates a CLIP image embedding given a text caption, and a decoder that generates an image conditioned on the image embedding (DALL-E 2).",
     "url": "https://arxiv.org/abs/2204.06125",
-    "domains": ["Computer Vision", "Generative AI", "Multimodal"],
-    "author_ids": ["r16"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI",
+      "Multimodal"
+    ],
+    "author_ids": [
+      "r16"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -286,7 +307,10 @@
     "citation_count": 14000,
     "abstract": "We apply diffusion models in the latent space of powerful pretrained autoencoders, achieving state-of-the-art image synthesis while reducing computational costs. This work underlies Stable Diffusion.",
     "url": "https://arxiv.org/abs/2112.10752",
-    "domains": ["Computer Vision", "Generative AI"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -299,8 +323,16 @@
     "citation_count": 16000,
     "abstract": "We propose an algorithm for meta-learning that is model-agnostic and trains the model's initial parameters such that a small number of gradient steps with a small amount of training data produces good generalization on a new task.",
     "url": "https://arxiv.org/abs/1703.03400",
-    "domains": ["Reinforcement Learning", "Robotics", "Generative AI"],
-    "author_ids": ["r19", "r10", "r15"],
+    "domains": [
+      "Reinforcement Learning",
+      "Robotics",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r19",
+      "r10",
+      "r15"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -312,8 +344,13 @@
     "citation_count": 20000,
     "abstract": "We introduce a new approach to computer Go that uses value networks to evaluate board positions and policy networks to select moves, combined with a Monte Carlo tree search. AlphaGo defeated the human European Go champion.",
     "url": "https://www.nature.com/articles/nature16961",
-    "domains": ["Reinforcement Learning"],
-    "author_ids": ["r17", "r6"],
+    "domains": [
+      "Reinforcement Learning"
+    ],
+    "author_ids": [
+      "r17",
+      "r6"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -325,7 +362,11 @@
     "citation_count": 8500,
     "abstract": "We report the development of GPT-4, a large-scale multimodal model which accepts image and text inputs and produces text outputs, exhibiting human-level performance on various professional and academic benchmarks.",
     "url": "https://arxiv.org/abs/2303.08774",
-    "domains": ["NLP", "Generative AI", "Multimodal"],
+    "domains": [
+      "NLP",
+      "Generative AI",
+      "Multimodal"
+    ],
     "author_ids": [],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -338,7 +379,10 @@
     "citation_count": 7200,
     "abstract": "We develop and release Llama 2, a collection of pretrained and fine-tuned large language models ranging from 7B to 70B parameters, optimized for dialogue use cases and outperforming existing open-source chat models.",
     "url": "https://arxiv.org/abs/2307.09288",
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-03-29T00:00:00Z"
   },
@@ -351,8 +395,13 @@
     "citation_count": 95000,
     "abstract": "We introduce Long Short-Term Memory, a novel recurrent network architecture with a gradient-based learning algorithm that can bridge minimal time lags in excess of 1000 discrete time steps, solving the vanishing gradient problem.",
     "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
-    "domains": ["NLP", "Generative AI"],
-    "author_ids": ["r24"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r24"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -364,8 +413,14 @@
     "citation_count": 5500,
     "abstract": "We discuss the environmental and financial costs of training large language models, the inscrutability of their training data, and the potential for generating text that encodes hegemonic worldviews.",
     "url": "https://doi.org/10.1145/3442188.3445922",
-    "domains": ["NLP", "AI Safety"],
-    "author_ids": ["r21", "r20"],
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r21",
+      "r20"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -377,8 +432,12 @@
     "citation_count": 25000,
     "abstract": "We propose a simple and scalable detection algorithm (R-CNN) that improves mean average precision by more than 30% relative to the previous best result on PASCAL VOC, by applying high-capacity CNNs to bottom-up region proposals.",
     "url": "https://arxiv.org/abs/1311.2524",
-    "domains": ["Computer Vision"],
-    "author_ids": ["r27"],
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r27"
+    ],
     "created_at": "2026-03-29T00:00:00Z"
   },
   {
@@ -390,8 +449,13 @@
     "citation_count": 18000,
     "abstract": "We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems (pix2pix).",
     "url": "https://arxiv.org/abs/1611.07004",
-    "domains": ["Computer Vision", "Generative AI"],
-    "author_ids": ["r31"],
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r31"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -403,7 +467,10 @@
     "citation_count": 1200,
     "abstract": "This survey provides a comprehensive overview of data-centric AI, including training data development, inference data development, and data maintenance.",
     "url": "https://arxiv.org/abs/2303.10158",
-    "domains": ["MLOps", "Generative AI"],
+    "domains": [
+      "MLOps",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -416,8 +483,13 @@
     "citation_count": 12000,
     "abstract": "We propose PGD adversarial training, a method for building robust deep learning models that resist adversarial perturbations.",
     "url": "https://arxiv.org/abs/1706.06083",
-    "domains": ["AI Safety", "Computer Vision"],
-    "author_ids": ["r33"],
+    "domains": [
+      "AI Safety",
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r33"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -429,8 +501,13 @@
     "citation_count": 450,
     "abstract": "We present a generative model for 3D molecular geometry that enables drug discovery by predicting molecular conformations.",
     "url": "https://arxiv.org/abs/1909.11459",
-    "domains": ["Healthcare AI", "Generative AI"],
-    "author_ids": ["r34"],
+    "domains": [
+      "Healthcare AI",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r34"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -442,8 +519,12 @@
     "citation_count": 35000,
     "abstract": "We frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation.",
     "url": "https://arxiv.org/abs/1506.02640",
-    "domains": ["Computer Vision"],
-    "author_ids": ["r42"],
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r42"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -455,8 +536,14 @@
     "citation_count": 800,
     "abstract": "We present OLMo, a truly open language model with open training data, training code, model weights, and evaluation code. OLMo enables the scientific study of language models by making every artifact fully reproducible.",
     "url": "https://arxiv.org/abs/2402.00838",
-    "domains": ["NLP", "Generative AI"],
-    "author_ids": ["r41", "r44"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r41",
+      "r44"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -468,8 +555,13 @@
     "citation_count": 1500,
     "abstract": "We present COMET, a framework for automatic construction of commonsense knowledge graphs by training transformers on existing knowledge tuples.",
     "url": "https://arxiv.org/abs/1906.05317",
-    "domains": ["NLP", "Generative AI"],
-    "author_ids": ["r43"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r43"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   },
   {
@@ -481,8 +573,1086 @@
     "citation_count": 15000,
     "abstract": "We introduce a new type of deep contextualized word representation (ELMo) that models both complex characteristics of word use and how these uses vary across linguistic contexts.",
     "url": "https://arxiv.org/abs/1802.05365",
-    "domains": ["NLP"],
-    "author_ids": ["r40"],
+    "domains": [
+      "NLP"
+    ],
+    "author_ids": [
+      "r40"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p34",
+    "semantic_id": "",
+    "title": "Language Models are Few-Shot Learners",
+    "year": 2020,
+    "venue": "NeurIPS 2020",
+    "citation_count": 18500,
+    "abstract": "We demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance, achieving strong results on many NLP benchmarks without fine-tuning (GPT-3).",
+    "url": "https://arxiv.org/abs/2005.14165",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r52"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p35",
+    "semantic_id": "",
+    "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+    "year": 2015,
+    "venue": "ICLR 2015",
+    "citation_count": 92000,
+    "abstract": "We investigate the effect of convolutional network depth on accuracy in large-scale image recognition, showing that pushing depth to 16-19 layers achieves significant improvement (VGGNet).",
+    "url": "https://arxiv.org/abs/1409.1556",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r56",
+      "r85"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p36",
+    "semantic_id": "",
+    "title": "Efficient Estimation of Word Representations in Vector Space",
+    "year": 2013,
+    "venue": "ICLR Workshop 2013",
+    "citation_count": 38000,
+    "abstract": "We propose two novel model architectures for computing continuous vector representations of words from very large data sets, known as Word2Vec.",
+    "url": "https://arxiv.org/abs/1301.3781",
+    "domains": [
+      "NLP"
+    ],
+    "author_ids": [
+      "r61"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p37",
+    "semantic_id": "",
+    "title": "Auto-Encoding Variational Bayes",
+    "year": 2014,
+    "venue": "ICLR 2014",
+    "citation_count": 22000,
+    "abstract": "We introduce a stochastic variational inference and learning algorithm that scales to large datasets, enabling efficient approximate inference in directed probabilistic models (VAE).",
+    "url": "https://arxiv.org/abs/1312.6114",
+    "domains": [
+      "Generative AI",
+      "Optimization"
+    ],
+    "author_ids": [
+      "r93",
+      "r65"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p38",
+    "semantic_id": "",
+    "title": "Adam: A Method for Stochastic Optimization",
+    "year": 2015,
+    "venue": "ICLR 2015",
+    "citation_count": 130000,
+    "abstract": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions that combines adaptive learning rates with momentum.",
+    "url": "https://arxiv.org/abs/1412.6980",
+    "domains": [
+      "Optimization"
+    ],
+    "author_ids": [
+      "r93"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p39",
+    "semantic_id": "",
+    "title": "Reinforcement Learning: An Introduction",
+    "year": 2018,
+    "venue": "MIT Press",
+    "citation_count": 65000,
+    "abstract": "A comprehensive textbook providing a clear and simple account of the key ideas and algorithms of reinforcement learning, now considered the foundational reference in the field.",
+    "url": "http://incompleteideas.net/book/the-book.html",
+    "domains": [
+      "Reinforcement Learning"
+    ],
+    "author_ids": [
+      "r49"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p40",
+    "semantic_id": "",
+    "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+    "year": 2017,
+    "venue": "ICLR 2017",
+    "citation_count": 21000,
+    "abstract": "We present a scalable approach for semi-supervised learning on graph-structured data based on an efficient variant of convolutional neural networks operating directly on graphs (GCN).",
+    "url": "https://arxiv.org/abs/1609.02907",
+    "domains": [
+      "Graph ML"
+    ],
+    "author_ids": [
+      "r91",
+      "r65"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p41",
+    "semantic_id": "",
+    "title": "Graph Attention Networks",
+    "year": 2018,
+    "venue": "ICLR 2018",
+    "citation_count": 14000,
+    "abstract": "We present graph attention networks (GATs), novel neural network architectures that operate on graph-structured data by leveraging masked self-attentional layers.",
+    "url": "https://arxiv.org/abs/1710.10903",
+    "domains": [
+      "Graph ML"
+    ],
+    "author_ids": [
+      "r92"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p42",
+    "semantic_id": "",
+    "title": "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation",
+    "year": 2014,
+    "venue": "EMNLP 2014",
+    "citation_count": 16000,
+    "abstract": "We propose a novel neural network model called RNN Encoder-Decoder that learns to encode a variable-length sequence into a fixed-length vector and decode it back, introducing the GRU unit.",
+    "url": "https://arxiv.org/abs/1406.1078",
+    "domains": [
+      "NLP"
+    ],
+    "author_ids": [
+      "r53",
+      "r8",
+      "r60"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p43",
+    "semantic_id": "",
+    "title": "Concrete Problems in AI Safety",
+    "year": 2016,
+    "venue": "arXiv preprint",
+    "citation_count": 1800,
+    "abstract": "We discuss five practical research problems related to accident risk in machine learning systems, covering avoiding negative side effects, reward hacking, scalable oversight, safe exploration, and distributional shift.",
+    "url": "https://arxiv.org/abs/1606.06565",
+    "domains": [
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r51"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p44",
+    "semantic_id": "",
+    "title": "DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs",
+    "year": 2017,
+    "venue": "IEEE TPAMI",
+    "citation_count": 14000,
+    "abstract": "We propose DeepLab, a system that uses atrous convolution and fully connected CRFs to achieve state-of-the-art semantic image segmentation.",
+    "url": "https://arxiv.org/abs/1606.00915",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r88"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p45",
+    "semantic_id": "",
+    "title": "Pyramid Scene Parsing Network",
+    "year": 2017,
+    "venue": "CVPR 2017",
+    "citation_count": 9500,
+    "abstract": "We propose a pyramid pooling module that exploits global context information for scene parsing, achieving state-of-the-art results on multiple benchmarks (PSPNet).",
+    "url": "https://arxiv.org/abs/1612.01105",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r90"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p46",
+    "semantic_id": "",
+    "title": "Aggregated Residual Transformations for Deep Neural Networks",
+    "year": 2017,
+    "venue": "CVPR 2017",
+    "citation_count": 10500,
+    "abstract": "We present ResNeXt, a simple and highly modularized network architecture for image classification that uses a homogeneous multi-branch architecture with aggregated transformations.",
+    "url": "https://arxiv.org/abs/1611.05431",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r89"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p47",
+    "semantic_id": "",
+    "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+    "year": 2016,
+    "venue": "ICLR 2016",
+    "citation_count": 7200,
+    "abstract": "We introduce a three-stage pipeline for compressing neural networks: pruning, quantization, and Huffman coding, achieving 35-49x compression without loss of accuracy.",
+    "url": "https://arxiv.org/abs/1510.00149",
+    "domains": [
+      "MLOps",
+      "Optimization"
+    ],
+    "author_ids": [
+      "r55"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p48",
+    "semantic_id": "",
+    "title": "Geometric Deep Learning: Going Beyond Euclidean Data",
+    "year": 2017,
+    "venue": "IEEE Signal Processing Magazine",
+    "citation_count": 4500,
+    "abstract": "We provide a unified framework for applying deep learning techniques to non-Euclidean domains such as graphs and manifolds, establishing the foundations of geometric deep learning.",
+    "url": "https://arxiv.org/abs/1611.08097",
+    "domains": [
+      "Graph ML",
+      "Optimization"
+    ],
+    "author_ids": [
+      "r82"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p49",
+    "semantic_id": "",
+    "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+    "year": 2016,
+    "venue": "ICML 2016",
+    "citation_count": 8200,
+    "abstract": "We show that dropout training in deep neural networks can be interpreted as approximate Bayesian inference, providing a practical way to obtain model uncertainty estimates.",
+    "url": "https://arxiv.org/abs/1506.02142",
+    "domains": [
+      "Optimization",
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r94"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p50",
+    "semantic_id": "",
+    "title": "Representation Learning on Graphs: Methods and Applications",
+    "year": 2017,
+    "venue": "IEEE Data Engineering Bulletin",
+    "citation_count": 3200,
+    "abstract": "We review methods for learning low-dimensional node embeddings on graphs, covering approaches based on matrix factorization, random walks, and graph neural networks.",
+    "url": "https://arxiv.org/abs/1709.05584",
+    "domains": [
+      "Graph ML"
+    ],
+    "author_ids": [
+      "r64"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p51",
+    "semantic_id": "",
+    "title": "Artificial Intelligence: A Modern Approach",
+    "year": 2020,
+    "venue": "Pearson (4th Edition)",
+    "citation_count": 72000,
+    "abstract": "The definitive textbook on artificial intelligence, covering search, knowledge representation, planning, learning, natural language processing, perception, and robotics.",
+    "url": "https://aima.cs.berkeley.edu/",
+    "domains": [
+      "Other",
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r81"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p52",
+    "semantic_id": "",
+    "title": "Causal Inference for Statistics, Social, and Biomedical Sciences",
+    "year": 2015,
+    "venue": "Cambridge University Press",
+    "citation_count": 5400,
+    "abstract": "A comprehensive introduction to causal inference using the potential outcomes framework, covering experimental design, matching, instrumental variables, and regression discontinuity.",
+    "url": "https://doi.org/10.1017/CBO9781139025751",
+    "domains": [
+      "Other",
+      "Healthcare AI"
+    ],
+    "author_ids": [
+      "r83"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p53",
+    "semantic_id": "",
+    "title": "Large-scale Video Classification with Convolutional Neural Networks",
+    "year": 2014,
+    "venue": "CVPR 2014",
+    "citation_count": 5800,
+    "abstract": "We study multiple approaches for extending CNN architectures for video classification, introducing the Sports-1M benchmark with 1 million YouTube videos across 487 classes.",
+    "url": "https://doi.org/10.1109/CVPR.2014.223",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r7",
+      "r47",
+      "r79"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p54",
+    "semantic_id": "",
+    "title": "Neural Architecture Search with Reinforcement Learning",
+    "year": 2017,
+    "venue": "ICLR 2017",
+    "citation_count": 5100,
+    "abstract": "We use a recurrent neural network trained with reinforcement learning to generate neural network architectures, discovering models that rival the best human-designed architectures.",
+    "url": "https://arxiv.org/abs/1611.01578",
+    "domains": [
+      "Optimization",
+      "Reinforcement Learning"
+    ],
+    "author_ids": [
+      "r29"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p55",
+    "semantic_id": "",
+    "title": "Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors",
+    "year": 2015,
+    "venue": "CVPR 2015",
+    "citation_count": 1800,
+    "abstract": "We propose trajectory-pooled deep-convolutional descriptors (TDD) that combine improved dense trajectories with deep convolutional features for video action recognition.",
+    "url": "https://arxiv.org/abs/1505.04868",
+    "domains": [
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r84"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p56",
+    "semantic_id": "",
+    "title": "Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+    "year": 2018,
+    "venue": "CVPR 2018",
+    "citation_count": 3800,
+    "abstract": "We propose a principled approach to multi-task learning using homoscedastic uncertainty to weigh multiple loss functions, demonstrating improvements on scene understanding tasks.",
+    "url": "https://arxiv.org/abs/1705.07115",
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "author_ids": [
+      "r94"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p57",
+    "semantic_id": "",
+    "title": "Towards Interpretable Machine Learning: A Survey on Methods and Metrics",
+    "year": 2019,
+    "venue": "Electronics",
+    "citation_count": 2200,
+    "abstract": "We provide a comprehensive survey of interpretable machine learning methods including feature attribution, concept-based explanations, and model-agnostic approaches.",
+    "url": "https://doi.org/10.3390/electronics8080832",
+    "domains": [
+      "AI Safety",
+      "Other"
+    ],
+    "author_ids": [
+      "r67"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p58",
+    "semantic_id": "",
+    "title": "PointFlow: 3D Point Cloud Generation with Continuous Normalizing Flows",
+    "year": 2019,
+    "venue": "ICCV 2019",
+    "citation_count": 650,
+    "abstract": "We propose PointFlow, a principled probabilistic framework for 3D point cloud generation using continuous normalizing flows that models the distribution of shapes as a two-level hierarchy.",
+    "url": "https://arxiv.org/abs/1906.12320",
+    "domains": [
+      "Computer Vision",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r71"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p59",
+    "semantic_id": "",
+    "title": "SoK: Eternal War in Memory",
+    "year": 2013,
+    "venue": "IEEE S&P 2013",
+    "citation_count": 1500,
+    "abstract": "A systematization of knowledge paper that categorizes memory corruption attacks and defenses, providing a comprehensive framework for understanding software security.",
+    "url": "https://doi.org/10.1109/SP.2013.13",
+    "domains": [
+      "AI Safety",
+      "Other"
+    ],
+    "author_ids": [
+      "r72"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p60",
+    "semantic_id": "",
+    "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+    "year": 2017,
+    "venue": "NeurIPS 2017",
+    "citation_count": 8500,
+    "abstract": "We introduce a hierarchical neural network that recursively applies PointNet on nested partitions of the input point set, capturing local structures at multiple scales for 3D understanding.",
+    "url": "https://arxiv.org/abs/1706.02413",
+    "domains": [
+      "Computer Vision",
+      "Robotics"
+    ],
+    "author_ids": [
+      "r64"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p61",
+    "semantic_id": "",
+    "title": "Memory Networks",
+    "year": 2015,
+    "venue": "ICLR 2015",
+    "citation_count": 4200,
+    "abstract": "We describe a new class of learning models called memory networks that combine inference with a long-term memory component for question answering and language understanding tasks.",
+    "url": "https://arxiv.org/abs/1410.3916",
+    "domains": [
+      "NLP"
+    ],
+    "author_ids": [
+      "r54"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p62",
+    "semantic_id": "",
+    "title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks",
+    "year": 2018,
+    "venue": "ICML 2018",
+    "citation_count": 1400,
+    "abstract": "We present GradNorm, an algorithm that automatically balances training in deep multitask models by dynamically tuning gradient magnitudes.",
+    "url": "https://arxiv.org/abs/1711.02257",
+    "domains": [
+      "Optimization",
+      "MLOps"
+    ],
+    "author_ids": [
+      "r62"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p63",
+    "semantic_id": "",
+    "title": "Variational Graph Auto-Encoders",
+    "year": 2016,
+    "venue": "NeurIPS Workshop 2016",
+    "citation_count": 3100,
+    "abstract": "We introduce the variational graph auto-encoder (VGAE), a framework for unsupervised learning on graph-structured data based on the variational auto-encoder.",
+    "url": "https://arxiv.org/abs/1611.07308",
+    "domains": [
+      "Graph ML",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r91",
+      "r65"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p64",
+    "semantic_id": "",
+    "title": "Deep Residual Learning for Image Recognition",
+    "year": 2016,
+    "venue": "CVPR 2016",
+    "citation_count": 185000,
+    "abstract": "We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously, enabling 152-layer deep networks on ImageNet.",
+    "url": "https://arxiv.org/abs/1512.03385",
+    "domains": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "author_ids": [
+      "r95"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p65",
+    "semantic_id": "",
+    "title": "Long Short-Term Memory",
+    "year": 1997,
+    "venue": "Neural Computation",
+    "citation_count": 95000,
+    "abstract": "We introduce a novel recurrent network architecture called Long Short-Term Memory (LSTM) that can learn to bridge minimal time lags in excess of 1000 discrete time steps.",
+    "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+    "domains": [
+      "Deep Learning",
+      "Recurrent Networks"
+    ],
+    "author_ids": [
+      "r127"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p66",
+    "semantic_id": "",
+    "title": "SSD: Single Shot MultiBox Detector",
+    "year": 2016,
+    "venue": "ECCV 2016",
+    "citation_count": 28000,
+    "abstract": "We present a method for detecting objects in images using a single deep neural network that discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales.",
+    "url": "https://arxiv.org/abs/1512.02325",
+    "domains": [
+      "Computer Vision",
+      "Object Detection"
+    ],
+    "author_ids": [
+      "r99"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p67",
+    "semantic_id": "",
+    "title": "Places: A 10 Million Image Database for Scene Recognition",
+    "year": 2017,
+    "venue": "IEEE TPAMI",
+    "citation_count": 8500,
+    "abstract": "We introduce the Places Database containing over 10 million images comprising 400+ unique scene categories, enabling large-scale visual understanding of scenes.",
+    "url": "https://arxiv.org/abs/1610.01507",
+    "domains": [
+      "Computer Vision",
+      "Scene Understanding"
+    ],
+    "author_ids": [
+      "r97"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p68",
+    "semantic_id": "",
+    "title": "DeepLab: Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs",
+    "year": 2015,
+    "venue": "ICLR 2015",
+    "citation_count": 14000,
+    "abstract": "We combine deep convolutional neural networks with fully connected conditional random fields to produce semantically accurate and detailed segmentation of images.",
+    "url": "https://arxiv.org/abs/1412.7062",
+    "domains": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "author_ids": [
+      "r100"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p69",
+    "semantic_id": "",
+    "title": "Visual Object Tracking using Adaptive Correlation Filters",
+    "year": 2010,
+    "venue": "CVPR 2010",
+    "citation_count": 5200,
+    "abstract": "We propose a tracking framework based on adaptive correlation filters trained with a regularized least squares approach, achieving real-time performance on visual object tracking benchmarks.",
+    "url": "https://doi.org/10.1109/CVPR.2010.5539960",
+    "domains": [
+      "Computer Vision",
+      "Object Tracking"
+    ],
+    "author_ids": [
+      "r100"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p70",
+    "semantic_id": "",
+    "title": "Learning to Rank: From Pairwise Approach to Listwise Approach",
+    "year": 2007,
+    "venue": "ICML 2007",
+    "citation_count": 4200,
+    "abstract": "We propose a listwise approach to learning to rank that directly optimizes a listwise loss function defined on the predicted permutation distribution of documents.",
+    "url": "https://doi.org/10.1145/1273496.1273513",
+    "domains": [
+      "Information Retrieval",
+      "Machine Learning"
+    ],
+    "author_ids": [
+      "r105"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p71",
+    "semantic_id": "",
+    "title": "Measuring Massive Multitask Language Understanding",
+    "year": 2021,
+    "venue": "ICLR 2021",
+    "citation_count": 3800,
+    "abstract": "We propose a test covering 57 subjects across STEM, humanities, and social sciences to measure a language model's multitask accuracy, which we call MMLU.",
+    "url": "https://arxiv.org/abs/2009.03300",
+    "domains": [
+      "NLP",
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r119"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p72",
+    "semantic_id": "",
+    "title": "Denoising Diffusion Probabilistic Models",
+    "year": 2020,
+    "venue": "NeurIPS 2020",
+    "citation_count": 12000,
+    "abstract": "We present high quality image synthesis results using diffusion probabilistic models, showing that these models can produce samples rivaling the best GAN results.",
+    "url": "https://arxiv.org/abs/2006.11239",
+    "domains": [
+      "Generative AI",
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r124"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p73",
+    "semantic_id": "",
+    "title": "Equality of Opportunity in Supervised Learning",
+    "year": 2016,
+    "venue": "NeurIPS 2016",
+    "citation_count": 4800,
+    "abstract": "We propose a framework for fair supervised learning where the goal is to ensure that the protected attribute is independent of the prediction conditional on the true label.",
+    "url": "https://arxiv.org/abs/1610.02413",
+    "domains": [
+      "AI Fairness",
+      "Machine Learning Theory"
+    ],
+    "author_ids": [
+      "r116"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p74",
+    "semantic_id": "",
+    "title": "Reading Wikipedia to Answer Open-Domain Questions",
+    "year": 2017,
+    "venue": "ACL 2017",
+    "citation_count": 5200,
+    "abstract": "We propose DrQA, a system for reading comprehension applied to open-domain question answering at the scale of Wikipedia, combining document retrieval with a neural reader.",
+    "url": "https://arxiv.org/abs/1704.00051",
+    "domains": [
+      "NLP",
+      "Question Answering"
+    ],
+    "author_ids": [
+      "r137"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p75",
+    "semantic_id": "",
+    "title": "Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour",
+    "year": 2017,
+    "venue": "arXiv preprint",
+    "citation_count": 7500,
+    "abstract": "We present techniques for efficient large-scale distributed training using large minibatch sizes, training ResNet-50 on ImageNet in one hour with 256 GPUs.",
+    "url": "https://arxiv.org/abs/1706.02677",
+    "domains": [
+      "Deep Learning",
+      "Machine Learning Systems"
+    ],
+    "author_ids": [
+      "r121"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p76",
+    "semantic_id": "",
+    "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
+    "year": 2011,
+    "venue": "AISTATS 2011",
+    "citation_count": 3500,
+    "abstract": "We propose DAgger, an iterative algorithm that trains a policy under its own induced distribution of states, achieving strong theoretical guarantees for imitation learning.",
+    "url": "https://arxiv.org/abs/1011.0686",
+    "domains": [
+      "Reinforcement Learning",
+      "Robotics"
+    ],
+    "author_ids": [
+      "r110"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p77",
+    "semantic_id": "",
+    "title": "Language Models as Knowledge Bases?",
+    "year": 2019,
+    "venue": "EMNLP 2019",
+    "citation_count": 3200,
+    "abstract": "We analyze the factual knowledge stored in pretrained language models by probing them with cloze-style queries, finding that BERT contains surprisingly rich relational knowledge.",
+    "url": "https://arxiv.org/abs/1909.01066",
+    "domains": [
+      "NLP",
+      "Knowledge Bases"
+    ],
+    "author_ids": [
+      "r111"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p78",
+    "semantic_id": "",
+    "title": "Covariate Shift Adaptation by Importance Weighted Cross Validation",
+    "year": 2007,
+    "venue": "JMLR",
+    "citation_count": 3000,
+    "abstract": "We propose a method for adapting classifiers under covariate shift using importance-weighted cross validation to select model parameters without labeled target samples.",
+    "url": "https://www.jmlr.org/papers/v8/sugiyama07a.html",
+    "domains": [
+      "Machine Learning Theory",
+      "Transfer Learning"
+    ],
+    "author_ids": [
+      "r126"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p79",
+    "semantic_id": "",
+    "title": "Introduction to Online Convex Optimization",
+    "year": 2016,
+    "venue": "Foundations and Trends in Optimization",
+    "citation_count": 2800,
+    "abstract": "We present a comprehensive survey of online convex optimization covering fundamental algorithms, regret bounds, and applications to machine learning.",
+    "url": "https://arxiv.org/abs/1909.05207",
+    "domains": [
+      "Optimization",
+      "Online Learning"
+    ],
+    "author_ids": [
+      "r130"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p80",
+    "semantic_id": "",
+    "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+    "year": 2020,
+    "venue": "ICML 2020",
+    "citation_count": 18000,
+    "abstract": "We present SimCLR, a simple framework for contrastive learning of visual representations that outperforms previous self-supervised and semi-supervised methods on ImageNet.",
+    "url": "https://arxiv.org/abs/2002.05709",
+    "domains": [
+      "Self-Supervised Learning",
+      "Computer Vision"
+    ],
+    "author_ids": [
+      "r121"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p81",
+    "semantic_id": "",
+    "title": "Reconciling Modern Machine Learning Practice and the Bias-Variance Trade-off",
+    "year": 2019,
+    "venue": "PNAS",
+    "citation_count": 2400,
+    "abstract": "We demonstrate the double descent phenomenon, showing that increasing model complexity beyond the interpolation threshold can lead to improved test performance, challenging classical bias-variance intuitions.",
+    "url": "https://arxiv.org/abs/1812.11118",
+    "domains": [
+      "Machine Learning Theory",
+      "Deep Learning"
+    ],
+    "author_ids": [
+      "r129"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p82",
+    "semantic_id": "",
+    "title": "OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs",
+    "year": 2021,
+    "venue": "NeurIPS 2021 Datasets Track",
+    "citation_count": 1500,
+    "abstract": "We present the Open Graph Benchmark Large-Scale Challenge, providing large-scale graph datasets for node classification, link prediction, and graph regression.",
+    "url": "https://arxiv.org/abs/2103.09430",
+    "domains": [
+      "Graph Neural Networks",
+      "Machine Learning"
+    ],
+    "author_ids": [
+      "r125"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p83",
+    "semantic_id": "",
+    "title": "Speech and Language Processing",
+    "year": 2023,
+    "venue": "Textbook (3rd Edition draft)",
+    "citation_count": 32000,
+    "abstract": "A comprehensive textbook covering foundational concepts in NLP and speech processing, from n-gram language models to modern transformer architectures and large language models.",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/",
+    "domains": [
+      "NLP",
+      "Computational Linguistics"
+    ],
+    "author_ids": [
+      "r118"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p84",
+    "semantic_id": "",
+    "title": "Explaining Nonlinear Classification Decisions with Deep Taylor Decomposition",
+    "year": 2017,
+    "venue": "Pattern Recognition",
+    "citation_count": 3500,
+    "abstract": "We introduce deep Taylor decomposition, a method for explaining individual classification decisions by backpropagating relevance from the output to the input pixels.",
+    "url": "https://doi.org/10.1016/j.patcog.2016.11.008",
+    "domains": [
+      "Explainable AI",
+      "Deep Learning"
+    ],
+    "author_ids": [
+      "r128"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p85",
+    "semantic_id": "",
+    "title": "SayCan: Grounding Language in Robotic Affordances",
+    "year": 2023,
+    "venue": "CoRL 2022",
+    "citation_count": 1200,
+    "abstract": "We present SayCan, which combines large language models with robotic affordance functions to ground language instructions in physically feasible robotic actions.",
+    "url": "https://arxiv.org/abs/2204.01691",
+    "domains": [
+      "Robotics",
+      "NLP"
+    ],
+    "author_ids": [
+      "r122"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p86",
+    "semantic_id": "",
+    "title": "Language Through a Prism: A Spectral Approach for Multiscale Language Representations",
+    "year": 2020,
+    "venue": "NeurIPS 2020",
+    "citation_count": 800,
+    "abstract": "We propose a spectral approach that decomposes language representations at different scales, capturing both local syntax and global semantics in a unified framework.",
+    "url": "https://arxiv.org/abs/2011.04823",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r136"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p87",
+    "semantic_id": "",
+    "title": "AMiner: Mining Deep Knowledge from Big Scholar Data",
+    "year": 2016,
+    "venue": "WWW 2016",
+    "citation_count": 1800,
+    "abstract": "We present AMiner, a system for mining academic social networks that provides services including researcher profiling, expert finding, and topic modeling over millions of papers.",
+    "url": "https://doi.org/10.1145/2872518.2890513",
+    "domains": [
+      "Data Mining",
+      "Social Networks"
+    ],
+    "author_ids": [
+      "r139"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p88",
+    "semantic_id": "",
+    "title": "CPM: A Large-scale Generative Chinese Pre-trained Language Model",
+    "year": 2021,
+    "venue": "AI Open",
+    "citation_count": 1200,
+    "abstract": "We release CPM, a generative Chinese pre-trained language model with 2.6 billion parameters, trained on 100GB of Chinese text data.",
+    "url": "https://arxiv.org/abs/2012.00413",
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
+    "author_ids": [
+      "r138",
+      "r140"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p89",
+    "semantic_id": "",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "year": 2019,
+    "venue": "EMNLP 2019",
+    "citation_count": 7500,
+    "abstract": "We present Sentence-BERT, a modification of BERT using siamese and triplet network structures to derive semantically meaningful sentence embeddings for efficient similarity comparison.",
+    "url": "https://arxiv.org/abs/1908.10084",
+    "domains": [
+      "NLP",
+      "Representation Learning"
+    ],
+    "author_ids": [
+      "r142"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p90",
+    "semantic_id": "",
+    "title": "MultiFC: A Real-World Multi-Domain Dataset for Evidence-Based Fact Checking of Claims",
+    "year": 2019,
+    "venue": "EMNLP 2019",
+    "citation_count": 900,
+    "abstract": "We present MultiFC, the largest publicly available dataset for fact checking, covering 36,534 claims from 26 fact checking websites across multiple domains.",
+    "url": "https://arxiv.org/abs/1909.03242",
+    "domains": [
+      "NLP",
+      "Fact Verification"
+    ],
+    "author_ids": [
+      "r144"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p91",
+    "semantic_id": "",
+    "title": "Identifying and Attacking the Saddle Point Problem in High-Dimensional Non-Convex Optimization",
+    "year": 2014,
+    "venue": "NeurIPS 2014",
+    "citation_count": 3600,
+    "abstract": "We argue that saddle points rather than local minima are the primary obstacle for optimization in high-dimensional non-convex problems, and propose methods to escape them.",
+    "url": "https://arxiv.org/abs/1406.2572",
+    "domains": [
+      "Optimization",
+      "Deep Learning"
+    ],
+    "author_ids": [
+      "r134"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p92",
+    "semantic_id": "",
+    "title": "Data-centric Artificial Intelligence: A Survey",
+    "year": 2023,
+    "venue": "arXiv preprint",
+    "citation_count": 1100,
+    "abstract": "We provide a comprehensive survey of data-centric AI, covering data quality, data augmentation, and data-efficient learning approaches that focus on improving datasets rather than models.",
+    "url": "https://arxiv.org/abs/2303.10158",
+    "domains": [
+      "Data-Centric AI",
+      "Machine Learning"
+    ],
+    "author_ids": [
+      "r135"
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p93",
+    "semantic_id": "",
+    "title": "Learning Safe Multi-Agent Control with Decentralized Neural Barrier Certificates",
+    "year": 2021,
+    "venue": "ICLR 2021",
+    "citation_count": 600,
+    "abstract": "We propose a decentralized framework using neural barrier certificates for safe multi-agent control, ensuring collision avoidance while achieving cooperative objectives.",
+    "url": "https://arxiv.org/abs/2101.05436",
+    "domains": [
+      "Robotics",
+      "AI Safety"
+    ],
+    "author_ids": [
+      "r123"
+    ],
     "created_at": "2026-03-30T00:00:00Z"
   }
 ]
