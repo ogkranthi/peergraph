@@ -31,17 +31,25 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
 
   // Extract cities from builder nodes + map researcher institutions to cities
   const INSTITUTION_CITY_MAP: Record<string, string> = {
-    "MIT": "Cambridge", "Harvard": "Cambridge", "CSAIL": "Cambridge",
-    "Stanford": "Stanford", "UC Berkeley": "Berkeley", "Berkeley": "Berkeley",
-    "Google": "Mountain View", "DeepMind": "London", "Meta AI": "New York",
-    "NYU": "New York", "OpenAI": "San Francisco", "Anthropic": "San Francisco",
+    "MIT": "Boston / Cambridge", "Harvard": "Boston / Cambridge", "CSAIL": "Boston / Cambridge",
+    "Stanford": "Bay Area", "UC Berkeley": "Bay Area", "Berkeley": "Bay Area",
+    "Google": "Bay Area", "Meta AI": "New York", "NYU": "New York",
+    "OpenAI": "Bay Area", "Anthropic": "Bay Area",
+    "DeepMind": "London",
     "Toronto": "Toronto", "Montréal": "Montreal", "Montreal": "Montreal",
     "Cohere": "Toronto", "KAUST": "Riyadh", "IDSIA": "Lugano",
-    "Washington": "Seattle", "Apple": "Cupertino", "insitro": "San Francisco",
+    "Washington": "Seattle", "Apple": "Bay Area", "insitro": "Bay Area",
+  };
+
+  // Normalize builder cities to metro areas too
+  const CITY_NORMALIZE: Record<string, string> = {
+    "San Francisco": "Bay Area", "Berkeley": "Bay Area", "Mountain View": "Bay Area",
+    "Cupertino": "Bay Area", "Stanford": "Bay Area",
+    "Boston": "Boston / Cambridge", "Cambridge": "Boston / Cambridge",
   };
 
   function getNodeCity(n: GraphNode): string | undefined {
-    if (n.city) return n.city;
+    if (n.city) return CITY_NORMALIZE[n.city] || n.city;
     if (n.institution) {
       for (const [key, city] of Object.entries(INSTITUTION_CITY_MAP)) {
         if (n.institution.includes(key)) return city;
