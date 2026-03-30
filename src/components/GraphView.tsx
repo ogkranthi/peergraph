@@ -1,13 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import { GraphNode, GraphLink, NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 import { useRouter } from "next/navigation";
-
-const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
-  ssr: false,
-});
 
 interface GraphViewProps {
   nodes: GraphNode[];
@@ -16,111 +11,272 @@ interface GraphViewProps {
   builderMap: { id: string; username: string }[];
 }
 
+interface PositionedNode extends GraphNode {
+  x: number;
+  y: number;
+  edgeCount: number;
+}
+
 export default function GraphView({ nodes, links, builderMap }: GraphViewProps) {
   const router = useRouter();
-  const graphRef = useRef<any>(null);
-  const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null);
-  const [highlightNodes, setHighlightNodes] = useState<Set<string>>(new Set());
-  const [highlightLinks, setHighlightLinks] = useState<Set<string>>(new Set());
-  const [hoverNode, setHoverNode] = useState<GraphNode | null>(null);
-  const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
-  const [filterDomain, setFilterDomain] = useState<string>("all");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
+  const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null);
+  const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
+  const [filterDomain, setFilterDomain] = useState<string>("all");
 
   const allDomains = Array.from(new Set(nodes.flatMap((n) => n.domains))).sort();
 
+  // Resize
   useEffect(() => {
-    function updateDimensions() {
+    function update() {
       if (containerRef.current) {
         setDimensions({
           width: containerRef.current.clientWidth,
-          height: window.innerHeight - 180,
+          height: Math.max(500, window.innerHeight - 210),
         });
       }
     }
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
-  // Neighbor map for highlighting
-  const neighborMap = useRef(new Map<string, Set<string>>());
-  useEffect(() => {
-    const map = new Map<string, Set<string>>();
-    links.forEach((link) => {
-      const src = typeof link.source === "object" ? (link.source as any).id : link.source;
-      const tgt = typeof link.target === "object" ? (link.target as any).id : link.target;
-      if (!map.has(src)) map.set(src, new Set());
-      if (!map.has(tgt)) map.set(tgt, new Set());
-      map.get(src)!.add(tgt);
-      map.get(tgt)!.add(src);
-    });
-    neighborMap.current = map;
-  }, [links]);
+  // Filter
+  const filteredNodes = nodes.filter(
+    (n) => filterDomain === "all" || n.domains.includes(filterDomain as any)
+  );
+  const filteredNodeIds = new Set(filteredNodes.map((n) => n.id));
+  const filteredLinks = links.filter((l) => filteredNodeIds.has(l.source) && filteredNodeIds.has(l.target));
 
-  // Fix researcher nodes to the left, builders to the right
-  useEffect(() => {
-    if (!graphRef.current) return;
+  // Compute edge count per node
+  const edgeCounts = new Map<string, number>();
+  filteredLinks.forEach((l) => {
+    edgeCounts.set(l.source, (edgeCounts.get(l.source) || 0) + 1);
+    edgeCounts.set(l.target, (edgeCounts.get(l.target) || 0) + 1);
+  });
 
-    const w = dimensions.width;
-    const h = dimensions.height;
-    const researchers = nodes.filter((n) => n.nodeType === "researcher");
-    const builders = nodes.filter((n) => n.nodeType === "builder");
+  // Neighbor map for hover highlighting
+  const neighborMap = new Map<string, Set<string>>();
+  filteredLinks.forEach((l) => {
+    if (!neighborMap.has(l.source)) neighborMap.set(l.source, new Set());
+    if (!neighborMap.has(l.target)) neighborMap.set(l.target, new Set());
+    neighborMap.get(l.source)!.add(l.target);
+    neighborMap.get(l.target)!.add(l.source);
+  });
 
-    // Position researchers on left third, builders on right third
-    researchers.forEach((n, i) => {
-      const node = n as any;
-      node.fx = w * 0.22;
-      node.fy = (h * (i + 1)) / (researchers.length + 1);
-    });
+  // Split into researchers (left) and builders (right), sorted by edge count desc
+  const researchers = filteredNodes
+    .filter((n) => n.nodeType === "researcher")
+    .map((n) => ({ ...n, edgeCount: edgeCounts.get(n.id) || 0 }))
+    .sort((a, b) => b.edgeCount - a.edgeCount);
 
-    builders.forEach((n, i) => {
-      const node = n as any;
-      node.fx = w * 0.72;
-      node.fy = (h * (i + 1)) / (builders.length + 1);
-    });
+  const builders = filteredNodes
+    .filter((n) => n.nodeType === "builder")
+    .map((n) => ({ ...n, edgeCount: edgeCounts.get(n.id) || 0 }))
+    .sort((a, b) => b.edgeCount - a.edgeCount);
 
-    // Release positions after initial layout so users can drag
-    const timer = setTimeout(() => {
-      nodes.forEach((n) => {
-        const node = n as any;
-        delete node.fx;
-        delete node.fy;
-      });
-      graphRef.current?.d3ReheatSimulation?.();
-    }, 2000);
+  // Position nodes
+  const { width: W, height: H } = dimensions;
+  const LEFT_X = W * 0.18;
+  const RIGHT_X = W * 0.82;
+  const TOP_PAD = 50;
+  const BOT_PAD = 30;
 
-    return () => clearTimeout(timer);
-  }, [nodes, dimensions]);
+  const positionColumn = (items: (GraphNode & { edgeCount: number })[], x: number): PositionedNode[] => {
+    const usableH = H - TOP_PAD - BOT_PAD;
+    const spacing = items.length > 1 ? usableH / (items.length - 1) : 0;
+    return items.map((n, i) => ({
+      ...n,
+      x,
+      y: items.length === 1 ? H / 2 : TOP_PAD + i * spacing,
+    }));
+  };
 
-  const handleNodeHover = useCallback(
-    (node: any) => {
-      const newHighlightNodes = new Set<string>();
-      const newHighlightLinks = new Set<string>();
-      if (node) {
-        newHighlightNodes.add(node.id);
-        const neighbors = neighborMap.current.get(node.id);
-        if (neighbors) neighbors.forEach((n) => newHighlightNodes.add(n));
-        links.forEach((link) => {
-          const src = typeof link.source === "object" ? (link.source as any).id : link.source;
-          const tgt = typeof link.target === "object" ? (link.target as any).id : link.target;
-          if (src === node.id || tgt === node.id) newHighlightLinks.add(`${src}-${tgt}`);
-        });
+  const posResearchers = positionColumn(researchers, LEFT_X);
+  const posBuilders = positionColumn(builders, RIGHT_X);
+  const allPositioned = [...posResearchers, ...posBuilders];
+  const posMap = new Map(allPositioned.map((n) => [n.id, n]));
+
+  // Hit testing
+  const getNodeAt = useCallback(
+    (cx: number, cy: number): PositionedNode | null => {
+      for (const n of allPositioned) {
+        const r = 6 + n.edgeCount * 2;
+        if (Math.hypot(cx - n.x, cy - n.y) < r + 6) return n;
       }
-      setHoverNode(node || null);
-      setHighlightNodes(newHighlightNodes);
-      setHighlightLinks(newHighlightLinks);
+      return null;
     },
-    [links]
+    [allPositioned]
   );
 
-  const handleNodeClick = useCallback((node: any) => {
-    setSelectedNode(node);
-    if (graphRef.current) {
-      graphRef.current.centerAt(node.x, node.y, 500);
-      graphRef.current.zoom(2.5, 500);
+  // Canvas mouse handlers
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+      const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+      const node = getNodeAt(x, y);
+      setHoverNodeId(node?.id ?? null);
+      canvas.style.cursor = node ? "pointer" : "default";
+    },
+    [getNodeAt]
+  );
+
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+      const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+      const node = getNodeAt(x, y);
+      setSelectedNode(node ?? null);
+    },
+    [getNodeAt]
+  );
+
+  // Draw
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = `${W}px`;
+    canvas.style.height = `${H}px`;
+    ctx.scale(dpr, dpr);
+
+    // Background
+    ctx.fillStyle = "#0a0a0f";
+    ctx.fillRect(0, 0, W, H);
+
+    // Column labels
+    ctx.font = "11px Inter, system-ui, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillStyle = "rgba(255,255,255,0.2)";
+    if (posResearchers.length > 0) ctx.fillText("RESEARCHERS", LEFT_X, 22);
+    if (posBuilders.length > 0) ctx.fillText("BUILDERS", RIGHT_X, 22);
+
+    // Highlight set
+    const highlightNodes = new Set<string>();
+    const highlightEdges = new Set<string>();
+    if (hoverNodeId) {
+      highlightNodes.add(hoverNodeId);
+      const neighbors = neighborMap.get(hoverNodeId);
+      if (neighbors) neighbors.forEach((n) => highlightNodes.add(n));
+      filteredLinks.forEach((l) => {
+        if (l.source === hoverNodeId || l.target === hoverNodeId) {
+          highlightEdges.add(`${l.source}-${l.target}`);
+        }
+      });
     }
-  }, []);
+
+    // Draw edges
+    for (const link of filteredLinks) {
+      const src = posMap.get(link.source);
+      const tgt = posMap.get(link.target);
+      if (!src || !tgt) continue;
+
+      const edgeKey = `${link.source}-${link.target}`;
+      const isHighlighted = highlightEdges.has(edgeKey);
+      const isUsesPaper = link.type === "uses_paper";
+      const isDimmed = hoverNodeId && !isHighlighted;
+
+      ctx.beginPath();
+
+      if (isUsesPaper) {
+        // Curved bezier for research→product edges
+        const cpX = (src.x + tgt.x) / 2;
+        const cpY = (src.y + tgt.y) / 2 - Math.abs(src.y - tgt.y) * 0.15;
+        ctx.moveTo(src.x, src.y);
+        ctx.quadraticCurveTo(cpX, cpY, tgt.x, tgt.y);
+      } else {
+        // Straight for co-author
+        ctx.moveTo(src.x, src.y);
+        ctx.lineTo(tgt.x, tgt.y);
+      }
+
+      if (isDimmed) {
+        ctx.strokeStyle = isUsesPaper ? "rgba(251,191,36,0.04)" : "rgba(255,255,255,0.02)";
+        ctx.lineWidth = 0.5;
+      } else if (isHighlighted) {
+        ctx.strokeStyle = isUsesPaper ? "rgba(251,191,36,0.7)" : "rgba(255,255,255,0.4)";
+        ctx.lineWidth = isUsesPaper ? 2.5 : 1.5;
+      } else {
+        ctx.strokeStyle = isUsesPaper ? "rgba(251,191,36,0.15)" : "rgba(255,255,255,0.06)";
+        ctx.lineWidth = 1;
+      }
+      ctx.stroke();
+    }
+
+    // Draw nodes
+    for (const node of allPositioned) {
+      const isHighlighted = highlightNodes.has(node.id);
+      const isSelected = selectedNode?.id === node.id;
+      const isDimmed = hoverNodeId && !isHighlighted;
+      const radius = Math.min(6 + node.edgeCount * 2, 16);
+
+      ctx.globalAlpha = isDimmed ? 0.15 : 1;
+
+      // Glow
+      if (isHighlighted && !isDimmed) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius + 10, 0, 2 * Math.PI);
+        const grad = ctx.createRadialGradient(node.x, node.y, radius, node.x, node.y, radius + 10);
+        grad.addColorStop(0, node.color + "40");
+        grad.addColorStop(1, "transparent");
+        ctx.fillStyle = grad;
+        ctx.fill();
+      }
+
+      // Shape
+      ctx.beginPath();
+      if (node.nodeType === "builder") {
+        const s = radius * 0.85;
+        ctx.roundRect(node.x - s, node.y - s, s * 2, s * 2, 3);
+      } else {
+        ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI);
+      }
+      ctx.fillStyle = node.color;
+      ctx.fill();
+
+      // Selection ring
+      if (isSelected) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius + 4, 0, 2 * Math.PI);
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      // Label
+      const fontSize = 11;
+      ctx.font = `${isHighlighted || isSelected ? "600 " : ""}${fontSize}px Inter, system-ui, sans-serif`;
+      ctx.textAlign = node.nodeType === "researcher" ? "right" : "left";
+      ctx.textBaseline = "middle";
+      ctx.fillStyle = isHighlighted ? "#fff" : isDimmed ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.65)";
+
+      const labelOffset = radius + 10;
+      const labelX = node.nodeType === "researcher" ? node.x - labelOffset : node.x + labelOffset;
+      ctx.fillText(node.name, labelX, node.y);
+
+      // Subtitle for highlighted nodes
+      if (isHighlighted && node.metric) {
+        ctx.font = `${fontSize * 0.8}px Inter, system-ui, sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.3)";
+        ctx.fillText(node.metric, labelX, node.y + fontSize + 2);
+      }
+
+      ctx.globalAlpha = 1;
+    }
+  }, [W, H, allPositioned, filteredLinks, hoverNodeId, selectedNode, posMap, neighborMap, posResearchers, posBuilders]);
 
   const navigateToProfile = useCallback(
     (node: GraphNode) => {
@@ -134,132 +290,10 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     [builderMap, router]
   );
 
-  // Filtering
-  const filteredNodes = nodes.filter((n) => {
-    return filterDomain === "all" || n.domains.includes(filterDomain as any);
-  });
-  const filteredNodeIds = new Set(filteredNodes.map((n) => n.id));
-  const filteredLinks = links.filter((l) => {
-    const src = typeof l.source === "object" ? (l.source as any).id : l.source;
-    const tgt = typeof l.target === "object" ? (l.target as any).id : l.target;
-    return filteredNodeIds.has(src) && filteredNodeIds.has(tgt);
-  });
-
-  const nodeCanvasObject = useCallback(
-    (node: any, ctx: CanvasRenderingContext2D, globalScale: number) => {
-      const connectionCount = neighborMap.current.get(node.id)?.size ?? 0;
-      const baseSize = 6 + connectionCount * 1.5;
-      const size = Math.min(baseSize, 18);
-      const isHighlighted = highlightNodes.has(node.id);
-      const isSelected = selectedNode?.id === node.id;
-      const isDimmed = hoverNode && !isHighlighted;
-
-      ctx.globalAlpha = isDimmed ? 0.12 : 1;
-
-      // Glow for highlighted nodes
-      if (isHighlighted && !isDimmed) {
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, size + 8, 0, 2 * Math.PI);
-        const gradient = ctx.createRadialGradient(node.x, node.y, size, node.x, node.y, size + 8);
-        gradient.addColorStop(0, node.color + "40");
-        gradient.addColorStop(1, "transparent");
-        ctx.fillStyle = gradient;
-        ctx.fill();
-      }
-
-      // Node shape
-      if (node.nodeType === "builder") {
-        const s = size * 0.85;
-        const r = 3;
-        ctx.beginPath();
-        ctx.moveTo(node.x - s + r, node.y - s);
-        ctx.arcTo(node.x + s, node.y - s, node.x + s, node.y + s, r);
-        ctx.arcTo(node.x + s, node.y + s, node.x - s, node.y + s, r);
-        ctx.arcTo(node.x - s, node.y + s, node.x - s, node.y - s, r);
-        ctx.arcTo(node.x - s, node.y - s, node.x + s, node.y - s, r);
-        ctx.closePath();
-      } else {
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, size, 0, 2 * Math.PI);
-      }
-      ctx.fillStyle = node.color;
-      ctx.fill();
-
-      // Selection ring
-      if (isSelected) {
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI);
-        ctx.strokeStyle = "#fff";
-        ctx.lineWidth = 2;
-        ctx.stroke();
-      }
-
-      // Labels — always show names for readability
-      const fontSize = Math.max(10, 11 / globalScale);
-      ctx.globalAlpha = isDimmed ? 0.12 : 1;
-      ctx.font = `${isSelected || isHighlighted ? "bold " : ""}${fontSize}px Inter, system-ui, sans-serif`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "top";
-      ctx.fillStyle = isHighlighted ? "#fff" : "rgba(255,255,255,0.7)";
-
-      // Name
-      const lastName = node.name.split(" ").slice(-1)[0];
-      const label = globalScale > 1.5 ? node.name : lastName;
-      ctx.fillText(label, node.x, node.y + size + 3);
-
-      // Subtitle on hover/select
-      if ((isHighlighted || isSelected) && globalScale > 1) {
-        ctx.font = `${fontSize * 0.75}px Inter, system-ui, sans-serif`;
-        ctx.fillStyle = "rgba(255,255,255,0.35)";
-        ctx.fillText(node.metric || "", node.x, node.y + size + 3 + fontSize + 1);
-      }
-
-      ctx.globalAlpha = 1;
-    },
-    [highlightNodes, hoverNode, selectedNode]
-  );
-
-  const linkCanvasObject = useCallback(
-    (link: any, ctx: CanvasRenderingContext2D) => {
-      const src = typeof link.source === "object" ? link.source : { id: link.source, x: 0, y: 0 };
-      const tgt = typeof link.target === "object" ? link.target : { id: link.target, x: 0, y: 0 };
-      const linkId = `${src.id}-${tgt.id}`;
-      const isHighlighted = highlightLinks.has(linkId);
-      const isUsesPaper = link.type === "uses_paper";
-
-      // Curved lines for uses_paper, straight for co_author
-      ctx.beginPath();
-      if (isUsesPaper) {
-        // Bezier curve for paper→product edges
-        const midX = (src.x + tgt.x) / 2;
-        const midY = (src.y + tgt.y) / 2;
-        const dx = tgt.x - src.x;
-        const curvature = dx * 0.15;
-        ctx.moveTo(src.x, src.y);
-        ctx.quadraticCurveTo(midX, midY - curvature, tgt.x, tgt.y);
-      } else {
-        ctx.moveTo(src.x, src.y);
-        ctx.lineTo(tgt.x, tgt.y);
-      }
-
-      if (isHighlighted) {
-        ctx.strokeStyle = isUsesPaper ? "rgba(251, 191, 36, 0.6)" : "rgba(255,255,255,0.4)";
-        ctx.lineWidth = isUsesPaper ? 2 : 1.5;
-      } else {
-        ctx.strokeStyle = isUsesPaper ? "rgba(251, 191, 36, 0.08)" : "rgba(255,255,255,0.05)";
-        ctx.lineWidth = 0.5;
-      }
-
-      ctx.stroke();
-    },
-    [highlightLinks]
-  );
-
   return (
     <div className="flex flex-col h-full">
-      {/* Compact controls */}
+      {/* Domain filter */}
       <div className="flex items-center gap-3 px-4 py-2.5 bg-white/5 rounded-xl mb-2">
-        {/* Domain pills */}
         <div className="flex gap-1 overflow-x-auto flex-1">
           <button
             onClick={() => setFilterDomain("all")}
@@ -283,57 +317,21 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
           ))}
         </div>
         <div className="text-[11px] text-white/30 whitespace-nowrap">
-          {filteredNodes.filter((n) => n.nodeType === "researcher").length}R &middot;{" "}
-          {filteredNodes.filter((n) => n.nodeType === "builder").length}B &middot;{" "}
-          {filteredLinks.filter((l) => l.type === "uses_paper").length} links
+          {researchers.length}R &middot; {builders.length}B &middot;{" "}
+          {filteredLinks.filter((l) => l.type === "uses_paper").length} paper links
         </div>
       </div>
 
-      {/* Graph + Side Panel */}
+      {/* Canvas + Side panel */}
       <div className="flex gap-2 flex-1">
         <div ref={containerRef} className="flex-1 bg-[#0a0a0f] rounded-xl overflow-hidden relative">
-          {/* Column labels */}
-          <div className="absolute top-3 left-0 right-0 flex justify-around pointer-events-none z-10">
-            <div className="flex items-center gap-2 px-3 py-1 bg-black/60 backdrop-blur rounded-full">
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: NODE_COLORS.researcher }} />
-              <span className="text-[11px] text-white/50 font-medium">Researchers</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1 bg-black/60 backdrop-blur rounded-full">
-              <span className="w-2 h-2 rounded-sm" style={{ backgroundColor: NODE_COLORS.builder }} />
-              <span className="text-[11px] text-white/50 font-medium">Builders</span>
-            </div>
-          </div>
-
-          <ForceGraph2D
-            ref={graphRef}
-            graphData={{ nodes: filteredNodes, links: filteredLinks }}
-            width={dimensions.width}
-            height={dimensions.height}
-            nodeCanvasObject={nodeCanvasObject}
-            linkCanvasObject={linkCanvasObject}
-            onNodeHover={handleNodeHover}
-            onNodeClick={handleNodeClick}
-            nodeRelSize={6}
-            d3AlphaDecay={0.03}
-            d3VelocityDecay={0.4}
-            cooldownTicks={150}
-            backgroundColor="#0a0a0f"
-            enableNodeDrag={true}
+          <canvas
+            ref={canvasRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={() => setHoverNodeId(null)}
+            onClick={handleClick}
+            style={{ width: "100%", height: "100%" }}
           />
-
-          {/* Legend */}
-          <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-sm rounded-lg p-2.5 text-[10px]">
-            <div className="flex flex-col gap-1.5">
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-0 border-t border-white/40" />
-                <span className="text-white/40">Co-author</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-0 border-t border-amber-400/50" style={{ borderStyle: "solid" }} />
-                <span className="text-white/40">Research → Product</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Side panel */}
@@ -374,9 +372,8 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
                 ))}
               </div>
             )}
-            {/* Connected nodes */}
-            <div className="text-[10px] text-white/30 mt-1">
-              {neighborMap.current.get(selectedNode.id)?.size ?? 0} connections
+            <div className="text-[10px] text-white/30">
+              {edgeCounts.get(selectedNode.id) ?? 0} connections
             </div>
             <button
               onClick={() => navigateToProfile(selectedNode)}
