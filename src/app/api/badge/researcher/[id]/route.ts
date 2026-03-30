@@ -7,14 +7,15 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const researcher = getResearcherById(id);
+  const [researcher, papers, projects] = await Promise.all([
+    getResearcherById(id),
+    getPapers(),
+    getProjects(),
+  ]);
 
   if (!researcher) {
     return new NextResponse("Researcher not found", { status: 404 });
   }
-
-  const papers = getPapers();
-  const projects = getProjects();
   const researcherPapers = papers.filter((p) => p.author_ids.includes(researcher.id));
   const impactScore = calculateResearchImpactScore(researcher, researcherPapers, projects);
 

@@ -1,25 +1,25 @@
-import { getBuilders, getBuilderByUsername, getBuilderProjects, getPaperById, getResearchers, getPapers } from "@/lib/data";
+import { getBuilders, getBuilderByUsername, getBuilderProjects, getResearchers, getPapers } from "@/lib/data";
 import { suggestPapersForProject, suggestResearchersForBuilder } from "@/lib/recommendations";
 import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
-  return getBuilders().map((b) => ({ username: b.github_username }));
+export async function generateStaticParams() {
+  return (await getBuilders()).map((b) => ({ username: b.github_username }));
 }
 
 export default async function BuilderPage({ params }: { params: Promise<{ username: string }> }) {
   const { username } = await params;
-  const builder = getBuilderByUsername(username);
+  const builder = await getBuilderByUsername(username);
   if (!builder) notFound();
 
-  const projects = getBuilderProjects(builder.id);
-  const linkedPapers = projects.flatMap((p) =>
-    p.paper_ids.map((pid) => ({ paper: getPaperById(pid)!, project: p }))
-  ).filter((x) => x.paper);
+  const [projects, allResearchers, allPapers] = await Promise.all([
+    getBuilderProjects(builder.id),
+    getResearchers(),
+    getPapers(),
+  ]);
 
-  const allResearchers = getResearchers();
-  const allPapers = getPapers();
+  const paperMap = new Map(allPapers.map((p) => [p.id, p]));
 
   // AI-suggested researchers whose work is relevant
   const suggestedResearchers = suggestResearchersForBuilder(
@@ -90,7 +90,7 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
             </h2>
             <div className="space-y-4">
               {projects.map((project) => {
-                const projectPapers = project.paper_ids.map((pid) => getPaperById(pid)).filter(Boolean);
+                const projectPapers = project.paper_ids.map((pid) => paperMap.get(pid)).filter(Boolean);
                 return (
                   <div key={project.id} className="p-5 bg-white/5 border border-white/10 rounded-xl">
                     <div className="flex items-start justify-between mb-2">

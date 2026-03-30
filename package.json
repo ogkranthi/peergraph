@@ -10,6 +10,7 @@
     "validate": "npx tsx scripts/validate.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.100.1",
     "next": "15.5.14",
     "react": "19.1.0",
     "react-dom": "19.1.0",

@@ -3,11 +3,13 @@ import { computePlatformAnalytics } from "@/lib/analytics";
 import { DOMAIN_COLORS } from "@/lib/types";
 import Link from "next/link";
 
-export default function AnalyticsPage() {
-  const researchers = getResearchers();
-  const builders = getBuilders();
-  const papers = getPapers();
-  const projects = getProjects();
+export default async function AnalyticsPage() {
+  const [researchers, builders, papers, projects] = await Promise.all([
+    getResearchers(),
+    getBuilders(),
+    getPapers(),
+    getProjects(),
+  ]);
 
   const analytics = computePlatformAnalytics(researchers, papers, builders, projects);
 

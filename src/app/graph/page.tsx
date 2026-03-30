@@ -1,9 +1,9 @@
 import { getGraphData, getBuilders } from "@/lib/data";
 import GraphView from "@/components/GraphView";
 
-export default function GraphPage() {
-  const { nodes, links } = getGraphData();
-  const builderMap = getBuilders().map((b) => ({ id: b.id, username: b.github_username }));
+export default async function GraphPage() {
+  const [{ nodes, links }, builders] = await Promise.all([getGraphData(), getBuilders()]);
+  const builderMap = builders.map((b) => ({ id: b.id, username: b.github_username }));
   const researcherIds = nodes.filter((n) => n.nodeType === "researcher").map((n) => n.id);
 
   return (

@@ -5,20 +5,22 @@ import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
-  return getResearchers().map((r) => ({ id: r.id }));
+export async function generateStaticParams() {
+  return (await getResearchers()).map((r) => ({ id: r.id }));
 }
 
 export default async function ResearcherPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const researcher = getResearcherById(id);
+  const researcher = await getResearcherById(id);
   if (!researcher) notFound();
 
-  const papers = getResearcherPapers(id);
-  const coAuthors = getResearcherCoAuthors(id);
-  const products = getResearcherProducts(id);
-  const allProjects = getProjects();
-  const allBuilders = getBuilders();
+  const [papers, coAuthors, products, allProjects, allBuilders] = await Promise.all([
+    getResearcherPapers(id),
+    getResearcherCoAuthors(id),
+    getResearcherProducts(id),
+    getProjects(),
+    getBuilders(),
+  ]);
 
   // Applied Impact Index
   const impactScore = calculateResearchImpactScore(researcher, papers, allProjects);

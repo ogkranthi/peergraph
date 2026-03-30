@@ -10,12 +10,14 @@ export async function GET(request: NextRequest) {
   const limit = parseInt(searchParams.get("limit") || "5", 10);
 
   if (type === "projects-for-paper" && paperId) {
-    const paper = getPaperById(paperId);
+    const [paper, allProjects, allBuilders] = await Promise.all([
+      getPaperById(paperId),
+      getProjects(),
+      getBuilders(),
+    ]);
     if (!paper) {
       return NextResponse.json({ error: "Paper not found" }, { status: 404 });
     }
-    const allProjects = getProjects();
-    const allBuilders = getBuilders();
     const suggestions = suggestProjectsForPaper(paper, allProjects, allBuilders, limit);
 
     return NextResponse.json({
@@ -30,16 +32,15 @@ export async function GET(request: NextRequest) {
   }
 
   if (type === "papers-for-project" && projectId) {
-    const allProjects = getProjects();
+    const [allProjects, allPapers] = await Promise.all([getProjects(), getPapers()]);
     const project = allProjects.find((p) => p.id === projectId);
     if (!project) {
       return NextResponse.json({ error: "Project not found" }, { status: 404 });
     }
-    const builder = getBuilderById(project.builder_id);
+    const builder = await getBuilderById(project.builder_id);
     if (!builder) {
       return NextResponse.json({ error: "Builder not found" }, { status: 404 });
     }
-    const allPapers = getPapers();
     const suggestions = suggestPapersForProject(project, builder, allPapers, limit);
 
     return NextResponse.json({

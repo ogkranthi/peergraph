@@ -3,10 +3,12 @@ import { getResearchers, getBuilders, getPapers, getProjects } from "@/lib/data"
 import { computePlatformAnalytics } from "@/lib/analytics";
 
 export async function GET() {
-  const researchers = getResearchers();
-  const builders = getBuilders();
-  const papers = getPapers();
-  const projects = getProjects();
+  const [researchers, builders, papers, projects] = await Promise.all([
+    getResearchers(),
+    getBuilders(),
+    getPapers(),
+    getProjects(),
+  ]);
 
   const analytics = computePlatformAnalytics(researchers, papers, builders, projects);
 

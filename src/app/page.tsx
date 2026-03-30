@@ -3,12 +3,13 @@ import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
 import { getAllResearcherImpactScores } from "@/lib/impact-score";
 import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 
-export default function HomePage() {
-  const stats = getStats();
-  const researchers = getResearchers();
-  const projects = getProjects();
-
-  const papers = getPapers();
+export default async function HomePage() {
+  const [stats, researchers, projects, papers] = await Promise.all([
+    getStats(),
+    getResearchers(),
+    getProjects(),
+    getPapers(),
+  ]);
 
   // Top researchers by citation
   const topResearchers = [...researchers].sort((a, b) => b.citation_count - a.citation_count).slice(0, 6);

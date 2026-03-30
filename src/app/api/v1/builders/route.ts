@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getBuilders, getBuilderProjects } from "@/lib/data";
+import { getBuilders, getProjects } from "@/lib/data";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -7,7 +7,8 @@ export async function GET(request: NextRequest) {
   const skill = searchParams.get("skill");
   const username = searchParams.get("username");
 
-  let builders = getBuilders();
+  const [allBuilders, allProjects] = await Promise.all([getBuilders(), getProjects()]);
+  let builders = allBuilders;
 
   // Single builder by username
   if (username) {
@@ -15,7 +16,7 @@ export async function GET(request: NextRequest) {
     if (!builder) {
       return NextResponse.json({ error: "Builder not found" }, { status: 404 });
     }
-    const projects = getBuilderProjects(builder.id);
+    const projects = allProjects.filter((p) => p.builder_id === builder.id);
     return NextResponse.json({ ...builder, projects });
   }
 
@@ -39,7 +40,7 @@ export async function GET(request: NextRequest) {
 
   const results = builders.map((b) => ({
     ...b,
-    projectCount: getBuilderProjects(b.id).length,
+    projectCount: allProjects.filter((p) => p.builder_id === b.id).length,
   }));
 
   return NextResponse.json({ data: results, count: results.length });

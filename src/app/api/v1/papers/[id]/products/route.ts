@@ -6,13 +6,11 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const paper = getPaperById(id);
+  const [paper, products] = await Promise.all([getPaperById(id), getPaperProducts(id)]);
 
   if (!paper) {
     return NextResponse.json({ error: "Paper not found" }, { status: 404 });
   }
-
-  const products = getPaperProducts(id);
 
   return NextResponse.json({
     paper: {

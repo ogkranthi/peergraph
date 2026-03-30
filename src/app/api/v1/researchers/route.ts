@@ -8,9 +8,8 @@ export async function GET(request: NextRequest) {
   const search = searchParams.get("q");
   const id = searchParams.get("id");
 
-  const papers = getPapers();
-  const projects = getProjects();
-  let researchers = getResearchers();
+  const [papers, projects, allResearchers] = await Promise.all([getPapers(), getProjects(), getResearchers()]);
+  let researchers = allResearchers;
 
   // Single researcher by ID
   if (id) {
