@@ -89,11 +89,11 @@ export default function DirectoryClient({ researchers, builders, projects }: Pro
         <select
           value={domainFilter}
           onChange={(e) => setDomainFilter(e.target.value)}
-          className="bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-white/30"
+          className="bg-[#1a1a2e] border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-white/30"
         >
-          <option value="all">All Domains</option>
+          <option value="all" className="bg-[#1a1a2e] text-white">All Domains</option>
           {domains.map((d) => (
-            <option key={d} value={d}>{d}</option>
+            <option key={d} value={d} className="bg-[#1a1a2e] text-white">{d}</option>
           ))}
         </select>
       </div>
