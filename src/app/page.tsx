@@ -226,26 +226,59 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* CTA */}
-      <section className="max-w-7xl mx-auto px-4 py-20 text-center">
+      {/* Open to Contributions */}
+      <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-blue-500/10 to-emerald-500/10 border border-white/10 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-3">Building with AI?</h2>
-          <p className="text-white/50 mb-6 max-w-lg mx-auto">
-            Get listed on PeerGraph.ai. Add your projects, credit the research behind them,
-            and connect with the people pushing the frontier.
-          </p>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-3">Open to Contributions</h2>
+            <p className="text-white/50 max-w-lg mx-auto">
+              PeerGraph.ai is open source (MIT). The most valuable contribution is a single link:
+              &quot;this product was built on this paper.&quot;
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <a
+              href="https://github.com/ogkranthi/peergraph/issues/new?template=add-paper-product-link.yml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors text-center"
+            >
+              <p className="text-amber-400 font-semibold mb-1">Submit a Link</p>
+              <p className="text-xs text-white/40">Connect a paper to a product</p>
+            </a>
+            <a
+              href="https://github.com/ogkranthi/peergraph/issues/new?template=add-builder.yml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors text-center"
+            >
+              <p className="text-emerald-400 font-semibold mb-1">Add a Builder</p>
+              <p className="text-xs text-white/40">List yourself or someone you know</p>
+            </a>
+            <a
+              href="https://github.com/ogkranthi/peergraph/issues/new?template=add-researcher.yml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors text-center"
+            >
+              <p className="text-blue-400 font-semibold mb-1">Add a Researcher</p>
+              <p className="text-xs text-white/40">Request a researcher profile</p>
+            </a>
+          </div>
           <div className="flex items-center justify-center gap-4">
-            <Link
-              href="/join"
+            <a
+              href="https://github.com/ogkranthi/peergraph"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-black rounded-lg px-6 py-3 font-medium hover:bg-white/90 transition-colors"
             >
-              Get Listed
-            </Link>
+              View on GitHub
+            </a>
             <Link
-              href="/graph"
+              href="/join"
               className="bg-white/10 text-white rounded-lg px-6 py-3 font-medium hover:bg-white/20 transition-colors"
             >
-              Explore the Graph
+              How to Get Listed
             </Link>
           </div>
         </div>

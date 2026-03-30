@@ -11,7 +11,6 @@ export default function Navbar() {
     { href: "/graph", label: "Graph" },
     { href: "/directory", label: "Directory" },
     { href: "/join", label: "Get Listed", highlight: true },
-    { href: "/changelog", label: "Changelog" },
   ];
 
   return (

@@ -111,32 +111,38 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     [allPositioned]
   );
 
+  // Convert mouse event to canvas logical coordinates (without DPR scaling)
+  const getCanvasCoords = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>): { x: number; y: number } => {
+      const canvas = canvasRef.current;
+      if (!canvas) return { x: 0, y: 0 };
+      const rect = canvas.getBoundingClientRect();
+      return {
+        x: ((e.clientX - rect.left) / rect.width) * W,
+        y: ((e.clientY - rect.top) / rect.height) * H,
+      };
+    },
+    [W, H]
+  );
+
   // Canvas mouse handlers
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>) => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      const x = (e.clientX - rect.left) * (canvas.width / rect.width);
-      const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+      const { x, y } = getCanvasCoords(e);
       const node = getNodeAt(x, y);
       setHoverNodeId(node?.id ?? null);
-      canvas.style.cursor = node ? "pointer" : "default";
+      if (canvasRef.current) canvasRef.current.style.cursor = node ? "pointer" : "default";
     },
-    [getNodeAt]
+    [getCanvasCoords, getNodeAt]
   );
 
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>) => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      const x = (e.clientX - rect.left) * (canvas.width / rect.width);
-      const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+      const { x, y } = getCanvasCoords(e);
       const node = getNodeAt(x, y);
       setSelectedNode(node ?? null);
     },
-    [getNodeAt]
+    [getCanvasCoords, getNodeAt]
   );
 
   // Draw
