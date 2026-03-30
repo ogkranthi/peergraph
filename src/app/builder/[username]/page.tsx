@@ -117,8 +117,22 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
                       ))}
                     </div>
                     {/* Linked papers */}
+                    <div className="border-t border-white/10 pt-3">
+                      {projectPapers.length === 0 && (
+                        <p className="text-xs text-white/30">
+                          No papers linked yet.{" "}
+                          <a
+                            href="https://github.com/ogkranthi/peergraph/issues/new?template=add-paper-product-link.yml"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-amber-400/60 hover:text-amber-400"
+                          >
+                            Know what research this builds on? Submit a link &rarr;
+                          </a>
+                        </p>
+                      )}
                     {projectPapers.length > 0 && (
-                      <div className="border-t border-white/10 pt-3">
+                      <>
                         <p className="text-xs text-white/30 mb-2">Built on research:</p>
                         <div className="space-y-2">
                           {projectPapers.map((paper) => paper && (
@@ -131,8 +145,9 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
                             </div>
                           ))}
                         </div>
-                      </div>
+                      </>
                     )}
+                    </div>
                   </div>
                 );
               })}

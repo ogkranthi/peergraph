@@ -63,7 +63,10 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
             <div className="flex items-center justify-between mb-3">
               <div>
                 <h2 className="text-sm font-medium text-amber-400 uppercase tracking-wider">Applied Impact Index</h2>
-                <p className="text-[10px] text-white/30 mt-0.5">{SCORE_DISCLAIMER}</p>
+                <p className="text-[10px] text-white/30 mt-0.5">
+                  {SCORE_DISCLAIMER}{" "}
+                  <Link href="/analytics" className="text-amber-400/50 hover:text-amber-400">How is this calculated?</Link>
+                </p>
               </div>
               <div className="text-right">
                 <span className="text-3xl font-bold text-amber-400">{impactScore.overallScore}</span>
@@ -155,11 +158,24 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
         )}
 
         {/* Products using this researcher's work */}
-        {products.length > 0 && (
-          <div className="mb-8">
-            <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
-              Products Using This Research ({products.length})
-            </h2>
+        <div className="mb-8">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+            Products Using This Research ({products.length})
+          </h2>
+          {products.length === 0 && (
+            <div className="p-4 bg-white/5 border border-white/10 rounded-lg text-center">
+              <p className="text-sm text-white/40 mb-2">No products linked to this research yet.</p>
+              <a
+                href="https://github.com/ogkranthi/peergraph/issues/new?template=add-paper-product-link.yml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-amber-400/70 hover:text-amber-400 transition-colors"
+              >
+                Know a product built on this work? Submit a link &rarr;
+              </a>
+            </div>
+          )}
+          {products.length > 0 && (
             <div className="space-y-3">
               {products.map(({ project, builder, paper }) => (
                 <Link
@@ -180,8 +196,8 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
                 </Link>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* AI Suggested Builders */}
         {suggestedBuilders.length > 0 && (

@@ -41,10 +41,11 @@ export default async function HomePage() {
             Meets Products
           </span>
         </h1>
-        <p className="text-lg text-white/50 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-white/50 max-w-2xl mx-auto mb-4">
           The open graph connecting AI researchers and builders.
           See who&apos;s publishing, who&apos;s building, and how research becomes real-world impact.
         </p>
+        <p className="text-sm text-white/30 mb-8">Open source. Community-driven. No login required to explore.</p>
         <div className="flex items-center justify-center gap-4">
           <Link
             href="/graph"
@@ -53,10 +54,10 @@ export default async function HomePage() {
             Explore the Graph
           </Link>
           <Link
-            href="/directory"
-            className="bg-white/10 text-white rounded-lg px-6 py-3 font-medium hover:bg-white/20 transition-colors"
+            href="/join"
+            className="bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-lg px-6 py-3 font-medium hover:bg-amber-500/30 transition-colors"
           >
-            Browse Directory
+            Get Listed
           </Link>
         </div>
       </section>
@@ -89,36 +90,46 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Who is this for */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-xl font-semibold mb-8 text-center">How It Works</h2>
+        <h2 className="text-xl font-semibold mb-2 text-center">Who Is This For?</h2>
+        <p className="text-sm text-white/40 text-center mb-8">PeerGraph.ai serves three audiences</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/15 rounded-xl p-6">
+            <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
               <span className="text-blue-400 text-lg font-bold">R</span>
             </div>
-            <h3 className="font-semibold mb-2">Researchers Auto-Import</h3>
-            <p className="text-sm text-white/50">
-              AI researchers are imported from Semantic Scholar. Papers, citations, and co-authors are populated automatically.
+            <h3 className="font-semibold mb-2 text-blue-300">For Researchers</h3>
+            <p className="text-sm text-white/50 mb-4">
+              See which products are built on your papers. Track your Applied Impact Index — a metric measuring real-world adoption, not just citations.
             </p>
+            <Link href="/directory" className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
+              Find your profile &rarr;
+            </Link>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-b from-emerald-500/10 to-transparent border border-emerald-500/15 rounded-xl p-6">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
               <span className="text-emerald-400 text-lg font-bold">B</span>
             </div>
-            <h3 className="font-semibold mb-2">Builders Sign Up</h3>
-            <p className="text-sm text-white/50">
-              Sign up with GitHub, add your AI projects, and declare what papers or techniques your product builds on.
+            <h3 className="font-semibold mb-2 text-emerald-300">For Builders</h3>
+            <p className="text-sm text-white/50 mb-4">
+              Credit the research behind your product. Link papers to your project and get discovered by researchers pushing your field forward.
             </p>
+            <Link href="/join" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+              Add your project &rarr;
+            </Link>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mx-auto mb-4">
-              <span className="text-yellow-400 text-lg font-bold">&harr;</span>
+          <div className="bg-gradient-to-b from-amber-500/10 to-transparent border border-amber-500/15 rounded-xl p-6">
+            <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center mb-4">
+              <span className="text-amber-400 text-lg font-bold">?</span>
             </div>
-            <h3 className="font-semibold mb-2">The Graph Connects Them</h3>
-            <p className="text-sm text-white/50">
-              When a builder links a paper, the graph creates an edge from research to product — making impact visible.
+            <h3 className="font-semibold mb-2 text-amber-300">For Everyone</h3>
+            <p className="text-sm text-white/50 mb-4">
+              Explore how AI research becomes real-world products. Browse the graph, discover connections, and see who&apos;s building what.
             </p>
+            <Link href="/graph" className="text-sm text-amber-400 hover:text-amber-300 transition-colors">
+              Explore the graph &rarr;
+            </Link>
           </div>
         </div>
       </section>
@@ -175,7 +186,10 @@ export default async function HomePage() {
           <div className="mb-6">
             <h2 className="text-xl font-semibold">Applied Impact Index</h2>
             <p className="text-sm text-white/40 mt-1">
-              Ranked by real-world product adoption, not just citations
+              Ranked by real-world product adoption, not just citations.{" "}
+              <Link href="/analytics" className="text-amber-400/60 hover:text-amber-400 transition-colors">
+                How is this calculated?
+              </Link>
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -217,13 +231,19 @@ export default async function HomePage() {
         <div className="bg-gradient-to-r from-blue-500/10 to-emerald-500/10 border border-white/10 rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-3">Building with AI?</h2>
           <p className="text-white/50 mb-6 max-w-lg mx-auto">
-            Join the graph. Add your projects, link the papers that inspired them,
-            and connect with researchers pushing the frontier.
+            Get listed on PeerGraph.ai. Add your projects, credit the research behind them,
+            and connect with the people pushing the frontier.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
-              href="/graph"
+              href="/join"
               className="bg-white text-black rounded-lg px-6 py-3 font-medium hover:bg-white/90 transition-colors"
+            >
+              Get Listed
+            </Link>
+            <Link
+              href="/graph"
+              className="bg-white/10 text-white rounded-lg px-6 py-3 font-medium hover:bg-white/20 transition-colors"
             >
               Explore the Graph
             </Link>

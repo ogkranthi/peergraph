@@ -10,6 +10,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/graph", label: "Graph" },
     { href: "/directory", label: "Directory" },
+    { href: "/join", label: "Get Listed", highlight: true },
     { href: "/changelog", label: "Changelog" },
   ];
 
@@ -33,6 +34,8 @@ export default function Navbar() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   pathname === link.href
                     ? "bg-white/10 text-white"
+                    : (link as any).highlight
+                    ? "text-amber-400/80 hover:text-amber-300 hover:bg-amber-500/10"
                     : "text-white/60 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -40,7 +43,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://github.com"
+              href="https://github.com/ogkranthi/peergraph"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 rounded-lg text-sm font-medium bg-white/10 text-white hover:bg-white/20 transition-colors"

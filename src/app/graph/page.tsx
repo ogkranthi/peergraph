@@ -1,5 +1,6 @@
 import { getGraphData, getBuilders } from "@/lib/data";
 import GraphView from "@/components/GraphView";
+import GraphHelpBanner from "@/components/GraphHelpBanner";
 
 export default async function GraphPage() {
   const [{ nodes, links }, builders] = await Promise.all([getGraphData(), getBuilders()]);
@@ -8,12 +9,13 @@ export default async function GraphPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-4 h-[calc(100vh-64px)] flex flex-col">
-      <div className="mb-3">
+      <div className="mb-2">
         <h1 className="text-2xl font-bold">The Graph</h1>
         <p className="text-sm text-white/50">
-          Where AI research meets AI products. Hover to explore connections. Click for details.
+          The research-to-product network. See how AI papers become real-world products.
         </p>
       </div>
+      <GraphHelpBanner />
       <GraphView nodes={nodes} links={links} researcherIds={researcherIds} builderMap={builderMap} />
     </div>
   );
