@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
 import { getAllResearcherImpactScores } from "@/lib/impact-score";
 import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
+import EmailCapture from "@/components/EmailCapture";
 
 export const revalidate = 3600; // Re-render from Supabase every hour
 
@@ -115,10 +116,10 @@ export default async function HomePage() {
             </div>
             <h3 className="font-semibold mb-2 text-emerald-300">For Builders</h3>
             <p className="text-sm text-white/50 mb-4">
-              Credit the research behind your product. Link papers to your project and get discovered by researchers pushing your field forward.
+              Discover what research powers your field. Find papers behind the products you admire, explore how cutting-edge research could benefit what you&apos;re building, and credit the work that inspired you.
             </p>
-            <Link href="/join" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
-              Add your project &rarr;
+            <Link href="/search" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+              Explore by topic &rarr;
             </Link>
           </div>
           <div className="bg-gradient-to-b from-amber-500/10 to-transparent border border-amber-500/15 rounded-xl p-6">
@@ -127,10 +128,10 @@ export default async function HomePage() {
             </div>
             <h3 className="font-semibold mb-2 text-amber-300">For Everyone</h3>
             <p className="text-sm text-white/50 mb-4">
-              Explore how AI research becomes real-world products. Browse the graph, discover connections, and see who&apos;s building what.
+              Search any AI topic — see all the products and research in that domain. Rabbit-hole into how papers become products, who&apos;s building what, and where the field is heading.
             </p>
-            <Link href="/graph" className="text-sm text-amber-400 hover:text-amber-300 transition-colors">
-              Explore the graph &rarr;
+            <Link href="/search" className="text-sm text-amber-400 hover:text-amber-300 transition-colors">
+              Search a topic &rarr;
             </Link>
           </div>
         </div>
@@ -283,6 +284,17 @@ export default async function HomePage() {
               How to Get Listed
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Stay in the loop */}
+      <section className="max-w-7xl mx-auto px-4 py-12">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/5 border border-white/10 rounded-xl p-6">
+          <div>
+            <p className="font-semibold mb-1">Stay in the loop</p>
+            <p className="text-sm text-white/40">Get notified about new researchers, builders, and features.</p>
+          </div>
+          <EmailCapture source="footer" />
         </div>
       </section>
 

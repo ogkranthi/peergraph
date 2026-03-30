@@ -10,6 +10,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/graph", label: "Graph" },
     { href: "/directory", label: "Directory" },
+    { href: "/search", label: "Search" },
     { href: "/join", label: "Get Listed", highlight: true },
   ];
 

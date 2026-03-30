@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmailCapture from "@/components/EmailCapture";
 
 const GITHUB_REPO = "https://github.com/ogkranthi/peergraph";
 
@@ -113,8 +114,17 @@ export default function JoinPage() {
         </div>
       </div>
 
-      {/* FAQ */}
+      {/* Email capture */}
       <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+          <p className="font-semibold mb-1">Get notified when we add new features</p>
+          <p className="text-sm text-white/40 mb-3">We&apos;ll email you about new researchers, builders, and platform updates.</p>
+          <EmailCapture source="join" />
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="pt-8 border-t border-white/10">
         <h2 className="text-lg font-semibold mb-4">Common Questions</h2>
         <div className="space-y-4">
           <div>
