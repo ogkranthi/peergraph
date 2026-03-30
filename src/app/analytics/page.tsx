@@ -3,6 +3,8 @@ import { computePlatformAnalytics } from "@/lib/analytics";
 import { DOMAIN_COLORS } from "@/lib/types";
 import Link from "next/link";
 
+export const revalidate = 3600;
+
 export default async function AnalyticsPage() {
   const [researchers, builders, papers, projects] = await Promise.all([
     getResearchers(),

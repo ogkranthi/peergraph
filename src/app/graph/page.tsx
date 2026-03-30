@@ -2,6 +2,8 @@ import { getGraphData, getBuilders } from "@/lib/data";
 import GraphView from "@/components/GraphView";
 import GraphHelpBanner from "@/components/GraphHelpBanner";
 
+export const revalidate = 3600;
+
 export default async function GraphPage() {
   const [{ nodes, links }, builders] = await Promise.all([getGraphData(), getBuilders()]);
   const builderMap = builders.map((b) => ({ id: b.id, username: b.github_username }));

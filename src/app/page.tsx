@@ -3,6 +3,8 @@ import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
 import { getAllResearcherImpactScores } from "@/lib/impact-score";
 import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 
+export const revalidate = 3600; // Re-render from Supabase every hour
+
 export default async function HomePage() {
   const [stats, researchers, projects, papers] = await Promise.all([
     getStats(),

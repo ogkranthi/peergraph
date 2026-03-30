@@ -5,6 +5,8 @@ import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   return (await getResearchers()).map((r) => ({ id: r.id }));
 }
