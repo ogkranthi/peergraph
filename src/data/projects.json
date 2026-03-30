@@ -193,5 +193,210 @@
       { "paper_id": "p6", "source_type": "community", "evidence_url": "https://jasonwei20.github.io", "confidence": 75, "added_at": "2026-03-04T00:00:00Z" }
     ],
     "created_at": "2026-03-04T00:00:00Z"
+  },
+  {
+    "id": "proj14",
+    "builder_id": "b13",
+    "name": "Stable Diffusion",
+    "description": "Open-source text-to-image diffusion model that democratized AI image generation. Runs locally on consumer GPUs and powers thousands of apps.",
+    "repo_url": "https://github.com/Stability-AI/stablediffusion",
+    "live_url": "https://stability.ai",
+    "domains": ["Computer Vision", "Generative AI"],
+    "paper_ids": ["p18", "p3", "p17"],
+    "paper_links": [
+      { "paper_id": "p18", "source_type": "maintainer_claim", "evidence_url": "https://github.com/Stability-AI/stablediffusion", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p3", "source_type": "community", "evidence_url": "https://stability.ai/research", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p17", "source_type": "community", "evidence_url": "https://stability.ai/research", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj15",
+    "builder_id": "b14",
+    "name": "Scale AI Data Platform",
+    "description": "Enterprise data labeling and AI infrastructure platform. Powers training data for OpenAI, Meta, and US DoD with human-in-the-loop annotation at scale.",
+    "repo_url": "",
+    "live_url": "https://scale.com",
+    "domains": ["Computer Vision", "NLP", "Generative AI"],
+    "paper_ids": ["p4", "p21"],
+    "paper_links": [
+      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://scale.com/computer-vision", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://scale.com/generative-ai", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj16",
+    "builder_id": "b15",
+    "name": "Hugging Face Transformers",
+    "description": "The most popular open-source library for state-of-the-art NLP, vision, and audio models. Hosts 500K+ models and 100K+ datasets. The GitHub of machine learning.",
+    "repo_url": "https://github.com/huggingface/transformers",
+    "live_url": "https://huggingface.co",
+    "domains": ["NLP", "Generative AI", "Computer Vision"],
+    "paper_ids": ["p1", "p14", "p22"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/huggingface/transformers", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p14", "source_type": "readme_extraction", "evidence_url": "https://github.com/huggingface/transformers", "confidence": 95, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p22", "source_type": "community", "evidence_url": "https://huggingface.co/meta-llama", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj17",
+    "builder_id": "b16",
+    "name": "Pioneer Fund",
+    "description": "AI-first venture fund and talent accelerator co-founded with Nat Friedman. Finds and funds the most ambitious AI builders globally using AI-powered scouting.",
+    "repo_url": "",
+    "live_url": "https://pioneer.app",
+    "domains": ["Generative AI"],
+    "paper_ids": ["p6", "p21"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://pioneer.app", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://pioneer.app", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj18",
+    "builder_id": "b17",
+    "name": "AI Grants & Investments",
+    "description": "Portfolio of AI investments and open-source contributions. Co-leads Pioneer Fund. Previously acquired GitHub for Microsoft and shipped Copilot.",
+    "repo_url": "https://github.com/nat",
+    "live_url": "https://nat.org",
+    "domains": ["Generative AI", "NLP"],
+    "paper_ids": ["p6", "p21"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://nat.org", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://nat.org", "confidence": 65, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj19",
+    "builder_id": "b18",
+    "name": "OpenAI Cookbook & DevRel",
+    "description": "Built OpenAI's developer ecosystem from scratch. Created the OpenAI Cookbook with 200+ examples, grew the API community to millions of developers.",
+    "repo_url": "https://github.com/openai/openai-cookbook",
+    "live_url": "https://cookbook.openai.com",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p6", "p21", "p13"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "readme_extraction", "evidence_url": "https://github.com/openai/openai-cookbook", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "readme_extraction", "evidence_url": "https://github.com/openai/openai-cookbook", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p13", "source_type": "community", "evidence_url": "https://cookbook.openai.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj20",
+    "builder_id": "b19",
+    "name": "Latent Space & smol.ai",
+    "description": "Latent Space is the leading AI engineering podcast and newsletter. smol.ai builds small, useful AI developer tools. Defined the AI Engineer role.",
+    "repo_url": "https://github.com/smol-ai/developer",
+    "live_url": "https://www.latent.space",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p1", "p6", "p21"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://www.latent.space", "confidence": 70, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj21",
+    "builder_id": "b20",
+    "name": "fast.ai",
+    "description": "Free deep learning courses and the fastai library. Made cutting-edge deep learning accessible to anyone who can code. Used by hundreds of thousands of students.",
+    "repo_url": "https://github.com/fastai/fastai",
+    "live_url": "https://fast.ai",
+    "domains": ["Generative AI", "Computer Vision", "NLP"],
+    "paper_ids": ["p1", "p15", "p23"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p15", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p23", "source_type": "readme_extraction", "evidence_url": "https://github.com/fastai/fastai", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj22",
+    "builder_id": "b21",
+    "name": "ML Paper Explanations (YouTube)",
+    "description": "YouTube channel with 250K+ subscribers explaining cutting-edge ML papers. Co-created OpenAssistant, an open-source ChatGPT alternative.",
+    "repo_url": "https://github.com/LAION-AI/Open-Assistant",
+    "live_url": "https://www.youtube.com/@YannicKilcher",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p1", "p14", "p6"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://www.youtube.com/@YannicKilcher", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj23",
+    "builder_id": "b22",
+    "name": "Replit",
+    "description": "AI-powered coding platform used by 30M+ developers. Features Replit Agent for building full-stack apps from natural language prompts in the browser.",
+    "repo_url": "https://github.com/replit",
+    "live_url": "https://replit.com",
+    "domains": ["Generative AI", "NLP"],
+    "paper_ids": ["p6", "p21", "p1"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://replit.com", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj24",
+    "builder_id": "b23",
+    "name": "OpenAI API Platform",
+    "description": "Built and scaled OpenAI's API platform serving GPT-4, DALL-E, and Whisper to millions of developers. Architected the product powering ChatGPT.",
+    "repo_url": "",
+    "live_url": "https://platform.openai.com",
+    "domains": ["NLP", "Generative AI", "Multimodal"],
+    "paper_ids": ["p6", "p21", "p17"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p17", "source_type": "maintainer_claim", "evidence_url": "https://platform.openai.com", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj25",
+    "builder_id": "b24",
+    "name": "OpenAI Engineering",
+    "description": "Co-founded OpenAI and led engineering from GPT-1 through ChatGPT and GPT-4. Built the infrastructure and team behind the most impactful AI products.",
+    "repo_url": "https://github.com/openai",
+    "live_url": "https://openai.com",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p6", "p21", "p7"],
+    "paper_links": [
+      { "paper_id": "p6", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p21", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 90, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p7", "source_type": "maintainer_claim", "evidence_url": "https://openai.com", "confidence": 85, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj26",
+    "builder_id": "b25",
+    "name": "Thinking Machines Lab",
+    "description": "AI research startup founded after departing OpenAI as CTO. Led the technical development of ChatGPT, GPT-4, and DALL-E at OpenAI.",
+    "repo_url": "",
+    "live_url": "",
+    "domains": ["Generative AI", "NLP", "Multimodal"],
+    "paper_ids": ["p21", "p17", "p7"],
+    "paper_links": [
+      { "paper_id": "p21", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 80, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p17", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" },
+      { "paper_id": "p7", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
+    ],
+    "created_at": "2026-03-29T00:00:00Z"
   }
 ]
