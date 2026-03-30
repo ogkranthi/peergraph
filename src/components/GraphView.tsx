@@ -25,8 +25,34 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null);
   const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
   const [filterDomain, setFilterDomain] = useState<string>("all");
+  const [filterCity, setFilterCity] = useState<string>("all");
 
   const allDomains = Array.from(new Set(nodes.flatMap((n) => n.domains))).sort();
+
+  // Extract cities from builder nodes + map researcher institutions to cities
+  const INSTITUTION_CITY_MAP: Record<string, string> = {
+    "MIT": "Cambridge", "Harvard": "Cambridge", "CSAIL": "Cambridge",
+    "Stanford": "Stanford", "UC Berkeley": "Berkeley", "Berkeley": "Berkeley",
+    "Google": "Mountain View", "DeepMind": "London", "Meta AI": "New York",
+    "NYU": "New York", "OpenAI": "San Francisco", "Anthropic": "San Francisco",
+    "Toronto": "Toronto", "Montréal": "Montreal", "Montreal": "Montreal",
+    "Cohere": "Toronto", "KAUST": "Riyadh", "IDSIA": "Lugano",
+    "Washington": "Seattle", "Apple": "Cupertino", "insitro": "San Francisco",
+  };
+
+  function getNodeCity(n: GraphNode): string | undefined {
+    if (n.city) return n.city;
+    if (n.institution) {
+      for (const [key, city] of Object.entries(INSTITUTION_CITY_MAP)) {
+        if (n.institution.includes(key)) return city;
+      }
+    }
+    return undefined;
+  }
+
+  const allCities = Array.from(
+    new Set(nodes.map(getNodeCity).filter(Boolean) as string[])
+  ).sort();
 
   // Resize
   useEffect(() => {
@@ -44,9 +70,11 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
   }, []);
 
   // Filter
-  const filteredNodes = nodes.filter(
-    (n) => filterDomain === "all" || n.domains.includes(filterDomain as any)
-  );
+  const filteredNodes = nodes.filter((n) => {
+    const matchesDomain = filterDomain === "all" || n.domains.includes(filterDomain as any);
+    const matchesCity = filterCity === "all" || getNodeCity(n) === filterCity;
+    return matchesDomain && matchesCity;
+  });
   const filteredNodeIds = new Set(filteredNodes.map((n) => n.id));
   const filteredLinks = links.filter((l) => filteredNodeIds.has(l.source) && filteredNodeIds.has(l.target));
 
@@ -298,33 +326,62 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
 
   return (
     <div className="flex flex-col h-full">
-      {/* Domain filter */}
-      <div className="flex items-center gap-3 px-4 py-2.5 bg-white/5 rounded-xl mb-2">
-        <div className="flex gap-1 overflow-x-auto flex-1">
-          <button
-            onClick={() => setFilterDomain("all")}
-            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-              filterDomain === "all" ? "bg-white/15 text-white" : "text-white/40 hover:text-white/60"
-            }`}
-          >
-            All
-          </button>
-          {allDomains.map((d) => (
+      {/* Filters */}
+      <div className="flex flex-col gap-1.5 mb-2">
+        {/* Domain filter */}
+        <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded-xl">
+          <span className="text-[10px] text-white/30 uppercase tracking-wider flex-shrink-0">Domain</span>
+          <div className="flex gap-1 overflow-x-auto flex-1">
             <button
-              key={d}
-              onClick={() => setFilterDomain(d)}
+              onClick={() => setFilterDomain("all")}
               className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-                filterDomain === d ? "text-white" : "text-white/40 hover:text-white/60"
+                filterDomain === "all" ? "bg-white/15 text-white" : "text-white/40 hover:text-white/60"
               }`}
-              style={filterDomain === d ? { backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "30" } : {}}
             >
-              {d}
+              All
             </button>
-          ))}
+            {allDomains.map((d) => (
+              <button
+                key={d}
+                onClick={() => setFilterDomain(d)}
+                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                  filterDomain === d ? "text-white" : "text-white/40 hover:text-white/60"
+                }`}
+                style={filterDomain === d ? { backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "30" } : {}}
+              >
+                {d}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="text-[11px] text-white/30 whitespace-nowrap">
-          {researchers.length}R &middot; {builders.length}B &middot;{" "}
-          {filteredLinks.filter((l) => l.type === "uses_paper").length} paper links
+        {/* City filter */}
+        <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded-xl">
+          <span className="text-[10px] text-white/30 uppercase tracking-wider flex-shrink-0">City</span>
+          <div className="flex gap-1 overflow-x-auto flex-1">
+            <button
+              onClick={() => setFilterCity("all")}
+              className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                filterCity === "all" ? "bg-white/15 text-white" : "text-white/40 hover:text-white/60"
+              }`}
+            >
+              All
+            </button>
+            {allCities.map((c) => (
+              <button
+                key={c}
+                onClick={() => setFilterCity(c)}
+                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                  filterCity === c ? "bg-white/15 text-white" : "text-white/40 hover:text-white/60"
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+          <div className="text-[11px] text-white/30 whitespace-nowrap flex-shrink-0">
+            {researchers.length}R &middot; {builders.length}B &middot;{" "}
+            {filteredLinks.filter((l) => l.type === "uses_paper").length} links
+          </div>
         </div>
       </div>
 

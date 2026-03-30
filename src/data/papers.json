@@ -380,5 +380,57 @@
     "domains": ["Computer Vision"],
     "author_ids": ["r27"],
     "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "p26",
+    "semantic_id": "pix2pix",
+    "title": "Image-to-Image Translation with Conditional Adversarial Networks",
+    "year": 2017,
+    "venue": "CVPR 2017",
+    "citation_count": 18000,
+    "abstract": "We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems (pix2pix).",
+    "url": "https://arxiv.org/abs/1611.07004",
+    "domains": ["Computer Vision", "Generative AI"],
+    "author_ids": ["r31"],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p27",
+    "semantic_id": "DataCentricAI",
+    "title": "Data-Centric Artificial Intelligence: A Survey",
+    "year": 2023,
+    "venue": "Communications of the ACM",
+    "citation_count": 1200,
+    "abstract": "This survey provides a comprehensive overview of data-centric AI, including training data development, inference data development, and data maintenance.",
+    "url": "https://arxiv.org/abs/2303.10158",
+    "domains": ["MLOps", "Generative AI"],
+    "author_ids": [],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p28",
+    "semantic_id": "AdversarialRobust",
+    "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+    "year": 2018,
+    "venue": "ICLR 2018",
+    "citation_count": 12000,
+    "abstract": "We propose PGD adversarial training, a method for building robust deep learning models that resist adversarial perturbations.",
+    "url": "https://arxiv.org/abs/1706.06083",
+    "domains": ["AI Safety", "Computer Vision"],
+    "author_ids": ["r33"],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p29",
+    "semantic_id": "MLforMolecules",
+    "title": "A Generative Model for Molecular Distance Geometry",
+    "year": 2020,
+    "venue": "ICML 2020",
+    "citation_count": 450,
+    "abstract": "We present a generative model for 3D molecular geometry that enables drug discovery by predicting molecular conformations.",
+    "url": "https://arxiv.org/abs/1909.11459",
+    "domains": ["Healthcare AI", "Generative AI"],
+    "author_ids": ["r34"],
+    "created_at": "2026-03-30T00:00:00Z"
   }
 ]

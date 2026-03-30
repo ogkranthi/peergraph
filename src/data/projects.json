@@ -398,5 +398,124 @@
       { "paper_id": "p7", "source_type": "community", "evidence_url": "https://www.crunchbase.com/organization/thinking-machines-lab", "confidence": 75, "added_at": "2026-03-29T00:00:00Z" }
     ],
     "created_at": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "proj27",
+    "builder_id": "b26",
+    "name": "Snorkel AI",
+    "description": "Data-centric AI platform. Write labeling functions instead of hand-labeling data. Used by Google, Apple, Intel, and government agencies.",
+    "repo_url": "https://github.com/snorkel-team/snorkel",
+    "live_url": "https://snorkel.ai",
+    "domains": ["MLOps", "Generative AI"],
+    "paper_ids": ["p27", "p1"],
+    "paper_links": [
+      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://snorkel.ai/blog", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://github.com/snorkel-team/snorkel", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj28",
+    "builder_id": "b27",
+    "name": "Weights & Biases",
+    "description": "ML experiment tracking, model versioning, and dataset management. The MLOps platform used by OpenAI, DeepMind, and 500K+ ML practitioners.",
+    "repo_url": "https://github.com/wandb/wandb",
+    "live_url": "https://wandb.ai",
+    "domains": ["MLOps", "Generative AI"],
+    "paper_ids": ["p1", "p15"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://wandb.ai/site/research", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://wandb.ai/site/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj29",
+    "builder_id": "b28",
+    "name": "Cleanlab",
+    "description": "Open-source tool to find and fix label errors in datasets. Implements confident learning — automatically detects noisy labels in any ML dataset.",
+    "repo_url": "https://github.com/cleanlab/cleanlab",
+    "live_url": "https://cleanlab.ai",
+    "domains": ["MLOps", "AI Safety"],
+    "paper_ids": ["p27"],
+    "paper_links": [
+      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://github.com/cleanlab/cleanlab", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj30",
+    "builder_id": "b29",
+    "name": "Neurala Brain Builder",
+    "description": "Edge AI platform for visual inspection and anomaly detection. Lifelong-learning neural networks that improve in production without retraining from scratch.",
+    "repo_url": "",
+    "live_url": "https://neurala.com",
+    "domains": ["Computer Vision", "Robotics"],
+    "paper_ids": ["p15", "p8"],
+    "paper_links": [
+      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p8", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj31",
+    "builder_id": "b30",
+    "name": "DataRobot",
+    "description": "Enterprise AutoML platform. Automates model building, deployment, and monitoring. Serves Fortune 500 companies from Boston headquarters.",
+    "repo_url": "",
+    "live_url": "https://datarobot.com",
+    "domains": ["MLOps", "Generative AI"],
+    "paper_ids": ["p1", "p15"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://datarobot.com/platform", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://datarobot.com/platform", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj32",
+    "builder_id": "b31",
+    "name": "Lunit INSIGHT",
+    "description": "AI-powered cancer detection in chest X-rays and mammography. FDA-cleared, CE-marked, deployed in 4000+ hospitals across 50+ countries.",
+    "repo_url": "",
+    "live_url": "https://lunit.io",
+    "domains": ["Healthcare AI", "Computer Vision"],
+    "paper_ids": ["p15", "p4"],
+    "paper_links": [
+      { "paper_id": "p15", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj33",
+    "builder_id": "b32",
+    "name": "Cohere",
+    "description": "Enterprise LLM platform built by a Transformer paper co-author. RAG, embeddings, and language understanding for enterprise search and generation.",
+    "repo_url": "https://github.com/cohere-ai",
+    "live_url": "https://cohere.com",
+    "domains": ["NLP", "Generative AI"],
+    "paper_ids": ["p1", "p14", "p22"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "maintainer_claim", "evidence_url": "https://cohere.com/research", "confidence": 95, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p14", "source_type": "community", "evidence_url": "https://cohere.com/research", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p22", "source_type": "community", "evidence_url": "https://cohere.com/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "proj34",
+    "builder_id": "b33",
+    "name": "Run:ai",
+    "description": "GPU orchestration platform for AI workloads. Fractional GPUs, dynamic scheduling, and cluster management. Acquired by NVIDIA in 2024.",
+    "repo_url": "",
+    "live_url": "https://run.ai",
+    "domains": ["MLOps", "Optimization"],
+    "paper_ids": ["p1"],
+    "paper_links": [
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://run.ai", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
+    ],
+    "created_at": "2026-03-30T00:00:00Z"
   }
 ]
