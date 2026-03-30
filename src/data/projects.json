@@ -38,10 +38,14 @@
     "repo_url": "https://github.com/aamini/introtodeeplearning",
     "live_url": "http://introtodeeplearning.com",
     "domains": ["Generative AI", "Computer Vision"],
-    "paper_ids": ["p1", "p2"],
+    "paper_ids": ["p1", "p2", "p15", "p23", "p26", "p28"],
     "paper_links": [
       { "paper_id": "p1", "source_type": "readme_extraction", "evidence_url": "https://github.com/aamini/introtodeeplearning", "confidence": 90, "added_at": "2026-03-01T00:00:00Z" },
-      { "paper_id": "p2", "source_type": "readme_extraction", "evidence_url": "https://github.com/aamini/introtodeeplearning", "confidence": 90, "added_at": "2026-03-01T00:00:00Z" }
+      { "paper_id": "p2", "source_type": "readme_extraction", "evidence_url": "https://github.com/aamini/introtodeeplearning", "confidence": 90, "added_at": "2026-03-01T00:00:00Z" },
+      { "paper_id": "p15", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p23", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p26", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 80, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p28", "source_type": "community", "evidence_url": "http://introtodeeplearning.com", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
     ],
     "created_at": "2026-03-01T00:00:00Z"
   },
@@ -67,9 +71,10 @@
     "repo_url": "",
     "live_url": "https://suno.com",
     "domains": ["Speech & Audio", "Generative AI"],
-    "paper_ids": ["p1"],
+    "paper_ids": ["p1", "p26"],
     "paper_links": [
-      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://suno.com", "confidence": 75, "added_at": "2026-03-02T00:00:00Z" }
+      { "paper_id": "p1", "source_type": "community", "evidence_url": "https://suno.com", "confidence": 75, "added_at": "2026-03-02T00:00:00Z" },
+      { "paper_id": "p26", "source_type": "community", "evidence_url": "https://suno.com/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
     ],
     "created_at": "2026-03-02T00:00:00Z"
   },
@@ -437,9 +442,10 @@
     "repo_url": "https://github.com/cleanlab/cleanlab",
     "live_url": "https://cleanlab.ai",
     "domains": ["MLOps", "AI Safety"],
-    "paper_ids": ["p27"],
+    "paper_ids": ["p27", "p28"],
     "paper_links": [
-      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://github.com/cleanlab/cleanlab", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" }
+      { "paper_id": "p27", "source_type": "maintainer_claim", "evidence_url": "https://github.com/cleanlab/cleanlab", "confidence": 90, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p28", "source_type": "community", "evidence_url": "https://cleanlab.ai/blog", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -451,10 +457,11 @@
     "repo_url": "",
     "live_url": "https://neurala.com",
     "domains": ["Computer Vision", "Robotics"],
-    "paper_ids": ["p15", "p8"],
+    "paper_ids": ["p15", "p8", "p26"],
     "paper_links": [
       { "paper_id": "p15", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p8", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
+      { "paper_id": "p8", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p26", "source_type": "community", "evidence_url": "https://neurala.com/technology", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
@@ -481,10 +488,12 @@
     "repo_url": "",
     "live_url": "https://lunit.io",
     "domains": ["Healthcare AI", "Computer Vision"],
-    "paper_ids": ["p15", "p4"],
+    "paper_ids": ["p15", "p4", "p28", "p29"],
     "paper_links": [
       { "paper_id": "p15", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 85, "added_at": "2026-03-30T00:00:00Z" },
-      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" }
+      { "paper_id": "p4", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 75, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p28", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 70, "added_at": "2026-03-30T00:00:00Z" },
+      { "paper_id": "p29", "source_type": "community", "evidence_url": "https://lunit.io/research", "confidence": 65, "added_at": "2026-03-30T00:00:00Z" }
     ],
     "created_at": "2026-03-30T00:00:00Z"
   },
