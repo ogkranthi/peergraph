@@ -38,7 +38,7 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     "DeepMind": "London",
     "Toronto": "Toronto", "Montréal": "Montreal", "Montreal": "Montreal",
     "Cohere": "Toronto", "KAUST": "Riyadh", "IDSIA": "Lugano",
-    "Washington": "Seattle", "Apple": "Bay Area", "insitro": "Bay Area",
+    "Washington": "Seattle", "Allen": "Seattle", "Apple": "Bay Area", "insitro": "Bay Area",
   };
 
   // Normalize builder cities to metro areas too

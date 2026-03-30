@@ -432,5 +432,57 @@
     "domains": ["Healthcare AI", "Generative AI"],
     "author_ids": ["r34"],
     "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p30",
+    "semantic_id": "YOLO",
+    "title": "You Only Look Once: Unified, Real-Time Object Detection",
+    "year": 2016,
+    "venue": "CVPR 2016",
+    "citation_count": 35000,
+    "abstract": "We frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation.",
+    "url": "https://arxiv.org/abs/1506.02640",
+    "domains": ["Computer Vision"],
+    "author_ids": ["r42"],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p31",
+    "semantic_id": "OLMo",
+    "title": "OLMo: Accelerating the Science of Language Models",
+    "year": 2024,
+    "venue": "ACL 2024",
+    "citation_count": 800,
+    "abstract": "We present OLMo, a truly open language model with open training data, training code, model weights, and evaluation code. OLMo enables the scientific study of language models by making every artifact fully reproducible.",
+    "url": "https://arxiv.org/abs/2402.00838",
+    "domains": ["NLP", "Generative AI"],
+    "author_ids": ["r41", "r44"],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p32",
+    "semantic_id": "CommonSense",
+    "title": "COMET: Commonsense Transformers for Automatic Knowledge Graph Construction",
+    "year": 2019,
+    "venue": "ACL 2019",
+    "citation_count": 1500,
+    "abstract": "We present COMET, a framework for automatic construction of commonsense knowledge graphs by training transformers on existing knowledge tuples.",
+    "url": "https://arxiv.org/abs/1906.05317",
+    "domains": ["NLP", "Generative AI"],
+    "author_ids": ["r43"],
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "p33",
+    "semantic_id": "ELMo",
+    "title": "Deep contextualized word representations",
+    "year": 2018,
+    "venue": "NAACL 2018",
+    "citation_count": 15000,
+    "abstract": "We introduce a new type of deep contextualized word representation (ELMo) that models both complex characteristics of word use and how these uses vary across linguistic contexts.",
+    "url": "https://arxiv.org/abs/1802.05365",
+    "domains": ["NLP"],
+    "author_ids": ["r40"],
+    "created_at": "2026-03-30T00:00:00Z"
   }
 ]

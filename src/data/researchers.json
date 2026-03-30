@@ -537,5 +537,83 @@
     "homepage_url": "https://people.csail.mit.edu/dsontag/",
     "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=DS&backgroundColor=3b82f6",
     "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r39",
+    "semantic_id": "",
+    "name": "Oren Etzioni",
+    "institution": "Allen Institute for AI (AI2)",
+    "h_index": 85,
+    "citation_count": 52000,
+    "paper_count": 320,
+    "domains": ["NLP", "AI Safety"],
+    "homepage_url": "https://allenai.org",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=OE&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r40",
+    "semantic_id": "",
+    "name": "Luke Zettlemoyer",
+    "institution": "University of Washington / Meta AI",
+    "h_index": 78,
+    "citation_count": 62000,
+    "paper_count": 280,
+    "domains": ["NLP", "Generative AI"],
+    "homepage_url": "https://www.cs.washington.edu/people/faculty/lsz",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=LZ&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r41",
+    "semantic_id": "",
+    "name": "Noah Smith",
+    "institution": "University of Washington / Allen AI",
+    "h_index": 82,
+    "citation_count": 48000,
+    "paper_count": 400,
+    "domains": ["NLP", "AI Safety"],
+    "homepage_url": "https://nasmith.github.io",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=NS2&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r42",
+    "semantic_id": "",
+    "name": "Ali Farhadi",
+    "institution": "University of Washington / Allen AI",
+    "h_index": 72,
+    "citation_count": 58000,
+    "paper_count": 200,
+    "domains": ["Computer Vision", "Multimodal"],
+    "homepage_url": "https://homes.cs.washington.edu/~ali/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=AF&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r43",
+    "semantic_id": "",
+    "name": "Yejin Choi",
+    "institution": "University of Washington / Allen AI",
+    "h_index": 75,
+    "citation_count": 45000,
+    "paper_count": 300,
+    "domains": ["NLP", "AI Safety"],
+    "homepage_url": "https://homes.cs.washington.edu/~yejin/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=YC&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "r44",
+    "semantic_id": "",
+    "name": "Hannaneh Hajishirzi",
+    "institution": "University of Washington / Allen AI",
+    "h_index": 55,
+    "citation_count": 32000,
+    "paper_count": 200,
+    "domains": ["NLP", "Generative AI"],
+    "homepage_url": "https://homes.cs.washington.edu/~hannaneh/",
+    "photo_url": "https://api.dicebear.com/7.x/initials/svg?seed=HH&backgroundColor=3b82f6",
+    "created_at": "2026-03-30T00:00:00Z"
   }
 ]
