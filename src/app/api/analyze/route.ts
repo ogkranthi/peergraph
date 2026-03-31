@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
   // Match extracted refs against our papers
   const matchedPapers: {
     paper: typeof papers[0];
-    matchType: "arxiv_id" | "doi" | "title_match";
+    matchType: "arxiv_id" | "doi" | "title_match" | "keyword_match";
     matchValue: string;
     authors: typeof researchers;
   }[] = [];
@@ -127,14 +127,64 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  // Fuzzy title matching — check if any paper titles appear in the README
+  // Keyword/alias matching — map common terms to papers
+  const PAPER_ALIASES: Record<string, string[]> = {
+    // paper semantic_id or id → list of keywords to search in README
+    "p1":  ["transformer", "attention is all you need", "self-attention", "multi-head attention"],
+    "p2":  ["generative adversarial", "GAN", "discriminator"],
+    "p3":  ["CLIP", "contrastive language-image"],
+    "p4":  ["ImageNet"],
+    "p5":  ["AlphaFold", "protein structure prediction"],
+    "p6":  ["GPT-3", "GPT-2", "GPT2", "GPT3", "few-shot learners", "language model"],
+    "p7":  ["RLHF", "reinforcement learning from human feedback", "InstructGPT"],
+    "p8":  ["LeNet", "convolutional neural network", "document recognition"],
+    "p9":  ["HELM", "holistic evaluation"],
+    "p10": ["world model", "autonomous machine intelligence"],
+    "p11": ["liquid neural", "liquid time-constant"],
+    "p12": ["lottery ticket", "sparse network", "pruning"],
+    "p13": ["chain-of-thought", "chain of thought", "CoT prompting"],
+    "p14": ["BERT", "bidirectional encoder", "pre-training"],
+    "p15": ["ResNet", "residual learning", "residual network", "skip connection"],
+    "p16": ["AlexNet"],
+    "p17": ["DALL-E", "DALL·E", "dalle"],
+    "p18": ["stable diffusion", "latent diffusion"],
+    "p19": ["MAML", "meta-learning", "model-agnostic"],
+    "p20": ["AlphaGo", "Monte Carlo tree search"],
+    "p21": ["GPT-4", "GPT4"],
+    "p22": ["Llama", "LLaMA"],
+    "p23": ["LSTM", "long short-term memory"],
+    "p25": ["R-CNN", "RCNN", "region-based convolutional"],
+    "p26": ["pix2pix", "image-to-image translation"],
+    "p28": ["adversarial attack", "adversarial robustness", "PGD"],
+    "p30": ["YOLO", "you only look once"],
+    "p31": ["OLMo"],
+    "p33": ["ELMo", "contextualized word"],
+  };
+
   const readmeLower = readmeText.toLowerCase();
+
+  // Alias-based matching
+  for (const [paperId, aliases] of Object.entries(PAPER_ALIASES)) {
+    if (matchedPaperIds.has(paperId)) continue;
+    const paper = paperMap.get(paperId);
+    if (!paper) continue;
+
+    for (const alias of aliases) {
+      if (readmeLower.includes(alias.toLowerCase())) {
+        matchedPaperIds.add(paperId);
+        const authors = paper.author_ids.map((id) => researcherMap.get(id)).filter(Boolean) as typeof researchers;
+        matchedPapers.push({ paper, matchType: "keyword_match" as any, matchValue: alias, authors });
+        break;
+      }
+    }
+  }
+
+  // Fallback: check if any paper title (long phrases) appear verbatim
   for (const paper of papers) {
     if (matchedPaperIds.has(paper.id)) continue;
-    // Match if paper title (or significant portion) appears in README
     const titleWords = paper.title.toLowerCase().split(/\s+/).filter((w) => w.length > 4);
     if (titleWords.length < 3) continue;
-    const titlePhrase = titleWords.slice(0, 6).join(" ");
+    const titlePhrase = titleWords.slice(0, 5).join(" ");
     if (readmeLower.includes(titlePhrase)) {
       matchedPaperIds.add(paper.id);
       const authors = paper.author_ids.map((id) => researcherMap.get(id)).filter(Boolean) as typeof researchers;

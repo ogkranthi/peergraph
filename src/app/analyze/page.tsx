@@ -175,9 +175,10 @@ export default function AnalyzePage() {
                       <span className={`px-2 py-0.5 rounded text-[10px] flex-shrink-0 ${
                         p.matchType === "arxiv_id" ? "bg-emerald-500/15 text-emerald-400" :
                         p.matchType === "doi" ? "bg-blue-500/15 text-blue-400" :
+                        p.matchType === "keyword_match" ? "bg-purple-500/15 text-purple-400" :
                         "bg-amber-500/15 text-amber-400"
                       }`}>
-                        {p.matchType === "arxiv_id" ? "arXiv match" : p.matchType === "doi" ? "DOI match" : "title match"}
+                        {p.matchType === "arxiv_id" ? "arXiv match" : p.matchType === "doi" ? "DOI match" : p.matchType === "keyword_match" ? `keyword: "${p.matchValue}"` : "title match"}
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-[11px] text-white/40 mb-2">
