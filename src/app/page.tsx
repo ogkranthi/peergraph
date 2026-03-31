@@ -302,9 +302,10 @@ export default async function HomePage() {
       <footer className="border-t border-white/10 py-8">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <p className="text-sm text-white/30">PeerGraph.ai</p>
-          <p className="text-sm text-white/30">
-            Open source &middot; MIT License
-          </p>
+          <div className="flex items-center gap-4 text-sm text-white/30">
+            <a href="mailto:ogkranthi22@gmail.com" className="hover:text-white/50 transition-colors">Contact</a>
+            <span>Open source &middot; MIT License</span>
+          </div>
         </div>
       </footer>
     </div>

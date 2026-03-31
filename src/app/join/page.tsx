@@ -151,7 +151,17 @@ export default function JoinPage() {
           <div>
             <h3 className="text-sm font-medium text-white/70 mb-1">Can researchers opt out?</h3>
             <p className="text-sm text-white/40">
-              Yes. We respect GDPR. Any researcher can request removal by emailing us or opening an issue.
+              Yes. We respect GDPR. Any researcher can request removal by{" "}
+              <a href="mailto:ogkranthi22@gmail.com" className="text-blue-400/70 hover:text-blue-400">emailing us</a>{" "}
+              or opening an issue.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-medium text-white/70 mb-1">How do I get in touch?</h3>
+            <p className="text-sm text-white/40">
+              Email{" "}
+              <a href="mailto:ogkranthi22@gmail.com" className="text-blue-400/70 hover:text-blue-400">ogkranthi22@gmail.com</a>{" "}
+              for questions, partnerships, or feedback.
             </p>
           </div>
         </div>
