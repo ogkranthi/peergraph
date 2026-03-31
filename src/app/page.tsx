@@ -25,6 +25,47 @@ export default async function HomePage() {
     .map((s) => ({ ...s, researcher: researchers.find((r) => r.id === s.researcherId)! }))
     .filter((s) => s.researcher);
 
+  // Recent activity — newest profiles and links
+  const { getBuilders } = await import("@/lib/data");
+  const builders = await getBuilders();
+  type ActivityItem = { type: string; label: string; detail: string; href: string; time: string };
+  const activity: ActivityItem[] = [];
+
+  // Recent researchers
+  [...researchers]
+    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+    .slice(0, 5)
+    .forEach((r) => activity.push({
+      type: "researcher", label: r.name, detail: r.institution,
+      href: `/researcher/${r.id}`, time: r.created_at,
+    }));
+
+  // Recent builders
+  [...builders]
+    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+    .slice(0, 5)
+    .forEach((b) => activity.push({
+      type: "builder", label: b.name, detail: b.city,
+      href: `/builder/${b.github_username}`, time: b.created_at,
+    }));
+
+  // Recent paper→product links
+  projects.forEach((proj) => {
+    (proj.paper_links ?? []).forEach((link) => {
+      const paper = papers.find((p) => p.id === link.paper_id);
+      if (paper) {
+        activity.push({
+          type: "link", label: `${proj.name} → ${paper.title.slice(0, 40)}...`,
+          detail: link.source_type, href: "#", time: link.added_at,
+        });
+      }
+    });
+  });
+
+  // Sort by time desc, take top 8
+  activity.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
+  const recentActivity = activity.slice(0, 8);
+
   // Domain breakdown
   const domainCounts = new Map<string, number>();
   researchers.forEach((r) => r.domains.forEach((d) => domainCounts.set(d, (domainCounts.get(d) || 0) + 1)));
@@ -92,6 +133,34 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Recent Activity */}
+      {recentActivity.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 py-8">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-4">Recent Activity</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            {recentActivity.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className="flex items-center gap-3 p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/8 transition-colors"
+              >
+                <span className={`w-2 h-2 flex-shrink-0 ${
+                  item.type === "researcher" ? "rounded-full bg-blue-400" :
+                  item.type === "builder" ? "rounded-sm bg-emerald-400" :
+                  "rounded-full bg-amber-400"
+                }`} />
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-medium text-white/80 truncate">{item.label}</p>
+                  <p className="text-[10px] text-white/30 truncate">
+                    {item.type === "link" ? "new link" : item.type === "researcher" ? "researcher" : "builder"} &middot; {item.detail}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Who is this for */}
       <section className="max-w-7xl mx-auto px-4 py-16">
