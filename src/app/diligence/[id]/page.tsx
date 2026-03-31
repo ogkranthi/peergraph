@@ -59,29 +59,69 @@ export default async function DiligencePage({ params }: { params: Promise<{ id: 
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
           <p className="text-2xl font-bold text-amber-400">{novelty.overall}</p>
           <p className="text-[10px] text-white/40">Overall Novelty</p>
+          <p className="text-[9px] text-white/25">Weighted score: how differentiated is this product&apos;s research?</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
           <p className="text-2xl font-bold">{novelty.uniqueness}</p>
           <p className="text-[10px] text-white/40">Uniqueness</p>
-          <p className="text-[9px] text-white/25">{novelty.avgCompetitors} avg competitors/paper</p>
+          <p className="text-[9px] text-white/25">
+            {novelty.avgCompetitors < 1
+              ? "Few others build on the same papers"
+              : `${novelty.avgCompetitors} other products use the same papers on avg`}
+          </p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
           <p className="text-2xl font-bold">{novelty.recency}</p>
           <p className="text-[10px] text-white/40">Research Recency</p>
+          <p className="text-[9px] text-white/25">Are the underlying papers recent (cutting-edge) or old (commoditized)?</p>
         </div>
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
           <p className="text-2xl font-bold">{novelty.founderAuthorship}</p>
           <p className="text-[10px] text-white/40">Founder Authorship</p>
-          <p className="text-[9px] text-white/25">{novelty.founderAuthorship > 0 ? "Founder authored papers" : "Uses external research"}</p>
+          <p className="text-[9px] text-white/25">
+            {novelty.founderAuthorship > 0
+              ? "Founder co-authored the research — deep technical moat"
+              : "Built on external research — execution-dependent"}
+          </p>
         </div>
       </div>
+
+      {/* How to read this report */}
+      <details className="mb-6 bg-white/5 border border-white/10 rounded-xl">
+        <summary className="px-5 py-3 text-sm text-white/50 cursor-pointer hover:text-white/70 transition-colors">
+          How to read this report
+        </summary>
+        <div className="px-5 pb-4 text-[12px] text-white/40 space-y-3 border-t border-white/5 pt-3">
+          <div>
+            <p className="text-white/60 font-medium mb-1">Novelty Score (0–100)</p>
+            <p>Measures how differentiated this product&apos;s technical approach is. Combines three signals: <strong>Uniqueness</strong> (40%) — fewer products on the same papers means a more unique approach. <strong>Research Recency</strong> (30%) — building on recent papers (2020+) suggests cutting-edge work; older papers (pre-2015) are more commoditized. <strong>Founder Authorship</strong> (30%) — if the founder authored the underlying papers, they have deep domain expertise and a technical moat.</p>
+          </div>
+          <div>
+            <p className="text-white/60 font-medium mb-1">Research Lineage</p>
+            <p>The academic papers this product builds on. Each link has a <strong>source type</strong> (who declared it: the maintainer, automated extraction from READMEs, community contribution, or AI detection) and a <strong>confidence score</strong> (0–100%). Higher confidence = stronger evidence.</p>
+          </div>
+          <div>
+            <p className="text-white/60 font-medium mb-1">Competitive Map</p>
+            <p>Other products that build on the <em>same research papers</em>. The <strong>overlap %</strong> shows what fraction of this product&apos;s papers are shared. 100% overlap = building on identical research. 10% = mostly different foundations.</p>
+          </div>
+          <div>
+            <p className="text-white/60 font-medium mb-1">Domain Trends</p>
+            <p>Are the domains this product operates in <strong>accelerating</strong> (more products being built recently), <strong>steady</strong>, or <strong>slowing</strong>? Based on the rate of new paper-to-product links over the last 30 and 90 days.</p>
+          </div>
+          <div>
+            <p className="text-white/60 font-medium mb-1">Paper Adoption Timeline</p>
+            <p>Shows <em>when</em> each product adopted each paper. If many products adopted the same paper recently, it&apos;s a trending technique. If only this product uses it, it&apos;s a differentiated bet.</p>
+          </div>
+        </div>
+      </details>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         {/* Research Lineage */}
         <div>
-          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-1">
             Research Lineage ({lineage.length} papers)
           </h2>
+          <p className="text-[10px] text-white/25 mb-3">The academic papers this product builds on, with provenance</p>
           <div className="space-y-2">
             {lineage.map(({ paper, link, authors, founderIsAuthor }) => (
               <div key={paper.id} className="p-4 bg-white/5 border border-white/10 rounded-lg">
@@ -126,9 +166,10 @@ export default async function DiligencePage({ params }: { params: Promise<{ id: 
 
         {/* Competitive Map */}
         <div>
-          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-1">
             Competitive Map ({competitors.length} products on same research)
           </h2>
+          <p className="text-[10px] text-white/25 mb-3">Other products building on the same papers — higher overlap = more similar technical approach</p>
           <div className="space-y-2">
             {competitors.slice(0, 10).map((comp) => (
               <Link
@@ -161,9 +202,10 @@ export default async function DiligencePage({ params }: { params: Promise<{ id: 
       {/* Domain Trends */}
       {domainTrends.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-1">
             Domain Trends
           </h2>
+          <p className="text-[10px] text-white/25 mb-3">Is this product&apos;s domain accelerating or cooling down? Based on new paper→product links over time</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {domainTrends.map((trend) => (
               <div key={trend.domain} className="p-4 bg-white/5 border border-white/10 rounded-lg">
@@ -193,9 +235,10 @@ export default async function DiligencePage({ params }: { params: Promise<{ id: 
       {/* Paper Adoption Timeline */}
       {paperAdoptionTimeline.length > 0 && (
         <div className="mb-6">
-          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-1">
             Paper Adoption Timeline
           </h2>
+          <p className="text-[10px] text-white/25 mb-3">When did each product adopt each paper? Clustering = trending technique. Solo adoption = differentiated bet</p>
           <div className="space-y-4">
             {paperAdoptionTimeline.map(({ paperId, title, adopters }) => (
               <div key={paperId} className="p-4 bg-white/5 border border-white/10 rounded-lg">
