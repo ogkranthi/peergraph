@@ -11,6 +11,7 @@ export default function Navbar() {
     { href: "/graph", label: "Graph" },
     { href: "/directory", label: "Directory" },
     { href: "/search", label: "Search" },
+    { href: "/analyze", label: "Analyze" },
     { href: "/diligence", label: "Diligence" },
     { href: "/join", label: "Get Listed", highlight: true },
   ];
