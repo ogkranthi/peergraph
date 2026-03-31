@@ -4,7 +4,7 @@
     "github_username": "hwchase17",
     "name": "Harrison Chase",
     "avatar_url": "https://avatars.githubusercontent.com/u/11986836",
-    "bio": "CEO of LangChain. Building the open-source framework for LLM-powered applications — agents, chains, and retrieval.",
+    "bio": "CEO of LangChain. Building the open-source framework for LLM-powered applications \u2014 agents, chains, and retrieval.",
     "city": "San Francisco",
     "skills": [
       "LLMs",
@@ -20,7 +20,8 @@
     "website_url": "https://langchain.com",
     "twitter_url": "https://twitter.com/hwchase17",
     "linkedin_url": "",
-    "created_at": "2026-03-01T00:00:00Z"
+    "created_at": "2026-03-01T00:00:00Z",
+    "verified": true
   },
   {
     "id": "b2",
@@ -43,7 +44,8 @@
     "website_url": "https://liquid.ai",
     "twitter_url": "https://twitter.com/raboramin",
     "linkedin_url": "",
-    "created_at": "2026-03-01T00:00:00Z"
+    "created_at": "2026-03-01T00:00:00Z",
+    "verified": true
   },
   {
     "id": "b3",
@@ -65,7 +67,8 @@
     "website_url": "https://aamini.github.io",
     "twitter_url": "",
     "linkedin_url": "",
-    "created_at": "2026-03-01T00:00:00Z"
+    "created_at": "2026-03-01T00:00:00Z",
+    "verified": true
   },
   {
     "id": "b4",
@@ -94,7 +97,7 @@
     "github_username": "mcamac",
     "name": "Martin Camacho",
     "avatar_url": "https://avatars.githubusercontent.com/u/2151953",
-    "bio": "Co-founder of Suno AI. Building AI music generation — anyone can make a song with just text. Previously at Kensho (S&P Global).",
+    "bio": "Co-founder of Suno AI. Building AI music generation \u2014 anyone can make a song with just text. Previously at Kensho (S&P Global).",
     "city": "Cambridge",
     "skills": [
       "audio ML",
@@ -139,7 +142,7 @@
     "github_username": "karpathy",
     "name": "Andrej Karpathy",
     "avatar_url": "https://avatars.githubusercontent.com/u/241138",
-    "bio": "Building Eureka Labs — AI-native education. Created nanoGPT and built neural networks from scratch on YouTube. Previously Director of AI at Tesla, founding member of OpenAI.",
+    "bio": "Building Eureka Labs \u2014 AI-native education. Created nanoGPT and built neural networks from scratch on YouTube. Previously Director of AI at Tesla, founding member of OpenAI.",
     "city": "San Francisco",
     "skills": [
       "deep learning",
@@ -183,7 +186,7 @@
     "github_username": "rauchg",
     "name": "Guillermo Rauch",
     "avatar_url": "https://avatars.githubusercontent.com/u/13041",
-    "bio": "CEO of Vercel. Built v0 — AI-powered UI generation from natural language. Created Next.js, Socket.io. Pushing the frontier of AI-assisted development.",
+    "bio": "CEO of Vercel. Built v0 \u2014 AI-powered UI generation from natural language. Created Next.js, Socket.io. Pushing the frontier of AI-assisted development.",
     "city": "San Francisco",
     "skills": [
       "react",
@@ -205,7 +208,7 @@
     "github_username": "shreyashankar",
     "name": "Shreya Shankar",
     "avatar_url": "https://avatars.githubusercontent.com/u/6895706",
-    "bio": "PhD at UC Berkeley. Building DocETL — AI-powered data processing pipelines. Research on ML data quality and LLM evaluation.",
+    "bio": "PhD at UC Berkeley. Building DocETL \u2014 AI-powered data processing pipelines. Research on ML data quality and LLM evaluation.",
     "city": "Berkeley",
     "skills": [
       "ML systems",
@@ -560,7 +563,7 @@
     "github_username": "AlessandroSaviworksatendeavoRrr",
     "name": "Alex Ratner",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AR&backgroundColor=34d399",
-    "bio": "CEO of Snorkel AI. Stanford PhD under Chris Re. Pioneered programmatic data labeling — write functions instead of hand-labeling data.",
+    "bio": "CEO of Snorkel AI. Stanford PhD under Chris Re. Pioneered programmatic data labeling \u2014 write functions instead of hand-labeling data.",
     "city": "Boston",
     "skills": [
       "weak supervision",
@@ -694,7 +697,7 @@
     "github_username": "aidangomez",
     "name": "Aidan Gomez",
     "avatar_url": "https://avatars.githubusercontent.com/u/6598478",
-    "bio": "CEO of Cohere. Co-author of 'Attention Is All You Need' — the Transformer paper. Building enterprise LLMs from Toronto, with a growing Boston presence.",
+    "bio": "CEO of Cohere. Co-author of 'Attention Is All You Need' \u2014 the Transformer paper. Building enterprise LLMs from Toronto, with a growing Boston presence.",
     "city": "Cambridge",
     "skills": [
       "transformers",
@@ -717,7 +720,7 @@
     "github_username": "abid",
     "name": "Abid Javed",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AJ&backgroundColor=34d399",
-    "bio": "Co-founder of Run:ai. Building GPU orchestration for AI workloads — fractional GPUs, scheduling, and cluster management. Acquired by NVIDIA 2024.",
+    "bio": "Co-founder of Run:ai. Building GPU orchestration for AI workloads \u2014 fractional GPUs, scheduling, and cluster management. Acquired by NVIDIA 2024.",
     "city": "Boston",
     "skills": [
       "GPU orchestration",
@@ -1032,7 +1035,7 @@
     "github_username": "edwardjhu",
     "name": "Edward Hu",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=EH&backgroundColor=34d399",
-    "bio": "Researcher at Microsoft. Inventor of LoRA and co-inventor of muP — enabling efficient fine-tuning and hyperparameter transfer for large models.",
+    "bio": "Researcher at Microsoft. Inventor of LoRA and co-inventor of muP \u2014 enabling efficient fine-tuning and hyperparameter transfer for large models.",
     "city": "NYC",
     "skills": [
       "LoRA",
@@ -1078,7 +1081,7 @@
     "github_username": "tridao",
     "name": "Tri Dao",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=TDao&backgroundColor=34d399",
-    "bio": "Assistant Professor at Princeton and co-founder of Together AI. Creator of FlashAttention — the IO-aware exact attention algorithm used everywhere.",
+    "bio": "Assistant Professor at Princeton and co-founder of Together AI. Creator of FlashAttention \u2014 the IO-aware exact attention algorithm used everywhere.",
     "city": "Princeton",
     "skills": [
       "FlashAttention",
@@ -1146,7 +1149,7 @@
   {
     "id": "b52",
     "github_username": "apolinario",
-    "name": "Apolinário Passos",
+    "name": "Apolin\u00e1rio Passos",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AP&backgroundColor=34d399",
     "bio": "Machine Learning Art Engineer at Hugging Face. Building tools and demos that bridge generative AI with creative applications.",
     "city": "Amsterdam",
@@ -1720,7 +1723,7 @@
   {
     "id": "b77",
     "github_username": "cris-val",
-    "name": "Cristóbal Valenzuela",
+    "name": "Crist\u00f3bal Valenzuela",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CV&backgroundColor=34d399",
     "bio": "CEO and co-founder of Runway ML. Building the next generation of creative tools powered by generative AI for video and multimedia.",
     "city": "NYC",

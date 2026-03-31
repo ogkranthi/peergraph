@@ -1,10 +1,19 @@
 import { getBuilders, getBuilderByUsername, getBuilderProjects, getResearchers, getPapers } from "@/lib/data";
 import { suggestPapersForProject, suggestResearchersForBuilder } from "@/lib/recommendations";
-import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
+import { DOMAIN_COLORS, NODE_COLORS, type Paper } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const revalidate = 3600;
+
+// Feature 12: Confidence dot color
+function ConfidenceDot({ confidence }: { confidence: number }) {
+  const color = confidence >= 80 ? "bg-green-400" : confidence >= 50 ? "bg-yellow-400" : "bg-red-400";
+  const label = confidence >= 80 ? "High" : confidence >= 50 ? "Medium" : "Low";
+  return (
+    <span className={`inline-block w-2 h-2 rounded-full ${color} flex-shrink-0`} title={`${label} confidence (${confidence}%)`} />
+  );
+}
 
 export async function generateStaticParams() {
   return (await getBuilders()).map((b) => ({ username: b.github_username }));
@@ -22,6 +31,28 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
   ]);
 
   const paperMap = new Map(allPapers.map((p) => [p.id, p]));
+
+  // Feature 11: Research lineage - all papers linked to this builder's projects
+  const researchFoundations: { paper: Paper; projectNames: string[]; confidence?: number }[] = [];
+  const seenPaperIds = new Set<string>();
+  projects.forEach((project) => {
+    project.paper_ids.forEach((paperId) => {
+      const paper = paperMap.get(paperId);
+      if (!paper) return;
+      if (seenPaperIds.has(paperId)) {
+        const existing = researchFoundations.find((r) => r.paper.id === paperId);
+        if (existing) existing.projectNames.push(project.name);
+        return;
+      }
+      seenPaperIds.add(paperId);
+      const link = project.paper_links?.find((l) => l.paper_id === paperId);
+      researchFoundations.push({
+        paper,
+        projectNames: [project.name],
+        confidence: link?.confidence,
+      });
+    });
+  });
 
   // AI-suggested researchers whose work is relevant
   const suggestedResearchers = suggestResearchersForBuilder(
@@ -51,6 +82,12 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
                 <span className="w-1.5 h-1.5 rounded-sm" style={{ backgroundColor: NODE_COLORS.builder }} />
                 Builder
               </span>
+              {/* Feature 13: Verification badge */}
+              {builder.verified && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400" title="Verified profile">
+                  &#10003; Verified
+                </span>
+              )}
             </div>
             <p className="text-lg text-white/60">{builder.city}</p>
             <p className="text-sm text-white/40 mt-1">@{builder.github_username}</p>
@@ -79,6 +116,41 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
             <div className="flex flex-wrap gap-2">
               {builder.looking_for.map((l) => (
                 <span key={l} className="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm text-emerald-400">{l}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Feature 11: Research Foundations */}
+        {researchFoundations.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
+              Research Foundations ({researchFoundations.length})
+            </h2>
+            <div className="space-y-3">
+              {researchFoundations.map(({ paper, projectNames, confidence }) => (
+                <a
+                  key={paper.id}
+                  href={paper.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg hover:bg-blue-500/10 transition-colors"
+                >
+                  <div className="flex items-start gap-2">
+                    {confidence !== undefined && <ConfidenceDot confidence={confidence} />}
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-blue-300 text-sm">{paper.title}</p>
+                      <div className="flex items-center gap-3 text-xs text-white/40 mt-1">
+                        <span>{paper.venue}</span>
+                        <span>{paper.year}</span>
+                        <span>{paper.citation_count.toLocaleString()} citations</span>
+                      </div>
+                      <p className="text-[10px] text-white/30 mt-1">
+                        Used by: {projectNames.join(", ")}
+                      </p>
+                    </div>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -113,12 +185,17 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
                     <p className="text-sm text-white/60 mb-3">{project.description}</p>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {project.domains.map((d) => (
-                        <span key={d} className="px-2 py-0.5 rounded text-[11px]" style={{ backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15", color: DOMAIN_COLORS[d] || "#94A3B8" }}>
+                        <Link
+                          key={d}
+                          href={`/domain/${d.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                          className="px-2 py-0.5 rounded text-[11px] hover:opacity-80"
+                          style={{ backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15", color: DOMAIN_COLORS[d] || "#94A3B8" }}
+                        >
                           {d}
-                        </span>
+                        </Link>
                       ))}
                     </div>
-                    {/* Linked papers */}
+                    {/* Linked papers with confidence indicators */}
                     <div className="border-t border-white/10 pt-3">
                       {projectPapers.length === 0 && (
                         <p className="text-xs text-white/30">
@@ -137,15 +214,20 @@ export default async function BuilderPage({ params }: { params: Promise<{ userna
                       <>
                         <p className="text-xs text-white/30 mb-2">Built on research:</p>
                         <div className="space-y-2">
-                          {projectPapers.map((paper) => paper && (
-                            <div key={paper.id} className="flex items-center gap-2 text-xs">
-                              <span className="px-1.5 py-0.5 bg-yellow-500/10 text-yellow-400 rounded text-[10px]">paper</span>
-                              <a href={paper.url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 truncate">
-                                {paper.title}
-                              </a>
-                              <span className="text-white/30 flex-shrink-0">({paper.year})</span>
-                            </div>
-                          ))}
+                          {projectPapers.map((paper) => {
+                            if (!paper) return null;
+                            const link = project.paper_links?.find((l) => l.paper_id === paper.id);
+                            return (
+                              <div key={paper.id} className="flex items-center gap-2 text-xs">
+                                {link && <ConfidenceDot confidence={link.confidence} />}
+                                <span className="px-1.5 py-0.5 bg-yellow-500/10 text-yellow-400 rounded text-[10px]">paper</span>
+                                <a href={paper.url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 truncate">
+                                  {paper.title}
+                                </a>
+                                <span className="text-white/30 flex-shrink-0">({paper.year})</span>
+                              </div>
+                            );
+                          })}
                         </div>
                       </>
                     )}

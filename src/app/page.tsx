@@ -3,6 +3,7 @@ import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
 import { getAllResearcherImpactScores } from "@/lib/impact-score";
 import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 import EmailCapture from "@/components/EmailCapture";
+import ScoreBreakdownModal from "@/components/ScoreBreakdownModal";
 
 export const revalidate = 3600; // Re-render from Supabase every hour
 
@@ -70,6 +71,46 @@ export default async function HomePage() {
   const domainCounts = new Map<string, number>();
   researchers.forEach((r) => r.domains.forEach((d) => domainCounts.set(d, (domainCounts.get(d) || 0) + 1)));
   projects.forEach((p) => p.domains.forEach((d) => domainCounts.set(d, (domainCounts.get(d) || 0) + 1)));
+  const maxDomainCount = Math.max(...Array.from(domainCounts.values()), 1);
+
+  // City spotlight
+  const INSTITUTION_CITY_MAP: Record<string, string> = {
+    "MIT": "Boston / Cambridge", "Harvard": "Boston / Cambridge", "CSAIL": "Boston / Cambridge",
+    "Stanford": "Bay Area", "UC Berkeley": "Bay Area", "Berkeley": "Bay Area",
+    "Google": "Bay Area", "Meta AI": "New York", "NYU": "New York",
+    "OpenAI": "Bay Area", "Anthropic": "Bay Area", "DeepMind": "London",
+    "Toronto": "Toronto", "Montréal": "Montreal", "Montreal": "Montreal",
+    "Cohere": "Toronto", "Washington": "Seattle", "Allen": "Seattle", "Apple": "Bay Area",
+  };
+  const CITY_NORMALIZE: Record<string, string> = {
+    "San Francisco": "Bay Area", "Berkeley": "Bay Area", "Mountain View": "Bay Area",
+    "Cupertino": "Bay Area", "Stanford": "Bay Area",
+    "Boston": "Boston / Cambridge", "Cambridge": "Boston / Cambridge",
+  };
+  const cityCounts = new Map<string, { researchers: number; builders: number }>();
+  researchers.forEach((r) => {
+    for (const [key, city] of Object.entries(INSTITUTION_CITY_MAP)) {
+      if (r.institution.includes(key)) {
+        const c = cityCounts.get(city) || { researchers: 0, builders: 0 };
+        c.researchers++;
+        cityCounts.set(city, c);
+        break;
+      }
+    }
+  });
+  builders.forEach((b) => {
+    const city = CITY_NORMALIZE[b.city] || b.city;
+    const c = cityCounts.get(city) || { researchers: 0, builders: 0 };
+    c.builders++;
+    cityCounts.set(city, c);
+  });
+  const topCities = Array.from(cityCounts.entries())
+    .sort((a, b) => (b[1].researchers + b[1].builders) - (a[1].researchers + a[1].builders))
+    .slice(0, 4);
+
+  function slugify(s: string): string {
+    return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  }
 
   return (
     <div className="min-h-screen">
@@ -206,28 +247,60 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Domains */}
+      {/* Feature 14: Domain Heat Map */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <h2 className="text-xl font-semibold mb-6">Domains</h2>
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {Array.from(domainCounts.entries())
             .sort((a, b) => b[1] - a[1])
-            .map(([domain, count]) => (
-              <div
-                key={domain}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg border"
-                style={{
-                  backgroundColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "10",
-                  borderColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "20",
-                }}
-              >
-                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: DOMAIN_COLORS[domain] || "#94A3B8" }} />
-                <span className="text-sm" style={{ color: DOMAIN_COLORS[domain] || "#94A3B8" }}>{domain}</span>
-                <span className="text-xs text-white/30">{count}</span>
-              </div>
-            ))}
+            .map(([domain, count]) => {
+              const color = DOMAIN_COLORS[domain] || "#94A3B8";
+              const intensity = Math.round((count / maxDomainCount) * 100);
+              const alpha = Math.max(8, Math.round((intensity / 100) * 35));
+              const alphaHex = alpha.toString(16).padStart(2, "0");
+              return (
+                <Link
+                  key={domain}
+                  href={`/domain/${slugify(domain)}`}
+                  className="relative p-4 rounded-xl border transition-all hover:scale-[1.02]"
+                  style={{
+                    backgroundColor: color + alphaHex,
+                    borderColor: color + "25",
+                  }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                    <span className="text-sm font-medium" style={{ color }}>{domain}</span>
+                  </div>
+                  <p className="text-2xl font-bold text-white/80">{count}</p>
+                  <p className="text-[10px] text-white/30">researchers + projects</p>
+                </Link>
+              );
+            })}
         </div>
       </section>
+
+      {/* Feature 15: City Spotlight */}
+      {topCities.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 py-12">
+          <h2 className="text-xl font-semibold mb-6">Top Cities</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {topCities.map(([city, counts]) => (
+              <Link
+                key={city}
+                href={`/region/${slugify(city)}`}
+                className="p-5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/8 transition-colors"
+              >
+                <h3 className="font-semibold text-white/90 mb-2">{city}</h3>
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="text-blue-400">{counts.researchers} <span className="text-[10px] text-white/30">researchers</span></span>
+                  <span className="text-emerald-400">{counts.builders} <span className="text-[10px] text-white/30">builders</span></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Top researchers */}
       <section className="max-w-7xl mx-auto px-4 py-12">
@@ -265,7 +338,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {topImpactResearchers.map(({ researcher, overallScore, breakdown }, i) => (
+            {topImpactResearchers.map(({ researcher, overallScore, breakdown, normalizedBreakdown }, i) => (
               <Link
                 key={researcher.id}
                 href={`/researcher/${researcher.id}`}
@@ -288,7 +361,12 @@ export default async function HomePage() {
                     </div>
                   </div>
                   <div className="flex-shrink-0 text-right">
-                    <span className="text-2xl font-bold text-amber-400">{overallScore}</span>
+                    <ScoreBreakdownModal
+                      researcherName={researcher.name}
+                      overallScore={overallScore}
+                      normalizedBreakdown={normalizedBreakdown}
+                      breakdown={breakdown}
+                    />
                     <p className="text-[9px] text-white/30">AII</p>
                   </div>
                 </div>

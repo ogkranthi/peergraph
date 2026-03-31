@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import KeyboardShortcuts from "@/components/KeyboardShortcuts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] text-[#ededed] min-h-screen`}
       >
         <Navbar />
+        <KeyboardShortcuts />
         <main>{children}</main>
+        <div className="fixed bottom-3 right-3 text-[10px] text-white/15 pointer-events-none hidden sm:block">
+          G = Graph &middot; S = Search &middot; / = Focus search
+        </div>
       </body>
     </html>
   );

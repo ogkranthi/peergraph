@@ -63,6 +63,7 @@ export interface Builder {
   website_url: string;
   twitter_url: string;
   linkedin_url: string;
+  verified?: boolean;
   created_at: string;
 }
 

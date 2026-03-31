@@ -1,6 +1,7 @@
 import { getResearchers, getBuilders, getPapers, getProjects } from "@/lib/data";
 import { computePlatformAnalytics } from "@/lib/analytics";
-import { DOMAIN_COLORS } from "@/lib/types";
+import { getAllResearcherImpactScores } from "@/lib/impact-score";
+import { DOMAIN_COLORS, type ResearchDomain } from "@/lib/types";
 import Link from "next/link";
 
 export const revalidate = 3600;
@@ -14,6 +15,21 @@ export default async function AnalyticsPage() {
   ]);
 
   const analytics = computePlatformAnalytics(researchers, papers, builders, projects);
+
+  // Feature 19: Domain leaderboards - top 3 researchers per domain
+  const impactScores = getAllResearcherImpactScores(researchers, papers, projects);
+  const allDomains = Array.from(new Set(researchers.flatMap((r) => r.domains))).sort();
+  const domainLeaderboards = allDomains
+    .map((domain) => {
+      const domainResearchers = researchers.filter((r) => r.domains.includes(domain as ResearchDomain));
+      const topInDomain = impactScores
+        .filter((s) => domainResearchers.some((r) => r.id === s.researcherId) && s.overallScore > 0)
+        .slice(0, 3)
+        .map((s) => ({ ...s, researcher: researchers.find((r) => r.id === s.researcherId)! }))
+        .filter((s) => s.researcher);
+      return { domain, top: topInDomain };
+    })
+    .filter((d) => d.top.length > 0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -189,6 +205,48 @@ export default async function AnalyticsPage() {
           </table>
         </div>
       </div>
+
+      {/* Feature 19: Domain Leaderboards */}
+      {domainLeaderboards.length > 0 && (
+        <div className="mb-10">
+          <h2 className="text-lg font-semibold mb-1">Domain Leaderboards</h2>
+          <p className="text-xs text-white/30 mb-4">Top 3 researchers by Applied Impact Index per domain</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {domainLeaderboards.map(({ domain, top }) => (
+              <div
+                key={domain}
+                className="p-4 rounded-xl border"
+                style={{
+                  backgroundColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "08",
+                  borderColor: (DOMAIN_COLORS[domain] || "#94A3B8") + "20",
+                }}
+              >
+                <Link
+                  href={`/domain/${domain.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                  className="flex items-center gap-2 mb-3 hover:opacity-80 transition-opacity"
+                >
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: DOMAIN_COLORS[domain] || "#94A3B8" }} />
+                  <span className="text-sm font-semibold" style={{ color: DOMAIN_COLORS[domain] || "#94A3B8" }}>{domain}</span>
+                </Link>
+                <div className="space-y-2">
+                  {top.map(({ researcher, overallScore }, i) => (
+                    <Link
+                      key={researcher.id}
+                      href={`/researcher/${researcher.id}`}
+                      className="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-colors"
+                    >
+                      <span className="text-[10px] font-bold text-white/25 w-4">{i + 1}</span>
+                      <img src={researcher.photo_url} alt={researcher.name} className="w-6 h-6 rounded-full bg-white/10" />
+                      <span className="text-xs text-white/70 truncate flex-1">{researcher.name}</span>
+                      <span className="text-xs font-bold text-amber-400">{overallScore}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Methodology Note */}
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">

@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useMemo } from "react";
 import { GraphNode, GraphLink, NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface GraphViewProps {
   nodes: GraphNode[];
@@ -19,13 +19,33 @@ interface PositionedNode extends GraphNode {
 
 export default function GraphView({ nodes, links, builderMap }: GraphViewProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null);
   const [hoverNodeId, setHoverNodeId] = useState<string | null>(null);
-  const [filterDomain, setFilterDomain] = useState<string>("all");
-  const [filterCity, setFilterCity] = useState<string>("all");
+  const [hoverLinkKey, setHoverLinkKey] = useState<string | null>(null);
+  const [hoverLinkPos, setHoverLinkPos] = useState<{ x: number; y: number } | null>(null);
+
+  // Feature 6: Restore filters from URL params
+  const [filterDomain, setFilterDomain] = useState<string>(searchParams.get("domain") || "all");
+  const [filterCity, setFilterCity] = useState<string>(searchParams.get("city") || "all");
+
+  // Feature 1: Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Feature 2: Focus mode
+  const [focusNodeId, setFocusNodeId] = useState<string | null>(null);
+
+  // Feature 3: Legend
+  const [legendOpen, setLegendOpen] = useState(false);
+
+  // Feature 5: Domain color overlay
+  const [domainColorMode, setDomainColorMode] = useState(false);
+
+  // Feature 1: Search tooltip position
+  const [searchHighlightId, setSearchHighlightId] = useState<string | null>(null);
 
   const allDomains = Array.from(new Set(nodes.flatMap((n) => n.domains))).sort();
 
@@ -41,7 +61,6 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     "Washington": "Seattle", "Allen": "Seattle", "Apple": "Bay Area", "insitro": "Bay Area",
   };
 
-  // Normalize builder cities to metro areas too
   const CITY_NORMALIZE: Record<string, string> = {
     "San Francisco": "Bay Area", "Berkeley": "Bay Area", "Mountain View": "Bay Area",
     "Cupertino": "Bay Area", "Stanford": "Bay Area",
@@ -62,6 +81,16 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     new Set(nodes.map(getNodeCity).filter(Boolean) as string[])
   ).sort();
 
+  // Feature 6: Sync filters to URL params
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (filterDomain !== "all") params.set("domain", filterDomain);
+    if (filterCity !== "all") params.set("city", filterCity);
+    const qs = params.toString();
+    const newUrl = qs ? `/graph?${qs}` : "/graph";
+    router.replace(newUrl, { scroll: false });
+  }, [filterDomain, filterCity, router]);
+
   // Resize
   useEffect(() => {
     function update() {
@@ -79,7 +108,7 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
 
   // Filter
   const filteredNodes = nodes.filter((n) => {
-    const matchesDomain = filterDomain === "all" || n.domains.includes(filterDomain as any);
+    const matchesDomain = filterDomain === "all" || n.domains.includes(filterDomain as never);
     const matchesCity = filterCity === "all" || getNodeCity(n) === filterCity;
     return matchesDomain && matchesCity;
   });
@@ -101,6 +130,15 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     neighborMap.get(l.source)!.add(l.target);
     neighborMap.get(l.target)!.add(l.source);
   });
+
+  // Feature 2: Focus mode neighbor set
+  const focusNeighbors = useMemo(() => {
+    if (!focusNodeId) return null;
+    const set = new Set<string>([focusNodeId]);
+    const neighbors = neighborMap.get(focusNodeId);
+    if (neighbors) neighbors.forEach((n) => set.add(n));
+    return set;
+  }, [focusNodeId, neighborMap]);
 
   // Split into researchers (left) and builders (right), sorted by edge count desc
   const researchers = filteredNodes
@@ -135,6 +173,14 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
   const allPositioned = [...posResearchers, ...posBuilders];
   const posMap = new Map(allPositioned.map((n) => [n.id, n]));
 
+  // Feature 5: Apply domain color overlay
+  const getNodeColor = useCallback((node: GraphNode): string => {
+    if (domainColorMode && node.domains.length > 0) {
+      return DOMAIN_COLORS[node.domains[0]] || "#94A3B8";
+    }
+    return node.color;
+  }, [domainColorMode]);
+
   // Hit testing
   const getNodeAt = useCallback(
     (cx: number, cy: number): PositionedNode | null => {
@@ -147,7 +193,40 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     [allPositioned]
   );
 
-  // Convert mouse event to canvas logical coordinates (without DPR scaling)
+  // Feature 4: Hit test for links
+  const getLinkAt = useCallback(
+    (cx: number, cy: number): { link: GraphLink; midX: number; midY: number } | null => {
+      const threshold = 8;
+      for (const link of filteredLinks) {
+        const src = posMap.get(link.source);
+        const tgt = posMap.get(link.target);
+        if (!src || !tgt) continue;
+
+        const midX = (src.x + tgt.x) / 2;
+        const midY = (src.y + tgt.y) / 2;
+
+        // Simple distance from point to line segment midpoint region
+        const dx = tgt.x - src.x;
+        const dy = tgt.y - src.y;
+        const len = Math.hypot(dx, dy);
+        if (len === 0) continue;
+
+        // Project point onto line
+        const t = Math.max(0, Math.min(1, ((cx - src.x) * dx + (cy - src.y) * dy) / (len * len)));
+        const projX = src.x + t * dx;
+        const projY = src.y + t * dy;
+        const dist = Math.hypot(cx - projX, cy - projY);
+
+        if (dist < threshold) {
+          return { link, midX, midY };
+        }
+      }
+      return null;
+    },
+    [filteredLinks, posMap]
+  );
+
+  // Convert mouse event to canvas logical coordinates
   const getCanvasCoords = useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>): { x: number; y: number } => {
       const canvas = canvasRef.current;
@@ -167,19 +246,104 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       const { x, y } = getCanvasCoords(e);
       const node = getNodeAt(x, y);
       setHoverNodeId(node?.id ?? null);
+
+      // Feature 4: Edge hover
+      if (!node) {
+        const linkHit = getLinkAt(x, y);
+        if (linkHit) {
+          setHoverLinkKey(`${linkHit.link.source}-${linkHit.link.target}`);
+          // Get screen position for tooltip
+          const canvas = canvasRef.current;
+          if (canvas) {
+            const rect = canvas.getBoundingClientRect();
+            setHoverLinkPos({
+              x: rect.left + (linkHit.midX / W) * rect.width,
+              y: rect.top + (linkHit.midY / H) * rect.height,
+            });
+          }
+        } else {
+          setHoverLinkKey(null);
+          setHoverLinkPos(null);
+        }
+      } else {
+        setHoverLinkKey(null);
+        setHoverLinkPos(null);
+      }
+
       if (canvasRef.current) canvasRef.current.style.cursor = node ? "pointer" : "default";
     },
-    [getCanvasCoords, getNodeAt]
+    [getCanvasCoords, getNodeAt, getLinkAt, W, H]
   );
+
+  // Feature 2: Track last click time for double-click detection
+  const lastClickTimeRef = useRef<number>(0);
+  const lastClickNodeRef = useRef<string | null>(null);
 
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>) => {
       const { x, y } = getCanvasCoords(e);
       const node = getNodeAt(x, y);
-      setSelectedNode(node ?? null);
+
+      const now = Date.now();
+      const isDoubleClick = node &&
+        lastClickNodeRef.current === node.id &&
+        now - lastClickTimeRef.current < 400;
+
+      if (node) {
+        lastClickTimeRef.current = now;
+        lastClickNodeRef.current = node.id;
+
+        if (isDoubleClick) {
+          // Feature 2: Focus mode - double click isolates 1-hop neighborhood
+          setFocusNodeId((prev) => (prev === node.id ? null : node.id));
+        } else {
+          setSelectedNode(node);
+        }
+      } else {
+        // Click empty = exit focus + deselect
+        setSelectedNode(null);
+        setFocusNodeId(null);
+        lastClickNodeRef.current = null;
+      }
     },
     [getCanvasCoords, getNodeAt]
   );
+
+  // Feature 4: Get paper title for link tooltip
+  const linkPaperTitles = useMemo(() => {
+    const map = new Map<string, string>();
+    // We don't have paper data directly, but link meta might help.
+    // For now, show connection type info.
+    filteredLinks.forEach((l) => {
+      const src = nodes.find((n) => n.id === l.source);
+      const tgt = nodes.find((n) => n.id === l.target);
+      const srcName = src?.name || l.source;
+      const tgtName = tgt?.name || l.target;
+      const typeLabel = l.type === "uses_paper" ? "uses research from" : "co-authored with";
+      map.set(`${l.source}-${l.target}`, `${srcName} ${typeLabel} ${tgtName}`);
+    });
+    return map;
+  }, [filteredLinks, nodes]);
+
+  // Feature 1: Search - find matching nodes
+  const searchMatches = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase();
+    return allPositioned.filter((n) =>
+      n.name.toLowerCase().includes(q) ||
+      (n.institution && n.institution.toLowerCase().includes(q)) ||
+      (n.city && n.city.toLowerCase().includes(q))
+    );
+  }, [searchQuery, allPositioned]);
+
+  // Feature 1: Jump to first search match
+  useEffect(() => {
+    if (searchMatches.length > 0) {
+      setSearchHighlightId(searchMatches[0].id);
+    } else {
+      setSearchHighlightId(null);
+    }
+  }, [searchMatches]);
 
   // Draw
   useEffect(() => {
@@ -220,6 +384,11 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       });
     }
 
+    // Feature 1: Search highlight
+    if (searchHighlightId) {
+      highlightNodes.add(searchHighlightId);
+    }
+
     // Draw edges
     for (const link of filteredLinks) {
       const src = posMap.get(link.source);
@@ -231,21 +400,25 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       const isUsesPaper = link.type === "uses_paper";
       const isDimmed = hoverNodeId && !isHighlighted;
 
+      // Feature 2: Focus mode dimming
+      const isFocusDimmed = focusNeighbors && (!focusNeighbors.has(link.source) || !focusNeighbors.has(link.target));
+
       ctx.beginPath();
 
       if (isUsesPaper) {
-        // Curved bezier for research→product edges
         const cpX = (src.x + tgt.x) / 2;
         const cpY = (src.y + tgt.y) / 2 - Math.abs(src.y - tgt.y) * 0.15;
         ctx.moveTo(src.x, src.y);
         ctx.quadraticCurveTo(cpX, cpY, tgt.x, tgt.y);
       } else {
-        // Straight for co-author
         ctx.moveTo(src.x, src.y);
         ctx.lineTo(tgt.x, tgt.y);
       }
 
-      if (isDimmed) {
+      if (isFocusDimmed) {
+        ctx.strokeStyle = "rgba(255,255,255,0.01)";
+        ctx.lineWidth = 0.3;
+      } else if (isDimmed) {
         ctx.strokeStyle = isUsesPaper ? "rgba(251,191,36,0.04)" : "rgba(255,255,255,0.02)";
         ctx.lineWidth = 0.5;
       } else if (isHighlighted) {
@@ -263,19 +436,34 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       const isHighlighted = highlightNodes.has(node.id);
       const isSelected = selectedNode?.id === node.id;
       const isDimmed = hoverNodeId && !isHighlighted;
+      const isSearchMatch = searchHighlightId === node.id;
       const radius = Math.min(6 + node.edgeCount * 2, 16);
 
-      ctx.globalAlpha = isDimmed ? 0.15 : 1;
+      // Feature 2: Focus mode dimming
+      const isFocusDimmed = focusNeighbors && !focusNeighbors.has(node.id);
+
+      ctx.globalAlpha = isFocusDimmed ? 0.05 : isDimmed ? 0.15 : 1;
+
+      const nodeColor = getNodeColor(node);
 
       // Glow
-      if (isHighlighted && !isDimmed) {
+      if ((isHighlighted || isSearchMatch) && !isDimmed && !isFocusDimmed) {
         ctx.beginPath();
         ctx.arc(node.x, node.y, radius + 10, 0, 2 * Math.PI);
         const grad = ctx.createRadialGradient(node.x, node.y, radius, node.x, node.y, radius + 10);
-        grad.addColorStop(0, node.color + "40");
+        grad.addColorStop(0, nodeColor + "40");
         grad.addColorStop(1, "transparent");
         ctx.fillStyle = grad;
         ctx.fill();
+      }
+
+      // Feature 1: Search match ring
+      if (isSearchMatch && !isFocusDimmed) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius + 6, 0, 2 * Math.PI);
+        ctx.strokeStyle = "#FBBF24";
+        ctx.lineWidth = 2;
+        ctx.stroke();
       }
 
       // Shape
@@ -286,7 +474,7 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       } else {
         ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI);
       }
-      ctx.fillStyle = node.color;
+      ctx.fillStyle = nodeColor;
       ctx.fill();
 
       // Selection ring
@@ -300,10 +488,10 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
 
       // Label
       const fontSize = 11;
-      ctx.font = `${isHighlighted || isSelected ? "600 " : ""}${fontSize}px Inter, system-ui, sans-serif`;
+      ctx.font = `${isHighlighted || isSelected || isSearchMatch ? "600 " : ""}${fontSize}px Inter, system-ui, sans-serif`;
       ctx.textAlign = node.nodeType === "researcher" ? "right" : "left";
       ctx.textBaseline = "middle";
-      ctx.fillStyle = isHighlighted ? "#fff" : isDimmed ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.65)";
+      ctx.fillStyle = isHighlighted || isSearchMatch ? "#fff" : isDimmed ? "rgba(255,255,255,0.15)" : "rgba(255,255,255,0.65)";
 
       const labelOffset = radius + 10;
       const labelX = node.nodeType === "researcher" ? node.x - labelOffset : node.x + labelOffset;
@@ -318,7 +506,7 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
 
       ctx.globalAlpha = 1;
     }
-  }, [W, H, allPositioned, filteredLinks, hoverNodeId, selectedNode, posMap, neighborMap, posResearchers, posBuilders]);
+  }, [W, H, allPositioned, filteredLinks, hoverNodeId, selectedNode, posMap, neighborMap, posResearchers, posBuilders, focusNeighbors, searchHighlightId, getNodeColor, LEFT_X, RIGHT_X]);
 
   const navigateToProfile = useCallback(
     (node: GraphNode) => {
@@ -332,8 +520,73 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
     [builderMap, router]
   );
 
+  // Feature 7: Export PNG
+  const handleExportPNG = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const dataUrl = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = "peergraph.png";
+    a.click();
+  }, []);
+
   return (
     <div className="flex flex-col h-full">
+      {/* Feature 1: Search + Feature 5: Domain Color + Feature 7: Export */}
+      <div className="flex items-center gap-2 mb-2">
+        <div className="relative flex-1 max-w-xs">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search nodes..."
+            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-white/30"
+          />
+          {searchMatches.length > 0 && searchQuery && (
+            <div className="absolute top-full mt-1 left-0 right-0 bg-[#1a1a2e] border border-white/10 rounded-lg overflow-hidden z-20 max-h-48 overflow-y-auto">
+              {searchMatches.slice(0, 8).map((n) => (
+                <button
+                  key={n.id}
+                  onClick={() => {
+                    setSearchHighlightId(n.id);
+                    setSelectedNode(n);
+                    setSearchQuery("");
+                  }}
+                  className="w-full text-left px-3 py-2 text-xs hover:bg-white/10 flex items-center gap-2"
+                >
+                  <span className={`w-2 h-2 flex-shrink-0 ${n.nodeType === "researcher" ? "rounded-full bg-blue-400" : "rounded-sm bg-emerald-400"}`} />
+                  <span className="text-white/80 truncate">{n.name}</span>
+                  <span className="text-white/30 text-[10px] ml-auto flex-shrink-0">{n.nodeType}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        <button
+          onClick={() => setDomainColorMode(!domainColorMode)}
+          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+            domainColorMode ? "bg-purple-500/20 text-purple-300 border border-purple-500/30" : "bg-white/5 text-white/40 border border-white/10 hover:text-white/60"
+          }`}
+        >
+          {domainColorMode ? "Domain Colors ON" : "Color by Domain"}
+        </button>
+        <button
+          onClick={handleExportPNG}
+          className="px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 text-white/40 border border-white/10 hover:text-white/60 transition-colors"
+        >
+          Export PNG
+        </button>
+      </div>
+
+      {/* Feature 2: Focus mode indicator */}
+      {focusNodeId && (
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-amber-500/10 border border-amber-500/20 rounded-lg mb-2 text-xs text-amber-300">
+          <span>Focus mode: showing 1-hop neighborhood of {allPositioned.find(n => n.id === focusNodeId)?.name}</span>
+          <button onClick={() => setFocusNodeId(null)} className="ml-auto text-amber-400 hover:text-amber-200">Exit</button>
+        </div>
+      )}
+
       {/* Filters */}
       <div className="flex flex-col gap-1.5 mb-2">
         {/* Domain filter */}
@@ -394,15 +647,58 @@ export default function GraphView({ nodes, links, builderMap }: GraphViewProps) 
       </div>
 
       {/* Canvas + Side panel */}
-      <div className="flex gap-2 flex-1">
+      <div className="flex gap-2 flex-1 relative">
         <div ref={containerRef} className="flex-1 bg-[#0a0a0f] rounded-xl overflow-hidden relative">
           <canvas
             ref={canvasRef}
             onMouseMove={handleMouseMove}
-            onMouseLeave={() => setHoverNodeId(null)}
+            onMouseLeave={() => { setHoverNodeId(null); setHoverLinkKey(null); setHoverLinkPos(null); }}
             onClick={handleClick}
             style={{ width: "100%", height: "100%" }}
           />
+
+          {/* Feature 4: Edge label tooltip */}
+          {hoverLinkKey && hoverLinkPos && (
+            <div
+              className="fixed z-50 pointer-events-none px-2.5 py-1.5 bg-[#1a1a2e] border border-white/15 rounded-lg text-[11px] text-white/80 max-w-xs shadow-lg"
+              style={{ left: hoverLinkPos.x, top: hoverLinkPos.y - 30, transform: "translateX(-50%)" }}
+            >
+              {linkPaperTitles.get(hoverLinkKey) || hoverLinkKey}
+            </div>
+          )}
+
+          {/* Feature 3: Legend toggle */}
+          <div className="absolute bottom-3 left-3 z-10">
+            <button
+              onClick={() => setLegendOpen(!legendOpen)}
+              className="px-2.5 py-1.5 bg-white/5 border border-white/10 rounded-lg text-[10px] text-white/40 hover:text-white/60 transition-colors backdrop-blur-md"
+            >
+              {legendOpen ? "Hide Legend" : "Legend"}
+            </button>
+            {legendOpen && (
+              <div className="mt-1.5 p-3 bg-[#0a0a0f]/95 border border-white/10 rounded-lg backdrop-blur-md space-y-2">
+                <div className="flex items-center gap-2 text-[11px] text-white/60">
+                  <span className="w-3 h-3 rounded-full bg-blue-400 inline-block" />
+                  Researcher
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-white/60">
+                  <span className="w-3 h-3 rounded-sm bg-emerald-400 inline-block" />
+                  Builder
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-white/60">
+                  <span className="w-5 h-0 border-t border-amber-400 inline-block" />
+                  Paper → Product
+                </div>
+                <div className="flex items-center gap-2 text-[11px] text-white/60">
+                  <span className="w-5 h-0 border-t border-white/30 inline-block" />
+                  Co-author
+                </div>
+                <div className="text-[9px] text-white/30 pt-1 border-t border-white/10">
+                  Click = select &middot; Double-click = focus
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Side panel */}

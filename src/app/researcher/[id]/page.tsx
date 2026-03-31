@@ -2,6 +2,7 @@ import { getResearchers, getResearcherById, getResearcherPapers, getResearcherCo
 import { suggestBuildersForResearcher } from "@/lib/recommendations";
 import { calculateResearchImpactScore, SCORE_DISCLAIMER } from "@/lib/impact-score";
 import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
+import ScoreBreakdownModal from "@/components/ScoreBreakdownModal";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -71,7 +72,12 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
                 </p>
               </div>
               <div className="text-right">
-                <span className="text-3xl font-bold text-amber-400">{impactScore.overallScore}</span>
+                <ScoreBreakdownModal
+                  researcherName={researcher.name}
+                  overallScore={impactScore.overallScore}
+                  normalizedBreakdown={impactScore.normalizedBreakdown}
+                  breakdown={impactScore.breakdown}
+                />
                 <span className="text-sm text-white/40">/100</span>
               </div>
             </div>
@@ -112,16 +118,17 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
         {/* Domains */}
         <div className="flex flex-wrap gap-2 mb-8">
           {researcher.domains.map((d) => (
-            <span
+            <Link
               key={d}
-              className="px-3 py-1 rounded-lg text-sm"
+              href={`/domain/${d.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+              className="px-3 py-1 rounded-lg text-sm hover:opacity-80 transition-opacity"
               style={{
                 backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15",
                 color: DOMAIN_COLORS[d] || "#94A3B8",
               }}
             >
               {d}
-            </span>
+            </Link>
           ))}
         </div>
 
