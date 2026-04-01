@@ -64,11 +64,17 @@
 
 ## Phase 2: Deterministic Link Discovery ($0)
 - [ ] Regex extraction of arXiv IDs and DOIs from GitHub READMEs
-- [ ] Library-to-paper mapping table (~200 entries: `transformers` → Attention Is All You Need, etc.)
+- [x] Library-to-paper mapping table (40 entries in `src/data/library-paper-map.json`)
+- [x] Scanner script (`scripts/scan-library-imports.ts`) — scans repos for library imports, creates paper links
+- [x] 21 new papers added (p94–p114): FlashAttention, LoRA, RAG, PagedAttention, XGBoost, FAISS, etc.
+- [x] Documentation: `docs/LIBRARY-ATTRIBUTION.md`
+- [ ] Run scanner against all existing builder repos
+- [ ] peergraph.json builder declaration spec (v1)
+- [ ] GitHub Actions weekly cron for new repos
 - [ ] Ingest Papers With Code dataset (150K paper→repo links, free JSON)
+- [ ] Papers With Code full dataset import (150K mappings)
 - [ ] OpenAlex API integration for paper metadata and concept tagging
 - [ ] Semantic Scholar API for TLDR summaries and field classification
-- [ ] Automated scan script: input a GitHub repo URL, output detected paper links
 
 ## Phase 3: AI-Powered Discovery ($0)
 - [ ] SPECTER2 embeddings for semantic similarity (paper abstracts ↔ product descriptions)
