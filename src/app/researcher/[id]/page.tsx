@@ -3,6 +3,7 @@ import { suggestBuildersForResearcher } from "@/lib/recommendations";
 import { calculateResearchImpactScore, SCORE_DISCLAIMER } from "@/lib/impact-score";
 import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import ScoreBreakdownModal from "@/components/ScoreBreakdownModal";
+import ExportButton from "@/components/ExportButton";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -270,13 +271,14 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
           </div>
         )}
 
-        {researcher.homepage_url && (
-          <div className="mt-8 pt-6 border-t border-white/10">
+        <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-4">
+          <ExportButton type="researcher" id={id} />
+          {researcher.homepage_url && (
             <a href={researcher.homepage_url} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
               Visit homepage &rarr;
             </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

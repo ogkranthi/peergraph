@@ -1,5 +1,6 @@
 import { getResearchers, getPapers, getProjects, getBuilders } from "@/lib/data";
 import { DOMAIN_COLORS, type ResearchDomain } from "@/lib/types";
+import ExportButton from "@/components/ExportButton";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -47,10 +48,13 @@ export default async function DomainPage({ params }: { params: Promise<{ slug: s
           <span className="w-4 h-4 rounded-full" style={{ backgroundColor: color }} />
           <h1 className="text-3xl font-bold" style={{ color }}>{domain}</h1>
         </div>
-        <p className="text-white/50">
-          {domainResearchers.length} researchers &middot; {domainPapers.length} papers &middot;{" "}
-          {domainProjects.length} projects &middot; {domainBuilders.length} builders
-        </p>
+        <div className="flex items-center gap-4 mb-1">
+          <p className="text-white/50">
+            {domainResearchers.length} researchers &middot; {domainPapers.length} papers &middot;{" "}
+            {domainProjects.length} projects &middot; {domainBuilders.length} builders
+          </p>
+        </div>
+        <ExportButton type="domain" slug={slug} label="Export Domain Skills" />
       </div>
 
       {/* Researchers */}
