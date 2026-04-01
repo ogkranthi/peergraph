@@ -1664,7 +1664,10 @@
     "citation_count": 18000,
     "abstract": "We present PyTorch, an imperative deep learning framework that provides GPU-accelerated tensor computation and automatic differentiation with a tape-based system.",
     "url": "https://arxiv.org/abs/1912.01703",
-    "domains": ["Machine Learning Systems", "Deep Learning"],
+    "domains": [
+      "Machine Learning Systems",
+      "Deep Learning"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1677,7 +1680,10 @@
     "citation_count": 22000,
     "abstract": "We describe TensorFlow, a machine learning system that operates at large scale and in heterogeneous environments using dataflow graphs to represent computation, shared state, and mutation operations.",
     "url": "https://arxiv.org/abs/1605.08695",
-    "domains": ["Machine Learning Systems", "Deep Learning"],
+    "domains": [
+      "Machine Learning Systems",
+      "Deep Learning"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1690,7 +1696,10 @@
     "citation_count": 3500,
     "abstract": "We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce memory reads/writes between GPU high bandwidth memory and on-chip SRAM, achieving 2-4x wall-clock speedup.",
     "url": "https://arxiv.org/abs/2205.14135",
-    "domains": ["Machine Learning Systems", "NLP"],
+    "domains": [
+      "Machine Learning Systems",
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1703,7 +1712,10 @@
     "citation_count": 1200,
     "abstract": "We propose FlashAttention-2, which improves upon FlashAttention with better work partitioning and parallelism to achieve up to 2x speedup, reaching 50-73% of theoretical maximum FLOPs on A100 GPUs.",
     "url": "https://arxiv.org/abs/2307.08691",
-    "domains": ["Machine Learning Systems", "NLP"],
+    "domains": [
+      "Machine Learning Systems",
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1716,7 +1728,10 @@
     "citation_count": 5500,
     "abstract": "We combine pre-trained parametric and non-parametric memory for language generation, using a retrieval component to access Wikipedia and augment generation for knowledge-intensive tasks.",
     "url": "https://arxiv.org/abs/2005.11401",
-    "domains": ["NLP", "Information Retrieval"],
+    "domains": [
+      "NLP",
+      "Information Retrieval"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1729,7 +1744,10 @@
     "citation_count": 2000,
     "abstract": "We develop a procedure for Int8 matrix multiplication for feed-forward and attention projection layers in transformers, enabling inference of models with up to 175B parameters without degradation.",
     "url": "https://arxiv.org/abs/2208.07339",
-    "domains": ["NLP", "Machine Learning Systems"],
+    "domains": [
+      "NLP",
+      "Machine Learning Systems"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1742,7 +1760,10 @@
     "citation_count": 8000,
     "abstract": "We propose LoRA, which freezes pre-trained model weights and injects trainable rank decomposition matrices into each Transformer layer, reducing trainable parameters by 10,000x and GPU memory by 3x.",
     "url": "https://arxiv.org/abs/2106.09685",
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1755,7 +1776,10 @@
     "citation_count": 35000,
     "abstract": "We describe XGBoost, a scalable end-to-end tree boosting system that is used widely by data scientists with results on many machine learning challenges.",
     "url": "https://arxiv.org/abs/1603.02754",
-    "domains": ["Machine Learning", "Data Science"],
+    "domains": [
+      "Machine Learning",
+      "Data Science"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1768,7 +1792,10 @@
     "citation_count": 3000,
     "abstract": "We present FAISS, a library for efficient similarity search and clustering of dense vectors, designed to handle billion-scale datasets using GPU acceleration.",
     "url": "https://arxiv.org/abs/1702.08734",
-    "domains": ["Information Retrieval", "Machine Learning Systems"],
+    "domains": [
+      "Information Retrieval",
+      "Machine Learning Systems"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1781,7 +1808,10 @@
     "citation_count": 1500,
     "abstract": "We propose PagedAttention, an attention algorithm inspired by virtual memory that allows KV cache memory to be stored in non-contiguous blocks, enabling near-zero waste in LLM serving.",
     "url": "https://arxiv.org/abs/2309.06180",
-    "domains": ["Machine Learning Systems", "NLP"],
+    "domains": [
+      "Machine Learning Systems",
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1794,7 +1824,10 @@
     "citation_count": 8500,
     "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters trained on publicly available data, competitive with the best existing LLMs.",
     "url": "https://arxiv.org/abs/2302.13971",
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1807,7 +1840,10 @@
     "citation_count": 3000,
     "abstract": "We propose ReAct, a paradigm that prompts LLMs to generate both verbal reasoning traces and task-specific actions in an interleaved manner, enabling synergy between reasoning and acting.",
     "url": "https://arxiv.org/abs/2210.03629",
-    "domains": ["NLP", "Generative AI"],
+    "domains": [
+      "NLP",
+      "Generative AI"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1820,7 +1856,9 @@
     "citation_count": 15000,
     "abstract": "We propose PPO, a family of policy gradient methods that alternate between sampling data through interaction with the environment and optimizing a clipped surrogate objective function.",
     "url": "https://arxiv.org/abs/1707.06347",
-    "domains": ["Reinforcement Learning"],
+    "domains": [
+      "Reinforcement Learning"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1833,7 +1871,10 @@
     "citation_count": 800,
     "abstract": "We show that self-attention can be computed with O(1) memory by leveraging the associativity of the softmax operation, enabling memory-efficient exact attention computation.",
     "url": "https://arxiv.org/abs/2112.05682",
-    "domains": ["Machine Learning Systems", "NLP"],
+    "domains": [
+      "Machine Learning Systems",
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1846,7 +1887,9 @@
     "citation_count": 12000,
     "abstract": "We introduce a simple method to represent open-vocabulary through byte pair encoding (BPE), allowing neural machine translation models to handle rare and unseen words via subword units.",
     "url": "https://arxiv.org/abs/1508.07909",
-    "domains": ["NLP"],
+    "domains": [
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1859,7 +1902,10 @@
     "citation_count": 600,
     "abstract": "We present Triton, a language and compiler centered around the concept of tile, enabling researchers to write highly efficient GPU code for neural network computations with minimal effort.",
     "url": "https://doi.org/10.1145/3315508.3329973",
-    "domains": ["Machine Learning Systems", "Compilers"],
+    "domains": [
+      "Machine Learning Systems",
+      "Compilers"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1872,7 +1918,10 @@
     "citation_count": 2500,
     "abstract": "We propose Constitutional AI (CAI), a method for training AI systems to be helpful and harmless using AI feedback guided by a set of principles, reducing reliance on human feedback for harmlessness.",
     "url": "https://arxiv.org/abs/2212.08073",
-    "domains": ["AI Safety", "NLP"],
+    "domains": [
+      "AI Safety",
+      "NLP"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1885,7 +1934,10 @@
     "citation_count": 4500,
     "abstract": "We propose HNSW, a graph-based approximate nearest neighbor search algorithm that builds a multi-layer structure of navigable small world graphs for logarithmic search complexity.",
     "url": "https://arxiv.org/abs/1603.09320",
-    "domains": ["Information Retrieval", "Data Structures"],
+    "domains": [
+      "Information Retrieval",
+      "Data Structures"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1898,7 +1950,10 @@
     "citation_count": 800,
     "abstract": "We present Milvus, a purpose-built vector data management system designed to manage and query billion-scale vectors with heterogeneous computing for approximate nearest neighbor search.",
     "url": "https://doi.org/10.1145/3448016.3457550",
-    "domains": ["Information Retrieval", "Databases"],
+    "domains": [
+      "Information Retrieval",
+      "Databases"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1911,7 +1966,10 @@
     "citation_count": 18000,
     "abstract": "We propose LightGBM, a gradient boosting framework that uses novel techniques of Gradient-based One-Side Sampling and Exclusive Feature Bundling to handle large-scale data efficiently.",
     "url": "https://papers.nips.cc/paper/2017/hash/6449f44a102fde848669bdd9eb6b76fa-Abstract.html",
-    "domains": ["Machine Learning", "Data Science"],
+    "domains": [
+      "Machine Learning",
+      "Data Science"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   },
@@ -1924,7 +1982,710 @@
     "citation_count": 85000,
     "abstract": "We describe Scikit-learn, a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems.",
     "url": "https://arxiv.org/abs/1201.0490",
-    "domains": ["Machine Learning", "Data Science"],
+    "domains": [
+      "Machine Learning",
+      "Data Science"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p115",
+    "title": "X-LXMERT: Paint, Caption and Answer Questions with Multi-Modal Transformers",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2009.11278",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p116",
+    "title": "Don't Stop Pretraining: Adapt Language Models to Domains and Tasks",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2004.10964",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p117",
+    "title": "olmOCR: Unlocking Trillions of Tokens in PDFs with Vision Language Models",
+    "year": 2025,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2502.18443",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p118",
+    "title": "Ai2 Scholar QA: Organized Literature Synthesis with Attribution",
+    "year": 2025,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2504.10861",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p119",
+    "title": "On-the-fly Definition Augmentation of LLMs for Biomedical NER",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2404.00152",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p120",
+    "title": "Variational Pretraining for Semi-supervised Text Classification",
+    "year": 2019,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/1906.02242",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p121",
+    "title": "GooAQ: Open Question Answering with Diverse Answer Types",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2104.08727",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p122",
+    "title": "Evaluating Models' Local Decision Boundaries via Contrast Sets",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2004.02709",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p123",
+    "title": "Automating the Search for Artificial Life with Foundation Models",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2412.17799",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p124",
+    "title": "Learning to Learn How to Learn: Self-Adaptive Visual Navigation Using Meta-Learning",
+    "year": 2018,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "http://arxiv.org/abs/1812.00971",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p125",
+    "title": "Document-Level Definition Detection in Scholarly Documents: Existing Models, Error Analyses, and Future Directions",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2010.05129",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p126",
+    "title": "Estimating label quality and errors in semantic segmentation data via any model",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2307.05080",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p127",
+    "title": "Agent Skill Acquisition for Large Language Models via CycleQD",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2410.14735",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p128",
+    "title": "Learning What is Essential in Questions",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://aclanthology.org/K17-1010",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p129",
+    "title": "Neural circuit policies enabling auditable autonomy",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://www.nature.com/articles/s42256-020-00237-3",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p130",
+    "title": "Evaluating Large Language Models Trained on Code",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2107.03374",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p131",
+    "title": "Safurai 001: New Qualitative Approach for Code LLM Evaluation",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2309.11385",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p132",
+    "title": "SciRepEval: A Multi-Format Benchmark for Scientific Document Representations",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2211.13308",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p133",
+    "title": "WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2406.18510",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p134",
+    "title": "Augmenting Scientific Papers with Just-in-Time, Position-Sensitive Definitions of Terms and Symbols",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2009.14237",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p135",
+    "title": "Detecting Errors in a Numerical Response via any Regression Model",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2305.16583",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p136",
+    "title": "UnQovering Stereotyping Biases via Underspecified Questions",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2010.02428",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p137",
+    "title": "Confident Learning: Estimating Uncertainty in Dataset Labels",
+    "year": 2019,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/1911.00068",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p138",
+    "title": "Detecting Label Errors in Token Classification Data",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2210.03920",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p139",
+    "title": "Back to the Basics: Revisiting Out-of-Distribution Detection Baselines",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2207.03061",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p140",
+    "title": "CROWDLAB: Supervised learning to infer consensus labels and quality scores for data with multiple annotators",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2210.06812",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p141",
+    "title": "Identifying Incorrect Annotations in Multi-Label Classification Data",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2211.13895",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p142",
+    "title": "Detecting Dataset Drift and Non-IID Sampling via k-Nearest Neighbors",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2305.15696",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p143",
+    "title": "Pervasive Label Errors in Test Sets Destabilize Machine Learning Benchmarks",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2103.14749",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p144",
+    "title": "ObjectLab: Automated Diagnosis of Mislabeled Images in Object Detection Data",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2309.00832",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p145",
+    "title": "A Dataset for N-ary Relation Extraction of Drug Combinations",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2205.02289",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p146",
+    "title": "Continued Pretraining for Better Zero- and Few-Shot Promptability",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2210.10258",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p147",
+    "title": "RedPajama: an Open Dataset for Training Large Language Models",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2411.12372",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p148",
+    "title": "ELASTIC: Improving CNNs with Dynamic Scaling Policies",
+    "year": 2018,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "http://arxiv.org/abs/1812.05262",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p149",
+    "title": "Embedding Recycling for Language Models",
+    "year": 2022,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2207.04993",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p150",
+    "title": "SciRIFF: A Resource to Enhance Language Model Instruction-Following over Scientific Literature",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2406.07835",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p151",
+    "title": "Obtaining Faithful Interpretations from Compositional Neural Networks",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2005.00724",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p152",
+    "title": "UNICORN on RAINBOW: A Universal Commonsense Reasoning Model on a New Multitask Benchmark",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2103.13009",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p153",
+    "title": "Container: Context Aggregation Networks",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "http://proceedings.neurips.cc/paper/2021/hash/9fe77ac7060e716f2d42631d156825c0-Abstract.html",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p154",
+    "title": "Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2009.10795",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p155",
+    "title": "Bias Runs Deep: Implicit Reasoning Biases in Persona-Assigned LLMs",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2311.04892",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p156",
+    "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+    "year": 2019,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/1910.02054",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p157",
+    "title": "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2104.04473",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p158",
+    "title": "InstructRetro: Instruction Tuning post Retrieval-Augmented Pretraining",
+    "year": 2023,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2310.07713",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p159",
+    "title": "An Empirical Study of Mamba-based Language Models",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2406.07887",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p160",
+    "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+    "year": 2019,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/1909.08053",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p161",
+    "title": "Local Knowledge Powered Conversational Agents",
+    "year": 2020,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2010.10150",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p162",
+    "title": "S2AND: A Benchmark and Evaluation System for Author Name Disambiguation",
+    "year": 2021,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2103.07534",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p163",
+    "title": "Bidirectional Attention Flow for Machine Comprehension",
+    "year": 2016,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "http://arxiv.org/abs/1611.01603",
+    "domains": [
+      "AI/ML"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "p164",
+    "title": "DISCOVERYWORLD: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents",
+    "year": 2024,
+    "venue": "",
+    "citation_count": 0,
+    "abstract": "",
+    "url": "https://arxiv.org/abs/2406.06769",
+    "domains": [
+      "AI/ML"
+    ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
   }

@@ -152,7 +152,8 @@
     "paper_ids": [
       "p11",
       "p95",
-      "p94"
+      "p94",
+      "p129"
     ],
     "paper_links": [
       {
@@ -174,6 +175,13 @@
         "source_type": "library_import",
         "evidence_url": "https://github.com/mlech26l/keras-ncp",
         "confidence": 60,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p129",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/neural-circuit-policies-enabling-auditable",
+        "confidence": 85,
         "added_at": "2026-04-01T00:00:00Z"
       }
     ],
@@ -969,7 +977,12 @@
     "paper_ids": [
       "p6",
       "p21",
-      "p7"
+      "p7",
+      "p130",
+      "p131",
+      "p34",
+      "p109",
+      "p3"
     ],
     "paper_links": [
       {
@@ -992,6 +1005,41 @@
         "evidence_url": "https://openai.com",
         "confidence": 85,
         "added_at": "2026-03-29T00:00:00Z"
+      },
+      {
+        "paper_id": "p130",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/evaluating-large-language-models-trained-on",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p131",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/safurai-001-new-qualitative-approach-for-code",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p34",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/language-models-are-few-shot-learners",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p109",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/triton-an-intermediate-language-and-compiler",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p3",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/learning-transferable-visual-models-from",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-29T00:00:00Z"
@@ -1134,7 +1182,17 @@
     "paper_ids": [
       "p27",
       "p28",
-      "p114"
+      "p114",
+      "p126",
+      "p135",
+      "p137",
+      "p138",
+      "p139",
+      "p140",
+      "p141",
+      "p142",
+      "p143",
+      "p144"
     ],
     "paper_links": [
       {
@@ -1156,6 +1214,76 @@
         "source_type": "library_import",
         "evidence_url": "https://github.com/cleanlab/cleanlab",
         "confidence": 60,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p126",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/estimating-label-quality-and-errors-in",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p135",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/detecting-errors-in-numerical-data-via-any",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p137",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/confident-learning-estimating-uncertainty-in",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p138",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/detecting-label-errors-in-token",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p139",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/back-to-the-basics-revisiting-out-of",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p140",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/utilizing-supervised-models-to-infer",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p141",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/identifying-incorrect-annotations-in-multi",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p142",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/detecting-dataset-drift-and-non-iid-sampling",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p143",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/pervasive-label-errors-in-test-sets",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p144",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/objectlab-automated-diagnosis-of-mislabeled",
+        "confidence": 85,
         "added_at": "2026-04-01T00:00:00Z"
       }
     ],
@@ -1366,7 +1494,35 @@
       "p30",
       "p31",
       "p32",
-      "p33"
+      "p33",
+      "p115",
+      "p116",
+      "p117",
+      "p118",
+      "p119",
+      "p120",
+      "p121",
+      "p122",
+      "p124",
+      "p125",
+      "p128",
+      "p132",
+      "p133",
+      "p134",
+      "p136",
+      "p145",
+      "p146",
+      "p148",
+      "p149",
+      "p150",
+      "p151",
+      "p152",
+      "p153",
+      "p154",
+      "p155",
+      "p162",
+      "p163",
+      "p164"
     ],
     "paper_links": [
       {
@@ -1396,6 +1552,202 @@
         "evidence_url": "https://allenai.org/research",
         "confidence": 85,
         "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p115",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/x-lxmert-paint-caption-and-answer-questions",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p116",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/don-t-stop-pretraining-adapt-language-models",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p117",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/olmocr-unlocking-trillions-of-tokens-in-pdfs",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p118",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/ai2-scholar-qa-organized-literature-synthesis",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p119",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/on-the-fly-definition-augmentation-of-llms",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p120",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/variational-pretraining-for-semi-supervised",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p121",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/gooaq-open-question-answering-with-diverse",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p122",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/evaluating-nlp-models-via-contrast-sets",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p124",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/learning-to-learn-how-to-learn-self-adaptive",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p125",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/document-level-definition-detection-in",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p128",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/learning-what-is-essential-in-questions",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p132",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/scirepeval-a-multi-format-benchmark-for",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p133",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/wildteaming-at-scale-from-in-the-wild",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p134",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/augmenting-scientific-papers-with-just-in",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p136",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/unqovering-stereotyping-biases-via",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p145",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/a-dataset-for-n-ary-relation-extraction-of-1",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p146",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/continued-pretraining-for-better-zero-and-few",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p148",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/elastic-improving-cnns-with-instance-specific",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p149",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/embedding-recycling-for-language-models",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p150",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/sciriff-a-resource-to-enhance-language-model",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p151",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/obtaining-faithful-interpretations-from",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p152",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/unicorn-on-rainbow-a-universal-commonsense",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p153",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/container-context-aggregation-networks",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p154",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/dataset-cartography-mapping-and-diagnosing",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p155",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/bias-runs-deep-implicit-reasoning-biases-in",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p162",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/s2and-a-benchmark-and-evaluation-system-for",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p163",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/bidirectional-attention-flow-for-machine",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p164",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/discoveryworld-a-virtual-environment-for",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -1652,7 +2004,13 @@
       "p1",
       "p34",
       "p94",
-      "p109"
+      "p109",
+      "p156",
+      "p157",
+      "p158",
+      "p159",
+      "p160",
+      "p161"
     ],
     "paper_links": [
       {
@@ -1682,6 +2040,48 @@
         "evidence_url": "https://github.com/NVIDIA/Megatron-LM",
         "confidence": 85,
         "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p156",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/zero-memory-optimization-towards-training-a",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p157",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/efficient-large-scale-language-model-training",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p158",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/instructretro-instruction-tuning-post",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p159",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/an-empirical-study-of-mamba-based-language",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p160",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/megatron-lm-training-multi-billion-parameter",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p161",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/local-knowledge-powered-conversational-agents",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -1701,7 +2101,8 @@
     "paper_ids": [
       "p1",
       "p2",
-      "p35"
+      "p35",
+      "p94"
     ],
     "paper_links": [
       {
@@ -1724,6 +2125,13 @@
         "evidence_url": "https://arxiv.org/abs/1912.01703",
         "confidence": 95,
         "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p94",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/pytorch-an-imperative-style-high-performance-1",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -1914,7 +2322,8 @@
     ],
     "paper_ids": [
       "p1",
-      "p40"
+      "p40",
+      "p100"
     ],
     "paper_links": [
       {
@@ -1930,6 +2339,13 @@
         "evidence_url": "https://arxiv.org/abs/2106.09685",
         "confidence": 95,
         "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p100",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/lora-low-rank-adaptation-of-large-language",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -1949,7 +2365,8 @@
       "p1",
       "p40",
       "p41",
-      "p94"
+      "p94",
+      "p99"
     ],
     "paper_links": [
       {
@@ -1979,6 +2396,13 @@
         "evidence_url": "https://github.com/TimDettmers/bitsandbytes",
         "confidence": 60,
         "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p99",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/llm-int8-8-bit-matrix-multiplication-for",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -1997,7 +2421,9 @@
     "paper_ids": [
       "p1",
       "p42",
-      "p109"
+      "p109",
+      "p96",
+      "p97"
     ],
     "paper_links": [
       {
@@ -2018,6 +2444,20 @@
         "paper_id": "p109",
         "source_type": "library_import",
         "evidence_url": "https://github.com/Dao-AILab/flash-attention",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p96",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/flashattention-fast-and-memory-efficient",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p97",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/flashattention-2-faster-attention-with-better",
         "confidence": 85,
         "added_at": "2026-04-01T00:00:00Z"
       }
@@ -2692,7 +3132,8 @@
       "p52",
       "p14",
       "p94",
-      "p114"
+      "p114",
+      "p89"
     ],
     "paper_links": [
       {
@@ -2728,6 +3169,13 @@
         "source_type": "library_import",
         "evidence_url": "https://github.com/UKPLab/sentence-transformers",
         "confidence": 60,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p89",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/sentence-bert-sentence-embeddings-using",
+        "confidence": 85,
         "added_at": "2026-04-01T00:00:00Z"
       }
     ],
@@ -2951,7 +3399,8 @@
     ],
     "paper_ids": [
       "p1",
-      "p42"
+      "p42",
+      "p147"
     ],
     "paper_links": [
       {
@@ -2967,6 +3416,13 @@
         "evidence_url": "https://together.ai",
         "confidence": 85,
         "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p147",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/redpajama-an-open-dataset-for-training-large",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
@@ -3017,7 +3473,9 @@
     ],
     "paper_ids": [
       "p1",
-      "p58"
+      "p58",
+      "p123",
+      "p127"
     ],
     "paper_links": [
       {
@@ -3033,6 +3491,20 @@
         "evidence_url": "https://arxiv.org/abs/2403.13187",
         "confidence": 95,
         "added_at": "2026-03-30T00:00:00Z"
+      },
+      {
+        "paper_id": "p123",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/automating-the-search-for-artificial-life",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
+      },
+      {
+        "paper_id": "p127",
+        "source_type": "pwc_import",
+        "evidence_url": "https://paperswithcode.com/paper/agent-skill-acquisition-for-large-language",
+        "confidence": 85,
+        "added_at": "2026-04-01T00:00:00Z"
       }
     ],
     "created_at": "2026-03-30T00:00:00Z"
