@@ -28,6 +28,14 @@ export default function ExportButton({ type, id, slug, label }: ExportButtonProp
         files: { name: string; content: string }[];
       };
 
+      // Track via GA4
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "export_download", {
+          export_type: type,
+          export_id: id || slug,
+        });
+      }
+
       // Download as individual files via a single combined text file
       // or trigger multiple downloads
       if (files.length === 1) {

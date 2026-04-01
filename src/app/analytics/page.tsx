@@ -6,12 +6,26 @@ import Link from "next/link";
 
 export const revalidate = 3600;
 
+async function getExportStats() {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/api/export/stats`, { next: { revalidate: 3600 } });
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
+    return null;
+  }
+}
+
 export default async function AnalyticsPage() {
-  const [researchers, builders, papers, projects] = await Promise.all([
+  const [researchers, builders, papers, projects, exportStats] = await Promise.all([
     getResearchers(),
     getBuilders(),
     getPapers(),
     getProjects(),
+    getExportStats(),
   ]);
 
   const analytics = computePlatformAnalytics(researchers, papers, builders, projects);
@@ -68,6 +82,50 @@ export default async function AnalyticsPage() {
           <p className="text-xs text-amber-400/60">Translation Rate</p>
         </div>
       </div>
+
+      {/* Agent Skills Downloads */}
+      {exportStats && (
+        <div className="mb-10">
+          <h2 className="text-lg font-semibold mb-1">Agent Skills Downloads</h2>
+          <p className="text-xs text-white/30 mb-4">Export activity for agent-ready skill graphs</p>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-4">
+            <div className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-xl p-4 text-center">
+              <p className="text-2xl font-bold text-violet-400">{exportStats.total}</p>
+              <p className="text-xs text-violet-400/60">Total Downloads</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+              <p className="text-2xl font-bold">{exportStats.byType?.researcher || 0}</p>
+              <p className="text-xs text-white/40">Researcher</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+              <p className="text-2xl font-bold">{exportStats.byType?.domain || 0}</p>
+              <p className="text-xs text-white/40">Domain</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+              <p className="text-2xl font-bold">{exportStats.byType?.paper || 0}</p>
+              <p className="text-xs text-white/40">Paper</p>
+            </div>
+          </div>
+          {exportStats.topExports?.length > 0 && (
+            <div>
+              <h3 className="text-sm font-medium text-white/50 mb-2">Top Downloads</h3>
+              <div className="space-y-1">
+                {exportStats.topExports.slice(0, 5).map((e: { type: string; id: string; name: string; count: number }, i: number) => (
+                  <div
+                    key={`${e.type}-${e.id}`}
+                    className="flex items-center gap-3 p-2.5 bg-white/5 border border-white/10 rounded-lg"
+                  >
+                    <span className="text-xs font-bold text-white/25 w-4 text-right">{i + 1}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-white/50 uppercase">{e.type}</span>
+                    <span className="text-sm text-white/70 truncate flex-1">{e.name}</span>
+                    <span className="text-sm font-bold text-violet-400">{e.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
         {/* Applied Impact Index Leaderboard */}
