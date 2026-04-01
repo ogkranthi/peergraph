@@ -4,7 +4,7 @@
     "github_username": "hwchase17",
     "name": "Harrison Chase",
     "avatar_url": "https://avatars.githubusercontent.com/u/11986836",
-    "bio": "CEO of LangChain. Building the open-source framework for LLM-powered applications \u2014 agents, chains, and retrieval.",
+    "bio": "CEO of LangChain. Building the open-source framework for LLM-powered applications — agents, chains, and retrieval.",
     "city": "San Francisco",
     "skills": [
       "LLMs",
@@ -97,7 +97,7 @@
     "github_username": "mcamac",
     "name": "Martin Camacho",
     "avatar_url": "https://avatars.githubusercontent.com/u/2151953",
-    "bio": "Co-founder of Suno AI. Building AI music generation \u2014 anyone can make a song with just text. Previously at Kensho (S&P Global).",
+    "bio": "Co-founder of Suno AI. Building AI music generation — anyone can make a song with just text. Previously at Kensho (S&P Global).",
     "city": "Cambridge",
     "skills": [
       "audio ML",
@@ -142,7 +142,7 @@
     "github_username": "karpathy",
     "name": "Andrej Karpathy",
     "avatar_url": "https://avatars.githubusercontent.com/u/241138",
-    "bio": "Building Eureka Labs \u2014 AI-native education. Created nanoGPT and built neural networks from scratch on YouTube. Previously Director of AI at Tesla, founding member of OpenAI.",
+    "bio": "Building Eureka Labs — AI-native education. Created nanoGPT and built neural networks from scratch on YouTube. Previously Director of AI at Tesla, founding member of OpenAI.",
     "city": "San Francisco",
     "skills": [
       "deep learning",
@@ -186,7 +186,7 @@
     "github_username": "rauchg",
     "name": "Guillermo Rauch",
     "avatar_url": "https://avatars.githubusercontent.com/u/13041",
-    "bio": "CEO of Vercel. Built v0 \u2014 AI-powered UI generation from natural language. Created Next.js, Socket.io. Pushing the frontier of AI-assisted development.",
+    "bio": "CEO of Vercel. Built v0 — AI-powered UI generation from natural language. Created Next.js, Socket.io. Pushing the frontier of AI-assisted development.",
     "city": "San Francisco",
     "skills": [
       "react",
@@ -208,7 +208,7 @@
     "github_username": "shreyashankar",
     "name": "Shreya Shankar",
     "avatar_url": "https://avatars.githubusercontent.com/u/6895706",
-    "bio": "PhD at UC Berkeley. Building DocETL \u2014 AI-powered data processing pipelines. Research on ML data quality and LLM evaluation.",
+    "bio": "PhD at UC Berkeley. Building DocETL — AI-powered data processing pipelines. Research on ML data quality and LLM evaluation.",
     "city": "Berkeley",
     "skills": [
       "ML systems",
@@ -563,7 +563,7 @@
     "github_username": "AlessandroSaviworksatendeavoRrr",
     "name": "Alex Ratner",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AR&backgroundColor=34d399",
-    "bio": "CEO of Snorkel AI. Stanford PhD under Chris Re. Pioneered programmatic data labeling \u2014 write functions instead of hand-labeling data.",
+    "bio": "CEO of Snorkel AI. Stanford PhD under Chris Re. Pioneered programmatic data labeling — write functions instead of hand-labeling data.",
     "city": "Boston",
     "skills": [
       "weak supervision",
@@ -697,7 +697,7 @@
     "github_username": "aidangomez",
     "name": "Aidan Gomez",
     "avatar_url": "https://avatars.githubusercontent.com/u/6598478",
-    "bio": "CEO of Cohere. Co-author of 'Attention Is All You Need' \u2014 the Transformer paper. Building enterprise LLMs from Toronto, with a growing Boston presence.",
+    "bio": "CEO of Cohere. Co-author of 'Attention Is All You Need' — the Transformer paper. Building enterprise LLMs from Toronto, with a growing Boston presence.",
     "city": "Cambridge",
     "skills": [
       "transformers",
@@ -720,7 +720,7 @@
     "github_username": "abid",
     "name": "Abid Javed",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AJ&backgroundColor=34d399",
-    "bio": "Co-founder of Run:ai. Building GPU orchestration for AI workloads \u2014 fractional GPUs, scheduling, and cluster management. Acquired by NVIDIA 2024.",
+    "bio": "Co-founder of Run:ai. Building GPU orchestration for AI workloads — fractional GPUs, scheduling, and cluster management. Acquired by NVIDIA 2024.",
     "city": "Boston",
     "skills": [
       "GPU orchestration",
@@ -1035,7 +1035,7 @@
     "github_username": "edwardjhu",
     "name": "Edward Hu",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=EH&backgroundColor=34d399",
-    "bio": "Researcher at Microsoft. Inventor of LoRA and co-inventor of muP \u2014 enabling efficient fine-tuning and hyperparameter transfer for large models.",
+    "bio": "Researcher at Microsoft. Inventor of LoRA and co-inventor of muP — enabling efficient fine-tuning and hyperparameter transfer for large models.",
     "city": "NYC",
     "skills": [
       "LoRA",
@@ -1081,7 +1081,7 @@
     "github_username": "tridao",
     "name": "Tri Dao",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=TDao&backgroundColor=34d399",
-    "bio": "Assistant Professor at Princeton and co-founder of Together AI. Creator of FlashAttention \u2014 the IO-aware exact attention algorithm used everywhere.",
+    "bio": "Assistant Professor at Princeton and co-founder of Together AI. Creator of FlashAttention — the IO-aware exact attention algorithm used everywhere.",
     "city": "Princeton",
     "skills": [
       "FlashAttention",
@@ -1149,7 +1149,7 @@
   {
     "id": "b52",
     "github_username": "apolinario",
-    "name": "Apolin\u00e1rio Passos",
+    "name": "Apolinário Passos",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=AP&backgroundColor=34d399",
     "bio": "Machine Learning Art Engineer at Hugging Face. Building tools and demos that bridge generative AI with creative applications.",
     "city": "Amsterdam",
@@ -1723,7 +1723,7 @@
   {
     "id": "b77",
     "github_username": "cris-val",
-    "name": "Crist\u00f3bal Valenzuela",
+    "name": "Cristóbal Valenzuela",
     "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=CV&backgroundColor=34d399",
     "bio": "CEO and co-founder of Runway ML. Building the next generation of creative tools powered by generative AI for video and multimedia.",
     "city": "NYC",
@@ -2047,5 +2047,542 @@
     "twitter_url": "https://twitter.com/maboraonorouzi",
     "linkedin_url": "",
     "created_at": "2026-03-30T00:00:00Z"
+  },
+  {
+    "id": "b91",
+    "github_username": "bradkav",
+    "name": "Bradley J. Kavanagh",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5381472?v=4",
+    "bio": "Particle astrophysicist at IFCA. Living in Santander in Northern Spain, working as a research scientist for the Spanish National Research Council (CSIC). ",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "bradkav.net",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b92",
+    "github_username": "anton-petrunin",
+    "name": "Anton Petrunin",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8867696?v=4",
+    "bio": "Geometer.",
+    "city": "State College, PA, USA",
+    "skills": [
+      "python",
+      "research",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://anton-petrunin.github.io/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b93",
+    "github_username": "hiyouga",
+    "name": "Yaowei Zheng",
+    "avatar_url": "https://avatars.githubusercontent.com/u/16256802?v=4",
+    "bio": "No code All live",
+    "city": "Beijing, China",
+    "skills": [
+      "python",
+      "research",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "https://twitter.com/llamafactory_ai",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b94",
+    "github_username": "LeapLabTHU",
+    "name": "LeapLab",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95328442?v=4",
+    "bio": "The Learning And Perception (LEAP) Lab is a research group at Tsinghua University working in the area of machine learning, multi-modal learning and embodied int",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "jax",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://www.leaplab.ai/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b95",
+    "github_username": "bghojogh",
+    "name": "Benyamin Ghojogh",
+    "avatar_url": "https://avatars.githubusercontent.com/u/66282117?v=4",
+    "bio": "Fields: machine learning, deep learning, dimensionality reduction, computer vision, data visualization, etc.",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "tensorflow",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b96",
+    "github_username": "oliverphilcox",
+    "name": "Oliver Philcox",
+    "avatar_url": "https://avatars.githubusercontent.com/u/30410089?v=4",
+    "bio": "Assistant Professor at Stanford (KIPAC/LITP)",
+    "city": "USA",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "jax",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "oliverphilcox.github.io",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b97",
+    "github_username": "vision4robotics",
+    "name": "Visual Perception for Robotics with Universal Edge Intelligence",
+    "avatar_url": "https://avatars.githubusercontent.com/u/41963748?v=4",
+    "bio": "Visual Perception for Robotics with Universal Edge Intelligence",
+    "city": "Shanghai, China",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://vision4robotics.github.io/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b98",
+    "github_username": "basiralab",
+    "name": "BASIRA LAB",
+    "avatar_url": "https://avatars.githubusercontent.com/u/51650277?v=4",
+    "bio": "Check out our YouTube channel: https://bit.ly/2SVUeEM",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "none",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "http://basira-lab.com",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b99",
+    "github_username": "emilbjornson",
+    "name": "Emil Björnson",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6824231?v=4",
+    "bio": "Professor of Wireless Communication at KTH, Host of the YouTube channel Wireless Future, IEEE Fellow",
+    "city": "Stockholm, Sweden",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://ebjornson.com/research/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b100",
+    "github_username": "qiongwu86",
+    "name": "qiongwu86",
+    "avatar_url": "https://avatars.githubusercontent.com/u/53260345?v=4",
+    "bio": "",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "pytorch",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b101",
+    "github_username": "WenjieDu",
+    "name": "Wenjie Du",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17807970?v=4",
+    "bio": "AI Researcher <​Time Series, FDA 510k Regulatory​> More awesome private repos will open source! Follow me to get notified ;-)",
+    "city": "where time series is observed & valued",
+    "skills": [
+      "python",
+      "research",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://Time-Series.AI",
+    "twitter_url": "https://twitter.com/_W_DU_",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b102",
+    "github_username": "BiDAlab",
+    "name": "BiDAlab",
+    "avatar_url": "https://avatars.githubusercontent.com/u/47176172?v=4",
+    "bio": "",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "tensorflow",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://bidalab.eps.uam.es/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b103",
+    "github_username": "JHL-HUST",
+    "name": "John Hopcroft Lab at HUST",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14016815?v=4",
+    "bio": "John Hopcroft Lab at HUST",
+    "city": "Wuhan",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "none",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b104",
+    "github_username": "yqx7150",
+    "name": "Qiegen Liu",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26964726?v=4",
+    "bio": "My current research interest is sparse representation, deep learning and their applications in image processing, computer vision and medical imaging.",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "pytorch",
+      "jax",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "http://www.escience.cn/people/liuqiegen/index.html",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b105",
+    "github_username": "HCPLab-SYSU",
+    "name": "HCP Lab",
+    "avatar_url": "https://avatars.githubusercontent.com/u/38847349?v=4",
+    "bio": "Human Cyber Physical (HCP) Intelligence Integration Lab\r\n\r\n中山大学人机物智能融合实验室",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "tensorflow",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://www.sysu-hcp.net/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b106",
+    "github_username": "KU-CVLAB",
+    "name": "KU-CVLAB",
+    "avatar_url": "https://avatars.githubusercontent.com/u/96568164?v=4",
+    "bio": "",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "jax",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b107",
+    "github_username": "NUST-Machine-Intelligence-Laboratory",
+    "name": "NUST-Machine-Intelligence-Laboratory",
+    "avatar_url": "https://avatars.githubusercontent.com/u/58131148?v=4",
+    "bio": "",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b108",
+    "github_username": "TUMFTM",
+    "name": "TUM - Institute of Automotive Technology",
+    "avatar_url": "https://avatars.githubusercontent.com/u/45591837?v=4",
+    "bio": "The main research at the Institute of Automotive Technology under the supervision of Prof. Markus Lienkamp is about the demands in mobility.",
+    "city": "Munich",
+    "skills": [
+      "python",
+      "research",
+      "jax",
+      "none",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://mos.ed.tum.de/ftm",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b109",
+    "github_username": "tencent-ailab",
+    "name": "tencent-ailab",
+    "avatar_url": "https://avatars.githubusercontent.com/u/54961825?v=4",
+    "bio": "Research repositories. ",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "none",
+      "tensorflow"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://ai.tencent.com/",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b110",
+    "github_username": "ostadabbas",
+    "name": "Sarah Ostadabbas",
+    "avatar_url": "https://avatars.githubusercontent.com/u/33360773?v=4",
+    "bio": "Sarah Ostadabbas is an Assistant Professor at the Electrical and Computer Engineering Department of Northeastern University (NEU). Sarah joined NEU from Georgia",
+    "city": "Boston, USA",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "http://www.northeastern.edu/ostadabbas",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b111",
+    "github_username": "lemire",
+    "name": "Daniel Lemire",
+    "avatar_url": "https://avatars.githubusercontent.com/u/391987?v=4",
+    "bio": "Software performance expert. Ranked in the top 2% of scientists globally (Stanford/Elsevier 2025) and among GitHub's top 1000 developers. ",
+    "city": "Montreal, Quebec, Canada",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "http://lemire.me/en/",
+    "twitter_url": "https://twitter.com/lemire",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b112",
+    "github_username": "VDIGPKU",
+    "name": "VDIGPKU",
+    "avatar_url": "https://avatars.githubusercontent.com/u/62875783?v=4",
+    "bio": "Visual Data Interpreting and Generation Lab",
+    "city": "",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "jax",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b113",
+    "github_username": "aliborji",
+    "name": "Ali Borji",
+    "avatar_url": "https://avatars.githubusercontent.com/u/23263386?v=4",
+    "bio": "I have been working both in academia (phd and postdoc) and industry. My areas of expertise are computer vision, and machine learning, and AI in general.",
+    "city": "SF",
+    "skills": [
+      "python",
+      "research",
+      "none",
+      "pytorch"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "",
+    "twitter_url": "",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
+  },
+  {
+    "id": "b114",
+    "github_username": "Ha0Tang",
+    "name": "Hao Tang",
+    "avatar_url": "https://avatars.githubusercontent.com/u/23024709?v=4",
+    "bio": "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.",
+    "city": "Zurich, Switzerland",
+    "skills": [
+      "python",
+      "research",
+      "pytorch",
+      "none"
+    ],
+    "looking_for": [
+      "collaborator"
+    ],
+    "website_url": "https://ha0tang.github.io/",
+    "twitter_url": "https://twitter.com/HaoTang_ai",
+    "linkedin_url": "",
+    "created_at": "2026-03-31T00:00:00Z",
+    "verified": false
   }
 ]

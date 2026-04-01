@@ -1,4 +1,57 @@
-# PeerGraph.ai — Scoring System Backlog
+# PeerGraph.ai — Backlog
+
+## UI / UX Features
+
+### 🗺️ Graph View
+- [ ] **City filter on graph** — "Show only Seattle nodes" (infra exists in GraphView, just needs UI polish + Seattle data)
+- [ ] **Mini-map / overview panel** — thumbnail of full graph with viewport indicator for large graphs
+- [ ] **Node search / jump-to** — type a name, graph flies to that node and highlights it
+- [ ] **"Focus mode"** — click a node to isolate its 1-hop neighborhood, dim everything else
+- [ ] **Graph legend toggle** — collapsible legend explaining node shapes, colors, link types
+- [ ] **Edge labels on hover** — show paper title when hovering a researcher↔project link
+- [ ] **Animated link pulses** — subtle animation showing data flowing from researcher → product
+- [ ] **Domain color overlay** — toggle to color nodes by domain instead of type (researcher/builder)
+- [ ] **Save graph state** — shareable URL that encodes current filters + viewport (e.g. `?domain=NLP&city=Seattle`)
+- [ ] **Export graph** — download current view as PNG or SVG
+
+### 🔍 Search & Discovery
+- [ ] **Semantic search** — search by concept, not just name (e.g. "models for protein folding" → relevant nodes)
+- [ ] **"Similar to this" button** on researcher/builder profiles — find others in the same cluster
+- [ ] **Domain landing pages** — `/domain/nlp` shows all researchers, papers, and products in NLP
+- [ ] **City/region pages** — `/region/seattle` shows local ecosystem at a glance
+- [ ] **Trending this week** — surface nodes getting new links added recently
+- [ ] **Paper → products timeline** — for a given paper, show a timeline of products built on it over the years
+
+### 👤 Profiles
+- [ ] **Researcher profile: "Built On" section** — which commercial products are based on their papers
+- [ ] **Builder profile: research lineage tree** — visual mini-graph showing paper → product chain
+- [ ] **"Claim this profile" flow** — researchers can verify and enrich their auto-imported profile
+- [ ] **Verification badge** — show a ✓ on profiles that have been claimed/verified
+- [ ] **Paper TLDR cards** — show Semantic Scholar TLDR summaries inline on paper hover
+- [ ] **Confidence indicator on links** — small colored dot (green/yellow/red) showing link confidence score
+
+### 🏠 Homepage
+- [ ] **Live ticker / activity feed** — scrolling feed of recent links added (researcher X → product Y)
+- [ ] **"Graph of the day"** — highlight a specific researcher + their impact network each day
+- [ ] **City spotlight** — rotating featured city with local researcher + builder count
+- [ ] **Domain heat map** — visual grid showing which domains are most active
+
+### 🧭 Navigation & UX
+- [ ] **Keyboard shortcuts** — `G` → graph, `S` → search, `/` → focus search bar
+- [ ] **Breadcrumb trails** — e.g. Paper → citing products → builder profiles
+- [ ] **Mobile graph view** — simplified list/card layout for mobile instead of canvas (canvas is hard on touch)
+- [ ] **Dark/light mode toggle** — currently dark-only
+- [ ] **Onboarding tooltip tour** — first-time visitor gets a 3-step walkthrough of the graph
+
+### 📊 Analytics & Scoring
+- [ ] **Score breakdown modal** — click any AII score to see exact breakdown (products × citations × breadth)
+- [ ] **Researcher comparison** — select 2 researchers and compare their impact profiles side by side
+- [ ] **Domain leaderboards** — top researchers per domain (NLP, CV, etc.)
+- [ ] **"Rising" badge** — tag researchers whose AII score increased significantly this month
+
+---
+
+# Scoring System Backlog
 
 ## Phase 1: Foundation (CURRENT)
 - [x] Open-source scoring function
