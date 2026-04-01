@@ -1,163 +1,152 @@
 # PeerGraph.ai — Launch Copy
 
+---
+
 ## 🟠 Hacker News — Show HN
 
 **Title:**
-Show HN: PeerGraph.ai – interactive graph connecting AI research papers to the products built on them
+Show HN: PeerGraph.ai – open graph connecting AI papers to products, now with agent skill pack exports
 
 **Body:**
-I built PeerGraph.ai to answer a question that's been bugging me: which AI papers actually got turned into real products?
+I built PeerGraph.ai to answer a question I kept running into: which AI papers actually got turned into real products?
 
-Researchers publish. Builders build. Nobody connects the dots.
+Researchers publish. Builders build. Nobody connects the dots. A paper gets 50k citations, but nobody tracks that 30 startups shipped products based on it.
 
-The result is a force-directed graph with 144 researchers (auto-imported from Semantic Scholar), 90+ builders (GitHub-authenticated), and 93 landmark papers. Each link between a paper and a product has a source type (maintainer claim / community / AI-detected) and a confidence score.
+**The graph:** 144 researchers (auto-imported from Semantic Scholar), 90+ builders (GitHub-authenticated), 93 landmark papers. Every link has a source type (maintainer claim / community / AI-detected) and a confidence score 0-100.
 
-I also built an "Applied Impact Index" — a metric that ranks researchers by real-world product adoption rather than just citations. Yann LeCun has 245K citations, but how many products actually shipped based on his work?
+**Applied Impact Index:** A metric ranking researchers by real-world product adoption, not citations. ~23% of the top-20 by AII are not in the top-20 by h-index. The inversion rate tells you who has real-world impact vs academic prestige.
 
-Tech stack: Next.js 15, Tailwind, custom canvas force graph (no react-force-graph), Supabase.
+**New: Agent skill pack exports.** Any researcher, domain, or paper can be downloaded as a folder of interconnected markdown files — YAML frontmatter, wikilinks, MOC entry point. Drop into `.claude/skills/` or `.cursor/skills/` and your agent understands the research landscape for that domain. Free, zero API cost, no rate limits.
 
-The data and scoring function are fully open source (MIT): github.com/ogkranthi/peergraph
+**Tech:** Next.js 15, custom canvas force graph (no library), Supabase, static JSON seed data.
 
-Would love feedback on: the scoring methodology, missing researchers/papers, and whether the graph is actually useful for discovery.
+**Open source MIT:** github.com/ogkranthi/peergraph
+
+Would love feedback on: the scoring methodology, missing researchers/papers, and whether the agent skills export format is useful or needs work.
 
 ---
 
-## 🐦 Twitter/X Threads
+## 📋 Reddit — r/MachineLearning
 
-### Thread 1 — The product reveal
+**Title:** I mapped which AI research papers power which real products — Applied Impact Index ranks researchers by adoption, not citations [OC]
 
-Tweet 1:
+**Body:**
+Hey r/MachineLearning,
+
+Been building PeerGraph.ai for a few months — an open-source platform that maps the lineage from AI research to real products.
+
+**The core insight:** h-index and citation count measure academic influence. But "how many production systems actually implemented this paper" is a different and arguably more important metric. I built the Applied Impact Index to track this.
+
+**Current data:**
+- 144 researchers (auto-imported from Semantic Scholar)
+- 90+ builders with GitHub auth
+- 93 landmark papers
+- Every paper→product link has provenance (source type + confidence score)
+
+**Some findings:**
+- ~23% of researchers in the top-20 by Applied Impact Index are NOT in the top-20 by citation count
+- The paper-to-product gap averages 2-4 years
+- "Attention Is All You Need" is the most-built-on paper by a large margin
+- Many highly-cited researchers have zero products built on their work
+
+**New feature:** Export any researcher or domain as agent-ready markdown skill packs (like HyperGraph by Hyperbrowser but built on real paper→product data). Drop into `.claude/skills/` for an agent that understands the research landscape.
+
+Would love critique on the scoring methodology — the AII formula is open source and I want to get it right. Also happy to add researchers/papers that are missing.
+
+**MIT licensed:** github.com/ogkranthi/peergraph
+**Live:** peergraph.ai
+
+---
+
+## 💼 LinkedIn
+
+The gap between AI research and AI products has never been more visible — or more invisible.
+
+Researchers publish groundbreaking work. Builders ship products based on it. And nobody connects the dots.
+
+I spent months building PeerGraph.ai to fix that.
+
+**What it does:**
+→ Maps 144 AI researchers to the products built on their papers
+→ Tracks the Applied Impact Index — real-world product adoption, not just citations
+→ Shows the full research→product network as an interactive force graph
+→ New: exports any domain as agent-ready markdown skill packs for .claude/skills/
+
+**What I found:** ~23% of researchers in the top-20 by real-world impact are NOT in the top-20 by h-index. The gap between academic prestige and real-world value creation is real and measurable.
+
+All open source. MIT licensed.
+
+If you're an AI researcher or builder — you might already be in the graph: peergraph.ai
+
+Would love feedback from this community on what's missing.
+
+---
+
+## 🐦 Twitter/X — Thread
+
+**Tweet 1:**
 I built a map of how AI research becomes real products.
 
 144 researchers. 90+ builders. 93 papers. Every link shows exactly which paper powers which product.
 
+New: download any domain as agent-ready .claude/skills/ markdown packs.
+
 peergraph.ai 🧵
 
-Tweet 2:
+**Tweet 2:**
 The problem: researchers publish papers. Builders build products. Nobody connects the dots.
 
 Yann LeCun doesn't know 15 products shipped based on his work. The builders don't know each other exists.
 
 PeerGraph fixes that.
 
-Tweet 3:
-Each paper→product link has:
-- Source (maintainer claimed / community / AI-detected)
-- Confidence score (0-100)
-- Evidence URL
+**Tweet 3:**
+The Applied Impact Index ranks researchers by real-world product adoption, not citations.
 
-Not vibes. Provenance.
+Finding: ~23% of the top-20 by AII are NOT in the top-20 by h-index.
 
-Tweet 4:
-I also built the Applied Impact Index — ranks researchers by real-world product adoption, not just citations.
+The gap between academic prestige and real-world value creation is real and measurable.
 
-Different metric. Different top 10.
+**Tweet 4:**
+New feature: export any researcher or domain as a .claude/skills/ pack.
 
-Tweet 5:
-Built with: Next.js 15 + custom canvas force graph (no library) + Supabase
+MOC entry point + interconnected markdown + YAML frontmatter + [[wikilinks]].
 
-Fully open source, MIT licensed.
-github.com/ogkranthi/peergraph
+Drop into Claude Code or Cursor and your agent understands the research landscape. Free. No API key.
 
-What am I missing? Which papers/builders should be in the graph?
-
----
-
-### Thread 2 — Tag researchers already in the graph
-
-Tweet (tag @hwchase17):
-@hwchase17 LangChain is in the PeerGraph.ai graph, linked to the Attention Is All You Need paper and RAG research.
+**Tweet 5:**
+@hwchase17 LangChain is in the graph, linked to Attention Is All You Need + RAG research.
 
 Check your builder profile: peergraph.ai/builder/hwchase17
 
 What paper links am I missing?
 
-Tweet (tag @Thom_Wolf):
-@Thom_Wolf @ClementDelangue HuggingFace's work is in the PeerGraph.ai graph — linked to BERT, T5, and the transformers paper.
+**Tweet 6:**
+Open source MIT: github.com/ogkranthi/peergraph
 
-See the connections: peergraph.ai
+Built with Next.js 15 + custom canvas force graph (no library) + Supabase.
 
-What should we add?
-
-Tweet (tag @tri_dao):
-@tri_dao FlashAttention is one of the most-built-on papers in the PeerGraph graph. Dozens of products list it as a foundation.
-
-See the impact: peergraph.ai/researcher/[id]
+What am I missing? Which researchers/papers/products should be in the graph?
 
 ---
 
-## 📋 Reddit — r/MachineLearning
+## 📧 Cold email to builders already in the graph
 
-**Title:** I built a graph showing which AI papers power which real products — Applied Impact Index ranks researchers by adoption, not citations
-
-**Body:**
-Hey r/MachineLearning,
-
-I built PeerGraph.ai — an open-source platform that maps the lineage from AI research papers to real-world products.
-
-**The core idea:** Citation counts measure academic influence. But "which papers got actually implemented in production systems" is a different and arguably more important question. I built a metric called the Applied Impact Index to track this.
-
-**What's in it:**
-- 144 researchers (auto-imported from Semantic Scholar with h-index, citations, co-authors)
-- 90+ builders (GitHub-authenticated, self-reported paper links)
-- 93 landmark papers
-- Force-directed graph showing the full research→product network
-- Each link has source type + confidence score for provenance
-
-**The graph:** It's a custom canvas-based force graph (built from scratch, not a library wrapper). You can filter by domain, city, zoom/pan, export PNG, and click any node to see the 1-hop neighborhood.
-
-**Open source:** MIT licensed at github.com/ogkranthi/peergraph
-
-Would love feedback from this community especially on: the scoring methodology, missing researchers, and whether this framing (paper → product) is actually useful vs. misleading.
-
-Live at: peergraph.ai
-
----
-
-## 💼 LinkedIn Post
-
-The gap between AI research and AI products has never been more visible — or more invisible.
-
-Researchers publish groundbreaking work. Builders ship products based on it. And nobody connects the dots.
-
-I spent the last few months building PeerGraph.ai to fix that.
-
-It's an open graph that maps exactly how AI papers become real-world products:
-→ 144 researchers from Semantic Scholar
-→ 90+ builders who've linked their products to source papers
-→ 93 landmark papers
-→ Every link with provenance (who claimed it, confidence score, evidence)
-
-The most interesting thing I found: the "Applied Impact Index" — ranking researchers by real-world product adoption rather than citations — produces a very different top 10 than h-index.
-
-Some researchers with modest citation counts have massive real-world impact. Some highly-cited researchers have almost no products built on their work.
-
-Open source (MIT): github.com/ogkranthi/peergraph
-Live: peergraph.ai
-
-If you're an AI researcher or builder — you might already be in the graph. I'd love your feedback on what's missing.
-
----
-
-## 📧 Direct Email to Researchers
-
-Subject: Your work is on PeerGraph.ai — would love your feedback
+Subject: You're on PeerGraph.ai — here's your research lineage
 
 Hi [Name],
 
-I'm Kranthi, a builder who recently launched PeerGraph.ai — an open graph that maps how AI research papers become real-world products.
+I'm Kranthi. I built PeerGraph.ai — an open graph mapping AI research papers to real products.
 
-Your work is listed here: [profile URL]
+[Project name] is listed here: [profile URL]
 
-I've linked [X] products that list your papers as foundations. The "Applied Impact Index" ranks you [#X] based on real-world adoption.
+I've linked it to [X papers] including [paper name]. You can also download your full research lineage as a .claude/skills/ pack — useful for onboarding new engineers or giving agents context about your technical foundations.
 
-I'd love 5 minutes of your feedback:
-1. Are the paper links accurate?
-2. Are there products built on your work that I'm missing?
-3. Does this kind of metric feel useful or misleading to you?
+Two questions:
+1. Are the paper links accurate? Anything missing?
+2. Would a `peergraph.json` in your repo (like package.json for research attribution) be useful?
 
-Happy to add/remove anything. Researchers can also claim and verify their profiles.
+Happy to add/fix anything. Repo is MIT: github.com/ogkranthi/peergraph
 
-Thanks,
 Kranthi
 peergraph.ai
