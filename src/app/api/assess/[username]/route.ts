@@ -65,15 +65,51 @@ export async function GET(
   const { username } = await params;
   const startTime = Date.now();
 
+  // Support ?org=codeintegrity-ai to force-include an org
+  const url = new URL(_request.url);
+  const extraOrg = url.searchParams.get("org");
+
   // 1. Fetch user profile
   const user = await ghJSON(`https://api.github.com/users/${username}`);
   if (!user) {
     return NextResponse.json({ error: `GitHub user '${username}' not found` }, { status: 404 });
   }
 
-  // 2. Fetch orgs
+  // 2. Fetch orgs (public memberships)
   const orgs: { login: string }[] = (await ghJSON(`https://api.github.com/users/${username}/orgs`)) || [];
   const orgLogins = orgs.map((o) => o.login);
+
+  // Force-include org from query param
+  if (extraOrg && !orgLogins.includes(extraOrg)) {
+    orgLogins.push(extraOrg);
+  }
+
+  // Also try to discover orgs from the user's profile company field
+  // and from their repo owner names (catches private org memberships)
+  const companyName = (user.company || "").replace(/^@/, "").trim().toLowerCase();
+  if (companyName && !orgLogins.includes(companyName)) {
+    // Check if this company is a GitHub org
+    const orgCheck = await ghJSON(`https://api.github.com/orgs/${companyName}`);
+    if (orgCheck && orgCheck.login) orgLogins.push(orgCheck.login);
+  }
+
+  // Also check if any personal repos are from an org (user might be contributor)
+  // and scan repos the user has contributed to via events
+  const events: any[] = (await ghJSON(`https://api.github.com/users/${username}/events/public?per_page=50`)) || [];
+  const eventOrgs = new Set<string>();
+  for (const event of events) {
+    if (event.repo?.name) {
+      const orgName = event.repo.name.split("/")[0];
+      if (orgName !== username && !orgLogins.includes(orgName)) {
+        eventOrgs.add(orgName);
+      }
+    }
+  }
+  // Try top 3 discovered orgs
+  for (const org of Array.from(eventOrgs).slice(0, 3)) {
+    const orgCheck = await ghJSON(`https://api.github.com/orgs/${org}`);
+    if (orgCheck && orgCheck.login) orgLogins.push(orgCheck.login);
+  }
 
   // 3. Fetch repos (personal + org)
   const personalRepos: RepoInfo[] = (await ghJSON(
@@ -81,7 +117,7 @@ export async function GET(
   )) || [];
 
   let orgRepos: RepoInfo[] = [];
-  for (const org of orgLogins.slice(0, 3)) {
+  for (const org of orgLogins.slice(0, 5)) {
     const repos = (await ghJSON(`https://api.github.com/orgs/${org}/repos?sort=stars&per_page=20`)) || [];
     orgRepos = [...orgRepos, ...repos];
   }

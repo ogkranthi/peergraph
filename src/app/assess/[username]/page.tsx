@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ENGAGEMENT_LABELS } from "@/lib/classify-engagement";
 
 interface Connection {
@@ -35,8 +36,10 @@ const LOADING_STEPS = [
   "Matching against security papers...",
 ];
 
-export default function AssessResultsPage() {
+function AssessResultsInner() {
   const { username } = useParams<{ username: string }>();
+  const searchParams = useSearchParams();
+  const org = searchParams.get("org");
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -47,7 +50,8 @@ export default function AssessResultsPage() {
       setLoadingStep((prev) => (prev < LOADING_STEPS.length - 1 ? prev + 1 : prev));
     }, 3000);
 
-    fetch(`/api/assess/${username}`)
+    const apiUrl = org ? `/api/assess/${username}?org=${encodeURIComponent(org)}` : `/api/assess/${username}`;
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) setError(data.error);
@@ -222,5 +226,18 @@ export default function AssessResultsPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+export default function AssessResultsPage() {
+  return (
+    <Suspense fallback={
+      <div className="max-w-3xl mx-auto px-4 py-20 text-center">
+        <div className="w-12 h-12 border-2 border-amber-400/30 border-t-amber-400 rounded-full animate-spin mx-auto mb-6" />
+        <p className="text-white/40">Loading...</p>
+      </div>
+    }>
+      <AssessResultsInner />
+    </Suspense>
   );
 }
