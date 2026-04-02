@@ -87,6 +87,24 @@ export default function AnalyzePage() {
           </button>
         </div>
         {error && <p className="text-sm text-red-400 mt-2">{error}</p>}
+        <div className="flex flex-wrap gap-2 mt-3">
+          <span className="text-xs text-white/30">Try:</span>
+          {[
+            "github.com/Dao-AILab/flash-attention",
+            "github.com/huggingface/transformers",
+            "github.com/facebookresearch/llama",
+            "github.com/langchain-ai/langchain",
+          ].map((example) => (
+            <button
+              key={example}
+              type="button"
+              onClick={() => setUrl(`https://${example}`)}
+              className="text-xs text-amber-400/70 hover:text-amber-300 underline underline-offset-2 decoration-amber-400/20 hover:decoration-amber-400/50 transition-colors"
+            >
+              {example.replace("github.com/", "")}
+            </button>
+          ))}
+        </div>
       </form>
 
       {/* How it works */}
@@ -205,10 +223,15 @@ export default function AnalyzePage() {
           {/* No matches */}
           {result.matched.count === 0 && (
             <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-center">
-              <p className="text-white/40 mb-2">No paper matches found in the README.</p>
+              <p className="text-white/40 mb-2">No paper references found in this README.</p>
               <p className="text-sm text-white/30">
-                This could mean: the README doesn&apos;t cite papers, uses papers not yet in our database,
-                or references them in a format we don&apos;t detect yet.
+                Try a research-heavy repo like{" "}
+                <button onClick={() => setUrl("https://github.com/Dao-AILab/flash-attention")} className="text-amber-400/70 hover:text-amber-300 underline underline-offset-2">
+                  Dao-AILab/flash-attention
+                </button>{" "}or{" "}
+                <button onClick={() => setUrl("https://github.com/huggingface/transformers")} className="text-amber-400/70 hover:text-amber-300 underline underline-offset-2">
+                  huggingface/transformers
+                </button>
               </p>
               <p className="text-xs text-white/25 mt-3">
                 Found {result.extracted.arxivIds.length} arXiv IDs and {result.extracted.dois.length} DOIs

@@ -56,6 +56,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "url is required" }, { status: 400 });
   }
 
+  // Detect profile URLs (github.com/username with no repo)
+  const profileMatch = url.match(/github\.com\/([A-Za-z0-9_.-]+)\/?$/);
+  if (profileMatch && !url.match(/github\.com\/[^/]+\/[^/]+/)) {
+    const username = profileMatch[1];
+    return NextResponse.json(
+      { error: `That looks like a GitHub profile, not a repo. Try https://github.com/${username}/nanoGPT` },
+      { status: 400 }
+    );
+  }
+
   const ghInfo = extractGitHubInfo(url);
   if (!ghInfo) {
     return NextResponse.json({ error: "Invalid GitHub URL. Expected: https://github.com/owner/repo" }, { status: 400 });
@@ -67,15 +77,21 @@ export async function POST(request: NextRequest) {
     const readmeRes = await fetch(
       `https://api.github.com/repos/${ghInfo.owner}/${ghInfo.repo}/readme`,
       {
-        headers: {
-          Accept: "application/vnd.github.raw+json",
-          "User-Agent": "PeerGraph.ai/1.0",
-        },
+        headers: (() => {
+          const h: HeadersInit = {
+            Accept: "application/vnd.github.raw+json",
+            "User-Agent": "PeerGraph.ai/1.0",
+          };
+          if (process.env.GITHUB_TOKEN) {
+            h["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
+          }
+          return h;
+        })(),
       }
     );
     if (!readmeRes.ok) {
       return NextResponse.json(
-        { error: `Could not fetch README: ${readmeRes.status} ${readmeRes.statusText}` },
+        { error: "Repo not found or no README. Make sure the repo is public and has a README.md" },
         { status: 404 }
       );
     }
