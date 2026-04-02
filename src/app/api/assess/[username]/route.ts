@@ -11,6 +11,7 @@ import {
   type RepoInfo,
 } from "@/lib/assess-signals";
 import { classifyEngagement } from "@/lib/classify-engagement";
+import { CONCEPT_RULES } from "@/lib/concept-aliases";
 
 const GH_HEADERS: Record<string, string> = {
   Accept: "application/vnd.github+json",
@@ -46,7 +47,9 @@ let libraryMap: { library: string; paper_ids: string[]; confidence: number }[] |
 async function getLibraryMap() {
   if (!libraryMap) {
     try {
-      libraryMap = (await import("@/data/library-paper-map.json")).default as any;
+      const raw = (await import("@/data/library-paper-map.json")).default as any;
+      // The file has { entries: [...] } structure
+      libraryMap = Array.isArray(raw) ? raw : (raw.entries || []);
     } catch {
       libraryMap = [];
     }
@@ -58,6 +61,7 @@ export async function GET(
   _request: NextRequest,
   { params }: { params: Promise<{ username: string }> }
 ) {
+  try {
   const { username } = await params;
   const startTime = Date.now();
 
@@ -186,7 +190,7 @@ export async function GET(
           const tags = (model.tags || []).map((t: string) => t.toLowerCase());
 
           // Match model name/tags against concept rules
-          for (const rule of (await import("@/lib/concept-aliases")).CONCEPT_RULES) {
+          for (const rule of CONCEPT_RULES) {
             let matched = false;
             let evidence = "";
             for (const pattern of rule.namePatterns) {
@@ -319,4 +323,11 @@ export async function GET(
       signalDistribution: signalDist,
     },
   });
+  } catch (err: any) {
+    console.error("Assessment error:", err);
+    return NextResponse.json(
+      { error: `Assessment failed: ${err?.message || "unknown error"}` },
+      { status: 500 }
+    );
+  }
 }
