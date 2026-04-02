@@ -46,25 +46,32 @@ function AssessResultsInner() {
   const [loadingStep, setLoadingStep] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setLoadingStep((prev) => (prev < LOADING_STEPS.length - 1 ? prev + 1 : prev));
-    }, 3000);
+    // Wait for searchParams to hydrate — org might be null on first render
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setLoadingStep((prev) => (prev < LOADING_STEPS.length - 1 ? prev + 1 : prev));
+      }, 3000);
 
-    const apiUrl = org ? `/api/assess/${username}?org=${encodeURIComponent(org)}` : `/api/assess/${username}`;
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.error) setError(data.error);
-        else setResult(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError("Failed to fetch assessment. Try again.");
-        setLoading(false);
-      });
+      const apiUrl = org
+        ? `/api/assess/${username}?org=${encodeURIComponent(org)}`
+        : `/api/assess/${username}`;
+      fetch(apiUrl)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) setError(data.error);
+          else setResult(data);
+          setLoading(false);
+          clearInterval(interval);
+        })
+        .catch(() => {
+          setError("Failed to fetch assessment. Try again.");
+          setLoading(false);
+          clearInterval(interval);
+        });
+    }, 100); // Small delay to let searchParams hydrate
 
-    return () => clearInterval(interval);
-  }, [username]);
+    return () => clearTimeout(timer);
+  }, [username, org]);
 
   if (loading) {
     return (

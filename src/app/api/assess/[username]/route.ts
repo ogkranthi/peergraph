@@ -69,10 +69,14 @@ export async function GET(
   const url = new URL(_request.url);
   const extraOrg = url.searchParams.get("org");
 
+  // Check rate limit status
+  const hasToken = !!process.env.GITHUB_TOKEN;
+
   // 1. Fetch user profile
   const user = await ghJSON(`https://api.github.com/users/${username}`);
   if (!user) {
-    return NextResponse.json({ error: `GitHub user '${username}' not found` }, { status: 404 });
+    const hint = !hasToken ? " (No GITHUB_TOKEN configured — may be rate limited)" : "";
+    return NextResponse.json({ error: `GitHub user '${username}' not found${hint}` }, { status: 404 });
   }
 
   // 2. Fetch orgs (public memberships)
@@ -84,18 +88,37 @@ export async function GET(
     orgLogins.push(extraOrg);
   }
 
-  // Also try to discover orgs from the user's profile company field
-  // and from their repo owner names (catches private org memberships)
-  const companyName = (user.company || "").replace(/^@/, "").trim().toLowerCase();
-  if (companyName && !orgLogins.includes(companyName)) {
-    // Check if this company is a GitHub org
-    const orgCheck = await ghJSON(`https://api.github.com/orgs/${companyName}`);
-    if (orgCheck && orgCheck.login) orgLogins.push(orgCheck.login);
+  // Debug tracking
+  const debug = { orgsTried: [] as string[], eventsFound: 0, companyRaw: user.company || "", rateLimit: "" };
+
+  // Try to discover orgs from the user's profile company field
+  // Company might be "CodeIntegrity" but org is "codeintegrity-ai"
+  const companyRaw = (user.company || "").replace(/^@/, "").trim();
+  const companyLower = companyRaw.toLowerCase().replace(/\s+/g, "");
+  if (companyLower) {
+    // Try multiple variations: exact, lowercase, with -ai, with -io, without spaces
+    const variations = [
+      companyLower,
+      companyLower + "-ai",
+      companyLower + "-io",
+      companyLower.replace(/-/g, ""),
+      companyRaw.toLowerCase().replace(/\s+/g, "-"),
+      companyRaw.toLowerCase().replace(/\s+/g, "-") + "-ai",
+    ];
+    for (const variant of new Set(variations)) {
+      if (orgLogins.includes(variant)) continue;
+      debug.orgsTried.push(variant);
+      const orgCheck = await ghJSON(`https://api.github.com/orgs/${variant}`);
+      if (orgCheck && orgCheck.login) {
+        orgLogins.push(orgCheck.login);
+        break; // found it
+      }
+    }
   }
 
-  // Also check if any personal repos are from an org (user might be contributor)
-  // and scan repos the user has contributed to via events
+  // Discover orgs from public events (catches private org memberships)
   const events: any[] = (await ghJSON(`https://api.github.com/users/${username}/events/public?per_page=50`)) || [];
+  debug.eventsFound = events.length;
   const eventOrgs = new Set<string>();
   for (const event of events) {
     if (event.repo?.name) {
@@ -105,8 +128,8 @@ export async function GET(
       }
     }
   }
-  // Try top 3 discovered orgs
-  for (const org of Array.from(eventOrgs).slice(0, 3)) {
+  // Try discovered orgs
+  for (const org of Array.from(eventOrgs).slice(0, 5)) {
     const orgCheck = await ghJSON(`https://api.github.com/orgs/${org}`);
     if (orgCheck && orgCheck.login) orgLogins.push(orgCheck.login);
   }
@@ -357,6 +380,14 @@ export async function GET(
       strongConnections: connections.filter((c) => c && c.highestConfidence > 75).length,
       topDomain: domainCoverage[0]?.domain || "none",
       signalDistribution: signalDist,
+    },
+    debug: {
+      hasGitHubToken: hasToken,
+      orgsDiscovered: orgLogins,
+      orgsTried: debug.orgsTried,
+      eventsFound: debug.eventsFound,
+      companyRaw: debug.companyRaw,
+      extraOrgParam: extraOrg,
     },
   });
   } catch (err: any) {
