@@ -13,6 +13,12 @@ export type ResearchDomain =
   | "Graph ML"
   | "Multimodal"
   | "Optimization"
+  | "Prompt Injection Defense"
+  | "Differential Privacy"
+  | "Adversarial Robustness"
+  | "Data Provenance"
+  | "LLM Safety"
+  | "Software Testing"
   | "Other";
 
 export type LookingFor =

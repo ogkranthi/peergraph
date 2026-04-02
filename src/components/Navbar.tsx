@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/graph", label: "Graph" },
     { href: "/directory", label: "Directory" },
     { href: "/explore", label: "Explore" },
-    { href: "/analyze", label: "Analyze" },
+    { href: "/assess", label: "Assess" },
     { href: "/diligence", label: "Diligence" },
     { href: "/join", label: "Get Listed", highlight: true },
   ];

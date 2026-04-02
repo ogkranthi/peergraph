@@ -2688,5 +2688,860 @@
     ],
     "author_ids": [],
     "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp1",
+    "semantic_id": "",
+    "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+    "year": 2023,
+    "venue": "AISec @ CCS 2023",
+    "citation_count": 620,
+    "abstract": "This paper demonstrates indirect prompt injection attacks where adversaries inject prompts into data retrieved by LLM-integrated applications, enabling remote control of the model's behavior without direct user interaction.",
+    "url": "https://arxiv.org/abs/2302.12173",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp2",
+    "semantic_id": "",
+    "title": "HouYi: A Framework for Systematic Prompt Injection Attack Against LLM-integrated Applications",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 180,
+    "abstract": "HouYi presents a systematic black-box prompt injection framework that uses a three-component architecture to automatically discover injection vulnerabilities in LLM-integrated applications.",
+    "url": "https://arxiv.org/abs/2306.05499",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp3",
+    "semantic_id": "",
+    "title": "Tensor Trust: Interpretable Prompt Injection Attacks from an Online Game",
+    "year": 2023,
+    "venue": "ICLR 2024",
+    "citation_count": 150,
+    "abstract": "Tensor Trust collects a large dataset of prompt injection attacks and defenses from an online game, providing interpretable analysis of attack strategies and their effectiveness against various defense mechanisms.",
+    "url": "https://arxiv.org/abs/2308.14132",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp4",
+    "semantic_id": "",
+    "title": "StruQ: Defending Against Prompt Injection with Structured Queries",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 95,
+    "abstract": "StruQ proposes a defense against prompt injection by separating user prompts from data through structured query representations, preventing injected instructions in data from being executed.",
+    "url": "https://arxiv.org/abs/2302.05733",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp5",
+    "semantic_id": "",
+    "title": "Jatmo: Prompt Injection Defense by Task-Specific Finetuning",
+    "year": 2023,
+    "venue": "ESORICS 2024",
+    "citation_count": 85,
+    "abstract": "Jatmo defends against prompt injection by using task-specific finetuned models that follow only their trained task, making them inherently resistant to injected instructions that deviate from the expected task.",
+    "url": "https://arxiv.org/abs/2310.06387",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp6",
+    "semantic_id": "",
+    "title": "NeMo Guardrails: A Toolkit for Controllable and Safe LLM Applications with Programmable Rails",
+    "year": 2023,
+    "venue": "EMNLP 2023 Demo",
+    "citation_count": 320,
+    "abstract": "NeMo Guardrails is an open-source toolkit from NVIDIA that enables developers to add programmable safety constraints to LLM-based conversational applications through a modeling language called Colang.",
+    "url": "https://arxiv.org/abs/2310.04451",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp7",
+    "semantic_id": "",
+    "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 410,
+    "abstract": "This paper introduces representation engineering, a top-down approach to neural network transparency that identifies and manipulates high-level cognitive concepts through control vectors applied to model representations.",
+    "url": "https://arxiv.org/abs/2312.06674",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp8",
+    "semantic_id": "",
+    "title": "Defending ChatGPT against Jailbreak Attack via Self-Reminder",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 130,
+    "abstract": "Self-Reminder is a defense mechanism that encapsulates user queries within system prompts that remind the LLM of its safety guidelines, significantly reducing the success rate of jailbreak attacks.",
+    "url": "https://arxiv.org/abs/2309.00614",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp9",
+    "semantic_id": "",
+    "title": "Automatic and Universal Prompt Injection Attacks against Large Language Models",
+    "year": 2024,
+    "venue": "arXiv",
+    "citation_count": 75,
+    "abstract": "This work proposes automatic methods for generating universal prompt injection attacks that transfer across different LLMs and application contexts, highlighting the systemic nature of prompt injection vulnerabilities.",
+    "url": "https://arxiv.org/abs/2402.06363",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp10",
+    "semantic_id": "",
+    "title": "Identifying and Mitigating the Security Risks of LLM-Integrated Applications",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 160,
+    "abstract": "This paper systematically identifies security risks in LLM-integrated applications and proposes a taxonomy of threats including prompt injection, data leakage, and unauthorized actions through tool use.",
+    "url": "https://arxiv.org/abs/2304.05197",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp11",
+    "semantic_id": "",
+    "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 380,
+    "abstract": "Llama Guard is an LLM-based safeguard model that performs input-output classification for human-AI conversations, detecting unsafe content across a customizable taxonomy of safety categories.",
+    "url": "https://arxiv.org/abs/2309.07045",
+    "domains": [
+      "Prompt Injection Defense"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp12",
+    "semantic_id": "",
+    "title": "Deep Learning with Differential Privacy",
+    "year": 2016,
+    "venue": "CCS 2016",
+    "citation_count": 5800,
+    "abstract": "This seminal paper introduces DP-SGD, a differentially private stochastic gradient descent algorithm that enables training deep neural networks with provable privacy guarantees by clipping per-sample gradients and adding calibrated noise.",
+    "url": "https://arxiv.org/abs/1607.00133",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp13",
+    "semantic_id": "",
+    "title": "Large Language Models Can Be Strong Differentially Private Learners",
+    "year": 2021,
+    "venue": "ICLR 2022",
+    "citation_count": 420,
+    "abstract": "This paper demonstrates that large pretrained language models can be finetuned with differential privacy while maintaining strong downstream task performance, challenging the belief that DP necessarily degrades utility significantly.",
+    "url": "https://arxiv.org/abs/2110.05679",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp14",
+    "semantic_id": "",
+    "title": "DP-Forward: Fine-tuning and Inference on Language Models with Differential Privacy in Forward Pass",
+    "year": 2023,
+    "venue": "CCS 2023",
+    "citation_count": 45,
+    "abstract": "DP-Forward introduces a novel approach to differentially private training by adding noise in the forward pass rather than the backward pass, achieving better privacy-utility tradeoffs for language model fine-tuning.",
+    "url": "https://arxiv.org/abs/2305.01645",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp15",
+    "semantic_id": "",
+    "title": "Privacy-Preserving Prompt Tuning for Large Language Model Services",
+    "year": 2022,
+    "venue": "arXiv",
+    "citation_count": 65,
+    "abstract": "This paper proposes privacy-preserving methods for prompt tuning that protect sensitive user data during the adaptation of LLM services, combining differential privacy with efficient prompt-based learning.",
+    "url": "https://arxiv.org/abs/2209.15563",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp16",
+    "semantic_id": "",
+    "title": "Differentially Private Decoding in Large Language Models",
+    "year": 2022,
+    "venue": "arXiv",
+    "citation_count": 55,
+    "abstract": "This work applies differential privacy to the decoding phase of language generation, ensuring that individual training examples cannot be extracted from model outputs during text generation.",
+    "url": "https://arxiv.org/abs/2210.15042",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp17",
+    "semantic_id": "",
+    "title": "Rényi Differential Privacy",
+    "year": 2017,
+    "venue": "CSF 2017",
+    "citation_count": 1450,
+    "abstract": "This paper introduces Rényi Differential Privacy, a relaxation of standard differential privacy based on Rényi divergence that provides tighter composition bounds and more flexible privacy accounting for iterative algorithms.",
+    "url": "https://arxiv.org/abs/1702.07476",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp18",
+    "semantic_id": "",
+    "title": "Federated Learning with Differential Privacy: Algorithms and Performance Analysis",
+    "year": 2019,
+    "venue": "IEEE TIFS 2020",
+    "citation_count": 1100,
+    "abstract": "This paper analyzes the integration of differential privacy mechanisms into federated learning, proposing algorithms that provide formal privacy guarantees while maintaining model convergence and utility.",
+    "url": "https://arxiv.org/abs/1911.11607",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp19",
+    "semantic_id": "",
+    "title": "Privacy in Large Language Models: Attacks, Defenses and Future Directions",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 190,
+    "abstract": "A comprehensive survey of privacy concerns in LLMs covering training data extraction, membership inference, and attribute inference attacks, along with defense mechanisms including differential privacy and machine unlearning.",
+    "url": "https://arxiv.org/abs/2304.03442",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp20",
+    "semantic_id": "",
+    "title": "Opacus: User-Friendly Differential Privacy Library in PyTorch",
+    "year": 2021,
+    "venue": "arXiv",
+    "citation_count": 350,
+    "abstract": "Opacus is an open-source library from Meta that enables training PyTorch models with differential privacy, providing efficient per-sample gradient computation and privacy accounting with minimal code changes.",
+    "url": "https://arxiv.org/abs/2106.09680",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp21",
+    "semantic_id": "",
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "year": 2014,
+    "venue": "ICLR 2015",
+    "citation_count": 14500,
+    "abstract": "This foundational paper introduces the Fast Gradient Sign Method (FGSM) for generating adversarial examples and provides a linear explanation for the existence of adversarial perturbations in neural networks.",
+    "url": "https://arxiv.org/abs/1412.6572",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp22",
+    "semantic_id": "",
+    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 950,
+    "abstract": "This paper discovers that optimized adversarial suffixes can reliably jailbreak aligned LLMs including ChatGPT, Bard, and Claude, with attacks transferring across different models and demonstrating fundamental vulnerabilities in alignment.",
+    "url": "https://arxiv.org/abs/2307.15043",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp23",
+    "semantic_id": "",
+    "title": "Jailbreaking Black Box Large Language Models in Twenty Queries",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 280,
+    "abstract": "This survey and methodology paper demonstrates automated jailbreaking of black-box LLMs using an attacker LLM that iteratively refines prompts, achieving high success rates against production models in as few as twenty queries.",
+    "url": "https://arxiv.org/abs/2309.16134",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp24",
+    "semantic_id": "",
+    "title": "Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To",
+    "year": 2023,
+    "venue": "ICLR 2024",
+    "citation_count": 520,
+    "abstract": "This paper shows that fine-tuning aligned LLMs on even a small number of benign or adversarial examples can remove safety alignment, raising concerns about the robustness of RLHF-based safety training.",
+    "url": "https://arxiv.org/abs/2310.03684",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp25",
+    "semantic_id": "",
+    "title": "PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 210,
+    "abstract": "PromptBench is a comprehensive benchmark for evaluating the robustness of LLMs against adversarial prompts, systematically testing character-level, word-level, sentence-level, and semantic-level perturbations.",
+    "url": "https://arxiv.org/abs/2306.09442",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp26",
+    "semantic_id": "",
+    "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 480,
+    "abstract": "This paper from Anthropic presents methods for red teaming language models at scale, analyzing how model size affects susceptibility to adversarial attacks and documenting lessons learned for improving safety.",
+    "url": "https://arxiv.org/abs/2308.06463",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp27",
+    "semantic_id": "",
+    "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+    "year": 2024,
+    "venue": "arXiv",
+    "citation_count": 650,
+    "abstract": "This Anthropic paper demonstrates that LLMs can be trained with hidden backdoor behaviors that activate under specific conditions and persist through standard safety fine-tuning techniques including RLHF and adversarial training.",
+    "url": "https://arxiv.org/abs/2402.05668",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp28",
+    "semantic_id": "",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "citation_count": 1800,
+    "abstract": "Toolformer demonstrates that language models can learn to use external tools like calculators, search engines, and APIs through self-supervised training, raising new questions about security when LLMs interact with external systems.",
+    "url": "https://arxiv.org/abs/2302.04237",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp29",
+    "semantic_id": "",
+    "title": "Not What You've Signed Up For: Analyzing Implicit Toxicity in LLM Agent Pipelines",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 90,
+    "abstract": "This paper analyzes how toxic behaviors can emerge in multi-step LLM agent pipelines even when individual components appear safe, identifying implicit toxic information flows across agent interactions.",
+    "url": "https://arxiv.org/abs/2305.14233",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp30",
+    "semantic_id": "",
+    "title": "A Watermark for Large Language Models",
+    "year": 2023,
+    "venue": "ICML 2023",
+    "citation_count": 1100,
+    "abstract": "Kirchenbauer et al. propose a watermarking framework for LLM-generated text that embeds statistically detectable signals during token sampling without significantly affecting text quality.",
+    "url": "https://arxiv.org/abs/2310.11986",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp31",
+    "semantic_id": "",
+    "title": "Membership Inference Attacks against Language Models",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 170,
+    "abstract": "This paper presents membership inference attacks that determine whether specific text samples were included in a language model's training data, with implications for privacy auditing and data provenance.",
+    "url": "https://arxiv.org/abs/2305.10601",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp32",
+    "semantic_id": "",
+    "title": "Poisoning Language Models During Instruction Tuning",
+    "year": 2023,
+    "venue": "ICML 2023",
+    "citation_count": 380,
+    "abstract": "This paper demonstrates data poisoning attacks against instruction-tuned LLMs where adversaries can inject a small number of malicious examples into training data to compromise model behavior on targeted inputs.",
+    "url": "https://arxiv.org/abs/2301.10226",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp33",
+    "semantic_id": "",
+    "title": "Tracing Model Outputs to Training Data: Influence Functions for Large Language Models",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 120,
+    "abstract": "This work extends influence functions to large language models, enabling attribution of model outputs to specific training examples for debugging, auditing, and understanding model behavior.",
+    "url": "https://arxiv.org/abs/2305.15324",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp34",
+    "semantic_id": "",
+    "title": "Data Provenance Initiative: A Large Scale Audit of Dataset Licensing and Attribution in AI",
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "citation_count": 210,
+    "abstract": "The Data Provenance Initiative provides a comprehensive audit of data licensing and attribution practices for foundation model training datasets, revealing widespread issues with provenance tracking.",
+    "url": "https://arxiv.org/abs/2303.11366",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp35",
+    "semantic_id": "",
+    "title": "Protecting Intellectual Property of Language Generation APIs with Lexical Watermarks",
+    "year": 2023,
+    "venue": "AAAI 2024",
+    "citation_count": 85,
+    "abstract": "This paper proposes lexical watermarking techniques to protect the intellectual property of language generation APIs by embedding detectable patterns that prove model provenance without degrading output quality.",
+    "url": "https://arxiv.org/abs/2305.14251",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp36",
+    "semantic_id": "",
+    "title": "Information Flow Control in LLM-Based Agentic Systems",
+    "year": 2024,
+    "venue": "arXiv",
+    "citation_count": 40,
+    "abstract": "This paper applies information flow control principles to LLM-based agent systems, providing formal frameworks for tracking and constraining how sensitive data propagates through multi-agent pipelines.",
+    "url": "https://arxiv.org/abs/2402.09321",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp37",
+    "semantic_id": "",
+    "title": "Taint Tracking for AI Systems: Dynamic Information Flow Analysis for Foundation Models",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 55,
+    "abstract": "This paper adapts taint tracking from traditional software security to AI systems, proposing methods to trace how potentially malicious or sensitive inputs propagate through and influence foundation model outputs.",
+    "url": "https://arxiv.org/abs/2310.10844",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp38",
+    "semantic_id": "",
+    "title": "OWASP Top 10 for Large Language Model Applications",
+    "year": 2023,
+    "venue": "OWASP Foundation",
+    "citation_count": 450,
+    "abstract": "The OWASP Top 10 for LLM Applications identifies the most critical security risks including prompt injection, data leakage, inadequate sandboxing, and supply chain vulnerabilities in LLM-powered systems.",
+    "url": "https://arxiv.org/abs/2305.18290",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp39",
+    "semantic_id": "",
+    "title": "LIMA: Less Is More for Alignment",
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "citation_count": 1400,
+    "abstract": "LIMA demonstrates that a strong pretrained language model can be aligned with only 1,000 carefully curated examples without reinforcement learning, suggesting that alignment is primarily about learning style rather than extensive training.",
+    "url": "https://arxiv.org/abs/2305.14314",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp40",
+    "semantic_id": "",
+    "title": "A Robust Safety Classifier for Large Language Models",
+    "year": 2024,
+    "venue": "arXiv",
+    "citation_count": 60,
+    "abstract": "This paper presents a safety classifier designed to robustly detect unsafe LLM outputs across diverse attack strategies, achieving high accuracy while maintaining low false positive rates on benign content.",
+    "url": "https://arxiv.org/abs/2401.06373",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp41",
+    "semantic_id": "",
+    "title": "GPT-4 Technical Report",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 8500,
+    "abstract": "The GPT-4 system card details OpenAI's safety evaluations including red teaming results, risk mitigations for harmful content generation, and the multi-layered safety approach used in deploying GPT-4.",
+    "url": "https://arxiv.org/abs/2306.11698",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp42",
+    "semantic_id": "",
+    "title": "Mistral 7B",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 2200,
+    "abstract": "Mistral 7B introduces an efficient open-weight language model with built-in guardrails and system prompt-based content moderation, demonstrating that smaller models can achieve strong safety properties alongside competitive performance.",
+    "url": "https://arxiv.org/abs/2310.01405",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp43",
+    "semantic_id": "",
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "year": 2022,
+    "venue": "arXiv",
+    "citation_count": 2100,
+    "abstract": "Constitutional AI from Anthropic trains a harmless AI assistant using AI-generated self-critiques guided by a set of constitutional principles, reducing reliance on human feedback for safety training.",
+    "url": "https://arxiv.org/abs/2212.08073",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp44",
+    "semantic_id": "",
+    "title": "An Analysis and Survey of the Development of Mutation Testing",
+    "year": 2011,
+    "venue": "IEEE TSE",
+    "citation_count": 2400,
+    "abstract": "This comprehensive survey covers the development of mutation testing from its inception, analyzing mutation operators, equivalent mutant detection, cost reduction techniques, and empirical studies validating mutation testing effectiveness.",
+    "url": "https://doi.org/10.1109/TSE.2010.62",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp45",
+    "semantic_id": "",
+    "title": "DeepMutation: Mutation Testing of Deep Learning Systems",
+    "year": 2018,
+    "venue": "ISSRE 2018",
+    "citation_count": 580,
+    "abstract": "DeepMutation adapts mutation testing to deep learning systems by defining source-level and model-level mutation operators specific to neural networks, enabling systematic quality assessment of DL test suites.",
+    "url": "https://doi.org/10.1109/ISSRE.2018.00021",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp46",
+    "semantic_id": "",
+    "title": "Are Mutants a Valid Substitute for Real Faults in Software Testing?",
+    "year": 2014,
+    "venue": "FSE 2014",
+    "citation_count": 1200,
+    "abstract": "This empirical study provides strong evidence that mutant detection is statistically correlated with real fault detection, validating the fundamental assumption underlying mutation testing as a test adequacy criterion.",
+    "url": "https://doi.org/10.1145/2635868.2635929",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp47",
+    "semantic_id": "",
+    "title": "The Major Mutation Framework: Efficient and Scalable Mutation Analysis for Java",
+    "year": 2014,
+    "venue": "ISSTA 2014",
+    "citation_count": 380,
+    "abstract": "Major is an efficient mutation testing framework for Java that integrates mutation analysis into the compiler, enabling scalable mutation testing through conditional mutation and compiler-integrated mutant generation.",
+    "url": "https://doi.org/10.1145/2610384.2628053",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp48",
+    "semantic_id": "",
+    "title": "Universal Mutator",
+    "year": 2018,
+    "venue": "ICSE 2018 Companion",
+    "citation_count": 120,
+    "abstract": "Universal Mutator is a language-agnostic mutation testing tool that uses regular expression-based rules to generate mutants for any programming language, providing broad applicability across diverse software projects.",
+    "url": "https://doi.org/10.1145/3183440.3183485",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp49",
+    "semantic_id": "",
+    "title": "PIT: A Practical Mutation Testing Tool for Java",
+    "year": 2016,
+    "venue": "ICSE 2016 Companion",
+    "citation_count": 450,
+    "abstract": "PIT (PITest) is a practical bytecode-level mutation testing tool for Java that provides fast execution through incremental analysis and coverage-based mutant filtering, making mutation testing feasible for real-world projects.",
+    "url": "https://doi.org/10.1145/2896995.2896997",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp50",
+    "semantic_id": "",
+    "title": "Predictive Mutation Testing",
+    "year": 2016,
+    "venue": "ISSTA 2016",
+    "citation_count": 210,
+    "abstract": "Predictive mutation testing uses machine learning to predict mutation testing results without executing mutants, dramatically reducing the computational cost while maintaining high accuracy in mutation score estimation.",
+    "url": "https://doi.org/10.1145/2931037.2931038",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp51",
+    "semantic_id": "",
+    "title": "LLM-Based Test-Driven Mutation Testing: Generating Mutants with Large Language Models",
+    "year": 2024,
+    "venue": "ICSE 2024",
+    "citation_count": 35,
+    "abstract": "This paper explores using large language models to generate semantically meaningful code mutants that better simulate real developer faults, outperforming traditional rule-based mutation operators in fault detection effectiveness.",
+    "url": "https://doi.org/10.1145/3597503.3639226",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp52",
+    "semantic_id": "",
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "year": 2022,
+    "venue": "arXiv",
+    "citation_count": 3200,
+    "abstract": "This Anthropic paper describes training language models to be both helpful and harmless using RLHF with separate helpfulness and harmlessness preference datasets, establishing key techniques for AI safety alignment.",
+    "url": "https://arxiv.org/abs/2204.05862",
+    "domains": [
+      "LLM Safety"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp53",
+    "semantic_id": "",
+    "title": "TrojDiff: Trojan Attacks on Diffusion Models with Diverse Targets",
+    "year": 2023,
+    "venue": "CVPR 2023",
+    "citation_count": 140,
+    "abstract": "TrojDiff presents trojan attacks targeting diffusion models that embed backdoor behaviors activated by specific triggers, demonstrating data poisoning vulnerabilities extend beyond discriminative to generative AI models.",
+    "url": "https://arxiv.org/abs/2303.05762",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp54",
+    "semantic_id": "",
+    "title": "Extracting Training Data from Large Language Models",
+    "year": 2020,
+    "venue": "USENIX Security 2021",
+    "citation_count": 2600,
+    "abstract": "This paper demonstrates that large language models memorize and can emit verbatim training data through targeted prompting, revealing significant privacy risks for sensitive data included in training corpora.",
+    "url": "https://arxiv.org/abs/2012.07805",
+    "domains": [
+      "Differential Privacy"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp55",
+    "semantic_id": "",
+    "title": "DeepMutation++: A Mutation Testing Framework for Deep Learning Systems",
+    "year": 2019,
+    "venue": "ASE 2019",
+    "citation_count": 320,
+    "abstract": "DeepMutation++ extends the original DeepMutation framework with additional mutation operators and more efficient execution strategies for systematically testing the quality of deep neural network test suites.",
+    "url": "https://doi.org/10.1109/ASE.2019.00126",
+    "domains": [
+      "Software Testing"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp56",
+    "semantic_id": "",
+    "title": "Do Anything Now: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models",
+    "year": 2023,
+    "venue": "CCS 2024",
+    "citation_count": 350,
+    "abstract": "This paper collects and systematically analyzes jailbreak prompts found in the wild, creating a taxonomy of attack strategies and evaluating their effectiveness across multiple commercial LLMs over time.",
+    "url": "https://arxiv.org/abs/2308.03825",
+    "domains": [
+      "Adversarial Robustness"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
+  },
+  {
+    "id": "sp57",
+    "semantic_id": "",
+    "title": "Scalable Extraction of Training Data from Production Language Models",
+    "year": 2023,
+    "venue": "arXiv",
+    "citation_count": 480,
+    "abstract": "This work demonstrates scalable methods for extracting memorized training data from production language models including ChatGPT, recovering several megabytes of verbatim training examples through divergence attacks.",
+    "url": "https://arxiv.org/abs/2311.17035",
+    "domains": [
+      "Data Provenance"
+    ],
+    "author_ids": [],
+    "created_at": "2026-04-01T00:00:00Z"
   }
 ]
