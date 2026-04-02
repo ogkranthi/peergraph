@@ -4,6 +4,8 @@
  * to paper IDs in our database.
  */
 
+export type SignalIntent = "core_research" | "tool_usage";
+
 export interface ConceptRule {
   paperIds: string[];
   namePatterns: string[];
@@ -12,6 +14,9 @@ export interface ConceptRule {
   codePatterns: string[];
   readmeKeywords: string[];
   confidence: number;
+  /** Domain keywords — if the repo's PURPOSE matches these, signals are 'core_research'.
+   *  If the repo just mentions generic terms from this rule, it's 'tool_usage'. */
+  purposeKeywords: string[];
 }
 
 export const CONCEPT_RULES: ConceptRule[] = [
@@ -24,6 +29,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["class Mutant", "def mutate", "mutation_score", "MutationRunner", "survived_mutants", "killed_mutants", "mutant_count"],
     readmeKeywords: ["mutation testing", "mutation coverage", "mutation score", "mutant killed", "mutant survived", "mutation operator", "fault seeding"],
     confidence: 80,
+    purposeKeywords: ["mutation testing", "mutation", "mutant", "fault seeding", "test generation"],
   },
   // Prompt Injection
   {
@@ -34,6 +40,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["detect_injection", "is_injection", "PromptGuard", "classify_prompt", "injection_score", "sanitize_prompt"],
     readmeKeywords: ["prompt injection", "injection attack", "jailbreak", "prompt security", "indirect injection", "prompt defense"],
     confidence: 80,
+    purposeKeywords: ["prompt injection", "injection defense", "llm security", "ai security", "prompt guard"],
   },
   // MCP Security / Tool Call Security / Agent Security
   {
@@ -44,6 +51,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["tool_call_firewall", "sandbox_execution", "validate_tool_call", "tool_poison"],
     readmeKeywords: ["MCP", "tool call", "tool poisoning", "rug pull", "data exfiltration", "agent security", "tool use attack"],
     confidence: 75,
+    purposeKeywords: ["mcp", "tool call", "agent security", "tool poisoning", "exfiltration"],
   },
   // Differential Privacy
   {
@@ -54,6 +62,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["GaussianMechanism", "LaplaceMechanism", "privacy_budget", "add_noise", "clip_gradient", "dp_sgd", "epsilon"],
     readmeKeywords: ["differential privacy", "epsilon", "DP-SGD", "privacy budget", "noise mechanism", "Gaussian mechanism", "Laplace mechanism", "privacy-preserving"],
     confidence: 80,
+    purposeKeywords: ["differential privacy", "privacy", "dp-sgd", "private learning", "epsilon"],
   },
   // Adversarial Robustness
   {
@@ -64,6 +73,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["fgsm_attack", "pgd_attack", "adversarial_training", "perturbation", "adversarial_example", "red_team"],
     readmeKeywords: ["adversarial", "FGSM", "PGD", "adversarial training", "robustness", "perturbation", "jailbreak", "red team"],
     confidence: 75,
+    purposeKeywords: ["adversarial", "robustness", "red team", "jailbreak", "attack"],
   },
   // Watermarking / Data Provenance
   {
@@ -74,6 +84,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["watermark_text", "detect_watermark", "taint_level", "data_lineage", "membership_inference"],
     readmeKeywords: ["watermark", "data provenance", "taint tracking", "data lineage", "membership inference", "data poisoning", "model fingerprint"],
     confidence: 75,
+    purposeKeywords: ["watermark", "provenance", "taint", "data poisoning", "membership inference"],
   },
   // LLM Safety / Guardrails
   {
@@ -84,6 +95,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["SafetyClassifier", "is_harmful", "content_filter", "guardrail_check", "moderate_content"],
     readmeKeywords: ["guardrails", "safety classifier", "content filter", "harmless", "RLHF", "constitutional AI", "OWASP", "alignment"],
     confidence: 75,
+    purposeKeywords: ["guardrails", "safety", "content filter", "harmful", "alignment", "OWASP"],
   },
   // Formal Verification / Symbolic Execution
   {
@@ -94,6 +106,7 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["SymbolicExecutor", "solve_constraints", "symbolic_state", "z3.Solver", "PathConstraint"],
     readmeKeywords: ["symbolic execution", "formal verification", "path constraint", "SMT", "static analysis"],
     confidence: 70,
+    purposeKeywords: ["symbolic execution", "formal verification", "static analysis", "constraint"],
   },
   // Test Generation / Code Quality
   {
@@ -104,8 +117,9 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["generate_test", "TestGenerator", "coverage_report", "test_suite"],
     readmeKeywords: ["test generation", "unit test", "test coverage", "line coverage", "mutation coverage", "automated testing"],
     confidence: 70,
+    purposeKeywords: ["test generation", "unit test", "test coverage", "automated testing"],
   },
-  // General LLM / Transformer (from existing papers)
+  // General LLM / Transformer — ONLY core_research if repo IS an LLM implementation
   {
     paperIds: ["p1", "p6", "p14", "p21"],
     namePatterns: ["transformer", "gpt", "llm", "bert"],
@@ -114,5 +128,6 @@ export const CONCEPT_RULES: ConceptRule[] = [
     codePatterns: ["TransformerEncoder", "attention_mask", "BertModel", "GPT2Model"],
     readmeKeywords: ["transformer", "attention mechanism", "language model", "GPT", "BERT", "fine-tuning"],
     confidence: 65,
+    purposeKeywords: ["language model", "transformer architecture", "pre-training", "fine-tuning", "tokenizer", "attention mechanism"],
   },
 ];

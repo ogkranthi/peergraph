@@ -205,6 +205,7 @@ export async function GET(
             paperId: paper.id, source: "arxiv_citation", confidence: 90,
             evidence: `README cites arXiv:${arxivId}`,
             repoName: repo.full_name, repoUrl: repo.html_url, repoStars: repo.stargazers_count,
+            intent: "core_research",
           });
         }
       }
@@ -215,6 +216,7 @@ export async function GET(
             paperId: paper.id, source: "doi_citation", confidence: 90,
             evidence: `README cites DOI:${doi}`,
             repoName: repo.full_name, repoUrl: repo.html_url, repoStars: repo.stargazers_count,
+            intent: "core_research",
           });
         }
       }
@@ -237,6 +239,7 @@ export async function GET(
                 paperId, source: "dependency", confidence: libEntry.confidence,
                 evidence: `${depFile} imports '${dep}'`,
                 repoName: repo.full_name, repoUrl: repo.html_url, repoStars: repo.stargazers_count,
+                intent: "tool_usage", // dependency = using a tool, not implementing the research
               });
             }
           }
@@ -297,12 +300,17 @@ export async function GET(
               }
             }
             if (matched) {
+              // HF models are core_research if model name matches purpose keywords
+              const modelText = (model.modelId || "").toLowerCase();
+              const hfIntent = rule.purposeKeywords.some((pk: string) => modelText.includes(pk.toLowerCase()))
+                ? "core_research" as const : "tool_usage" as const;
               for (const paperId of rule.paperIds) {
                 allSignals.push({
                   paperId, source: "huggingface_model", confidence: rule.confidence - 5,
                   evidence,
                   repoName: model.modelId || hfUser, repoUrl: `https://huggingface.co/${model.modelId}`,
                   repoStars: model.downloads || 0,
+                  intent: hfIntent,
                 });
               }
             }
@@ -336,11 +344,15 @@ export async function GET(
         orgLogins.includes(bestSignal.repoName.split("/")[0]),
       );
 
+      // Determine overall intent: core if ANY signal is core_research
+      const isCore = paperSignals.some((s) => s.intent === "core_research");
+
       return {
         paper: {
           id: paper.id, title: paper.title, year: paper.year, venue: paper.venue,
           citationCount: paper.citation_count, url: paper.url, domains: paper.domains,
         },
+        intent: isCore ? "core_research" : "tool_usage",
         signals: paperSignals.map((s) => ({
           source: s.source, confidence: s.confidence, evidence: s.evidence,
           repoName: s.repoName, repoUrl: s.repoUrl, repoStars: s.repoStars,

@@ -11,6 +11,7 @@ interface Connection {
   signals: { source: string; confidence: number; evidence: string; repoName: string; repoUrl: string; repoStars: number }[];
   engagement: keyof typeof ENGAGEMENT_LABELS;
   highestConfidence: number;
+  intent?: "core_research" | "tool_usage";
 }
 
 interface AssessmentResult {
@@ -150,10 +151,24 @@ function AssessResultsInner() {
         </div>
       )}
 
-      {/* Paper Connections */}
+      {/* Paper Connections — split by intent */}
+      {(() => {
+        const core = result.connections.filter((c) => c.intent === "core_research");
+        const tools = result.connections.filter((c) => c.intent === "tool_usage");
+
+        // Group core by first domain
+        const coreGroups = new Map<string, Connection[]>();
+        for (const conn of core) {
+          const domain = conn.paper.domains[0] || "Other";
+          if (!coreGroups.has(domain)) coreGroups.set(domain, []);
+          coreGroups.get(domain)!.push(conn);
+        }
+
+        return (
       <div className="mb-6">
         <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-3">
-          Paper Connections ({result.connections.length})
+          Core Research ({core.length} papers)
+          {tools.length > 0 && <span className="text-white/20 font-normal"> + {tools.length} tool usage</span>}
         </h2>
 
         {result.connections.length === 0 && (
@@ -165,60 +180,79 @@ function AssessResultsInner() {
           </div>
         )}
 
-        <div className="space-y-3">
-          {result.connections.map((conn) => {
-            const eng = ENGAGEMENT_LABELS[conn.engagement];
-            return (
-              <div key={conn.paper.id} className="p-4 bg-white/5 border border-white/10 rounded-lg">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm">{eng.emoji}</span>
-                      <span className="text-[10px] px-2 py-0.5 rounded font-medium" style={{ backgroundColor: eng.color + "20", color: eng.color }}>
-                        {eng.label}
-                      </span>
+        {/* Core research — grouped by domain */}
+        {Array.from(coreGroups.entries()).map(([domain, conns]) => (
+          <div key={domain} className="mb-4">
+            <p className="text-xs font-medium text-emerald-400 uppercase tracking-wider mb-2">
+              {domain} ({conns.length} paper{conns.length > 1 ? "s" : ""})
+            </p>
+            <div className="space-y-2">
+              {conns.slice(0, 3).map((conn) => {
+                const eng = ENGAGEMENT_LABELS[conn.engagement];
+                return (
+                  <div key={conn.paper.id} className="p-3 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs">{eng.emoji}</span>
+                          <span className="text-[10px] px-1.5 py-0.5 rounded font-medium" style={{ backgroundColor: eng.color + "20", color: eng.color }}>
+                            {eng.label}
+                          </span>
+                        </div>
+                        <a href={conn.paper.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-300 hover:text-blue-200">
+                          {conn.paper.title}
+                        </a>
+                        <div className="flex items-center gap-3 text-[11px] text-white/40 mt-1">
+                          <span>{conn.paper.venue}</span>
+                          <span>{conn.paper.year}</span>
+                          <span>{conn.paper.citationCount.toLocaleString()} cites</span>
+                        </div>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <span className="text-lg font-bold text-amber-400">{conn.highestConfidence}%</span>
+                      </div>
                     </div>
-                    <a href={conn.paper.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-300 hover:text-blue-200">
-                      {conn.paper.title}
-                    </a>
-                    <div className="flex items-center gap-3 text-[11px] text-white/40 mt-1">
-                      <span>{conn.paper.venue}</span>
-                      <span>{conn.paper.year}</span>
-                      <span>{conn.paper.citationCount.toLocaleString()} cites</span>
+                    <div className="mt-2">
+                      {conn.signals.slice(0, 2).map((sig, i) => (
+                        <div key={i} className="flex items-center gap-2 text-[11px] text-white/40">
+                          <span className="text-white/25">📍</span>
+                          <a href={sig.repoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400/60 hover:text-blue-400">{sig.repoName}</a>
+                          {sig.repoStars > 0 && <span className="text-white/20">★{sig.repoStars}</span>}
+                          <span className="text-white/25">—</span>
+                          <span>{sig.evidence}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="text-right flex-shrink-0">
-                    <span className="text-lg font-bold text-amber-400">{conn.highestConfidence}%</span>
-                    <p className="text-[9px] text-white/25">confidence</p>
-                  </div>
-                </div>
+                );
+              })}
+              {conns.length > 3 && (
+                <p className="text-[10px] text-white/25 pl-3">+ {conns.length - 3} more {domain} papers</p>
+              )}
+            </div>
+          </div>
+        ))}
 
-                {/* Evidence */}
-                <div className="space-y-1 mt-2">
-                  {conn.signals.map((sig, i) => (
-                    <div key={i} className="flex items-center gap-2 text-[11px] text-white/40">
-                      <span className="text-white/25">📍</span>
-                      <a href={sig.repoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400/60 hover:text-blue-400">
-                        {sig.repoName}
-                      </a>
-                      {sig.repoStars > 0 && <span className="text-white/20">★{sig.repoStars}</span>}
-                      <span className="text-white/25">—</span>
-                      <span>{sig.evidence}</span>
-                    </div>
-                  ))}
+        {/* Tool usage — collapsed */}
+        {tools.length > 0 && (
+          <details className="mt-4 bg-white/3 border border-white/5 rounded-lg">
+            <summary className="px-4 py-2.5 text-sm text-white/40 cursor-pointer hover:text-white/60">
+              Also uses tools built on {tools.length} paper{tools.length > 1 ? "s" : ""} (not core to their work)
+            </summary>
+            <div className="px-4 pb-3 space-y-1.5">
+              {tools.map((conn) => (
+                <div key={conn.paper.id} className="flex items-center gap-3 text-[11px] text-white/30 py-1">
+                  <a href={conn.paper.url} target="_blank" rel="noopener noreferrer" className="text-blue-400/40 hover:text-blue-400/60 truncate">{conn.paper.title}</a>
+                  <span className="flex-shrink-0">{conn.paper.year}</span>
+                  <span className="flex-shrink-0 text-white/15">{conn.highestConfidence}%</span>
                 </div>
-
-                {/* Domains */}
-                <div className="flex flex-wrap gap-1 mt-2">
-                  {conn.paper.domains.map((d) => (
-                    <span key={d} className="px-1.5 py-0.5 bg-white/5 rounded text-[9px] text-white/30">{d}</span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              ))}
+            </div>
+          </details>
+        )}
       </div>
+      );
+      })()}
 
       {/* Claim CTA */}
       <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/15 rounded-xl p-6 text-center">

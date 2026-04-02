@@ -3,7 +3,7 @@
  * 5 layers: direct citation → dependency → concept → code pattern → HuggingFace
  */
 
-import { CONCEPT_RULES } from "./concept-aliases";
+import { CONCEPT_RULES, type SignalIntent } from "./concept-aliases";
 
 export type SignalSource =
   | "arxiv_citation"
@@ -21,6 +21,7 @@ export interface Signal {
   repoName: string;
   repoUrl: string;
   repoStars: number;
+  intent: SignalIntent;
 }
 
 export interface RepoInfo {
@@ -114,6 +115,21 @@ export function parseDependencies(content: string, filename: string): string[] {
 
 // ============ Layer 3: Concept Detection ============
 
+/** Determine if a repo's PURPOSE aligns with a rule's domain */
+function classifyIntent(
+  repoName: string,
+  description: string,
+  topics: string[],
+  rule: typeof CONCEPT_RULES[0],
+): SignalIntent {
+  const text = `${repoName} ${description} ${topics.join(" ")}`.toLowerCase();
+  // Check if any purpose keyword appears in the repo's name/desc/topics
+  for (const kw of rule.purposeKeywords) {
+    if (text.includes(kw.toLowerCase())) return "core_research";
+  }
+  return "tool_usage";
+}
+
 export function matchConcepts(
   repoName: string,
   description: string,
@@ -160,10 +176,12 @@ export function matchConcepts(
     }
 
     if (matched) {
+      const intent = classifyIntent(repoName, description || "", topics, rule);
       for (const paperId of rule.paperIds) {
         signals.push({
           paperId,
           source: "repo_concept",
+          intent,
           confidence: rule.confidence,
           evidence,
           repoName: repo.full_name,
@@ -194,9 +212,10 @@ export function matchCodePatterns(code: string, repo: RepoInfo): Signal[] {
             repoName: repo.full_name,
             repoUrl: repo.html_url,
             repoStars: repo.stargazers_count,
+            intent: "core_research", // code patterns = actual implementation
           });
         }
-        break; // one code pattern match per rule is enough
+        break;
       }
     }
   }
@@ -213,15 +232,20 @@ export function matchReadmeKeywords(readme: string, repo: RepoInfo): Signal[] {
   for (const rule of CONCEPT_RULES) {
     for (const keyword of rule.readmeKeywords) {
       if (readmeLower.includes(keyword.toLowerCase())) {
+        // Classify intent: does the repo name/description suggest this is their core domain?
+        const repoText = `${repo.name} ${repo.description || ""} ${(repo.topics || []).join(" ")}`.toLowerCase();
+        const intent: SignalIntent = rule.purposeKeywords.some(pk => repoText.includes(pk.toLowerCase()))
+          ? "core_research" : "tool_usage";
         for (const paperId of rule.paperIds) {
           signals.push({
             paperId,
             source: "repo_concept",
-            confidence: Math.min(rule.confidence + 5, 90), // README match is slightly higher confidence
+            confidence: Math.min(rule.confidence + 5, 90),
             evidence: `README mentions '${keyword}'`,
             repoName: repo.full_name,
             repoUrl: repo.html_url,
             repoStars: repo.stargazers_count,
+            intent,
           });
         }
         break; // one keyword match per rule is enough
