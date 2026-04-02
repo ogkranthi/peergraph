@@ -83,8 +83,17 @@ export async function GET(
   // 1. Fetch user profile
   const user = await ghJSON(`https://api.github.com/users/${username}`);
   if (!user) {
-    const hint = !hasToken ? " (No GITHUB_TOKEN configured — may be rate limited)" : "";
-    return NextResponse.json({ error: `GitHub user '${username}' not found${hint}` }, { status: 404 });
+    // Check if rate limited
+    const rlRes = await fetch("https://api.github.com/rate_limit");
+    const rl = rlRes.ok ? await rlRes.json() : null;
+    const remaining = rl?.rate?.remaining ?? 0;
+    if (remaining === 0) {
+      const resetTime = new Date((rl?.rate?.reset ?? 0) * 1000).toISOString();
+      return NextResponse.json({
+        error: `GitHub API rate limit exceeded. Resets at ${resetTime}. Try again in a few minutes.`,
+      }, { status: 429 });
+    }
+    return NextResponse.json({ error: `GitHub user '${username}' not found` }, { status: 404 });
   }
 
   // 2. Fetch orgs (public memberships)
