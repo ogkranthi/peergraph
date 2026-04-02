@@ -65,6 +65,55 @@ async function getLibraryMap() {
   return libraryMap!;
 }
 
+// ============ Supabase Cache (24hr TTL) ============
+
+async function getCachedAssessment(username: string, org: string | null): Promise<any | null> {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY;
+  if (!supabaseUrl || !serviceKey) return null;
+
+  try {
+    const { createClient } = await import("@supabase/supabase-js");
+    const db = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+
+    const cacheKey = org ? `${username}:${org}` : username;
+    const { data } = await db
+      .from("assessment_cache")
+      .select("result, created_at")
+      .eq("cache_key", cacheKey)
+      .maybeSingle();
+
+    if (!data) return null;
+
+    // Check if cache is still fresh (24 hours)
+    const age = Date.now() - new Date(data.created_at).getTime();
+    if (age > 24 * 60 * 60 * 1000) return null;
+
+    return data.result;
+  } catch {
+    return null;
+  }
+}
+
+async function setCachedAssessment(username: string, org: string | null, result: any): Promise<void> {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY;
+  if (!supabaseUrl || !serviceKey) return;
+
+  try {
+    const { createClient } = await import("@supabase/supabase-js");
+    const db = createClient(supabaseUrl, serviceKey, { auth: { persistSession: false } });
+
+    const cacheKey = org ? `${username}:${org}` : username;
+    await db.from("assessment_cache").upsert({
+      cache_key: cacheKey,
+      username,
+      result,
+      created_at: new Date().toISOString(),
+    }, { onConflict: "cache_key" });
+  } catch { /* cache write failure is non-fatal */ }
+}
+
 export async function GET(
   _request: NextRequest,
   { params }: { params: Promise<{ username: string }> }
@@ -76,6 +125,15 @@ export async function GET(
   // Support ?org=codeintegrity-ai to force-include an org
   const url = new URL(_request.url);
   const extraOrg = url.searchParams.get("org");
+  const skipCache = url.searchParams.get("refresh") === "1";
+
+  // Check cache first (24hr TTL, saves ~100 GitHub API calls)
+  if (!skipCache) {
+    const cached = await getCachedAssessment(username, extraOrg);
+    if (cached) {
+      return NextResponse.json({ ...cached, cached: true });
+    }
+  }
 
   // Check rate limit status
   const hasToken = !!process.env.GITHUB_TOKEN;
@@ -407,7 +465,7 @@ export async function GET(
 
   const duration = (Date.now() - startTime) / 1000;
 
-  return NextResponse.json({
+  const responseData = {
     username,
     name: user.name || username,
     avatarUrl: user.avatar_url,
@@ -430,15 +488,12 @@ export async function GET(
       topDomain: domainCoverage[0]?.domain || "none",
       signalDistribution: signalDist,
     },
-    debug: {
-      hasGitHubToken: hasToken,
-      orgsDiscovered: orgLogins,
-      orgsTried: debug.orgsTried,
-      eventsFound: debug.eventsFound,
-      companyRaw: debug.companyRaw,
-      extraOrgParam: extraOrg,
-    },
-  });
+  };
+
+  // Cache the result for 24hrs
+  await setCachedAssessment(username, extraOrg, responseData);
+
+  return NextResponse.json(responseData);
   } catch (err: any) {
     console.error("Assessment error:", err);
     return NextResponse.json(
