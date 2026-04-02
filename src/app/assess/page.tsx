@@ -5,12 +5,18 @@ import { useRouter } from "next/navigation";
 
 export default function AssessLanding() {
   const [username, setUsername] = useState("");
+  const [org, setOrg] = useState("");
   const router = useRouter();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const cleaned = username.trim().replace(/^@/, "");
-    if (cleaned) router.push(`/assess/${cleaned}`);
+    if (!cleaned) return;
+    const orgCleaned = org.trim().replace(/^@/, "");
+    const url = orgCleaned
+      ? `/assess/${cleaned}?org=${encodeURIComponent(orgCleaned)}`
+      : `/assess/${cleaned}`;
+    router.push(url);
   }
 
   return (
@@ -28,24 +34,36 @@ export default function AssessLanding() {
       </div>
 
       <form onSubmit={handleSubmit} className="mb-12">
-        <div className="flex gap-2 max-w-lg mx-auto">
-          <div className="flex-1 flex items-center bg-white/10 border border-white/10 rounded-xl px-5 py-4 focus-within:border-white/30">
-            <span className="text-white/30 mr-2">@</span>
+        <div className="space-y-2 max-w-lg mx-auto">
+          <div className="flex gap-2">
+            <div className="flex-1 flex items-center bg-white/10 border border-white/10 rounded-xl px-5 py-4 focus-within:border-white/30">
+              <span className="text-white/30 mr-2">@</span>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="github-username"
+                autoFocus
+                className="flex-1 bg-transparent text-white placeholder-white/30 focus:outline-none text-lg"
+              />
+            </div>
+            <button
+              type="submit"
+              className="px-8 py-4 bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold rounded-xl hover:bg-amber-500/30 transition-colors"
+            >
+              Assess
+            </button>
+          </div>
+          <div className="flex items-center bg-white/5 border border-white/10 rounded-xl px-5 py-3 focus-within:border-white/20">
+            <span className="text-white/20 mr-2 text-sm">org:</span>
             <input
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="github-username"
-              autoFocus
-              className="flex-1 bg-transparent text-white placeholder-white/30 focus:outline-none text-lg"
+              value={org}
+              onChange={(e) => setOrg(e.target.value)}
+              placeholder="github-org (optional — e.g. codeintegrity-ai)"
+              className="flex-1 bg-transparent text-white/70 placeholder-white/20 focus:outline-none text-sm"
             />
           </div>
-          <button
-            type="submit"
-            className="px-8 py-4 bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold rounded-xl hover:bg-amber-500/30 transition-colors"
-          >
-            Assess
-          </button>
         </div>
       </form>
 

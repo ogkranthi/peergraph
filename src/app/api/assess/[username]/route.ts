@@ -29,9 +29,17 @@ async function ghFetch(url: string): Promise<Response> {
 }
 
 async function ghJSON(url: string): Promise<any> {
-  const res = await ghFetch(url);
-  if (!res.ok) return null;
-  return res.json();
+  try {
+    const res = await ghFetch(url);
+    if (res.status === 403 || res.status === 429) {
+      console.warn(`GitHub rate limited: ${url}`);
+      return null;
+    }
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
+    return null;
+  }
 }
 
 async function ghText(url: string): Promise<string | null> {
@@ -91,7 +99,24 @@ export async function GET(
   // Debug tracking
   const debug = { orgsTried: [] as string[], eventsFound: 0, companyRaw: user.company || "", rateLimit: "" };
 
-  // Try to discover orgs from the user's profile company field
+  // FIRST: Discover orgs from public events (fastest, most reliable)
+  const events: any[] = (await ghJSON(`https://api.github.com/users/${username}/events/public?per_page=50`)) || [];
+  debug.eventsFound = events.length;
+  for (const event of events) {
+    if (event.repo?.name) {
+      const orgName = event.repo.name.split("/")[0];
+      if (orgName !== username && !orgLogins.includes(orgName)) {
+        // Verify it's an org (not another user)
+        const orgCheck = await ghJSON(`https://api.github.com/orgs/${orgName}`);
+        if (orgCheck && orgCheck.login) {
+          orgLogins.push(orgCheck.login);
+          debug.orgsTried.push(`${orgName} (from events)`);
+        }
+      }
+    }
+  }
+
+  // THEN: Try to discover orgs from the user's profile company field
   // Company might be "CodeIntegrity" but org is "codeintegrity-ai"
   const companyRaw = (user.company || "").replace(/^@/, "").trim();
   const companyLower = companyRaw.toLowerCase().replace(/\s+/g, "");
@@ -116,23 +141,7 @@ export async function GET(
     }
   }
 
-  // Discover orgs from public events (catches private org memberships)
-  const events: any[] = (await ghJSON(`https://api.github.com/users/${username}/events/public?per_page=50`)) || [];
-  debug.eventsFound = events.length;
-  const eventOrgs = new Set<string>();
-  for (const event of events) {
-    if (event.repo?.name) {
-      const orgName = event.repo.name.split("/")[0];
-      if (orgName !== username && !orgLogins.includes(orgName)) {
-        eventOrgs.add(orgName);
-      }
-    }
-  }
-  // Try discovered orgs
-  for (const org of Array.from(eventOrgs).slice(0, 5)) {
-    const orgCheck = await ghJSON(`https://api.github.com/orgs/${org}`);
-    if (orgCheck && orgCheck.login) orgLogins.push(orgCheck.login);
-  }
+  // (Events-based org discovery already done above)
 
   // 3. Fetch repos (personal + org)
   const personalRepos: RepoInfo[] = (await ghJSON(
