@@ -116,6 +116,25 @@ export async function GET(
     }
   }
 
+  // SECOND: Search GitHub for repos where user has committed (catches expired events)
+  if (orgLogins.length <= 1) {  // only if events didn't find enough
+    const searchRes = await ghJSON(
+      `https://api.github.com/search/commits?q=author:${username}&sort=author-date&per_page=20`
+    );
+    if (searchRes?.items) {
+      for (const item of searchRes.items) {
+        const repoOwner = item.repository?.owner?.login;
+        if (repoOwner && repoOwner !== username && !orgLogins.includes(repoOwner)) {
+          const orgCheck = await ghJSON(`https://api.github.com/orgs/${repoOwner}`);
+          if (orgCheck && orgCheck.login) {
+            orgLogins.push(orgCheck.login);
+            debug.orgsTried.push(`${repoOwner} (from commit search)`);
+          }
+        }
+      }
+    }
+  }
+
   // THEN: Try to discover orgs from the user's profile company field
   // Company might be "CodeIntegrity" but org is "codeintegrity-ai"
   const companyRaw = (user.company || "").replace(/^@/, "").trim();
