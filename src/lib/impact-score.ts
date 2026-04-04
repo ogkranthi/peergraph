@@ -26,6 +26,9 @@ import { Researcher, Paper, Project, ResearchDomain } from "./types";
 
 export const SCORING_METHODOLOGY_VERSION = "1.0";
 
+export const AII_VERSION = "1.0.0";
+export const AII_DESCRIPTION = "Applied Impact Index v1.0.0 — measures real-world product adoption of research papers.";
+
 export const SCORE_DISCLAIMER =
   "Reflects builder-declared project usage. Not a measure of research quality.";
 
@@ -39,7 +42,7 @@ export interface PaperImpactScore {
   score: number; // 0–100
 }
 
-export interface ResearchImpactScore {
+export interface AppliedImpactScore {
   researcherId: string;
   overallScore: number; // 0–100
   methodologyVersion: string;
@@ -94,13 +97,13 @@ export function calculatePaperImpactScore(
 }
 
 /**
- * Calculate the Research Impact Score for a researcher.
+ * Calculate the Applied Impact Index for a researcher.
  */
-export function calculateResearchImpactScore(
+export function calculateAppliedImpactScore(
   researcher: Researcher,
   researcherPapers: Paper[],
   allProjects: Project[]
-): ResearchImpactScore {
+): AppliedImpactScore {
   // Calculate per-paper impact
   const paperScores = researcherPapers.map((paper) =>
     calculatePaperImpactScore(paper, allProjects)
@@ -191,21 +194,58 @@ export function calculateResearchImpactScore(
 /**
  * Get impact scores for all researchers, sorted by score descending.
  */
-export function getAllResearcherImpactScores(
+export function getAllAppliedImpactScores(
   researchers: Researcher[],
   papers: Paper[],
   projects: Project[]
-): ResearchImpactScore[] {
+): AppliedImpactScore[] {
   return researchers
     .map((researcher) => {
       const researcherPapers = papers.filter((p) =>
         p.author_ids.includes(researcher.id)
       );
-      return calculateResearchImpactScore(
+      return calculateAppliedImpactScore(
         researcher,
         researcherPapers,
         projects
       );
     })
     .sort((a, b) => b.overallScore - a.overallScore);
+}
+
+/**
+ * Identify "rising" researchers: added in the last 60 days OR having the
+ * highest ratio of products_built / citation_count (high real-world adoption
+ * relative to citations). Returns a Set of researcher IDs.
+ */
+export function getRisingResearcherIds(
+  researchers: Researcher[],
+  scores: AppliedImpactScore[]
+): Set<string> {
+  const rising = new Set<string>();
+
+  // Researchers added in the last 60 days
+  const sixtyDaysAgo = Date.now() - 60 * 86400000;
+  for (const r of researchers) {
+    if (new Date(r.created_at).getTime() > sixtyDaysAgo) {
+      rising.add(r.id);
+    }
+  }
+
+  // Researchers with highest products / citation_count ratio (top 20%)
+  const withRatio = scores
+    .filter((s) => s.breakdown.productAdoption > 0)
+    .map((s) => {
+      const researcher = researchers.find((r) => r.id === s.researcherId);
+      const citations = researcher?.citation_count || 1;
+      return { id: s.researcherId, ratio: s.breakdown.productAdoption / citations };
+    })
+    .sort((a, b) => b.ratio - a.ratio);
+
+  const top20pct = Math.max(1, Math.ceil(withRatio.length * 0.2));
+  for (const item of withRatio.slice(0, top20pct)) {
+    rising.add(item.id);
+  }
+
+  return rising;
 }

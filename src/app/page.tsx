@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getStats, getResearchers, getProjects, getPapers } from "@/lib/data";
-import { getAllResearcherImpactScores } from "@/lib/impact-score";
+import { getAllAppliedImpactScores, getRisingResearcherIds } from "@/lib/impact-score";
 import { NODE_COLORS, DOMAIN_COLORS } from "@/lib/types";
 import EmailCapture from "@/components/EmailCapture";
 import ScoreBreakdownModal from "@/components/ScoreBreakdownModal";
@@ -18,8 +18,9 @@ export default async function HomePage() {
   // Top researchers by citation
   const topResearchers = [...researchers].sort((a, b) => b.citation_count - a.citation_count).slice(0, 6);
 
-  // Top researchers by Research Impact Score
-  const impactScores = getAllResearcherImpactScores(researchers, papers, projects);
+  // Top researchers by Applied Impact Index
+  const impactScores = getAllAppliedImpactScores(researchers, papers, projects);
+  const risingIds = getRisingResearcherIds(researchers, impactScores);
   const topImpactResearchers = impactScores
     .filter((s) => s.overallScore > 0)
     .slice(0, 6)
@@ -203,6 +204,46 @@ export default async function HomePage() {
         </section>
       )}
 
+      {/* Trending This Week */}
+      {(() => {
+        const trendingLinks: { projectName: string; paperTitle: string; addedAt: string; href: string }[] = [];
+        projects.forEach((proj) => {
+          (proj.paper_links ?? []).forEach((link) => {
+            const paper = papers.find((p) => p.id === link.paper_id);
+            if (paper) {
+              trendingLinks.push({
+                projectName: proj.name,
+                paperTitle: paper.title,
+                addedAt: link.added_at,
+                href: `/researcher/${paper.author_ids[0] || ""}`,
+              });
+            }
+          });
+        });
+        trendingLinks.sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
+        const top4 = trendingLinks.slice(0, 4);
+        if (top4.length === 0) return null;
+        const now = Date.now();
+        return (
+          <section className="max-w-7xl mx-auto px-4 py-8">
+            <h2 className="text-sm font-medium text-white/40 uppercase tracking-wider mb-4">Trending This Week</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {top4.map((item, i) => {
+                const daysAgo = Math.max(0, Math.round((now - new Date(item.addedAt).getTime()) / 86400000));
+                return (
+                  <div key={i} className="p-4 bg-gradient-to-r from-amber-500/5 to-transparent border border-amber-500/10 rounded-xl">
+                    <p className="text-sm text-white/80 mb-1">
+                      <span className="text-amber-400 font-medium">{item.projectName}</span> → {item.paperTitle.slice(0, 50)}...
+                    </p>
+                    <p className="text-xs text-white/30">New connection added {daysAgo === 0 ? "today" : `${daysAgo} day${daysAgo !== 1 ? "s" : ""} ago`}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Who is this for */}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-xl font-semibold mb-2 text-center">Who Is This For?</h2>
@@ -336,6 +377,7 @@ export default async function HomePage() {
                 How is this calculated?
               </Link>
             </p>
+            <p className="text-xs text-white/30 italic mt-1">Reflects builder-declared usage. Not a measure of research quality.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {topImpactResearchers.map(({ researcher, overallScore, breakdown, normalizedBreakdown }, i) => (
@@ -352,7 +394,12 @@ export default async function HomePage() {
                     </span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold group-hover:text-amber-400 transition-colors truncate">{researcher.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-semibold group-hover:text-amber-400 transition-colors truncate">{researcher.name}</h3>
+                      {risingIds.has(researcher.id) && (
+                        <span className="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 rounded text-[9px] font-medium flex-shrink-0">↑ Rising</span>
+                      )}
+                    </div>
                     <p className="text-sm text-white/50 truncate">{researcher.institution}</p>
                     <div className="flex items-center gap-3 mt-1 text-xs text-white/40">
                       <span>{breakdown.productAdoption} products</span>

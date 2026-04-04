@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getResearcherById, getPapers, getProjects } from "@/lib/data";
-import { calculateResearchImpactScore } from "@/lib/impact-score";
+import { calculateAppliedImpactScore } from "@/lib/impact-score";
 
 export async function GET(
   _request: NextRequest,
@@ -17,7 +17,7 @@ export async function GET(
     return new NextResponse("Researcher not found", { status: 404 });
   }
   const researcherPapers = papers.filter((p) => p.author_ids.includes(researcher.id));
-  const impactScore = calculateResearchImpactScore(researcher, researcherPapers, projects);
+  const impactScore = calculateAppliedImpactScore(researcher, researcherPapers, projects);
 
   const name = escapeXml(researcher.name);
   const score = impactScore.overallScore;

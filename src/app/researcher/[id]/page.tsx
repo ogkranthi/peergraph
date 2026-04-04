@@ -1,6 +1,6 @@
 import { getResearchers, getResearcherById, getResearcherPapers, getResearcherCoAuthors, getResearcherProducts, getProjects, getBuilders } from "@/lib/data";
 import { suggestBuildersForResearcher } from "@/lib/recommendations";
-import { calculateResearchImpactScore, SCORE_DISCLAIMER } from "@/lib/impact-score";
+import { calculateAppliedImpactScore, SCORE_DISCLAIMER } from "@/lib/impact-score";
 import { DOMAIN_COLORS, NODE_COLORS } from "@/lib/types";
 import ScoreBreakdownModal from "@/components/ScoreBreakdownModal";
 import ExportButton from "@/components/ExportButton";
@@ -27,7 +27,7 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
   ]);
 
   // Applied Impact Index
-  const impactScore = calculateResearchImpactScore(researcher, papers, allProjects);
+  const impactScore = calculateAppliedImpactScore(researcher, papers, allProjects);
 
   // AI-suggested builders who might benefit from this researcher's work
   const suggestedBuilders = suggestBuildersForResearcher(
@@ -140,29 +140,49 @@ export default async function ResearcherPage({ params }: { params: Promise<{ id:
               Key Papers ({papers.length})
             </h2>
             <div className="space-y-3">
-              {papers.map((paper) => (
-                <a
-                  key={paper.id}
-                  href={paper.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 bg-white/5 rounded-lg hover:bg-white/8 transition-colors"
-                >
-                  <h3 className="font-medium text-white/90 mb-1">{paper.title}</h3>
-                  <div className="flex items-center gap-3 text-xs text-white/40">
-                    <span>{paper.venue}</span>
-                    <span>{paper.year}</span>
-                    <span>{paper.citation_count.toLocaleString()} citations</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {paper.domains.map((d) => (
-                      <span key={d} className="px-2 py-0.5 rounded text-[10px]" style={{ backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "10", color: DOMAIN_COLORS[d] || "#94A3B8" }}>
-                        {d}
-                      </span>
-                    ))}
-                  </div>
-                </a>
-              ))}
+              {papers.map((paper) => {
+                const paperProducts = allProjects.filter((p) => p.paper_ids.includes(paper.id));
+                const productYears = paperProducts
+                  .map((p) => new Date(p.created_at).getFullYear())
+                  .filter((y) => !isNaN(y))
+                  .sort((a, b) => a - b);
+                const uniqueYears = [...new Set(productYears)];
+                return (
+                  <a
+                    key={paper.id}
+                    href={paper.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 bg-white/5 rounded-lg hover:bg-white/8 transition-colors"
+                  >
+                    <h3 className="font-medium text-white/90 mb-1">{paper.title}</h3>
+                    <div className="flex items-center gap-3 text-xs text-white/40">
+                      <span>{paper.venue}</span>
+                      <span>{paper.year}</span>
+                      <span>{paper.citation_count.toLocaleString()} citations</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {paper.domains.map((d) => (
+                        <span key={d} className="px-2 py-0.5 rounded text-[10px]" style={{ backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "10", color: DOMAIN_COLORS[d] || "#94A3B8" }}>
+                          {d}
+                        </span>
+                      ))}
+                    </div>
+                    {uniqueYears.length > 0 && (
+                      <div className="mt-3 flex items-center gap-1">
+                        <span className="text-[9px] text-white/25 mr-1">Products:</span>
+                        {uniqueYears.map((year, idx) => (
+                          <span key={year} className="flex items-center gap-1">
+                            {idx > 0 && <span className="w-3 h-px bg-white/10" />}
+                            <span className="px-1.5 py-0.5 bg-emerald-500/10 text-emerald-400 rounded text-[9px]">{year}</span>
+                          </span>
+                        ))}
+                        <span className="text-[9px] text-white/20 ml-1">({paperProducts.length} total)</span>
+                      </div>
+                    )}
+                  </a>
+                );
+              })}
             </div>
           </div>
         )}

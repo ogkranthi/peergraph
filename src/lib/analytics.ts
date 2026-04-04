@@ -1,5 +1,5 @@
 import { Researcher, Paper, Project, Builder, ResearchDomain } from "./types";
-import { getAllResearcherImpactScores, ResearchImpactScore } from "./impact-score";
+import { getAllAppliedImpactScores, AppliedImpactScore } from "./impact-score";
 
 /**
  * Analytics computations for the PeerGraph.ai platform.
@@ -19,7 +19,7 @@ export interface PlatformAnalytics {
   };
   impactLeaderboard: {
     researcher: Researcher;
-    score: ResearchImpactScore;
+    score: AppliedImpactScore;
   }[];
   paperLeaderboard: {
     paper: Paper;
@@ -57,7 +57,7 @@ export function computePlatformAnalytics(
     papers.length > 0 ? papersWithProducts.size / papers.length : 0;
 
   // Impact leaderboard
-  const impactScores = getAllResearcherImpactScores(
+  const impactScores = getAllAppliedImpactScores(
     researchers,
     papers,
     projects

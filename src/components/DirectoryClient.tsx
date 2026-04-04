@@ -9,10 +9,16 @@ interface Props {
   researchers: Researcher[];
   builders: Builder[];
   projects: Project[];
+  risingIds?: string[];
+  impactScores?: { researcherId: string; overallScore: number }[];
 }
 
-export default function DirectoryClient({ researchers, builders, projects }: Props) {
+export default function DirectoryClient({ researchers, builders, projects, risingIds = [], impactScores = [] }: Props) {
   const [tab, setTab] = useState<"researchers" | "builders">("researchers");
+  const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [showCompare, setShowCompare] = useState(false);
+  const risingSet = new Set(risingIds);
+  const scoreMap = new Map(impactScores.map((s) => [s.researcherId, s.overallScore]));
   const [search, setSearch] = useState("");
   const [domainFilter, setDomainFilter] = useState("all");
 
@@ -102,40 +108,61 @@ export default function DirectoryClient({ researchers, builders, projects }: Pro
       {tab === "researchers" && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredResearchers.map((r) => (
-            <Link
-              key={r.id}
-              href={`/researcher/${r.id}`}
-              className="group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/8 hover:border-white/20 transition-all"
-            >
-              <div className="flex items-start gap-4">
-                <img src={r.photo_url} alt={r.name} className="w-12 h-12 rounded-full bg-white/10" />
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors truncate">
-                    {r.name}
-                  </h3>
-                  <p className="text-sm text-white/50 truncate">{r.institution}</p>
-                  <div className="flex items-center gap-3 mt-2 text-xs text-white/40">
-                    <span>h-index: {r.h_index}</span>
-                    <span>{r.citation_count.toLocaleString()} citations</span>
-                    <span>{r.paper_count} papers</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {r.domains.map((d) => (
-                      <span
-                        key={d}
-                        className="px-2 py-0.5 rounded text-[11px]"
-                        style={{
-                          backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15",
-                          color: DOMAIN_COLORS[d] || "#94A3B8",
-                        }}
-                      >
-                        {d}
-                      </span>
-                    ))}
+            <div key={r.id} className="relative group bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/8 hover:border-white/20 transition-all">
+              <Link href={`/researcher/${r.id}`}>
+                <div className="flex items-start gap-4">
+                  <img src={r.photo_url} alt={r.name} className="w-12 h-12 rounded-full bg-white/10" />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors truncate">
+                        {r.name}
+                      </h3>
+                      {risingSet.has(r.id) && (
+                        <span className="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 rounded text-[9px] font-medium flex-shrink-0">↑ Rising</span>
+                      )}
+                    </div>
+                    <p className="text-sm text-white/50 truncate">{r.institution}</p>
+                    <div className="flex items-center gap-3 mt-2 text-xs text-white/40">
+                      <span>h-index: {r.h_index}</span>
+                      <span>{r.citation_count.toLocaleString()} citations</span>
+                      <span>{r.paper_count} papers</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {r.domains.map((d) => (
+                        <span
+                          key={d}
+                          className="px-2 py-0.5 rounded text-[11px]"
+                          style={{
+                            backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15",
+                            color: DOMAIN_COLORS[d] || "#94A3B8",
+                          }}
+                        >
+                          {d}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setCompareIds((prev) => {
+                    if (prev.includes(r.id)) return prev.filter((id) => id !== r.id);
+                    if (prev.length >= 2) return [prev[1], r.id];
+                    return [...prev, r.id];
+                  });
+                }}
+                className={`absolute top-2 right-2 px-2 py-1 rounded text-[10px] font-medium transition-colors ${
+                  compareIds.includes(r.id)
+                    ? "bg-blue-500/30 text-blue-300 border border-blue-500/40"
+                    : "bg-white/5 text-white/30 border border-white/10 hover:text-white/60"
+                }`}
+              >
+                {compareIds.includes(r.id) ? "Selected" : "Compare"}
+              </button>
+            </div>
           ))}
           {filteredResearchers.length === 0 && (
             <div className="col-span-full text-center py-20 text-white/30">No researchers found.</div>
@@ -182,6 +209,65 @@ export default function DirectoryClient({ researchers, builders, projects }: Pro
           )}
         </div>
       )}
+      {/* Compare bar */}
+      {compareIds.length > 0 && (
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-[#1a1a2e] border border-white/20 rounded-xl px-5 py-3 shadow-2xl flex items-center gap-4">
+          <span className="text-sm text-white/60">{compareIds.length}/2 selected</span>
+          {compareIds.length === 2 && (
+            <button
+              onClick={() => setShowCompare(true)}
+              className="px-4 py-1.5 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-lg text-sm font-medium hover:bg-blue-500/30 transition-colors"
+            >
+              Compare
+            </button>
+          )}
+          <button onClick={() => setCompareIds([])} className="text-xs text-white/30 hover:text-white/60">Clear</button>
+        </div>
+      )}
+
+      {/* Comparison modal */}
+      {showCompare && compareIds.length === 2 && (() => {
+        const r1 = researchers.find((r) => r.id === compareIds[0]);
+        const r2 = researchers.find((r) => r.id === compareIds[1]);
+        if (!r1 || !r2) return null;
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setShowCompare(false)}>
+            <div className="bg-[#141420] border border-white/10 rounded-2xl p-6 max-w-2xl w-full mx-4 shadow-2xl max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-semibold text-lg">Researcher Comparison</h3>
+                <button onClick={() => setShowCompare(false)} className="text-white/30 hover:text-white/60 text-sm">Close</button>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                {[r1, r2].map((r) => (
+                  <div key={r.id}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <img src={r.photo_url} alt={r.name} className="w-12 h-12 rounded-full bg-white/10" />
+                      <div>
+                        <Link href={`/researcher/${r.id}`} className="font-semibold text-blue-400 hover:text-blue-300">{r.name}</Link>
+                        <p className="text-xs text-white/40">{r.institution}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between"><span className="text-white/40">h-index</span><span className="font-medium">{r.h_index}</span></div>
+                      <div className="flex justify-between"><span className="text-white/40">Citations</span><span className="font-medium">{r.citation_count.toLocaleString()}</span></div>
+                      <div className="flex justify-between"><span className="text-white/40">Papers</span><span className="font-medium">{r.paper_count}</span></div>
+                      <div className="flex justify-between"><span className="text-white/40">AII Score</span><span className="font-medium text-amber-400">{scoreMap.get(r.id) ?? "—"}</span></div>
+                      <div>
+                        <span className="text-white/40 text-xs">Domains</span>
+                        <div className="flex flex-wrap gap-1 mt-1">
+                          {r.domains.map((d) => (
+                            <span key={d} className="px-2 py-0.5 rounded text-[10px]" style={{ backgroundColor: (DOMAIN_COLORS[d] || "#94A3B8") + "15", color: DOMAIN_COLORS[d] || "#94A3B8" }}>{d}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }

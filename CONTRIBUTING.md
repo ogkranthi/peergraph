@@ -45,7 +45,7 @@ npm run dev
 
 ## Key Files
 
-- `src/lib/impact-score.ts` — Research Impact Score computation
+- `src/lib/impact-score.ts` — Applied Impact Index computation
 - `src/lib/recommendations.ts` — Bidirectional AI recommendation engine
 - `src/lib/analytics.ts` — Platform analytics
 - `src/lib/data.ts` — Data access layer

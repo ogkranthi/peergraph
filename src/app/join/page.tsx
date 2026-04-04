@@ -114,6 +114,37 @@ export default function JoinPage() {
         </div>
       </div>
 
+      {/* peergraph.json spec */}
+      <div className="mt-8 bg-white/5 border border-white/10 rounded-xl p-6">
+        <h2 className="text-lg font-semibold mb-2">Declare Papers with peergraph.json</h2>
+        <p className="text-sm text-white/60 mb-4">
+          Drop a <code className="text-amber-400 bg-white/5 px-1.5 py-0.5 rounded text-xs">peergraph.json</code> file
+          in your repo root to declare which papers your project builds on. We&apos;ll detect it automatically.
+        </p>
+        <div className="bg-black/30 border border-white/10 rounded-lg p-4 mb-3 relative">
+          <pre className="text-xs text-white/70 overflow-x-auto">{`{
+  "papers": [
+    {
+      "arxiv": "2205.14135",
+      "usage": "direct_implementation",
+      "description": "We use FlashAttention for memory-efficient attention"
+    }
+  ]
+}`}</pre>
+        </div>
+        <p className="text-xs text-white/40 mb-2">
+          Supported usage types: <code className="text-white/50">direct_implementation</code>, <code className="text-white/50">inspired_by</code>, <code className="text-white/50">extends</code>, <code className="text-white/50">uses_library</code>, <code className="text-white/50">cites</code>
+        </p>
+        <p className="text-xs text-white/30">
+          Fetch the JSON schema: <code className="text-amber-400/60">GET /api/peergraph-spec</code>
+        </p>
+      </div>
+
+      {/* CC0 License Notice */}
+      <div className="mt-8 p-4 bg-white/5 border border-white/10 rounded-xl">
+        <p className="text-xs text-white/40">Paper→product link data is CC0 licensed. Free to use, share, and build on.</p>
+      </div>
+
       {/* Email capture */}
       <div className="mt-12 pt-8 border-t border-white/10">
         <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">

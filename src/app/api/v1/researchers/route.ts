@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getResearchers, getPapers, getProjects } from "@/lib/data";
-import { calculateResearchImpactScore } from "@/lib/impact-score";
+import { calculateAppliedImpactScore } from "@/lib/impact-score";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Researcher not found" }, { status: 404 });
     }
     const researcherPapers = papers.filter((p) => p.author_ids.includes(researcher.id));
-    const impactScore = calculateResearchImpactScore(researcher, researcherPapers, projects);
+    const impactScore = calculateAppliedImpactScore(researcher, researcherPapers, projects);
     return NextResponse.json({ ...researcher, impactScore });
   }
 
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
   // Add impact scores
   const results = researchers.map((r) => {
     const researcherPapers = papers.filter((p) => p.author_ids.includes(r.id));
-    const impactScore = calculateResearchImpactScore(r, researcherPapers, projects);
+    const impactScore = calculateAppliedImpactScore(r, researcherPapers, projects);
     return { ...r, impactScore: impactScore.overallScore };
   });
 

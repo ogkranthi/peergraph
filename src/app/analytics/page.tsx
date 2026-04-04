@@ -1,6 +1,6 @@
 import { getResearchers, getBuilders, getPapers, getProjects } from "@/lib/data";
 import { computePlatformAnalytics } from "@/lib/analytics";
-import { getAllResearcherImpactScores } from "@/lib/impact-score";
+import { getAllAppliedImpactScores, AII_VERSION, AII_DESCRIPTION } from "@/lib/impact-score";
 import { DOMAIN_COLORS, type ResearchDomain } from "@/lib/types";
 import Link from "next/link";
 
@@ -31,7 +31,7 @@ export default async function AnalyticsPage() {
   const analytics = computePlatformAnalytics(researchers, papers, builders, projects);
 
   // Feature 19: Domain leaderboards - top 3 researchers per domain
-  const impactScores = getAllResearcherImpactScores(researchers, papers, projects);
+  const impactScores = getAllAppliedImpactScores(researchers, papers, projects);
   const allDomains = Array.from(new Set(researchers.flatMap((r) => r.domains))).sort();
   const domainLeaderboards = allDomains
     .map((domain) => {
@@ -131,7 +131,8 @@ export default async function AnalyticsPage() {
         {/* Applied Impact Index Leaderboard */}
         <div>
           <h2 className="text-lg font-semibold mb-1">Applied Impact Index Leaderboard</h2>
-          <p className="text-xs text-white/30 mb-4">Researchers ranked by builder-declared product usage</p>
+          <p className="text-xs text-white/30 mb-2">Researchers ranked by builder-declared product usage</p>
+          <p className="text-xs text-white/30 italic mb-4">Reflects builder-declared usage. Not a measure of research quality.</p>
           <div className="space-y-2">
             {analytics.impactLeaderboard.map(({ researcher, score }, i) => (
               <Link
@@ -306,9 +307,15 @@ export default async function AnalyticsPage() {
         </div>
       )}
 
+      {/* CC0 License Notice */}
+      <div className="mb-10 p-4 bg-white/5 border border-white/10 rounded-xl">
+        <p className="text-xs text-white/40">Paper→product link data is CC0 licensed. Free to use, share, and build on.</p>
+      </div>
+
       {/* Methodology Note */}
       <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-        <h2 className="text-sm font-semibold mb-2">About These Metrics (Methodology v1.0)</h2>
+        <h2 className="text-sm font-semibold mb-2">About These Metrics — {AII_DESCRIPTION}</h2>
+        <p className="text-[10px] text-white/25 mb-3">Version: {AII_VERSION}</p>
         <p className="text-xs text-white/40 leading-relaxed mb-3">
           The <strong className="text-amber-400">Applied Impact Index (AII)</strong> measures
           real-world product adoption of academic research based on builder-declared usage. Unlike citation-based metrics

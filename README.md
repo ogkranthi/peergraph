@@ -7,7 +7,7 @@ PeerGraph.ai connects AI researchers and builders in an interactive force-direct
 ## Features
 
 - **Interactive Graph** — Force-directed visualization with two node types: researchers (blue) and builders (green)
-- **Research Impact Score** — A novel metric measuring real-world product adoption, not just citations
+- **Applied Impact Index** — A novel metric measuring real-world product adoption, not just citations
 - **Bidirectional AI Recommendations** — Researcher↔builder matching based on domain overlap and keyword analysis
 - **Public REST API** — Open endpoints at `/api/v1/` for researchers, builders, papers, recommendations, and stats
 - **Embeddable Badges** — SVG badges showing researcher impact scores, embeddable on websites and READMEs

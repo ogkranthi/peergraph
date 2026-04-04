@@ -1,5 +1,5 @@
 import { Paper, Project, Researcher, Builder } from "./types";
-import { calculateResearchImpactScore } from "./impact-score";
+import { calculateAppliedImpactScore } from "./impact-score";
 
 // ============ Use-Case → Research Domain Mapping ============
 
@@ -239,7 +239,7 @@ export function exploreQuery(
 
       if (!researcherScores.has(aid)) {
         const researcherPapers = allPapers.filter((p) => p.author_ids.includes(aid));
-        const aii = calculateResearchImpactScore(researcher, researcherPapers, allProjects);
+        const aii = calculateAppliedImpactScore(researcher, researcherPapers, allProjects);
         researcherScores.set(aid, { aiiScore: aii.overallScore, productCount: aii.breakdown.productAdoption, papers: [] });
       }
       researcherScores.get(aid)!.papers.push(paper.paper);
